@@ -1,0 +1,59 @@
+#######################################
+# Syntax Coloring Map For LandjeRobot
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+LandjeRobot	KEYWORD1	LandjeRobot
+LandjeRobotMotorController	KEYWORD1	LandjeRobotMotorController
+LandjeRobotHead	KEYWORD1	LandjeRobotHead
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# Mouth (Led)
+praat	KEYWORD2
+praatIk	KEYWORD2
+mondOpen	KEYWORD2
+mondDicht	KEYWORD2
+
+# Head (Servo)
+kijk	KEYWORD2
+
+# Eyes (Ultrasonic Sensor)
+meetAfstand	KEYWORD2
+
+# Line Sensors
+detecteerLijn	KEYWORD2
+
+# Wheels (Stepper motors)
+beweegIk	KEYWORD2
+beweeg	KEYWORD2
+draai	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
+STOP	LITERAL1
+FORWARD	LITERAL1
+BACKWARD	LITERAL1
+
+HALF_STEP	LITERAL1
+FULL_STEP	LITERAL1
+
+GEEN	LITERAL1
+LINKS	LITERAL1
+RECHTS	LITERAL1
+BEIDE	LITERAL1
+
+FAR_LEFT	LITERAL1
+LEFT	LITERAL1
+FORWARD	LITERAL1
+RIGHT	LITERAL1
+FAR_RIGHT	LITERAL1

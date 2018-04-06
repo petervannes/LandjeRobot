@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>instruction manual NLD</title>
+
+
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 18px;
+  line-height: 22.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+  list-style-position: inside
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+
+}
+li {
+  margin-bottom: 10px;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  /* text-transform: capitalize; */
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid;
+}
+h2 {
+  border-bottom: 2px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+
+html body {
+  /* background-color: #fdf6e3; */
+background-color: #ffffff;
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  background-color: #58b51c ;
+}
+
+
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #957500;
+}
+
+html h1 {
+  color: #957500;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #957500;
+}
+
+html code {
+  color: #ffffff;
+  background-color: #58b51c;
+}
+
+html u {
+  color: #657b83;
+}
+
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+
+
+body > h1:first-child {
+	position:relative;
+  left:-4px;
+  margin-top: 0;
+  padding-top: 110px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  border: 0;
+  color: #58b51c;
+  background:  url(data:image/png;base64,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) ;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+table {
+
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table tr em {
+  color: #ffffff;
+}
+
+table tr u {
+  color: #ffffff;
+}
+
+  table tr {
+    border-top: 2px solid #95C11F;
+    background-color: #58b51c;
+    padding: 20px;
+
+    /* margin: 0;
+    padding: 0px; }
+    /* table tr:nth-child(2n) { */
+      /* background-color: #f8f8f8; } */
+    }
+    table tr th {
+      color: #ffffff;
+      font-weight: bold;
+      border: 2px solid #95C11F;
+      padding: 10px ;
+      /* margin: 0; */
+      /* padding: 6px 13px; } */
+    }
+    table tr td {
+      color: #ffffff;
+      border: 2px solid #95C11F;
+      padding: 10px ;
+      /* margin: 0; */
+      /* padding: 6px 13px; } */
+    }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Landje Robot Instructies</h1>
+
+<p>De Landje robot heeft zijn eigen set van opdrachten die je hem kunt geven, een instructie-set.
+Met deze instructies kun je de robot eenvoudig besturen.</p>
+
+<p>Elke programma voor een Landje Robot moet beginnen met de volgende instructies. Deze instructies hoef je niet te begrijpen.</p>
+
+<div><pre><code class="language-none">#include &lt;LandjeRobot.h&gt;
+
+// Aansluitingen van de robot.
+const int motor[2][4] = {
+  {2, 3, 4, 5}, {6, 7, 8, 9}
+} ;
+
+// Aansluitingen van de lijn sensoren
+const int lineSensors[2] = { 10, 11 } ;
+const bool lineSensorInverse = false ;
+
+// Omtrek van de wielen in cm
+const int wheelRadiusMM = 21 ;
+// Afstand tussen de wielen in cm
+const int trackWidthMM = 55 ;
+
+// Aansluiting van de ultrasoon sensor
+// Ultrasoon sensor meet de afstand
+int ultraPin = 13 ;
+
+// Aansluiting van de servo
+// De servo motor beweegt het hoofd van links naar rechts
+int servoPin = 14 ;
+
+// Aansluiting van het led 
+// Lampje in de mond van de robot
+int mouthledPin = 15 ;
+
+
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM ,
+trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;</code></pre></div>
+
+<p>Deze instructies moeten voor de functie <em>setup()</em> in het programma geplaatst worden. Knip en plak deze instructies voor aan ieder programma dat je voor de robot schrijft.</p>
+
+<h2 id="toc_1">De instructie set</h2>
+
+<p>De Landje robot heeft verschillende eigen instructies. Je hebt instructies om te bewegen, te draaien of bijvoorbeeld om de afstand te meten. Deze instructies geeft je aan de Landje Robot die deze instructies dan weer opvolgd. In het eerste gedeelte van het programma zie je als laatste regel staan. </p>
+
+<p><code>LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM ,
+trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;</code></p>
+
+<p>Met deze lange instructie wordt de robot ingesteld. Na het uitvoeren van deze regel kun je de variabele <code>landjerobot</code>. Door middel van deze variabele kun je de instructies aan de robot geven. Je geeft een instructie door aan de variabele <code>landjerobot</code> de instructie te plakken. Je plakt een instructie aan landjerobot door middel van een punt. Bijvoorbeeld;   </p>
+
+<p><code>landjerobot.talk(5) ;</code> </p>
+
+<p>Het plakken van een instructie heet een instructie <em>geven</em>. Als er dus ergens staat &lsquo;<em>geef de instructie move</em>&rsquo; programmeer je dus `landjerobot.move()&lsquo;. In de volgende paragraaf staan alle speciale instructies die de Landje robot begrijpt. </p>
+
+<h3 id="toc_2">De Landje robot instructieset</h3>
+
+<p>De Landje robot heeft verschillende instructies. Bij sommige instructies kun of moet je iets extra&rsquo;s aan de instructie vertellen. Als je de robot wilt laten bewegen kun je bijvoorbeeld vertellen welke richting hij moet op rijden. Het iets extra&rsquo;s vertellen aan een instructie noemen we <em>doorgeven</em>. Je <em>geeft</em> dus aan de instructie <code>move</code> <em>door</em> welke richting hij op moet rijden.</p>
+
+<p><code>landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;</code></p>
+
+<p>Met <code>LandjeRobot::DIRECTION::FORWARD</code> geeft je aan de landjerobot door dat hij vooruit moet bewegen. Het engelse woord <code>FORWARD</code> betekent vooruit, <code>DIRECTION</code> betekent richting. Je vertelt <code>LandjeRobot</code> robot dus dat hij in de <code>DIRECTION</code> <code>FORWARD</code> moet bewegen. Je zult in andere instructies zien dat de robot kan draaien (<code>TURN</code>) naar links (<code>LEFT</code>) en rechts (<code>RIGHT</code>) of kan kijken (<code>LOOK</code>). </p>
+
+<p>Wat je aan de robot doorgeeft heet <em>parameter</em>. Aan elke instructie kan geen, één of meerdere parameters worden doorgegeven. Hoeveel en welke parameters je kan doorgeven verschilt per instructie.</p>
+
+<p>Bij sommige instructies mag je sommige parameters opgegeven, maar hoeft dit niet. Als je de instructie <code>move</code> opgeeft mag je de parameter <em>wachten</em> opgeven, maar het hoeft niet. Je mag dus de instructie <code>landerobot.move(LandjeRobot::DIRECTION::FORWARD,10)</code> geven maar ook <code>landerobot.move(LandjeRobot::DIRECTION::FORWARD)</code>. Bij de eerste instructie zal de robot 10 centimeter vooruit gaan rijden. Bij de tweede instructie zal de robot net zolang vooruit blijven rijden totdat je de instructie geeft om te stoppen. Als je een parameter niet opgeeft zal een waarde gekozen worden. Deze gekozen waarde noemt men de standaard waarde. Voor de parameter <em>afstand</em> is dit oneindig (∞). </p>
+
+<p>Als je in deze handleiding de parameter voor instructies opzoekt is er één waarde voor een parameter <u>onderstreept</u>. Dit is de waarde welke voor de parameter gekozen zal worden als je de parameter niet doorgeeft aan de instructie. Kijk eens bij de instructie <em>move</em>, daar staat dat de waarde &#39;∞&rsquo; onderstreept. Het teken &lsquo;∞&rsquo; betekend oneindig. Als je de parameter <em>afstand</em> niet opgeeft blijft de robot oneindig doorrijden.</p>
+
+<p>Instructies kunnen ook een waarde teruggeven. Als een instructie een waarde teruggeeft staat dit bij de instructie vermeld. De instructie <em>doIMove</em> heeft geen parameters, maar geeft wel een waarde terug. Als de robot beweegt krijg je <em>true</em>, anders <em>false</em>.</p>
+
+<h3 id="toc_3">Instructies</h3>
+
+<h4 id="toc_4">move</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot in een richting bewegen</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>move( richting ) ;<br>
+move( richting , afstand) ;<br>
+move( richting , afstand, wachten) ;</p>
+
+<p><strong>Parameters</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarden</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">richting</td>
+<td style="text-align: left"></td>
+<td style="text-align: left">LandjeRobot::DIRECTION::STOP </br>LandjeRobot::DIRECTION::FORWARD</br>LandjeRobot::DIRECTION::BACKWARD</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">afstand</td>
+<td style="text-align: left">int</td>
+<td style="text-align: left">0..<u>∞</u></td>
+<td style="text-align: left">De afstand die bewogen moet worden in centimeters</td>
+</tr>
+<tr>
+<td style="text-align: left">wachten</td>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">true</br><u>false</u></td>
+<td style="text-align: left">Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// beweeg de robot vooruit
+landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD) ;
+
+// beweeg de robot 10cm achteruit
+landjerobot.beweeg(LandjeRobot::DIRECTION::BACKWARD,10) ;
+
+// beweeg de robot 20cm vooruit en wacht 
+// totdat de opgegeven afstand is afgelegd
+landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD,20,true) ;
+</code></pre></div>
+
+<h4 id="toc_5">doIMove</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Geeft aan of de robot beweegt.</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>doIMove() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarde</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">Deze waarde wordt teruggegeven als de robot aan het bewegen is</td>
+</tr>
+<tr>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">Als de robot niet beweegt wordt deze waarde teruggeveven</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// beweeg de robot vooruit
+landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+
+if (doIMove()) {
+    Serial.println(&quot;Ik beweeg!&quot;) ;
+}
+</code></pre></div>
+
+<h4 id="toc_6">turn</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot in een bepaalde richting draaien </p>
+
+<p><strong>Syntax</strong></p>
+
+<p>turn( richting ) ;<br>
+turn( richting , hoek) ;<br>
+turn( richting , hoek, wachten) ;</p>
+
+<p><strong>Parameters</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarden</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">richting</td>
+<td style="text-align: left"></td>
+<td style="text-align: left">LandjeRobot::TURN::STRAIGHT</br>LandjeRobot::TURN::LEFT</br>LandjeRobot::TURN::RIGHT</td>
+<td style="text-align: left">De draairichting van de robot. De waarde STRAIGHT laat de robot weer recht voor- of achteruit rijden</td>
+</tr>
+<tr>
+<td style="text-align: left">hoek</td>
+<td style="text-align: left">int</td>
+<td style="text-align: left">0..360 </br><u>90</u></td>
+<td style="text-align: left">Het aantal graden dat de robot moet draaien. Een hoek van 90 graden is een rechte hoek</td>
+</tr>
+<tr>
+<td style="text-align: left">wachten</td>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">true</br><u>false</u></td>
+<td style="text-align: left">Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Draairichtingen van de robot</strong>
+<img src="./instruction manual/img_2.png" width="640"></p>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// draai de robot naar links
+landjerobot.draai(LandjeRobot::TURN::LEFT) ;
+
+// laat de robot een rondje rechtsom draaien
+landjerobot.draai(LandjeRobot::TURN::RIGHT,360) ;
+</code></pre></div>
+
+<h4 id="toc_7">look</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot in een richting kijken</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>look( richting ) ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarden</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">richting</td>
+<td style="text-align: left"></td>
+<td style="text-align: left">LandjeRobot::LOOK::FORWARD</br>LandjeRobot::LOOK::LEFT</br>LandjeRobot::LOOK::RIGHT</br>LandjeRobot::LOOK::FAR_LEFT</br>LandjeRobot::LOOK::FAR_RIGHT</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Kijkrichtingen van de robot</strong>
+<img src="./instruction manual/img_1.png" width="640"></p>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// Kijk naar links
+landjerobot.look(LandjeRobot::LOOK::LEFT) ;</code></pre></div>
+
+<h4 id="toc_8">talk</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot &lsquo;praten&rsquo; door een lichtje in de mond te laten knipperen.</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>talk( duur ) ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarden</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">duur</td>
+<td style="text-align: left">int</td>
+<td style="text-align: left">0..∞</td>
+<td style="text-align: left">Aantal seconden dat de robot &lsquo;praat&rsquo;</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// Praat 7 seconden
+landjerobot.talk(7);</code></pre></div>
+
+<h4 id="toc_9">doITalk</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Geeft aan of de robot aan het praten is.</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>doITalk() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarde</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">Deze waarde wordt teruggegeven als de robot aan het praten is</td>
+</tr>
+<tr>
+<td style="text-align: left">bool</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">Als de robot niet praat wordt deze waarde teruggeveven</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// Laat de robot praten
+landjerobot.talk(60) ;
+
+if (doITalk()) {
+    Serial.println(&quot;Ik praat!&quot;) ;
+}
+</code></pre></div>
+
+<h4 id="toc_10">mouthClosed</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot zijn mond &lsquo;dicht&rsquo; doen door het led-je uit te zetten</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>mouthClosed() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// Laat de robot zijn mond dicht doen
+landjerobot.mouthClosed();</code></pre></div>
+
+<h4 id="toc_11">mouthOpen</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Laat de robot zijn mond &lsquo;open&rsquo; doen door het led-je aan te zetten</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>mouthOpen() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<p>niets</p>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">// Laat de robot zijn mond open doen
+landjerobot.mouthOpen();</code></pre></div>
+
+<h4 id="toc_12">measureDistance</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Meet de afstand van de robot tot een ander object</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>measureDistance() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarde</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">int</td>
+<td style="text-align: left">2..400</td>
+<td style="text-align: left">Afstand in centimeters</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">int gemetenAfstand = 0 ;
+// Meet de afstand van de robot tot een ander object
+gemetenAfstand  = landjerobot.measureDistance() ;
+
+Serial.print(&quot;Gemeten afstand &quot;) ;
+Serial.print(gemetenAfstand) ;
+Serial.println(&quot; cm&quot;) ;
+</code></pre></div>
+
+<h4 id="toc_13">detectLine</h4>
+
+<p><strong>Omschrijving</strong></p>
+
+<p>Geeft aan of er een lijn wordt gedetecteerd</p>
+
+<p><strong>Syntax</strong></p>
+
+<p>detectLine() ;   </p>
+
+<p><strong>Parameters</strong></p>
+
+<p>geen</p>
+
+<p><strong>Geeft terug</strong></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Waarde</th>
+<th style="text-align: left">Opmerkingen</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"></td>
+<td style="text-align: left">LandjeRobot::LINE::NONE</br>LandjeRobot::LINE::LEFT</br> LandjeRobot::LINE::RIGHT</br> LandjeRobot::LINE::BOTH</td>
+<td style="text-align: left">NONE geeft aan dat er geen lijn gedetecteerd wordt. Bij BOTH wordt zowel links als rechts een lijn gedetecteerd</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Voorbeeld</strong></p>
+
+<div><pre><code class="language-none">
+(
+if (detecteerLijn() != LandjeRobot::LINE::NONE) {
+    Serial.println(&quot;Er is een lijn gedetecteerd&quot;) ;
+}
+</code></pre></div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang=nl>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="landje.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Student guide NLD</title>
+
+
+</head>
+
+<body>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+
+    <div class="coverContainer">
+        <img src="./Student%20guide/cover.png" alt="Landje robot cover" style="width:100%;" />
+        <div class="coverTitle">
+            <h1 id="toc_0">Leren programmeren</h1>
+        </div>
+    </div>
+
+    <p>Over programmeren kun je heel veel lezen. Maar je leert het vooral door hetzelf te doen, fouten te maken en deze zelf op te lossen. Het zelf zoeken naar en oplossen van fouten heet debuggen.</p>
+
+    <p><strong>Waarom heet het zoeken naar en oplossen van fouten debuggen ?</strong> Het woord &ldquo;bug&rdquo; betekent in het Engels, kever of insect. Lang geleden bestonden computers uit elektrische schakelaars. Tussen deze schakelaars kon wel eens een kever of vlieg vast komen te zitten waardoor de schakelaar vast kon komen te zitten. Door de vastzittende schakelaar werkte de computer niet meer goed. Om de computer weer goed te laten werken moest de &lsquo;bug&rsquo;, de kever of vlieg, gevonden en verwijderd worden om hem weer goed te laten werken. </p>
+
+    <img src="./Student%20guide/H96566k.jpg" alt="By Courtesy of the Naval Surface Warfare Center, Dahlgren, VA., 1988. [Public domain] via Wikimedia Commons" />
+    <p>Een voorbeeld van een computer verslag van de Mark II computer. Hier staat de eerste bug die men gevonden heeft geplakt in het computer verslag in 1947</p>
+
+    <h2 id="toc_1">Landje Robot</h2>
+
+    <p>Je gaat dus vooral zelf veel proberen, puzzelen en leren van je eigen fouten! Dit ga je doen met een robot, Landje Robot. Landje Robot kan als je het hem goed programmeert;</p>
+
+    <ul>
+        <li>Rond rijden</li>
+        <li>Lijnen volgen</li>
+        <li>Binnen een door een lijn gemarkeerd gebied blijven</li>
+        <li>Afstand meten tot een ander object</li>
+        <li>Andere objecten of robots ontwijken</li>
+        <li>Een lampje laten knipperen.</li>
+    </ul>
+
+    <h2 id="toc_2">Programmeertaal</h2>
+
+    <p>Om te programmeren gebruik je een taal. Een taal die jouw computer begrijpt zodat je kan uitleggen wat het moet doen. Zo zijn er heel veel talen, sommige talen zijn heel erg geschikt om spelletjes mee te schrijven, andere talen zijn weer betere beschikt om complexe berekeningen te maken. Als je begint met programmeren is er een grote kans dat je dit in Scratch doet. Met Scratch kun je met het in elkaar schuiven van blokken een programma&#39;tje maken. </p>
+
+    <p><img src="./Student%20guide/Scratch_Hello_World.png" alt="Scratch Hello World" /><br> Een simpel voorbeeld van een programma in Scratch.</p>
+
+    <p>Bijna geen enkele programmeertaal werkt zoals Scratch. Bij de meeste programmeertalen moet je een opdracht schrijven om de computer te laten weten wat je moet doen. Schrijven van een programma is moeilijker dan zoals bij Scratch. Dit komt omdat een computer heel precies en erg dom is. Een computer begrijpt je alleen als je heel erg precies vertelt wat je van hem wilt. </p>
+
+    <div>
+        <pre><code class="language-none">// Dit wordt door de computer begrepen
+Serial.println(&quot;Hallo&quot;) ;
+
+// Dit begrijpt de computer niet
+Serial.Println(&quot;Hallo&quot;) ;</code></pre>
+    </div>
+
+    <p>Zie jij het verschil tussen de twee opdrachten ?</p>
+
+    <p>Het programmeren van Landje Robot zal je in de programmeertaal C (<em>see</em>) gaan doen. Zoals je in het vorige voorbeeld al kon zien worden hier Engelse woorden gebruikt. </p>
+
+    <h1 id="toc_3">Les 1, Je eerste programma</h1>
+
+    <h2 id="toc_4">Arduino Create</h2>
+
+    <p>In deze les ga je het eerste programma schrijven. Programma&rsquo;s kun je op veel manier schrijven, maar meestal doe je dit met een programma dat je help bij programmeren. Zo&#39;n programma heet een geintegreerde ontwikkel omgeving of Integrated Development Environment. Een hele mond vol, daarom heeft iedereen het over een IDE. De IDE die jij gaat gebruiken staat &lsquo; in de cloud &rsquo;. Deze term zal je wel vaker gehoord hebben. Het betekent niets anders dan dat je het programma overal ter wereld kunt gebruiken als je maar een internet verbinding en een computer hebt. </p>
+
+    <p>Jij zult gebruik gaan maken van de IDE Arduino Create. </p>
+
+    <ul>
+        <li>Start <em>Chrome</em> en ga naar de internet pagina <a href="https://create.arduino.cc">https://create.arduino.cc</a>.</li>
+        <li>Klik op de knop <em>Arduino Web Editor</em> om de IDE te starten.</li>
+        <li>Je staat nu op de inlog pagina maar hebt nog geen geldige gebruikersnaam, een account. </li>
+        <li>Klik nu onder <em>create a new account</em> op de knop <em>sign up</em>.</li>
+        <li>Verzin een gebruikersnaam en wachtwoord. Zorg dat je de gebruikersnaam ergens opschrijft. Verzin een wachtwoord dat <strong>JIJ</strong> makkelijk kan onthouden, maar niet makkelijk door iemand anders is te raden. </li>
+        <li>Vul bij het e-mail adres je landje010 e-mail adres in.</li>
+        <li>Om je account aan te kunnen maken moet je aantonen dat je geen robot bent. Lees de opdracht goed en voer deze uit. Als je dit goed genoeg doet heb je aangetoond dat je geen robot bent en wordt je account aangemaakt.</li>
+        <li>Om aan te kunnen loggen moet je aantonen dat het e-mail adres echt van jou is. Kijk in je mail en klik op de link die je van Arduino hebt ontvangen.</li>
+        <li>Gelukt ? Probeer dan nu aanloggen. Als dit goed gegaan is zal het scherm er ongeveer zo uit zien als het het plaatje hieronder.</li>
+    </ul>
+
+    <p><img style=" display: block;
+    margin-left: auto;
+    margin-right: auto;" src="./Student%20guide/create.arduino.cc.png" width="600" alt="Arduino Create"></p>
+
+    <p>Om de IDE te starten klik je op de knop <em>Arduino Web Editor</em>. In de IDE kun je links op diverse tabjes klikken. Klik op <em>Sketchbook</em>. Een programma in deze IDE noemt men een <em>sketch</em>, dit is Engels voor schets (tekening). <em>Sketchbook</em> is Engels voor schetsboek. Rechts naast het <em>Sketchbook</em> zie je schetsen die je in het boek hebt bewaard.</p>
+
+    <p><img style=" display: block;
+    margin-left: auto;
+    margin-right: auto;" src="./Student%20guide/editor.arduino.png" width="600" alt="Arduino Create"></p>
+
+    <p>Maak nu een nieuwe sketch door op <em>NEW SKETCH</em> te klikken. Een nieuwe sketch krijgt automatisch een naam bijvoorbeeld &lsquo;sketch_jan11b&rsquo;. Dit is vaak niet handig, het zou duidelijker zijn als de sketch <em>mijn eerste sketch</em> heet. </p>
+
+    <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+        <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+        <div>Probeer zelf uit te zoeken hoe je de naam van de sketch kan veranderen naar <em>mijn_eerste_sketch</em>.</div>
+    </div>
+
+    <p>
+        Als je een nieuw programma maakt ziet dat er alsvolgt uit.
+    </p>
+
+    <div>
+        <pre><code class="language-none">&sol;*
+
+*&sol;
+
+void setup() {
+    
+}
+
+void loop() {
+    
+}</code></pre>
+    </div>
+
+    <h2 id="toc_5">Commentaar</h2>
+
+    <p>In het begin van het programma staat een <strong>&sol;*</strong> en een <strong>*&sol;</strong>. Als de computer een programma uitvoert dan zal er niets gedaan worden met wat er tussen <strong>&sol;*</strong> en <strong>*&sol;</strong> staat, de computer negeert het. Dit kun je gebruiken om te beschrijven wat je in het programma doet. Je kunt op deze manier dus commentaar of een opmerking in het programma plaatsen. Je kunt het ook gebruiken om even een stukje van een programma 'uit' te zetten. Bijvoorbeeld;</p>
+
+    <div>
+        <pre><code class="language-none">&sol;*        
+Hier leg ik uit wat het programma gaat doen.
+Het programma gaat een tekst laten zien.
+*&sol;
+
+Serial.println("Ik laat deze tekst zien") ;
+
+&sol;*
+Serial.println("Deze instructie wordt genegeerd);
+*&sol;
+    
+</code></pre>
+    </div>
+
+    <p>Als je maar &eacute;&eacute;n regel commentaar wilt toevoegen of &eacute;&eacute;n instructie even wilt negeren mag je de regel ook beginnen met <strong>&sol;&sol;</strong>. Je gebruikt <strong>&sol;*</strong> en <strong>*&sol;</strong> dus vaak als je meerdere regels wilt negeren en <strong>&sol;&sol;</strong> voor &eacute;&eacute;n regel.</p>
+
+    <div>
+        <pre><code class="language-none">&sol;*        
+ Alles tussen &sol;* en *&sol; wordt genegeerd.
+*&sol;
+
+&sol;&sol; Maar deze regel ook 
+</code></pre>
+    </div>
+
+    <h2 id="toc_6">Functies</h2>
+
+    <p><strong>setup()</strong> en <strong>loop()</strong> zijn <em>functies</em>. Een functie is een groep van instructies die bij elkaar horen. De instructies die bij elkaar horen staan tussen <strong>{</strong> en <strong>}</strong> na de naam van de instructie. Door nu in een programma in plaats van een instructie te geven de functie aan te roepen, kun je in &eacute;&eacute;n keer meerdere instructies uitvoeren. De functie <strong>setup()</strong> wordt automatisch &eacute;&eacute;n keer aangeroepen als je het programma start. <strong>Loop()</strong> is een functie die elke keer opnieuw wordt uitgevoerd als deze klaar is.</p>
+
+    <h2 id="toc_7">Jouw eerste programma</h2>
+    <p>Type nu in de functie <strong>setup()</strong> de volgende instructies.</p>
+
+    <div>
+        <pre><code class="language-none">Serial.begin(9600);
+delay(5000);
+Serial.println("Hoi");</code></pre>
+    </div>
+
+    <p>Je hebt nu je eerste programma geschreven! Maar hoe laat je dit programma draaien? Om een programma te kunnen gebruiken heb je een computer nodig. Omdat je niet een hele laptop op een robot kan zetten gaan we een hele kleine computer gebruiken. Deze computer heet een Arduino Nano. Nano betekent heel klein en komt van het Latijnse woord Nanos wat 'dwerg' betekent. Zoals elke computer heeft de Nano een processor of CPU, dit zijn de hersenen van de computer waarmee hij jouw programma gaat uitvoeren. Ook zit er een kleine reset-knop op, hiermee kun je de Nano opnieuw opstarten als dat nodig is. Omdat de Nano zo klein is kun je er geen toetsenbord of beeldscherm op aansluiten. Je gebruikt jouw computer als beeldscherm en om programma's naar de Nano te versturen.</p>
+
+    <img style=" display: block;
+    margin-left: auto;
+    margin-right: auto;" src="./Student%20guide/Lesson1_Arduino.png" width="600" alt="Arduino Create">
+
+
+
+
+    <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+        <img style="float: left;margin-right: 7px;max-width: 350px" src="/Student%20guide/Lesson1_Select_Board.png" alt="Doe" />
+        <div>Verbind de Nano met een USB kabel met je Chromebook. Als het goed is kun je in de witte balk de Arduino Nano selecteren. Als je deze geselecteerd hebt wordt jouw Chromebook verbonden met de Nano.</div>
+    </div>
+
+
+
+    <p>Nu is het tijd om je programma te starten. Open weer je Arduino Create pagina en klik nu eerst links op <strong>Monitor</strong>. Rechts van de editor verschijnt een venster. In dit venster kunnen we tekst tonen die de Nano naar de Chromebook verstuurd. Je kunt dit dus vergelijken met een beeldscherm van je Chromebook. Start nu je eerste programma op de Nano. Doe dit door het programma te 'uploaden', het versturen van het programma, naar de Nano. Uploaden doe je door op de pijl te klikken die boven het programma getoond wordt. Wacht een paar seconden en als je alles goed gedaan hebt verschijnt er een tekst in de Monitor van de Nano.
+    </p>
+
+    <img style=" display: block; margin-left: auto; margin-right: auto; " src="./Student%20guide/Lesson1_create_monitor.png" width=600 alt="" />
+
+
+    <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+        <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width=50 alt="Doe" />
+        <div>Pas nu het programma aan zodat het "Hoi, " en dan jouw naam op de monitor laat zien. Dus bijvoorbeeld "Hoi, Willem".</div>
+    </div>
+
+
+    <p>De functie <strong>setup()</strong> wordt alleen &eacute;&eacute;n keer aangeroepen als je de Nano start. De functie <strong>loop()</strong> wordt telkens opnieuw aangeroepen. Dit ga je zien als je in de functie <strong>loop</strong> ook iets naar de monitor laat sturen. Hiervoor gebruiken we een deel van dezelfde instructies zoals we in <strong>setup()</strong> hebben gebruikt. De instructie <code>Serial.begin(9600)</code> mag alleen in <strong>setup()</strong> gebruikt worden. Deze instructie zorgt ervoor dat de Arduino een verbinding maakt met de Chromebook. Met de instructie <code>delay()</code> laat je het programma even wachten. Tussen de ronde haakjes moet je opgeven hoe lang je wilt wachten. Dit moet je opgeven in milliseconden, duizendsten van een seconde, dus als je <code>delay(1000)</code> opgeeft wacht de Nano 1000 * 1&frasl;1000s. Dit is dus precies 1 seconde. Met <code>Serial.println()</code> print je een tekst naar de Monitor in Create. Wat je wilt printen moet altijd tussen dubbele aanhalingstekens, dus &apos; <strong>&quot;</strong> &apos;.</p>
+
+    <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+        <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width=50 alt="Doe" />
+        <div>Pas nu het programma aan zodat het iedere 5 seconden "Nog een keer!" op de monitor laat zien.</div>
+    </div>
+
+    <p>Gelukt ? Mooi! </p>
+
+    <h2 id="toc_8">Leesbaarheid</h2>
+    <p>Zoals je misschien gezien hebt staat er na iedere instructe een ' <strong>;</strong> '. Dit is voor de computer hetzelfde als de ruimte, spatie, die wij in gewone taal tussen de woorden plaatsen. Datmaaktheteenstukleesbaardervindjeniet? Je mag dus meerdere instructies op &eacute;&eacute;n regel plaatsen. Dus voor een computer is het linker als rechter-voorbeeld even goed leesbaar. Om een programma ook voor jou en de Nano goed leesbaar te houden spreken wij af om iedere instructie op een nieuwe regel te beginnen en te eindigen met een ' ; '</p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px">
+            <pre><code class="language-none">Serial.begin(9600);
+delay(5000);
+Serial.println("Hoi");</code></pre>
+        </div>
+        <div style="float:right;width:49%;margin-left: 7px;">
+            <pre><code class="language-none">Serial.begin(9600);delay(5000);Serial.println("Hoi");</code></pre>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+
+    <h1 id="toc_9">Les 2, in elkaar zetten van de robot, deel 1</h1>
+
+    <p>
+        De robot bestaat uit verschillende onderdelen. Met deze onderdelen ga je het eerste deel van de robot in elkaar zetten. Hieronder zie je een afbeelding met alle onderdelen met een nummer. Onder de afbeelding zie je een lijstje met nummers en de naam van het onderdeel en een korte uitleg waar dit onderdeel voor dient.
+    </p>
+
+    <p>
+        <img style=" display: block; margin-left: auto; margin-right: auto;width:80% " src="./Student%20guide/Lesson2_kit_contents_labeled.png" alt="">
+    </p>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left ">Nummer</th>
+                <th style="text-align: left ">Naam</th>
+                <th style="text-align: left ">Omschrijving</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td style="text-align: left ">1</td>
+                <td style="text-align: left ">Robot frame</td>
+                <td style="text-align: left ">Dit is het frame van de robot, hierop worden alle onderdelen vastgemaakt.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">2</td>
+                <td style="text-align: left ">Robot hoofd</td>
+                <td style="text-align: left ">Met het hoofd kan de robot 'kijken'. De robot kijkt door een voor ons onhoorbaar geluid te maken. Door te meten hoe lang het duurt voordat de echo van het geluid terugkomt kan de robot een afstand berekenen tot een voorwerp voor hem. Dit hoge geluid noemen we ultrasoon geluid. Ook vleermuizen en dolfijnen maken hier gebruik van om beter te kunnen kijken. </td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">3</td>
+                <td style="text-align: left ">Batterijhouder</td>
+                <td style="text-align: left ">De batterijhouder heeft ruimte voor 4 AA batterijen van 1,5 volt. Omdat de batterijen in serie, achter elkaar, zijn aangesloten geeft de batterijhouder ongeveer 6 volt.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">4</td>
+                <td style="text-align: left ">Breadboard</td>
+                <td style="text-align: left ">Een Breadboard is een plastic expirmenteer bordje waarin electronische componenten geplaatst kunnen worden. In het bordje zitten per rij gaatjes metalen stripjes die die rijen gaatjes verbinden. Door middel van de draadjes en het breadboard worden alle electronische onderdelen van de robot met elkaar verbonden</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">5</td>
+                <td style="text-align: left ">Zwenkwiel</td>
+                <td style="text-align: left ">Dit is het achterwieltje van de robot. Deze kan rondraaien zodat de robot straks goed bochten kan maken</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">6</td>
+                <td style="text-align: left ">Voorwielen</td>
+                <td style="text-align: left ">De robot heeft twee voorwielen met rubber bandjes. Deze twee wielen kunnen onafhankelijk van elkaar draaien</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">7</td>
+                <td style="text-align: left ">Darlington drivers</td>
+                <td style="text-align: left ">Deze chips zorgen ervoor dat de Arduino computer de motoren kunnen bedienen. Computers kunnen vaak maar kleine signaaltjes in de vorm van kleine stroompjes sturen. Een motor heeft veel stroom nodig en kan dus niet direct werken op de kleine signaaltjes van de computer. De Darlington drivers vertalen de kleine signaaltjes naar sterkere signalen. Het is dus een soort versterker voor een computer.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">8</td>
+                <td style="text-align: left ">Schroeven setje</td>
+                <td style="text-align: left ">Sommige onderdelen moeten met schroefjes vastgezet worden. Er zijn verschillende soorten schroefjes. De grootte van een schroefje begint altijd van M. De M staat voor het Metrieke stelsel. In het metrieke stelsel drukken we afstanden, gewicht en temperatuur uit in milli-meters, kilogrammen en graden celcius. Er zijn ook andere stels zoals Imperiaal dat in Groot Brittanie of sommige amerikaanse landen wordt gebruikt. Zij gebruiken inches, pounds en graden Fahrenheit om afstanden, gewicht en temperatuur uit te drukken. Na de M komt een getal dat de diameter van de schroef in millimeters aangeeft. Na het eerste getal komt een 'X' en weer een getal. Dit laatste getal geeft de lengte van de schroef in millimeters aan. Een schroef van maar M3.5x6 heeft dus een diameter van 3,5mm en is 6 mm lang. In het schroevensetje zitten M3.5x6, M2.6x4, M1.7x8 en M1.5x4 schroeven.</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">9</td>
+                <td style="text-align: left ">Kabelbinders</td>
+                <td style="text-align: left ">Kabelbinders of ty-raps zijn plastic stripjes waarmee je eenvoudig draadjes bij elkaar kunt binden. </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">10</td>
+                <td style="text-align: left ">Stappen motoren</td>
+                <td style="text-align: left ">Stappen motoren of stepper-motors zijn zoals de naam al zegt motoren die stapjes kunnen maken. Deze motoren moeten 64 stapjes maken om een keer om hun as te draaien. In het motorje zitten ook nog een aantal radertjes die het motorje vertragen. Door deze vertraging moet het motorje uiteindelijk 4096 stapjes maken om het asje aan de buitenkant &eacute;&eacute;n keer rond te laten draaien. Hierdoor kan de robot heel precies een opgegeven afstand afleggen.</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">11</td>
+                <td style="text-align: left ">Reflectie sensors</td>
+                <td style="text-align: left ">Deze twee meterjes meten of een voor ons onzichtbaar, infrarood, licht weerkaatst wordt. Deze sensors kunnen straks gebruikt worden om te meten of de robot over een donker of lichtgekleurde lijn rijdt.</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">12</td>
+                <td style="text-align: left ">Arduino Nano</td>
+                <td style="text-align: left ">Een Arduino Nano is een mini-computer. De computer zorgt ervoor dat de robot straks doet wat jij geprogrammeerd hebt. De Arduino zorgt ervoor dat de motoren bewogen worden en gegevens van de sensors gelezen worden.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">13</td>
+                <td style="text-align: left ">Reflectie sensor kabel rechts</td>
+                <td style="text-align: left ">Deze kabel verbindt de rechter reflectie sensor met de Arduino</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">14</td>
+                <td style="text-align: left ">Reflectie sensor kabel links</td>
+                <td style="text-align: left ">Deze kabel verbindt de linker reflectie sensor met de Arduino</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">15</td>
+                <td style="text-align: left ">Keuze schakelaar</td>
+                <td style="text-align: left ">Met de keuze schakelaar kun jij straks bepalen wat de robot gaa doen.</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">16</td>
+                <td style="text-align: left ">Schroevedraaier</td>
+                <td style="text-align: left ">Het gereedschap dat je nodig hebt om de robot in elkaar te zetten.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">17</td>
+                <td style="text-align: left ">USB Kabel</td>
+                <td style="text-align: left ">Hiermee verbind je de robot straks met je Chrombook zodat je hem kunt programmeren.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">18</td>
+                <td style="text-align: left ">Servo motor</td>
+                <td style="text-align: left ">Een servo motor is een motor waarvan je de as naar een positie kan laten draaien. Het motortje kan dus niet rondjes draaien, maar alleen een stukje linksom en een stukje rechtsom. Deze motor zorgt ervoor dat de robot naar links en rechts kan kijken.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left ">19</td>
+                <td style="text-align: left ">Kabels Darlingon drivers</td>
+                <td style="text-align: left ">Deze kabeltjes verbinden straks de Darlington drivers met de Arduino</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: left ">20</td>
+                <td style="text-align: left ">Verbindingen</td>
+                <td style="text-align: left ">Deze korte verbindingdraadjes verbinden straks de + en - van de batterijen met een rij op het breadboard zodat er meerdere motoren en sensors op de batterij kunnen worden aangesloten.</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <p>
+    </p>
+
+    <p>De eerste stap gaan we de stappen motoren op het frame monteren. Schuif de motoren &eacute;&eacute;n voor &eacute;&eacute;n in het frame zoals op onderstaande afbeeldingen. Let er op dat het blauwe kapje van de motor boven het frame uitsteekt. Schroef de motoren daarna vast met 4 M3.5x6 schroefjes.</p>
+
+    <p>Tip: Als je iets op de fotos duidelijker wilt zien, klik dan op de foto zodat hij automatisch wordt uitvergroot.</p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Assembly_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Assembly_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Assembly_1">
+                <img src="./Student%20guide/Lesson2_Assembly_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Assembly_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Assembly_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Assembly_2">
+                <img src="./Student%20guide/Lesson2_Assembly_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+    <p>Je gaat nu het breadboard op het frame schroeven. Let op! Het breadboard heeft aan &eacute;&eacute;n van de lange zijden een nokje. Deze moet bij het vastschroeven naar de voorkant van de robot wijzen. Bekijk het breadboard eens van de achterkant. Zie je hoe de gaatjes met elaar verbonden worden door de metalen strookjes? </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson_2_Breadboard_Front">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Breadboard_Front.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson_2_Breadboard_Front">
+                <img src="./Student%20guide/Lesson_2_Breadboard_Front.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson_2_Breadboard_Back">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Breadboard_Back.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson_2_Breadboard_Back">
+                <img src="./Student%20guide/Lesson_2_Breadboard_Back.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Schroef het breadboard nu met twee M1.7X8 schroefjes vast. Heb je opgelet op welke kant het nokje op het breadboard wijst ?</p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson_2_Breadboard_Assembly">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Breadboard_Assembly.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson_2_Breadboard_Assembly">
+                <img src="./Student%20guide/Lesson_2_Breadboard_Assembly.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Draai het frame nu om en schroef de batterijhouder met twee M2.6x4 schroefjes vast. Zorg dat de draden van de batterijhouder links in het midden van het frame uitkomen.</p>
+
+
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_BatteryBox">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_BatteryBox.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_BatteryBox">
+                <img src="./Student%20guide/Lesson2_BatteryBox.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+
+        <div style="clear:both; "></div>
+    </div>
+
+
+
+    <p>Aan de batterijhouder zit een klein schakelaartje. Duw deze voorzichtig door de opening met de tekst "ON OFF ". Kijk goed naar de foto's voor de stand van de de schakelaar als je deze door de opening drukt. Het nokje van de schakelaar moet eerst door de opening. Het is even priegelen, maar met wat geduld moet het lukken. Breekt er een draadje? Geen nood, deze kunnen we weer vastsolderen. </p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Switch_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Switch_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Switch_1">
+                <img src="./Student%20guide/Lesson2_Switch_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Switch_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Switch_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Switch_2">
+                <img src="./Student%20guide/Lesson2_Switch_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Duw de schakelaar nu van de bovenkant op zijn plek. De schakelaar moet wel met de goed gedraaid zijn. Als je aan de onderkant van de schakelaar kijkt zie je drie aansluitingen. Op twee van deze drie aansluitingen zit een draad gesoldeerd. De aansluiting zonder draad moet aan de kant van de tekst "OFF " zitten. Voer de overige draden nu door het gat.</p>
+
+
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Switch_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Switch_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Switch_3">
+                <img src="./Student%20guide/Lesson2_Switch_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_BatteryWires">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_BatteryWires.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_BatteryWires">
+                <img src="./Student%20guide/Lesson2_BatteryWires.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Schroef de schakelaar vast met twee M1.7x4 schroefjes</p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Switch_4">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Switch_4.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Switch_4">
+                <img src="./Student%20guide/Lesson2_Switch_4.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Druk op de voorkant van het frame de reflectie sensors &eacute;&eacute;n voor &eacute;&eacute;n met de ledjes voorzichtig in de twee gaatjes. Let op dat je de sensor in de juiste richting plaatst. De componentzijde van het printplaatje, de kant waarop de onderdelen gesoldeerd zijn, moet naar voren wijzen. Beide gaatjes zijn nml. niet even groot. Het heldere ledje met het rubberen ringetje moet in het grootste gat. Als de ledjes ver genoeg doorgedrukt zijn, dan moet het kleine staafje door het gaatje van het printplaatje steken. </p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_IRDistance_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_IRDistance_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_IRDistance_1">
+                <img src="./Student%20guide/Lesson2_IRDistance_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_IRDistance_3">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_IRDistance_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_IRDistance_3">
+                <img src="./Student%20guide/Lesson2_IRDistance_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Nu de sensors op hun plaats zitten gaan we de Darlington drivers vastzetten. Rol de draad van de rechter stappenmotor een beetje op tussen de vier schroefgaten. Zorg dat de connector aan de voorkant nog een paar centimeter uit kan steken zoals op de eerste foto te zien is.</p>
+    <p>De Darlington driver heeft nog elektriciteit nodig om de motor te kunnen laten draaien. In een eerdere stap heb je de draden van de batterij houder door het gat aan de rechtzijde van het frame gehaald. Dit zijn drie zwarte (negatief) draden en drie rode (positief) draden. De draden hebben zowel een mannelijke stekers, de stekers met een pinnetje, als vrouwelijke stekers. Neem nu de langste zwarte en rode draad met een vrouwelijke steker. Plaats deze draden onder de draad van de stappenmotor in de richting van de schakelaar. Hou een vinger op de draden zodat ze op hun plaats blijven zitten.</p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_DarlingtonStepper_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_1">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_DarlingtonStepper_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_2">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Plaats nu een van de Darlington drivers over de draden zodat de gaten precies over de schroefgaten vallen. Let goed op hoe je de driver plaatst, de witte connector moet naar de buitenkant wijzen. Schroef de driver dan met vier M2.6X4 schroefjes vast.</p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_DarlingtonStepper_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_3">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_4">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_DarlingtonStepper_4.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_4">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_4.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Plaats nu de andere Darlington driver op dezelfde manier als de eerste. Alleen bij deze driver hoeven de draden van de batterij nog niet geplaatst te worden. </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_5">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_DarlingtonStepper_5.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_5">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_5.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_6">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_DarlingtonStepper_6.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_6">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_6.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Druk nu voorzichtig een voor een de witte stekers op de connector van de Darlington driver. Kijk goed hoe je de steker plaatst, ze kunnen er maar op &eacute;&eacute;n manier op.</p>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_7">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_DarlingtonStepper_7.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_7">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_7.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_DarlingtonStepper_8">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_DarlingtonStepper_8.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_DarlingtonStepper_8">
+                <img src="./Student%20guide/Lesson2_DarlingtonStepper_8.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Zet de Arduino boven op het breadboard. Druk hem er nog niet gelijk ik. Zet de pinnetjes zo dat ze;</p>
+    <ul>
+        <li>Precies boven alle gaatjes zitten.</li>
+        <li>Aan de voorkant van het breadboatd nog 4 rijen aan gaatjes vrij zijn.</li>
+        <li>Links nog twee rijen aan gaatjes vrij zijn</li>
+        <li>Aan de achterkant van het breadboard nog &eacute;&eacute;n rij aan gaatjes vrij is.</li>
+    </ul>
+    <p>
+        Staat de Arduino precies goed ?! Druk hem dan heel voorzichtig met twee duimen in het breadboard. Gebruik niet teveel kracht en let er op dat alle pootjes in het breadboard gedrukt worden en niet per-ongeluk verbuigen.
+    </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Arduino_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Arduino_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Arduino_1">
+                <img src="./Student%20guide/Lesson2_Arduino_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Arduino_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Arduino_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Arduino_2">
+                <img src="./Student%20guide/Lesson2_Arduino_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Arduino_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Arduino_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Arduino_3">
+                <img src="./Student%20guide/Lesson2_Arduino_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>
+        Voer de drie draden van de servo door het gat in en duw de servo op zijn plaats.
+    </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Servo_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Servo_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Servo_1">
+                <img src="./Student%20guide/Lesson2_Servo_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Servo_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Servo_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Servo_2">
+                <img src="./Student%20guide/Lesson2_Servo_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+
+    <p>
+        Schroef de servo-motor vast met twee M1.7x8 schroeven.
+    </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Servo_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Servo_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Servo_3">
+                <img src="./Student%20guide/Lesson2_Servo_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Servo_4">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Servo_4.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Servo_4">
+                <img src="./Student%20guide/Lesson2_Servo_4.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+
+    <p>
+        Plaats nu de tweede schakelaar vanaf de bovenkant van het frame door het gat met de tekst "1 MODE 2". De rode draad op de schakelaar moet aan de kant van de "2" staan. Trek de draden van de schakelaar dan vanaf de onderkant van het frame door de uitsparing van het frame aan de linkerkant. Schroef de schakelaar dan met de laatste twee M1.7x4 schroeven vast.
+    </p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Modeswitch_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_Modeswitch_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Modeswitch_1">
+                <img src="./Student%20guide/Lesson2_Modeswitch_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_Modeswitch_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_Modeswitch_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_Modeswitch_2">
+                <img src="./Student%20guide/Lesson2_Modeswitch_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>
+        Je gaat nu de draden op de reflectie sensors zetten. Begin met de recht sensor. Zorg eerst dat je de goede kabel pakt, de kabel voor de sensors lijken erg op elkaar. Maar als je goed kijkt zie je dat voor de rechter sensor de rode draad langer is.
+    </p>
+
+    <p>Houd het robotframe ondersteboven en kijk naar de tekst bij de pinnetjes van de sensor. Hier staat OUT, GND en VCC op. GND betekent hetzelfde als de - van de batterij, en VCC de +. Deze pinnetjes zijn dus voor de elektricteit naar de sensor. OUT betekent uit, met dit pinnetje heeft de sensor een signaal als hij een lijn detecteerd.</p>
+
+    <p>Druk de connector nu zo dat de rode draad op de pin met de tekst VCC wordt aangesloten en de gele draad op de pin met de tekst OUT. </p>
+
+    <p>Pak nu &eacute;&eacute;n kabelbinder een maar hiermee het kabeltje vast zoals op de foto's hieronder. Trek de kabelbinder niet te strak aan anders gaat de kabel stuk.</p>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_SensorWireRight_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_SensorWireRight_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_SensorWireRight_1">
+                <img src="./Student%20guide/Lesson2_SensorWireRight_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_SensorWireRight_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_SensorWireRight_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_SensorWireRight_2">
+                <img src="./Student%20guide/Lesson2_SensorWireRight_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_SensorWireRight_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_SensorWireRight_3.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_SensorWireRight_3">
+                <img src="./Student%20guide/Lesson2_SensorWireRight_3.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_SensorWireRight_4">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_SensorWireRight_4.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_SensorWireRight_4">
+                <img src="./Student%20guide/Lesson2_SensorWireRight_4.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+
+
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_SensorWireRight_5">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_SensorWireRight_5.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_SensorWireRight_5">
+                <img src="./Student%20guide/Lesson2_SensorWireRight_5.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+
+        <div style="clear:both; "></div>
+
+    </div>
+
+    <p>Gelukt? Zit de kabel netjes vast?! Mooi, herhaal dit dan voor de linker sensor.</p>
+
+
+    <p>Je gaat nu de sensors, schakelaars en motoren welke je op het frame hebt vastgemaakt aansluiten op de Arduino. Op de Arduino zitten heel veel aansluitingen. Op de onderstaande afbeeldingen staan per aansluiting veel verschillende labels. Elke kleur van de labels heeft een eigen betekenis. Jij hoeft alleen maar naar de paarse labels te kijken. Deze hebben een cijfer van 0 tot en met 19. Straks moet je draden verbinden naar een van deze aansluitingen. Dus als er in de instructie staat "Sluit de draad aan op verbinding 0", dan zoek je de aansluiting met het paarse label "0" op en sluit je hierop het draadje aan.</p>
+
+    <img style=" display: block; margin-left: auto; margin-right: auto;width:80% " src="./Student%20guide/ArduinoNanoPinout.png" alt="">
+
+    <p>Naast de aansluitingen met de paarse labels gaan we nog drie verschillende aansluitingen op de Arduino gebruiken. Een hiervan is de aansluiting met het label "GND". Deze ben je al eerder tegen gekomen, weet je nog waar deze voor is ? Een andere aansluiting is "VIN", hier had ook "VCC" kunnen staan. Denk je al te weten waar deze verbinding op aangesloten moet worden ? Als laatste is de aansluiting "5V", deze aansluiting heeft altijd precies 5 volt. </p>
+
+    <p>Hieronder zie je hoe bij jou de Nano op het breadboard zit. Op dit breadboard zitten allemaal gaatjes. Deze gaatjes zijn, zoals op de foto getoond, verticaal met elkaar verbonden. Dit betekend dat als je draadjes, zoals op de foto getoond, boven en onder elkaar in de gaatjes prikt deze met elkaar verbonden zijn. Er zit nog een horizontale onderbreking in het midden van het breadboard. zodat de bovendste en onderste vijf gaatjes afzonderlijk van elkaar verbonden zijn.</p>
+
+    <p> Op de tweede foto rechts zie je een rode en zwarte streep. Deze strepen geven aan hoe deze pinnetjes met elkaar verbonden zijn.</p>
+
+    <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+        <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+        <div>Kijk nu naar de tekening van de Arduino en de rood en zwart gemarkeerde aansluitingen op het breadboard. Wat zou er aangesloten moeten worden op de rood en zwart gemarkeerde pinnetjes ?</div>
+    </div>
+
+
+    <div style="">
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_WiringUp_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson2_WiringUp_1.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_WiringUp_1">
+                <img src="./Student%20guide/Lesson2_WiringUp_1.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="float:left;width:49%;margin-right: 7px ">
+            <a class="lightbox" href="#Lesson2_WiringUp_2">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson2_WiringUp_2.JPG" alt=""/>
+                    </a>
+            <div class="lightbox-target" id="Lesson2_WiringUp_2">
+                <img src="./Student%20guide/Lesson2_WiringUp_2.JPG" alt="" />
+                <a class="lightbox-close" href="#deadlink"></a>
+            </div>
+        </div>
+        <div style="clear:both; "></div>
+    </div>
+
+    <p>Hieronder zie je hoe jouw robot er nu uit zou moeten zien. Je hebt nog veel draden die niet aangesloten zijn. Deze draden gaan we nu stap voor aansluiten op het breadboard zodat alle onderdelen aangesloten worden op de Arduino. Op de foto staat bij alle draden een label. Deze labels worden straks gebruikt om duidelijk te maken welke draad er in het breadboard geplaatst moet worden./p>
+
+        <p>
+            <img style=" display: block; margin-left: auto; margin-right: auto;width:80% " src="./Student%20guide/Lesson2_FrameWired_Labels.JPG" alt="">
+        </p>
+
+        <p> We beginnen met het aansluiten van de voeding, de elektriciteit, voor de sensors en computer. Zonder voeding kan een computer niet werken. Neem de draad <em>VCC BREADBOARD</em> en plaats deze in het breadboard zodat deze verbonden is met <em>VCC</em> van de Arduino.</p>
+
+        <p>Plaats vervolgens de draad <em>GND BREADBOARD</em> en verbind deze met de <em>GND</em> aansluiting op de Arduino. Kijk goed naar de foto's en let op dat de draadjes netjes liggen zoals getoond. Straks gaan we de draden vastzetten zodat het geen rommeltje wordt. </p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_01">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_01.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_01">
+                    <img src="./Student%20guide/Lesson_2_Wiring_01.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_02">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_02.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_02">
+                    <img src="./Student%20guide/Lesson_2_Wiring_02.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Op de Arduino zit de aansluiting <em>+5V</em>. Als de Arduino aangesloten is komt hier altijd precies 5 volt uit. Omdat we meer dan 4 draden moeten verbinden met <em>+5V</em> gaan we deze aansluiting verbinden met een nog vrije rij op het breadboard. Neem het rode korte verbindingsdraadje en verbind hiermee de <em>+5V</em> van de Arduino met de linker boven-rij op het breadboard zoals op onderstaande linker foto. Je hebt nu 7 in plaats van 4 aansluitingen met <em>+5V</em>. Deze aansluitingen zijn met een rode streep aangegeven op de foto rechtsonder.</p>
+
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_03a">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_03a.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_03a">
+                    <img src="./Student%20guide/Lesson_2_Wiring_03a.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_03b">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_03b.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_03b">
+                    <img src="./Student%20guide/Lesson_2_Wiring_03b.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>We gaan nu wat we voor de <em>+5V</em> gedaan hebben herhalen voor de <em>GND</em> aansluiting op de Arduino. Neem de korte zwarte verbindingsdraad en verbind hiermee de <em>GND aansluiting op de Arduino met de linker onder-rij op het breadboard. Je hebt nu 6 in plaats van 4 aansluitingen met <em>GND</em>. Deze aansluitingen zijn met een zwarte streep aangegeven op de foto rechtsonder.</em>
+        </p>
+
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_04a">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_04a.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_04a">
+                    <img src="./Student%20guide/Lesson_2_Wiring_04a.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_04b">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_04b.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_04b">
+                    <img src="./Student%20guide/Lesson_2_Wiring_04b.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>De reflectie sensors hebben 5 volt nodig om te kunnen werken. Je hebt in de vorige stappen <em>GND</em> en <em>5V</em> aangesloten op de linker twee rijen van het breadboard. Nu ga je de sensor aansluiten op deze twee rijen zodat de sensor straks voeding heeft. Neem de zwarte <em>GND SENSOR R</em>draad van de rechter reflectie sensor en plaats deze in een van de gaatjes links onder in het breadboard die aangesloten is op <em>GND</em> van de Arduino. Kijk goed naar onderstaande fotos hoe het draadje langs de Arduino is gelegd.</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_05">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_05.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_05">
+                    <img src="./Student%20guide/Lesson_2_Wiring_05.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_06">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_06.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_06">
+                    <img src="./Student%20guide/Lesson_2_Wiring_06.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Nu de sensor is aangesloten op <em>GND</em> moet de sensor nog op <em>5V</em> aangesloten worden. Plaats de rode <em>VCC SENSOR R</em> draad van de rechter reflectie sensor zoals op onderstaand fotos om de Arduino heen. Plaats dan het pinnetje in de linkerboven rij van het breadboard dat aangesloten is op de <em>5V</em> aansluiting van de Arduino.</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_07">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_07">
+                    <img src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_08">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_08">
+                    <img src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+
+        <p>Er is nog &eacute;&eacute;n draad van de rechter reflectie sensor niet aangesloten, de
+            <EM>OUT SENSOR R</EM>. Deze draad geeft een signaal af aan de Arduino als het een reflectie detecteerd. Deze draad moet aangesloten worden op verbinding 11 van de Arduino.</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_09">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_09.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_09">
+                    <img src="./Student%20guide/Lesson_2_Wiring_09.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_10">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_10.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_10">
+                    <img src="./Student%20guide/Lesson_2_Wiring_10.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Nu moet je hetzelfde wat je voor de rechtersensor hebt gedaan herhalen voor de linker reflectie sensor. Sluit de <em>GND SENSOR L</em> en <em>VCC SENSOR L</em> draad van de sensor aan zoals bij de rechter sensor. Kijk goed naar onderstaande fotos.</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_11">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_11.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_11">
+                    <img src="./Student%20guide/Lesson_2_Wiring_11.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_12">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_12.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_12">
+                    <img src="./Student%20guide/Lesson_2_Wiring_12.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_13">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_13.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_13">
+                    <img src="./Student%20guide/Lesson_2_Wiring_13.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_14">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_14.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_14">
+                    <img src="./Student%20guide/Lesson_2_Wiring_14.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Ook de draad <em>OUT SENSOR L</em> van linker reflectie sensor moet worden aangesloten. Sluit deze draad aan op verbinding 10 van de Arduino.</p>
+
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_15">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_15.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_15">
+                    <img src="./Student%20guide/Lesson_2_Wiring_15.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_16">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_16.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_16">
+                    <img src="./Student%20guide/Lesson_2_Wiring_16.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Beide sensoren zijn nu aangesloten. Nu ga je de voeding op de Darlington drivers aansluiten zodat de twee stappenmotoren straks kunnen gaan draaien. Als het goed is steken er nu nog twee draden van de batterij uit de opening van het frame, <em>VCC DARL L</em> en <em>GND DARL L</em>. Neem deze twee dradene en plaats ze onderlangs de Arduino naar de linker Darlington driver.</p>
+
+        <p>Sluit de draad <em>GND DARL L</em> aan op het pinnetje met de tekst '-' en
+            <em>VCC DARL L</em> op de '+'
+        </p>
+
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_17">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_17.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_17">
+                    <img src="./Student%20guide/Lesson_2_Wiring_17.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_18">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_18.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_18">
+                    <img src="./Student%20guide/Lesson_2_Wiring_18.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+
+        <p>Sluit nu dezelfde draden voor de rechter Darlington driver aan op de '-' en de '+'. Dit zijn de draden <em>VCC DARL R</em> en <em>GND DARL R</em></p>.
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_19">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_19.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_19">
+                    <img src="./Student%20guide/Lesson_2_Wiring_19.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+
+        <p>Bijna alle draden zitten nu op hun plaats. De draden van de mode-schakelaar moeten nog aangesloten worden zodat je straks met deze schakelaar straks een opdracht aan de robot kan geven. Neem de draad <em>GND MODE SWITCH</em> en plaats deze in een van de laatste twee plaatsen links onder op het breadboard. Daarna sluit je de draad <em>SIG MODE SWITCH</em> aan op verbinding 0 van de Arduino. Kijk goed op het <em>Nano Pinout</em> overzicht waar deze aansluiting zit.</p>.
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_20">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_20.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_20">
+                    <img src="./Student%20guide/Lesson_2_Wiring_20.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_21">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_21.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_21">
+                    <img src="./Student%20guide/Lesson_2_Wiring_21.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_22">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_22.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_22">
+                    <img src="./Student%20guide/Lesson_2_Wiring_22.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+
+            <div style="clear:both; "></div>
+        </div>
+
+
+        <p>Dat zit er op! De draden zijn nog wel een beetje een rommeltje. Dat gaan we oplossen door de draden vast te zetten met de vijf overgebleven snelbinders. Leg de draadjes netjes neer en maak dan de snelbinder losjes vast. Plaats de draden dan nog wat netter en zet deze dan vast door de snelbinder strakker aan te trekken. Doe dit niet heel strak, het is alleen de bedoeling dat de draden netjes op hun plaats blijven zitten. </p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_23">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_23.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_23">
+                    <img src="./Student%20guide/Lesson_2_Wiring_23.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_24">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_24.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_24">
+                    <img src="./Student%20guide/Lesson_2_Wiring_24.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Ook aan de onderkant lopen een aantal draden, deze moet je ook netjes vastmaken met dezelfde kabelbinder. Bij sommige kabelbinders moet je dus aan de boven <em>en</em> onderkant draden vastzetten. Bij &eacute;&eacute;n van de vijf kabelbinders kun je de kabelbinder niet zomaar door het frame krijgen. Hoe ga je dit oplossen? </p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_25">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_25.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_25">
+                    <img src="./Student%20guide/Lesson_2_Wiring_25.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_26">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_26.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_26">
+                    <img src="./Student%20guide/Lesson_2_Wiring_26.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_27">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_27.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_27">
+                    <img src="./Student%20guide/Lesson_2_Wiring_27.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+
+            <div style="clear:both; "></div>
+        </div>
+
+
+
+        <p>De Darlingtondrivers zijn aangesloten op de motoren, maar nog niet op de Arduino. Neem &eacute;&eacute;n van de twee Darling driver kabels. Sluit de kant met de pinnetjs aan op de Arduino. Voor de rechter motor moet deze aangesloten worden op verbinding 7 t/m 10. Verbind de andere kant van de kabel dan aan op de rechter Darlington driver. Je moet de kabel aansluiten op IN1 t/m IN4. Let op! Aansluiting IN1 moet verbonden zijn met verbinding 7 op de Arduino. Sluit je hem verkeerd aan, dan rijdt de robot straks precies de andere kant op dan dat jij wilt.</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_28">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_28.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_28">
+                    <img src="./Student%20guide/Lesson_2_Wiring_28.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_29">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_29.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_29">
+                    <img src="./Student%20guide/Lesson_2_Wiring_29.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Nu ga je dit nog een keer doen maar dan voor de linker Darlington driver. Sluit de kabel aan op verbinding 3 t/m 7 op de Arduino. Aansluiting IN1 moet verbonden zijn met verbinding 3 op de Arduino</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_30">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_30.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_30">
+                    <img src="./Student%20guide/Lesson_2_Wiring_30.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_31">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_31.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_31">
+                    <img src="./Student%20guide/Lesson_2_Wiring_31.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Hierna ben je voorlopig klaar met aansluiten van draden! De voorlopig laatste drie draden zijn <em>GND SERVO</em>, <em>VCC SERVO</em> en <em>SIG SERVO</em>. Sluit de draad <em>VCC SERVO</em> aan op verbinding 14 van de Arduino. De draad <em>VCC SERVO</em> sluit je aan op de meest linker bovenrij op het breadboard dat verbonden is met 5V</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_32">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_32.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_32">
+                    <img src="./Student%20guide/Lesson_2_Wiring_32.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_33">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_33.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_33">
+                    <img src="./Student%20guide/Lesson_2_Wiring_33.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Als laatste sluit je <em>GND SERVO</em> aan op de <em>GND</em> verbinding van de Arduino</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_Wiring_34">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_34.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_Wiring_34">
+                    <img src="./Student%20guide/Lesson_2_Wiring_34.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+
+            <div style="clear:both; "></div>
+        </div>
+
+        <p>Het begint al op een robot te lijken vindt je niet ? Door het opzetten van de wielen maak je hem nog meer compleet!</p>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_01">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_01.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_01">
+                    <img src="./Student%20guide/Lesson_2_wheels_01.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_02">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_02.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_02">
+                    <img src="./Student%20guide/Lesson_2_wheels_02.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_03">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_03.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_03">
+                    <img src="./Student%20guide/Lesson_2_wheels_03.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_04">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_04.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_04">
+                    <img src="./Student%20guide/Lesson_2_wheels_04.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_05">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_05.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_05">
+                    <img src="./Student%20guide/Lesson_2_wheels_05.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_2_wheels_06">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_wheels_06.JPG" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_2_wheels_06">
+                    <img src="./Student%20guide/Lesson_2_wheels_06.JPG" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+
+</body>
+
+
+
+
+
+
+
+</html>
