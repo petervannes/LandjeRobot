@@ -227,6 +227,28 @@ Gently push the rod untill it comes out of the hole on the other side of the boo
 
 ## servo wiring
 
+Due to a aberrant connector layout on the ULN2003 stepper motor driver boards the wiring on the stepper motor drivers have to be adapted to match the correct pins on the ULN2003.
+
+All stepper motors i have received have the following wiring configuration. With the stepper motor axis and connector side with the 2 notches facing towards you the pins are labeled 1 to 5 when counting from left to right. 
+
+On the image below the wires for a new received stepper motor are wired as follows.
+
+stepper 1 (coil 1) to connector 3  
+stepper 2 (coil 3) to connector 1  
+stepper 3 (+5v) to connector 2  
+stepper 4 (coil 4) to connector 4  
+stepper 5 (coil 2) to connector 5  
+
+Note that the connector on the photo below is turned.
+
+<img src="./Landje robot Kit preparation/servo_wiring_1.JPG" width="800"> 
+
+To rewire the connector, remove the wires from the connector first. I have tried different tools to removed the pins from the connector and got the best results using a T3 screwdriver bit. 
+
+Place the 
+
+<img src="./Landje robot Kit preparation/servo_wiring_2.JPG" width="800"> 
+
 |Motor</br>pin1|Article|Details|Est.&nbsp;&nbsp;price|
 
 |:--------|:---|:------|-----:|
