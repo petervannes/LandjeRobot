@@ -241,22 +241,38 @@ stepper 5 (coil 2) to connector 5
 
 Note that the connector on the photo below is turned.
 
-<img src="./Landje robot Kit preparation/servo_wiring_1.JPG" width="800"> 
+<img src="./Landje robot Kit preparation/stepper_wiring_1.JPG" width="800"> 
 
-To rewire the connector, remove the wires from the connector first. I have tried different tools to removed the pins from the connector and got the best results using a T3 screwdriver bit. 
+To rewire the connector, remove the wires from the connector first. I have tried different tools to removed the pins from the connector and got the best results using a T3 screwdriver bit.
 
-Place the 
+Place the connector on a flat surface with the five cutouts facing upwards. Gently push the little notch, which keeps the connector in place, down,
+<img src="./Landje robot Kit preparation/stepper_wiring_2.JPG" width="800"> 
 
-<img src="./Landje robot Kit preparation/servo_wiring_2.JPG" width="800"> 
+and pull the cable outside the connector at the same time. 
 
-|Motor</br>pin1|Article|Details|Est.&nbsp;&nbsp;price|
+<img src="./Landje robot Kit preparation/stepper_wiring_3.JPG" width="800"> 
 
-|:--------|:---|:------|-----:|
+Repeat this step for all wires.
 
-motor                 pin
+<img src="./Landje robot Kit preparation/stepper_wiring_4.JPG" width="800"> 
 
-1 2 3 4 5      2 1 4 5 3
+Now place the wires into the connector again, one by one.
 
+stepper 1 (coil 1) to connector 2  
+stepper 2 (coil 3) to connector 1  
+stepper 3 (+5v) to connector 5  
+stepper 4 (coil 4) to connector 3  
+stepper 5 (coil 2) to connector 4  
+
+(Yes! the wire on the picture below is not positioned correctly 😃)
+
+<img src="./Landje robot Kit preparation/stepper_wiring_5.JPG" width="800"> 
+
+And after completion the wiring should match the image below. Ignore the colour of the wires when comparing your stepper motor wiring with the photo below. Different stepper motor suppliers do use different wire colours and ordering of colours. Only compare the order of the wires from the stepper motor.
+
+<img src="./Landje robot Kit preparation/stepper_wiring_6_retake_.JPG" width="800"> 
 
 
 ## Arduino create preparation school accounts
+
+
