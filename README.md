@@ -5,4 +5,4 @@
 
 [Student guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20guide%20NLD.html)
 
-[Instruction Manual](https://github.com/petervannes/LandjeRobot/blob/master/Guides/instruction%20manual%20NLD.html)
+[Instruction Manual](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instruction%20manual%20NLD.html)
