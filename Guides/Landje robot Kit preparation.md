@@ -270,9 +270,23 @@ stepper 5 (coil 2) to connector 4
 
 And after completion the wiring should match the image below. Ignore the colour of the wires when comparing your stepper motor wiring with the photo below. Different stepper motor suppliers do use different wire colours and ordering of colours. Only compare the order of the wires from the stepper motor.
 
-<img src="./Landje robot Kit preparation/stepper_wiring_6_retake_.JPG" width="800"> 
+<img src="./Landje robot Kit preparation/stepper_wiring_6.JPG" width="800"> 
 
 
 ## Arduino create preparation school accounts
+
+When using [Arduino Create](https://create.arduino.cc) and Chromebooks an Arduino Create subscription is required. There are two plans available for Arduino Create, a personal plan and an educational plan.
+
+### Personal plan
+When you want to subscribe yourself to Arduino Create, visit the Chrome web store and take a monthly subscription on Arduino Create [here]( 
+https://chrome.google.com/webstore/detail/arduino-create/dcgicpihgkmccjigalccipmjlnjopdfe)
+
+### Educational plan
+If you are in an educational environment, you should use the [Arduino Create App for Education](https://create.arduino.cc/plans/chrome-app). A detailed description how to subscribe to subscribe to the Arduino Chrome App for Education can be found [here](https://create.arduino.cc/projecthub/Arduino_Genuino/how-to-subscribe-to-the-arduino-chrome-app-for-education-6ae9c8). 
+
+Follow the instructions to create a team and add the students to the plan. If the students have been added successfully, the Arduino Create for Education Chrome app can be installed by following the steps in the [Install Arduino Create for Education Chrome app](https://create.arduino.cc/projecthub/Arduino_Genuino/install-arduino-create-for-education-chrome-app-6bf22a) article.
+
+
+
 
 
