@@ -9,7 +9,7 @@
 
 This guide documents the parts and tools to be purchased to create a complete Landje robot kit.
 Part of the preparation is assembling the wiring looms and preparation of the led and its wiring.
-If you have completed this guide the kit will assemble the picture below. 
+If you have completed this guide the kit will reassemble the picture below. 
 
 <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Landje robot Kit preparation/kit_contents_labeled.png" >
 
