@@ -16,4 +16,6 @@ Create three variables and print the output
     
 ### Assignment 2  
     
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      boolean uitkomst = var1 == var2 ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);      Serial.println(uitkomst);    }    void loop() {    }
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      boolean uitkomst = var1 == var2 ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);      Serial.println(uitkomst);    }    void loop() {    }### Assignment 3  
+    
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                Serial.println(klein > groot);      Serial.println(klein < groot);    }    void loop() {    }

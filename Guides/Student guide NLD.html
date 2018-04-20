@@ -1540,9 +1540,9 @@ Serial.println("Hoi");</code></pre>
             <pre><code class="language-none">boolean waarofniet = true ;</code></pre>
         </div>
 
-        <h2>Opdracht 3.1</h2>
+        <h3>Opdracht 3.1</h3>
 
-        <p>Sluit de Arduino Nano van de Robot aan op je Chromebook met de USB kabel en start een nieuwe sketch in Arduino Create. Weet je niet meer precies hoe dat moet, kijk dan bij Les 1. Schrijf vervolgens in de functie <em>setup</em> een programma waarin je drie variabelen maakt en print.</p>
+        <p class="assignment">Sluit de Arduino Nano van de Robot aan op je Chromebook met de USB kabel en start een nieuwe sketch in Arduino Create. Weet je niet meer precies hoe dat moet, kijk dan bij Les 1. Schrijf vervolgens in de functie <em>setup</em> een programma waarin je drie variabelen maakt en print.</p>
         <ul>
             <li>Een variabele <b>naam</b> welke je vult met je eigen naam,
             </li>
@@ -1550,25 +1550,25 @@ Serial.println("Hoi");</code></pre>
             <li>Een variable <b>getal </b>met een geheel getal</li>
         </ul>
 
-        <p>De eerte twee regels van de functie <em>setup()</em> begin je met</p>
+        <p class="assignment">De eerte twee regels van de functie <em>setup()</em> begin je met</p>
 
         <div>
             <pre><code class="language-none">  Serial.begin(9600);
   delay(2000);</code></pre>
         </div>
 
-        <p>Deze twee regels zorgen ervoor dat je in de monitor van Arduino Create de waarden kunt zien als jij ze print.</p>
+        <p class="assignment">Deze twee regels zorgen ervoor dat je in de monitor van Arduino Create de waarden kunt zien als jij ze print.</p>
 
 
         <div style="">
             <div style="float:left;width:49%;margin-right: 7px ">
-                <p>Het kan zijn dat als je jouw programma upload naar de Arduino dat je onder aan het scherm een rode balk ziet verschijnen met de text <em>Executing command: exit status 1</em>. Arduino create geeft met een waarde aan of het uploaden naar de Arduino goed is gegaan. Als alles goed is gegaan is de waarde 0, bij alle andere waarden is er iets fout gegaan en verschijnt er een rode balk.</p>
+                <p class="assignment">Het kan zijn dat als je jouw programma upload naar de Arduino dat je onder aan het scherm een rode balk ziet verschijnen met de text <em>Executing command: exit status 1</em>. Arduino create geeft met een waarde aan of het uploaden naar de Arduino goed is gegaan. Als alles goed is gegaan is de waarde 0, bij alle andere waarden is er iets fout gegaan en verschijnt er een rode balk.</p>
 
-                <p>Onder de rode balk wordt een log getoond. Een log is een lijst van gebeurtenissen, dingen die hebben plaatsgevonden. In een log worden belangrijke zaken bijgehouden, bijvoorbeeld als er iets fout gaat.</p>
+                <p class="assignment">Onder de rode balk wordt een log getoond. Een log is een lijst van gebeurtenissen, dingen die hebben plaatsgevonden. In een log worden belangrijke zaken bijgehouden, bijvoorbeeld als er iets fout gaat.</p>
 
-                <p>Als je een rode balk krijgt bij het uploaden van jouw programma kijk je in de log wat de mogelijk oorzaak is. Dit is niet altijd makkelijk te vinden of te begrijpen. Als je meerdere meldingen ziet welke lijken op de melding <code>avrdude: stk500_getsync() attempt 10 of 10: not in sync: resp=0x00</code> dan staat waarschijnlijk de mode schakelaar op de robot in stand 2.</p>
+                <p class="assignment">Als je een rode balk krijgt bij het uploaden van jouw programma kijk je in de log wat de mogelijk oorzaak is. Dit is niet altijd makkelijk te vinden of te begrijpen. Als je meerdere meldingen ziet welke lijken op de melding <code>avrdude: stk500_getsync() attempt 10 of 10: not in sync: resp=0x00</code> dan staat waarschijnlijk de mode schakelaar op de robot in stand 2.</p>
 
-                <p>Zet de mode-schakelaar op stand 1 en probeer dan nog eens het programma te uploaden.</p>
+                <p class="assignment">Zet de mode-schakelaar op stand 1 en probeer dan nog eens het programma te uploaden.</p>
             </div>
             <div style="float:left;width:49%;margin-right: 7px ">
                 <a class="lightbox" href="#Lesson_3_UploadError">
@@ -1586,7 +1586,7 @@ Serial.println("Hoi");</code></pre>
 
 
 
-        <p>Zie je iets wat je niet verwacht bij de variabele <em>waarofniet</em>? Als je een waarde <em>false</em> toekent zal er <em>0</em> geprint worden, bij <em>true</em> een <em>1</em>. Voor de computer is dit hetzelfde, je mag dus ook <em>0</em> invullen in plaats van <em>false</em> en <em>1</em> in plaats van <em>true</em></p>
+        <p class="assignment">Zie je iets wat je niet verwacht bij de variabele <em>waarofniet</em>? Als je een waarde <em>false</em> toekent zal er <em>0</em> geprint worden, bij <em>true</em> een <em>1</em>. Voor de computer is dit hetzelfde, je mag dus ook <em>0</em> invullen in plaats van <em>false</em> en <em>1</em> in plaats van <em>true</em></p>
 
         <h1 id="toc_11">Les 4, vergelijkingen</h1>
 
@@ -1597,7 +1597,9 @@ Serial.println("Hoi");</code></pre>
             <div>Van welk type is de uitkomst van een vergelijking?</div>
         </div>
 
-        <p>Als je de inhoud van twee variabelen met elkaar wilt vergelijken geef je dit aan met &quot;==&quot;. Hierbij moet aan iedere kant van de &quot;==&quot; een variabele staan. Onderstaande voorbeeld print dus &quot;1&quot; omdat de inhoud van <em>var1</em> en <em>var2</em> gelijk zijn.</p>
+        <h2>Gelijk aan</h2>
+
+        <p>Als je de inhoud van twee variabelen met elkaar wilt vergelijken om te testen of deze gelijk zijn, dan geef je dit aan met &quot;==&quot;. Hierbij moet aan iedere kant van de &quot;==&quot; een variabele staan. Onderstaande voorbeeld print dus &quot;1&quot; omdat de inhoud van <em>var1</em> en <em>var2</em> gelijk zijn.</p>
 
         <div>
             <pre><code class="language-none">String var1 = "abcd" ;    
@@ -1607,11 +1609,11 @@ Serial.println(var1 == var2);</code>
 </pre>
         </div>
 
-        <h2>Opdracht 4.1</h2>
+        <h3>Opdracht 4.1</h3>
 
-        <p>Schrijf nu een programma &quot;Les_4_vergelijkingen&quot; dat drie variabelen maakt, <em>var1</em>, <em>var2</em> en <em>var3</em>. De variabelen <em>var1</em> en <em>var2</em> geef je dezelfde waarde. Variabele <em>var3</em> geef je een andere waarde.</p>
+        <p class="assignment">Schrijf nu een programma &quot;Les_4_vergelijkingen&quot; dat drie variabelen maakt, <em>var1</em>, <em>var2</em> en <em>var3</em>. De variabelen <em>var1</em> en <em>var2</em> geef je dezelfde waarde. Variabele <em>var3</em> geef je een andere waarde.</p>
 
-        <p>Print nu de uitkomst van de vergelijking van variabele <em>var1</em> en <em>var2</em>. Print ook de uitkomst van de vergelijking van <em>var1</em> met <em>var3</em>. Test je programma. De uitkomst van de eerste vergelijking moet <em>true</em> (1) zijn en de uitkomst van de tweede vergelijking <em>false</em> (0)</p>
+        <p class="assignment">Print nu de uitkomst van de vergelijking van variabele <em>var1</em> en <em>var2</em>. Print ook de uitkomst van de vergelijking van <em>var1</em> met <em>var3</em>. Test je programma. De uitkomst van de eerste vergelijking moet <em>true</em> (1) zijn en de uitkomst van de tweede vergelijking <em>false</em> (0)</p>
         <hr/>
         <p>Naast de waarden van twee variabelen kun je ook de waarde van een variabele vergelijken met een andere waarde die niet in een variabele zit. De uitkomst van onderstaande twee vergelijkingen is hetzelfde. Bij de eerste vergelijking vergelijk je de <em> inhoud</em> van <em>var1</em> met <em>var2</em>. In de tweede vergelijking vergelijk je de <em>inhoud</em> van <em>var1</em> met de <em>waarde</em> &quot;abcd&quot;.</p>
 
@@ -1625,12 +1627,61 @@ Serial.println(var1 == "abcd");</code></pre>
 
         <p>De uitkomst van een vergelijking geeft dus een boolean waarde. Deze waarde kun je ook weer opslaan in een andere variabele.</p>
 
-        <h2>Opdracht 4.2</h2>
+        <h3>Opdracht 4.2</h3>
 
-        <p>Ga nu verder met het programma dat je in opdracht 4.1 hebt gemaakt. Maak een extra variabele met de naam <em>uitkomst</em>. In deze variabele ga je de uitkomst van een vergelijking opslaan. Denk goed na welk type je voor deze variabele gebruikt!</p>
-        <p>Als je variabele hebt gemaakt moet je de waarde van de vergelijking van <em>var1</em> en <em>var2</em> aan de variabele <em>uitkomst</em> toekennen.</p>
-
+        <p class="assignment">Ga nu verder met het programma dat je in opdracht 4.1 hebt gemaakt. Maak een extra variabele met de naam <em>uitkomst</em>. In deze variabele ga je de uitkomst van een vergelijking opslaan. Denk goed na welk type je voor deze variabele gebruikt!</p>
+        <p class="assignment">Als je variabele hebt gemaakt moet je de waarde van de vergelijking van <em>var1</em> en <em>var2</em> aan de variabele <em>uitkomst</em> toekennen. Print vervolgens de waarde van de variabele <em>uitkomst</em>.</p>
         <hr/>
+
+        <p>Je kunt alleen twee variabelen van hetzelfde type vergelijken. Het is dus niet mogelijk om een variabele van het type <em>String</em> met een andere variabele van het type <em>int</em> te vergelijken. Als je onderstaande programma probeert uit te voeren krijg je de foutmelding &quot;error: no match for 'operator==' (operand types are 'int' and 'String')&quot;.</p>
+
+        <pre><code class="language-none">int var4 = 12 ;
+String var5 = "12" ;
+    
+Serial.println(var4 == var5);</code></pre>
+
+        <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+            <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+            <div>Probeer bovenstaande regels in je vorige programma toe te voegen en kijk welke foutmelding jij krijgt.</div>
+        </div>
+
+        <h2>Kleiner en groter dan</h2>
+
+        <p>Naast vergelijken of waarden gelijk aan elkaar zijn kun je nog meer vergelijkingen maken. Je kunt vergelijken of een waarde groter of kleiner is dan een andere waarde. Bij het vergelijken of twee waarden gelijk zijn gebruikte je &quot;==&quot;, om te vergelijken of een waarde groter is dan een andere waarde gebruik je het teken &quot;&gt;&quot;.</p>
+
+        <p>De vergelijking geeft <em>true</em> (is waar) als het getal links van &gt; groter is dan het getal aan de rechterkant. Je kunt dit makkelijker onthouden door het volgende ezelsbruggetje: Links van het &gt; teken is de afstand tussen de lijntjes <em>groot</em>, rechts van het teken is de afstand <em>klein</em>. Het teken kun je ook zien als een pijl die wijst van <em>groot</em> naar <em>klein</em>. Als de waarden overeenkomen met de afstand tussen de lijntjes is de uitkomst <em>true</em></p>
+
+        <p>In het volgende programmavoorbeeld staat links de waarde 7, recht staat de waarde 3. De pijl wijst van het <em>grootste</em> naar het <em>kleinste</em> getal. De uitkomst van deze vergelijking is dus <em>true</em> (1). De inhoud van variabele <em>var1</em> is dus <em>groter dan</em> de inhoud van variabele <em>var2</em></p>
+
+        <pre><code class="language-none">int var1 = 7 ;
+int var1 = 3 ;
+    
+Serial.println(var1 &gt; var2);</code></pre>
+
+        <p>Naast een <em>grote dan</em> vergelijking is er ook een <em>kleiner dan</em> vergelijking. Hiervoor gebruik je het pijltje dat de andere kant op wijst &quot;&lt;&quot;. Als je in hetzelfde programma de <em>groter dan</em> (&gt;) vergelijking vervangt door een <em>kleiner dan</em> (&lt;) dan is de uitkomst <em>false</em> (0). Want, 7 is niet kleiner dan 3</p>
+
+        <pre><code class="language-none">int var1 = 7 ;
+int var1 = 3 ;
+    
+Serial.println(var1 &lt; var2);</code></pre>
+
+
+        <h3>Opdracht 4.3</h3>
+
+        <p class="assignment">Maak een nieuw programma <em>Les_4_groterenkleiner</em>. Maak in dit programma twee variabelen van het type <em>int</em>. Kies zelf de naam van de variabelen, bijvoorbeeld <em>groot</em> en <em>klein</em>. Zorg dat het programma de variabelen vergelijkt met de <em>groter dan</em> en <em>kleiner dan</em> vergelijking</p>
+
+        <p class="assignment">Probeer het programma uit te voeren en kijk of de uitkomst van de vergelijkingen kloppen.</p>
+
+        <hr>
+
+        <p>Naast het vergelijken van gehele getallen met &gt; en &lt;, kun je ook String waarden vergelijken. Dit is echter minder </p>
+
+        <h2>Kleiner of gelijk en groter of gelijk</h2>
+
+        <p>Nu je weet hoe je kunt vergelijken of waarden gelijk, kleiner of groter zijn</p>
+
+
+
         <h1 id="toc_12">Les 4, condities</h1>
 
 
