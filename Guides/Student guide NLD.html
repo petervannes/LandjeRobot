@@ -1495,15 +1495,16 @@ Serial.println("Hoi");</code></pre>
 
         <p>Welk soort dingen je in een variabele kunt opslaan geef je aan met een <em>type</em>. Je bergt je spelcomputer ook niet op in een sokkenla en je sokken in een keukenla! Voorlopig zul je drie soorten variabelen gebruiken; strings, integers en booleans. Wat zijn dat ?</p>
 
+        <img style=" display: block; float:right; margin-right: auto;width:40% " src="./Student%20guide/letterstring.JPG" alt="">
         <p><em>String</em> betekent draad in het engels. Een string is een draad van lettertekens. Het maakt dus niet uit of het &eacute;&eacute;n of heel veel lettertekens als ze maar achter elkaar staan. Om het begin en einde van een string aan te geven zet je de lettertekens tussen twee dubbele aanhalingtekens, &quot;. Dus "Dit is een String" is een string, en "123 :-)" ook. </p>
 
-        <p>Als je een variabele programmeert geeft je eerst aan van welke type het is, dan de naam. Door na de naam van de variabele een <em>=</em> te typen kun je aangeven wat er in de variabele opgeslagen moet worden. Na het <em>=</em> teken geef je aan wat er in de variabele opgeslagen moet worden. Dit noem je ook toekennen van een waarde. In onderstaande voorbeeld ken je de waarde <em>Peter</em> toe aan de variabele <em>naam</em>. Deze variabele is van het type <em>String</em>. Met <em>String</em> heeft je aan dat het type van de variabele <em>string</em> is.</p>
+        <p>Als je een variabele programmeert geeft je eerst aan van welke type het is, dan de naam. Door na de naam van de variabele een &quot;=&quot; te typen kun je aangeven wat er in de variabele opgeslagen moet worden. Na het <em>=</em> teken geef je aan wat er in de variabele opgeslagen moet worden. Dit noem je ook toekennen van een waarde. In onderstaande voorbeeld ken je de waarde <em>Peter</em> toe aan de variabele <em>naam</em>. Deze variabele is van het type <em>String</em>. Met <em>String</em> heeft je aan dat het type van de variabele <em>String</em> is.</p>
 
         <div>
             <pre><code class="language-none">String naam = &quot;Peter&quot; ;</code></pre>
         </div>
 
-        <p>Naast variabelen van het type <em>String</em> heb je integers. In het Engels betekend <em>integer</em>,geheel getal. De getallen 0,1,1,2,3,5,8,42,1138 zijn integers, het getal 3,14159265359 niet. Omdat er aan een geheel getal altijd een duidelijk begin en einde zit plaats je hier geen dubbele aanhalingstekens aan het begin en einde van de waarde. Als je dit wel doet denkt de computer dat de waarde van het type <em>String</em> is.</p>
+        <p>Naast variabelen van het type <em>String</em> heb je integers. In het Engels betekent <em>integer</em>, geheel getal. De getallen 0,1,1,2,3,5,8,42,1138 zijn integers, het getal 3,14159265359 niet. Omdat er aan een geheel getal altijd een duidelijk begin en einde zit plaats je hier geen dubbele aanhalingstekens aan het begin en einde van de waarde. Als je dit wel doet denkt de computer dat de waarde van het type <em>String</em> is.</p>
 
         <p>Met het woord <em>int</em> geeft je aan dat de variabele van het type <em>integer</em> is. Deze variabele kan dus alleen gehele getallen bevatten.</p>
 
@@ -1511,14 +1512,35 @@ Serial.println("Hoi");</code></pre>
             <pre><code class="language-none">int waarde = 42 ;</code></pre>
         </div>
 
+        <p>Je kunt dus ook dezelfde waarde toekennen aan een variabele van het type String.
+        </p>
+
+        <div>
+            <pre><code class="language-none">String waarde = "42" ;</code></pre>
+        </div>
+
+        <p>
+            Er is alleen een groot verschil tussen de bovenstaande twee variabelen. Met de variabele van het type <em>int</em> en <em>String</em>. De computer kan rekenen met de variabele <em>waarde</em> van het type <em>int</em>, maar omdat de computer de variabele <em>waarde</em> niet als getal herkent kan hiermee niet gerekend worden.</p>
+
+        <p>De computer kan dus wel uitrekenen van 2 x 21 is.</p>
+
+        <div>
+            <pre><code class="language-none">int waarde = 21 * 2 ;</code></pre>
+        </div>
+
+        <p>Maar niet uitrekenen wat &quot;2 x 21&quot; is. De waarde van de variabele waarde is in het onderstaande voorbeeld '21 * 2'. Het is een String, een draad van, de tekens '21 * 2'.</p>
+        <div>
+            <pre><code class="language-none">String waarde = "21 * 2" ;</code></pre>
+        </div>
+
         <p>Het laatste type variabele is <em>boolean</em>. Deze variabele kent maar twee waarden, waar (true) en niet-waar (false). Dit type zal je veel gaan gebruiken, niet alleen in variabelen maar ook als uitkomst van vergelijkingen. Als je in een programma iets vergelijkt, bijvoorbeeld de waarde van twee variabelen, is de uitkomst altijd waar (<em>true</em>) of niet-waar (<em>false</em>).</p>
 
-        <p>Een variabele van het type boolean geef je aan met het woord <em>boolean.</em>. In het onderstaande voorbeeld maak je de variabele <em>waarofniet</em> van het type <em>boolean</em> en ken je de waarde <em>true</em> (waar) toe.</p>
+        <p>Een variabele van het type boolean geef je aan met het woord <em>boolean</em>. In het onderstaande voorbeeld maak je de variabele <em>waarofniet</em> van het type <em>boolean</em> en ken je de waarde <em>true</em> (waar) toe.</p>
         <div>
             <pre><code class="language-none">boolean waarofniet = true ;</code></pre>
         </div>
 
-        <h2>Opdracht</h2>
+        <h2>Opdracht 3.1</h2>
 
         <p>Sluit de Arduino Nano van de Robot aan op je Chromebook met de USB kabel en start een nieuwe sketch in Arduino Create. Weet je niet meer precies hoe dat moet, kijk dan bij Les 1. Schrijf vervolgens in de functie <em>setup</em> een programma waarin je drie variabelen maakt en print.</p>
         <ul>
@@ -1537,11 +1559,86 @@ Serial.println("Hoi");</code></pre>
 
         <p>Deze twee regels zorgen ervoor dat je in de monitor van Arduino Create de waarden kunt zien als jij ze print.</p>
 
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>Het kan zijn dat als je jouw programma upload naar de Arduino dat je onder aan het scherm een rode balk ziet verschijnen met de text <em>Executing command: exit status 1</em>. Arduino create geeft met een waarde aan of het uploaden naar de Arduino goed is gegaan. Als alles goed is gegaan is de waarde 0, bij alle andere waarden is er iets fout gegaan en verschijnt er een rode balk.</p>
+
+                <p>Onder de rode balk wordt een log getoond. Een log is een lijst van gebeurtenissen, dingen die hebben plaatsgevonden. In een log worden belangrijke zaken bijgehouden, bijvoorbeeld als er iets fout gaat.</p>
+
+                <p>Als je een rode balk krijgt bij het uploaden van jouw programma kijk je in de log wat de mogelijk oorzaak is. Dit is niet altijd makkelijk te vinden of te begrijpen. Als je meerdere meldingen ziet welke lijken op de melding <code>avrdude: stk500_getsync() attempt 10 of 10: not in sync: resp=0x00</code> dan staat waarschijnlijk de mode schakelaar op de robot in stand 2.</p>
+
+                <p>Zet de mode-schakelaar op stand 1 en probeer dan nog eens het programma te uploaden.</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_3_UploadError">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_3_UploadError.png" alt=""/>
+                    </a>
+                <div class="lightbox-target" id="Lesson_3_UploadError">
+                    <img src="./Student%20guide/Lesson_3_UploadError.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
+
+
+
+
+        <p>Zie je iets wat je niet verwacht bij de variabele <em>waarofniet</em>? Als je een waarde <em>false</em> toekent zal er <em>0</em> geprint worden, bij <em>true</em> een <em>1</em>. Voor de computer is dit hetzelfde, je mag dus ook <em>0</em> invullen in plaats van <em>false</em> en <em>1</em> in plaats van <em>true</em></p>
+
         <h1 id="toc_11">Les 4, vergelijkingen</h1>
+
+        <p>De inhoud van een variabele kun vergelijken met een waarde of een andere variabele. De uitkomst van een vergelijk is altijd waar of niet-waar, dus <em>true</em> of <em>false</em>.</p>
+
+        <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+            <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+            <div>Van welk type is de uitkomst van een vergelijking?</div>
+        </div>
+
+        <p>Als je de inhoud van twee variabelen met elkaar wilt vergelijken geef je dit aan met &quot;==&quot;. Hierbij moet aan iedere kant van de &quot;==&quot; een variabele staan. Onderstaande voorbeeld print dus &quot;1&quot; omdat de inhoud van <em>var1</em> en <em>var2</em> gelijk zijn.</p>
+
+        <div>
+            <pre><code class="language-none">String var1 = "abcd" ;    
+String var2 = "abcd" ;
+
+Serial.println(var1 == var2);</code>
+</pre>
+        </div>
+
+        <h2>Opdracht 4.1</h2>
+
+        <p>Schrijf nu een programma &quot;Les_4_vergelijkingen&quot; dat drie variabelen maakt, <em>var1</em>, <em>var2</em> en <em>var3</em>. De variabelen <em>var1</em> en <em>var2</em> geef je dezelfde waarde. Variabele <em>var3</em> geef je een andere waarde.</p>
+
+        <p>Print nu de uitkomst van de vergelijking van variabele <em>var1</em> en <em>var2</em>. Print ook de uitkomst van de vergelijking van <em>var1</em> met <em>var3</em>. Test je programma. De uitkomst van de eerste vergelijking moet <em>true</em> (1) zijn en de uitkomst van de tweede vergelijking <em>false</em> (0)</p>
+        <hr/>
+        <p>Naast de waarden van twee variabelen kun je ook de waarde van een variabele vergelijken met een andere waarde die niet in een variabele zit. De uitkomst van onderstaande twee vergelijkingen is hetzelfde. Bij de eerste vergelijking vergelijk je de <em> inhoud</em> van <em>var1</em> met <em>var2</em>. In de tweede vergelijking vergelijk je de <em>inhoud</em> van <em>var1</em> met de <em>waarde</em> &quot;abcd&quot;.</p>
+
+        <div>
+            <pre><code class="language-none">String var1 = "abcd" ;    
+String var2 = "abcd" ;
+
+Serial.println(var1 == var2);
+Serial.println(var1 == "abcd");</code></pre>
+        </div>
+
+        <p>De uitkomst van een vergelijking geeft dus een boolean waarde. Deze waarde kun je ook weer opslaan in een andere variabele.</p>
+
+        <h2>Opdracht 4.2</h2>
+
+        <p>Ga nu verder met het programma dat je in opdracht 4.1 hebt gemaakt. Maak een extra variabele met de naam <em>uitkomst</em>. In deze variabele ga je de uitkomst van een vergelijking opslaan. Denk goed na welk type je voor deze variabele gebruikt!</p>
+        <p>Als je variabele hebt gemaakt moet je de waarde van de vergelijking van <em>var1</em> en <em>var2</em> aan de variabele <em>uitkomst</em> toekennen.</p>
+
+        <hr/>
         <h1 id="toc_12">Les 4, condities</h1>
 
 
         <h1 id="toc_13">Les 5, herhalingen</h1>
+
+        <h1 id="toc_14">Les 6, debuggen</h1>
+
+
 
 
 

@@ -35,6 +35,10 @@ p {
     margin-bottom: 20px;
 }
 
+h3 p {
+    padding-left: 20px;
+}
+
 strong {
     font-weight: bold;
 }
@@ -146,17 +150,34 @@ blockquote > :last-child {
     margin-bottom: 15px;
 }
 
+hr {
+    border-top: 2px solid #586e75;
+    border-top-color: #586e75;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-bottom: 20px
+}
+
 h1 {
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: 2px solid;
 }
 
-h2 {
+h2,
+h3 {
     border-bottom: 2px solid;
 }
 
-h3,
+h3 {
+    margin-left: 20px;
+}
+
+
+
+
+
 h4,
 h5,
 h6 {
