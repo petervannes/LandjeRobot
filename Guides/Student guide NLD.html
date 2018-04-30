@@ -1504,6 +1504,11 @@ Serial.println("Hoi");</code></pre>
             <pre><code class="language-none">String naam = &quot;Peter&quot; ;</code></pre>
         </div>
 
+        <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+            <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width=50 alt="Doe" />
+            <div>Het = teken noemen we ook wel een &quot;operator&quot;. Het woord operator komt uit de wiskunde en betekent 'bewerking'. Een operator zorgt er dus voor dat de waarde van een variabele wijzigt. Andere operatoren zijn *, +, - etc. </div>
+        </div>
+
         <p>Naast variabelen van het type <em>String</em> heb je integers. In het Engels betekent <em>integer</em>, geheel getal. De getallen 0,1,1,2,3,5,8,42,1138 zijn integers, het getal 3,14159265359 niet. Omdat er aan een geheel getal altijd een duidelijk begin en einde zit plaats je hier geen dubbele aanhalingstekens aan het begin en einde van de waarde. Als je dit wel doet denkt de computer dat de waarde van het type <em>String</em> is.</p>
 
         <p>Met het woord <em>int</em> geeft je aan dat de variabele van het type <em>integer</em> is. Deze variabele kan dus alleen gehele getallen bevatten.</p>
@@ -1658,7 +1663,7 @@ int var1 = 3 ;
     
 Serial.println(var1 &gt; var2);</code></pre>
 
-        <p>Naast een <em>grote dan</em> vergelijking is er ook een <em>kleiner dan</em> vergelijking. Hiervoor gebruik je het pijltje dat de andere kant op wijst &quot;&lt;&quot;. Als je in hetzelfde programma de <em>groter dan</em> (&gt;) vergelijking vervangt door een <em>kleiner dan</em> (&lt;) dan is de uitkomst <em>false</em> (0). Want, 7 is niet kleiner dan 3</p>
+        <p>Naast een <em>groter dan</em> vergelijking is er ook een <em>kleiner dan</em> vergelijking. Hiervoor gebruik je het pijltje dat de andere kant op wijst &quot;&lt;&quot;. Als je in hetzelfde programma de <em>groter dan</em> (&gt;) vergelijking vervangt door een <em>kleiner dan</em> (&lt;) dan is de uitkomst <em>false</em> (0). Want, 7 is niet kleiner dan 3</p>
 
         <pre><code class="language-none">int var1 = 7 ;
 int var1 = 3 ;
@@ -1668,18 +1673,44 @@ Serial.println(var1 &lt; var2);</code></pre>
 
         <h3>Opdracht 4.3</h3>
 
-        <p class="assignment">Maak een nieuw programma <em>Les_4_groterenkleiner</em>. Maak in dit programma twee variabelen van het type <em>int</em>. Kies zelf de naam van de variabelen, bijvoorbeeld <em>groot</em> en <em>klein</em>. Zorg dat het programma de variabelen vergelijkt met de <em>groter dan</em> en <em>kleiner dan</em> vergelijking</p>
+
+        <p class="assignment"> Maak een nieuw programma <em>Les_4_groterenkleiner</em>. Maak in dit programma twee variabelen van het type <em>int</em>. Kies zelf de naam van de variabelen, bijvoorbeeld <em>groot</em> en <em>klein</em>. Zorg dat het programma de variabelen vergelijkt met de <em>groter dan</em> en <em>kleiner dan</em> vergelijking</p>
 
         <p class="assignment">Probeer het programma uit te voeren en kijk of de uitkomst van de vergelijkingen kloppen.</p>
 
         <hr>
 
-        <p>Naast het vergelijken van gehele getallen met &gt; en &lt;, kun je ook String waarden vergelijken. Dit is echter minder </p>
+        <p>Naast het vergelijken van gehele getallen met <em>&gt;</em> en <em>&lt;</em>, kun je ook String waarden vergelijken. Dit is echter minder voor de hand liggend. Welk woord is groter &quot;app&quot; of &quot;apen&quot;? Het is &quot;app&quot; !</p>
+
+        <p>Het is vreemd, of niet ? Het woord &quot;app&quot; is korter dan &quot;apen&quot;, maar bij het vergelijken van string waarden begint de vergelijking bij het eerste teken. Als dit teken gelijk is gaat de vergelijking verder bij het volgende teken. De eerste twee tekens van &quot;app&quot; en &quot;apen&quot; zijn gelijk. Bij het derde teken wordt &quot;p&quot; vergeleken met &quot;e&quot;. De letter &quot;e&quot; komt eerder in het alfabet voor is dus kleiner net zoals bij vergelijken van waarden waar 0 kleiner is dan 5. Bij het vergelijken van strings wordt er dus per teken van links naar rechts vergeleken. Zodra er een verschil tussen de tekens is gelden de volgende tekens niet meer in de vergelijking.</p>
+
+        <p>Hieronder nog enkele voorbeelden van vergelijkingen die waar zijn.</p>
+
+        <pre><code class="language-none">app > apen
+landje &gt; OBS Landje
+A &gt; 1
+1 &lt; a
+a4 &gt; a3</code></pre>
+
+        <p>Je ziet wel dat vergelijken van string waarden niet altijd heel erg makkelijk te begrijpen is. In de verdere oefeningen gaan we hier dan ook geen gebruik van maken.</p>
+
 
         <h2>Kleiner of gelijk en groter of gelijk</h2>
 
-        <p>Nu je weet hoe je kunt vergelijken of waarden gelijk, kleiner of groter zijn</p>
+        <p>Nu heb je al geleerd hoe je kunt vergelijken of waarden gelijk, kleiner of groter zijn dan een andere waarde. Deze vergelijkingen kun je ook met elkaar combineren. Je kunt niet alleen vergelijken of een waarde groter is dan een andere waarde, maar ook groter of gelijk aan een andere waarde. De vergelijking <code>4 &gt; 3</code> is waar, maar <code>4 &gt; 4</code> niet. Stel dat je nu een waarde wilt vergelijken die groter of gelijk aan 4 is. Dan kan dat heel eenvoudig door de vergelijkingssymbolen te combineren, bijvoorbeeld <code>&gt;=</code>. De uitkomst van de vergelijking <code>4 &gt;= 4</code> is dan waar en <code>4 &gt;= 3</code> ook!</p>
 
+        <p>Naast de vergelijking groter of gelijk , <code>&gt;=</code> is er ook nog de vergelijking kleiner of gelijk, <code>&lt;=</code>. Net zoals bij de groter of gelijk vergelijking is bij de kleiner of gelijk aan vergelijking zowel <code>3 &lt;= 4</code> als <code>4 &lt;= 4</code> waar.</p>
+
+        <h3>Opdracht 4.4</h3>
+
+        <p class="assignment">Voeg in het vorige opdracht gemaakte programma <em>Les_4_groterenkleiner</em> vergelijkingen toe waarbij je gebruik maakt van de groter- en kleiner dan vergelijking. </p>
+
+        <hr/>
+
+
+        <h2>Ongelijk aan</h2>
+
+        <p>De laatste van de vergelijkingen is <em>ongelijk aan</em>, <code>!=</code>. De uitkomst van deze vergelijking is waar als beide vergelijkte waarden niet gelijk aan elkaar zijn, dus <code>3 != 7</code> is waar. Het uitroepteken voor het = teken in de vergelijking betekent <em>niet</em>, er staat dus eigenlijk &quot;niet-gelijk&quot; aan. </p>
 
 
         <h1 id="toc_12">Les 4, condities</h1>
