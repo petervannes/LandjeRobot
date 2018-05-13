@@ -1710,15 +1710,97 @@ a4 &gt; a3</code></pre>
 
         <h2>Ongelijk aan</h2>
 
-        <p>De laatste van de vergelijkingen is <em>ongelijk aan</em>, <code>!=</code>. De uitkomst van deze vergelijking is waar als beide vergelijkte waarden niet gelijk aan elkaar zijn, dus <code>3 != 7</code> is waar. Het uitroepteken voor het = teken in de vergelijking betekent <em>niet</em>, er staat dus eigenlijk &quot;niet-gelijk&quot; aan. </p>
+        <p>De laatste van de vergelijkingen is <em>ongelijk aan</em>, <code>!=</code>. De uitkomst van deze vergelijking is waar als beide vergelijkte waarden niet gelijk aan elkaar zijn, dus <code>3 != 7</code> is waar. Het uitroepteken voor het = teken in de vergelijking betekent <em>niet</em> (NOT) , er staat dus eigenlijk &quot;niet-gelijk&quot; aan. </p>
+
+        <h3>Opdracht 4.5</h3>
+
+        <p class="assignment">Voeg in het vorige opdracht gemaakte programma <em>Les_4_groterenkleiner</em> vergelijkingen toe waarbij je gebruik maakt van de ongelijk aan vergelijking. </p>
+
+        <hr/>
 
 
-        <h1 id="toc_12">Les 4, condities</h1>
+        <h1 id="toc_12">Les 5, conditionele statements</h1>
+
+        <p> Leuk denk je die vergelijkingen, maar wat kun je er eigenlijk mee ? Nou je kunt ze gebruiken in conditionele statements ?! Tja denk je, wat is dat dan ? Een statement is een ander woord voor een programmeer instructie, conditie is een ander woord voor voorwaarde. Het wordt iets duidelijker aan de hand van het volgende voorbeeld.</p>
+
+        <p>Stel dat je met je vriend afspreekt dat jij hem een snoepje geeft als hij je heeft geholpen met je huiswerk . Dan is de voorwaarde, de conditie, dat hij je heeft geholpen met je huiswerk. De instructie is dan dat jij hem een snoepje geeft. Als je dit opschrijft zodat dit dan door een computer begrepen kan worden dan ziet dit er zo uit.</p>
 
 
-        <h1 id="toc_13">Les 5, herhalingen</h1>
+        <pre><code class="language-none">if (Geholpen met huiswerk) {
+  Geef mijn vriend een snoepje
+}</code></pre>
 
-        <h1 id="toc_14">Les 6, debuggen</h1>
+        <p>Je begint voor een computer dus met <em>if</em> om aan te geven dat je een voorwaarde, conditie stelt waaraan voldaan moet worden. If is het engelse woord voor &quot;als&quot;. Deze conditie staat tussen de ronde haakjes en kan alleen waar of niet-waar zijn. De uitkomst van een conditie is dus een <em>Boolean</em> waarde. Na de conditie plaats je tussen kringelhaakjes de statements, instructies, die uitgevoerd moeten worden als de uitkomst van de conditie waar is. In het volgende voorbeeld programma staat is <em>als</em> het waar is, toon dan &quot;De conditie is waar&quot;.</p>
+
+        <pre><code class="language-none">if (true) {
+  Serial.println("De conditie is waar") ;
+}</code></pre>
+
+        <p>De boolean waarde <em>true</em> is waar, dus als je het programma uitvoert zal de tekst &quot;De conditie is waar&quot; tonen./p>
+
+            <h3>Opdracht 5.1</h3>
+            <p class="assignment">Maak nu een nieuw programma, conditie_if. Maak in de functie <code>setup()</code> twee nieuwe variabelen, <code>groot</code> en <code>klein</code> van het type <em>int</em>. Vul deze variabele met een getal. Het getal in variabele <code>klein</code> moet kleiner zijn dan in de variabele <code>groot</code>. Schrijf hierna een if-instructie welke de tekst "klein is kleiner dan groot" afdrukt.</p>
+
+            <hr/>
+
+            <p>Als het goed is drukt het programma van Opdracht 5.1 nu de tekst af "klein is kleiner dan groot". Maar wat nu als de waarde van klein <em>niet</em> kleiner is dan groot, dus als de uitkomst conditie <em>false</em> is Dan wordt er nu niets afgedrukt! Bij een if-instructie kun je ook instructies uitvoeren als de uitkomst van de conditie niet-waar (false) is. Dit doe je met het woord <code>else</code>. Else betekent <em>anders</em>. Je gebruikt het woord <code>else</code> na de instructies tussen { en } die uitgevoerd wordt als de uitkomst van de conditie waar is. Na else gebruik je weer de { en } om aan te geven welke instructies je wilt uitvoeren als de uitkomst van de conditie niet-waar is. Kijk maar naar onderstaande voorbeeld.</p>
+
+            <pre><code class="language-none">if (true) {
+  Serial.println("De conditie is waar") ;
+} else {
+  Serial.println("De conditie is niet-waar") ;
+}</code></pre>
+
+            <h3>Opdracht 5.2</h3>
+            <p class="assignment">Pas nu het programma, conditie_if aan. Zorg ervoor dat de tekst "klein is groter dan groot" afgedrukt wordt als de waarde in variabele <code>klein</code> groter is dan de waarde in variabele <code>groot</code>. Pas ook de waarde van &eacute;&eacute;n van de variabelen aan zodat de nieuwe tekst wordt afgedrukt.</p>
+
+            <hr/>
+
+            <h1 id="toc_13">Les 6, herhalingen</h1>
+
+            <p>Herhalingen zijn saai! Maar soms wel nuttig. Denk maar aan het leren van de tafels. Als een computer een bepaalde opdracht elke keer moet herhalen kun je dit meer keer programmeren, bijvoorbeeld als je 5x &quot;Dit herhaal ik&quot; wilt afdrukken, kun je dit zo schrijven.</p>
+
+            <pre><code class="language-none">Serial.println("Dit herhaal ik") ;
+Serial.println("Dit herhaal ik") ;
+Serial.println("Dit herhaal ik") ;
+Serial.println("Dit herhaal ik") ;
+Serial.println("Dit herhaal ik") ;
+</code></pre>
+
+            <p>Voor een paar herhalingen is dit nog overzichtelijk, maar stel dat je iets duizend keer moet herhalen. Dan wordt het programma erg lang en doet het dan nog bijna niets. Om dit overzichtelijker en makkerlijker te maken zijn er <em>heralingen</em>, of <em>loop</em>, instructies. Hiervan gaan we er twee behandelen, de <code>for</code> en de <code>while</code> loop.</p>
+
+            <h2>De while loop</h2>
+
+            <p>While in het engels betekent <em>zolang</em>. De instructie <code>while</code> werkt ongeveer net zoals de instructie <code>if</code>. Je begint met de naam van de instructie, <code>while</code>, dan komt er tussen twee ronde haakjes een conditie en staan er instructies tussen de { en }. Deze twee laatste tekens noemen we ook wel accolade's. </p>
+
+            <pre><code class="language-none">while (true) {
+  Serial.println("Dit herhaal ik") ;
+}
+</code></pre>
+
+            <p>Bij de <code>while</code> instructie worden de instructies tussen de accolade's herhaald totdat de conditie niet-waar is.</p>
+
+            <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+                <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+                <div>Weet jij hoe lang in de bovenstaande <code>while</code> loop het afdrukken van de tekst herhaald wordt?</div>
+            </div>
+
+            <p>Als je wilt dat een <code>while</code> loop op een gegeven moment stopt met herhalen, moet je dus zorgen dat de conditie tijdens het herhalen veranderd van <em>true</em> naar <em>false</em>. Als je dat niet doet zal de herhaling nooit stoppen.</p>
+
+            <p>Kijk eens naar het onderstaande voorbeeld en probeer te begrijpen wanneer de conditie van de loop wijzigt.</p>
+
+
+            <pre><code class="language-none">int getal = 1 ;
+  
+while (getal &lt;= 10) {
+  Serial.println("Dit herhaal ik") ;
+  getal = getal + 1;
+}
+  </code></pre>
+
+
+
+            <h1 id="toc_14">Les 7, debuggen</h1>
 
 
 

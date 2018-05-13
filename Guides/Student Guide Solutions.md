@@ -16,11 +16,12 @@ Create three variables and print the output
     
 ### Assignment 2  
     
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      boolean uitkomst = var1 == var2 ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);      Serial.println(uitkomst);    }    void loop() {    }### Assignment 3  
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      boolean uitkomst = var1 == var2 ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);      Serial.println(uitkomst);    }    void loop() {    }
+    ### Assignment 3  
     
     /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                Serial.println(klein > groot);      Serial.println(klein < groot);    }    void loop() {    }
-    
-    ### Assignment 4
+
+### Assignment 4
     
     /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;    
             Serial.println(klein > groot);      Serial.println(klein < groot);
@@ -28,6 +29,26 @@ Create three variables and print the output
       Serial.println(groot <= groot);
       Serial.println(klein >= groot);
       Serial.println(groot <= klein);
-      
-      
-          }    void loop() {    }
+    }    void loop() {    }### Assignment 5
+    
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;    
+            Serial.println(klein > groot);      Serial.println(klein < groot);
+      Serial.println(klein >= klein);
+      Serial.println(groot <= groot);
+      Serial.println(klein >= groot);
+      Serial.println(groot <= klein);
+      Serial.println(klein != klein);    
+      Serial.println(klein != groot);              }    void loop() {    }
+    
+    
+## Lesson 5, conditional statements
+
+### Assignment 1
+
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                if (klein < groot) {        Serial.println("klein is kleiner dan groot") ;            }     }    void loop() {    }
+    
+### Assignment 2
+
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                if (klein < groot) {        Serial.println("klein is kleiner dan groot") ;            } else {
+        Serial.println("klein is groter dan groot") ;      
+      }    }    void loop() {    }    
