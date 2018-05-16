@@ -52,3 +52,34 @@ Create three variables and print the output
     /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                if (klein < groot) {        Serial.println("klein is kleiner dan groot") ;            } else {
         Serial.println("klein is groter dan groot") ;      
       }    }    void loop() {    }    
+    
+## Lesson 6, Loops
+
+### Assignment 1
+
+Het juiste antwoord is 9x
+    
+    getal 1
+    "Dit herhaal ik" 
+    getal 2
+    "Dit herhaal ik" 
+    getal 3
+    "Dit herhaal ik" 
+    getal 4
+    "Dit herhaal ik" 
+    getal 5
+    "Dit herhaal ik" 
+    getal 6
+    "Dit herhaal ik" 
+    getal 7
+    "Dit herhaal ik" 
+    getal 8
+    "Dit herhaal ik" 
+    getal 9
+    "Dit herhaal ik" 
+    getal 10
+
+
+### Assignment 2
+
+    /*    */    void setup() {      Serial.begin(9600);      delay(2000);        int grondtal = 3 ;      int exponent = 5 ;      int uitkomst = grondtal ;        for (int x=1 ; x<exponent ; x++) {        uitkomst = uitkomst * grondtal ;      }        Serial.println(uitkomst);        }    void loop() {        }

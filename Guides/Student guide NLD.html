@@ -1769,7 +1769,7 @@ Serial.println("Dit herhaal ik") ;
 
             <p>Voor een paar herhalingen is dit nog overzichtelijk, maar stel dat je iets duizend keer moet herhalen. Dan wordt het programma erg lang en doet het dan nog bijna niets. Om dit overzichtelijker en makkerlijker te maken zijn er <em>heralingen</em>, of <em>loop</em>, instructies. Hiervan gaan we er twee behandelen, de <code>for</code> en de <code>while</code> loop.</p>
 
-            <h2>De while loop</h2>
+            <h2>De while-loop</h2>
 
             <p>While in het engels betekent <em>zolang</em>. De instructie <code>while</code> werkt ongeveer net zoals de instructie <code>if</code>. Je begint met de naam van de instructie, <code>while</code>, dan komt er tussen twee ronde haakjes een conditie en staan er instructies tussen de { en }. Deze twee laatste tekens noemen we ook wel accolade's. </p>
 
@@ -1778,29 +1778,131 @@ Serial.println("Dit herhaal ik") ;
 }
 </code></pre>
 
-            <p>Bij de <code>while</code> instructie worden de instructies tussen de accolade's herhaald totdat de conditie niet-waar is.</p>
+            <p>Bij de <code>while</code> instructie worden de instructies tussen de accolade's herhaald zolang de uitkomst van de conditie waar is.</p>
 
             <div style="overflow: auto;margin: 7px 7px 7px 7px;">
                 <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
                 <div>Weet jij hoe lang in de bovenstaande <code>while</code> loop het afdrukken van de tekst herhaald wordt?</div>
             </div>
 
-            <p>Als je wilt dat een <code>while</code> loop op een gegeven moment stopt met herhalen, moet je dus zorgen dat de conditie tijdens het herhalen veranderd van <em>true</em> naar <em>false</em>. Als je dat niet doet zal de herhaling nooit stoppen.</p>
+            <p>Als je wilt dat een <code>while</code> loop op een gegeven moment stopt met herhalen, moet je dus zorgen dat de conditie tijdens het herhalen verandert van <em>true</em> naar <em>false</em>. Als je er niet voor zorgt dat de uitkomst van de conditie verandert zal de herhaling nooit stoppen.</p>
 
-            <p>Kijk eens naar het onderstaande voorbeeld en probeer te begrijpen wanneer de conditie van de loop wijzigt.</p>
+            <p>Kijk eens naar het onderstaande voorbeeld en probeer te begrijpen wanneer de <code>while</code> conditie wijzigt.</p>
 
 
             <pre><code class="language-none">int getal = 1 ;
   
-while (getal &lt;= 10) {
+while (getal &lt; 10) {
   Serial.println("Dit herhaal ik") ;
   getal = getal + 1;
 }
   </code></pre>
 
+            <p>Het programma begint met het maken van een variabele <code>getal</code> en heeft deze de waarde &quot;1&quot;. De conditie <code>getal &lt;= 10</code> in de while-loop is dan waar. De tekst &quot;Dit herhaal ik&quot; wordt dan ook afgedrukt. Hierna wordt de instructie <code>getal = getal + 1</code> uitgevoerd. De variabele <em>getal</em> krijgt hier dus een nieuwe waarde. Deze nieuwe waarde is de huidige waarde in variabele getal, &quot;1&quot;, plus 1. De nieuwe inhoud van variabele <em>getal</em> wordt dus 2. De uitkomst van de while-loop conditie is nog steeds waar, dus zullen de instructies tussen de { en } nog een keer herhaald worden.
+            </p>
+
+            <h3>Opdracht 6.1</h3>
+            <p class="assignment">Probeer nu uit te vinden hoe vaak de tekst &quot;Dit herhaal ik&quot; afgedrukt wordt door het laatste voorbeeld programma. Doe dit door stap-voor-stap door de programma regels te gaan en op te schrijven wat de inhoud van de variabele <em>getal</em> is en wanneer er iets wordt afgedrukt wordt.</p>
+
+            <p class="assignment">Schrijf bijvoorbeeld zo op;</p>
+            <pre class="assignment"><code class="language-none">getal 1
+&quot;Dit herhaal ik&quot; 
+getal 2
+&quot;Dit herhaal ik&quot; 
+</code></pre>
+
+            <p class="assignment"></p>
+
+            <hr/>
+
+            <h2>De for-loop</h2>
+
+            <p>Met de for-loop kun je ook meerdere instructies herhalen. In plaats van alleen een conditie, zet je bij de <code>for</code> loop de <em>initialisatie</em>, <em>conditie</em> en <em>increment</em> tussen de ronde haakjes. Maar wat zijn dat ? <em>initialisatie</em>, <em>conditie</em> en <em>increment</em>.</p>
+
+            <p>Initialisatie betekent opnieuw maken, het is het maken van een variabele en het toekennen van een waarde. De instructie <code>int getal = 1</code> bij het while-loop voorbeeld programma is de initialisatie van de variabele <em>getal</em></p>
+
+            <p>Een conditie hebben we al eerder behandeld, dit is bijvoorbeeld <code>getal &lt; 10</code> in het while-loop voorbeeld programma.</p>
+
+            <p>Increment is een ander woord voor ophoging. Je geeft hiermee aan met hoeveel de inhoud van een variabele opgehoogd wordt. In het while-loop voorbeeld programma werd dit in de loop uitgevoerd door de instructie <code>getal = getal + 1</code>.</p>
+
+            <p>De <em>initialisatie</em>, <em>conditie</em> en <em>increment</em> in een for-loop moeten dus tussen de ronde haakjes na de instructie <code>for</code> komen. Tussen de <em>initialisatie</em>, <em>conditie</em> en <em>increment</em> type je een punt-komma (;). Dus dat ziet er dan zo uit</p>
+
+            <pre class="assignment"><code class="language-none">for (initialisatie;conditie;increment) {
+  // Instructies
+}
+</code></pre>
+
+            <p>Als we nu precies hetzelfde willen doen met een for-loop als in het &quot;Dit herhaal ik&quot; while-loop programma, dan ziet het programma er zo uit.</p>
+
+            <pre class="assignment"><code class="language-none">for (int getal=1;getal&lt;10;getal=getal+1) {
+  Serial.println("Dit herhaal ik") ;
+}
+</code></pre>
+
+            <p>Met een for-loop zet je eigenlijk alle instructies welke zorgen voor een goed verloop van de herhaling bij elkaar. De variabele wordt geinitialiseerd, <em>getal</em> krijgt de waarde 1. Elke herhaling wordt er 1 bij de inhoud van de variabele <em>getal</em> opgeteld. En de instructies worden herhaald zolang de inhoud van variabele <em>getal</em> kleiner is dan 10.</p>
+
+            <p> Als je de inhoud van een variabele met precies 1 wilt verhogen kun je dit ook anders opschrijven. Door na de naam van een variabele &quot;++&quot; te typen, bijvoorbeeld <code>getal++</code>, dan is dit hetzelfde als <code>getal = getal + 1</code>.Het vorige programma doet dus precies hetzelfde als het programma hieronder.</p>
+
+
+            <pre class="assignment"><code class="language-none">for (int getal=1;getal&lt;10;getal++) {
+  Serial.println("Dit herhaal ik") ;
+}
+</code></pre>
+
+
+            <h3>Opdracht 6.2</h3>
+            <p class="assignment">Dit wordt al een moeilijkere opdracht, dus neem je tijd en denk rustig na. Schrijf een programma dat de macht van een getal uitrekent. Als je 2 tot de macht 4 wilt uitrekenen, reken je uit wat 2x2x2x2 is. Twee keer Twee is vier, vier keer twee is acht en twee keer acht is zestien. Twee tot de macht 4 is dus 16. Voor het berekenen van een macht van een getal heb je een <em>grondtal</em> en een <em>exponent nodig</em>. Het grondtal is het getal dat je wilt vermenigvuldigen, het exponent is het aantal keer dat je het getal wilt vermenigvuldigen.</p>
+
+            <p class="assignment">Begin het programma door drie variabelen te maken, <code>grondtal</code>, <code>exponent</code> en <code>uitkomst</code>. Bedenk zelf welke type variabele je gebruikt. Maak de inhoud van de variabele <code>uitkomst</code> gelijk aan de waarde van <code>grondtal</code> en kies een eigen waarde voor de variabelen <code>grondtal</code> en <code>exponent</code>. Begin met kleine getallen zodat het nog overzichtelijk blijft.</p>
+
+            <p class="assignment">Schrijf vervolgens in een for-loop de berekening van de macht van het getal in variabele <code>grondtal</code>. Gebruikt de variabele <code>exponent</code> in de conditie. In de for-loop gebruikt je een aparte variabele <code>x</code> bij de initialisatie, conditie en increment.</p>
+
+            <p class="assignment">Druk nadat de for-loop klaar is de waarde van variabele <code>uitkomst</code> af. Test je programma met grondtal 3 en exponent 5. Als de uitkomst van het programma 243 is, dan werkt het programma goed.</p>
+
+            <hr/>
 
 
             <h1 id="toc_14">Les 7, debuggen</h1>
+
+
+            <p class="assignment">Schrijf bijvoorbeeld zo op;</p>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <pre class="assignment"><code class="language-none">/*
+
+*/
+
+void setup() {
+  
+  Serial.begin(9600);
+  delay(2000);
+  
+  Serial.println("Gaat het wel goed?")
+    
+}
+
+void loop() {
+    
+}
+</code></pre>
+
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_6_debugging">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_6_debugging.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_6_debugging">
+                        <img src="./Student%20guide/Lesson_6_debugging.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+
+            </div>
+
+
 
 
 

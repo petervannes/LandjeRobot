@@ -143,6 +143,10 @@ pre {
     padding: 15px;
 }
 
+pre.assignment {
+    margin-left: 20px;
+}
+
 blockquote {
     border-left: 4px solid;
     padding: 0 15px;
