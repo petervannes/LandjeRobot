@@ -83,3 +83,27 @@ Het juiste antwoord is 9x
 ### Assignment 2
 
     /*    */    void setup() {      Serial.begin(9600);      delay(2000);        int grondtal = 3 ;      int exponent = 5 ;      int uitkomst = grondtal ;        for (int x=1 ; x<exponent ; x++) {        uitkomst = uitkomst * grondtal ;      }        Serial.println(uitkomst);        }    void loop() {        }
+    
+    
+## Lesson 7, Debugging
+
+### Assignment 1
+
+### Assignment 2
+
+    /*
+    
+    */
+    
+    void setup() {
+      
+      Serial.begin(9600);
+      delay(2000);
+      
+      Serial.println("Gaat het wel goed?");
+        
+    }
+    
+    void loop() {
+        
+    }

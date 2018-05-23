@@ -1865,10 +1865,19 @@ getal 2
             <h1 id="toc_14">Les 7, debuggen</h1>
 
 
-            <p class="assignment">Schrijf bijvoorbeeld zo op;</p>
+            <p class="assignment">Fouten uit een programma halen heet &quot;debuggen&quot;. Er zijn twee soorten fouten in computerprogramma's, syntactische- en runtime fouten. </p>
+
+            <h2>Syntactische fouten</h2>
+
+            <p>Wat zijn dat voor fouten ? Een syntactische fout is zoiets als een spelvout 😉. Syntactische fouten kun je dus al zien voordat je een programma uitvoert. Als je je precies aan de regels van de programmeertaal houdt heb je nooit syntactische fouten. Maar er zijn heel veel regels. Dit is dus eigenlijk een klusje voor een programma om deze op te sporen. Dit programma zit ook in jouw IDE welke je start diir op de verify knop te klikken. </p>
+
+            <h3>Opdracht 7.1</h3>
+
+            <p class="assignment">Maak in een nieuw programma in Arduino Create en noem dit <em>debuggen</em>. Knip en plak dan onderstaand programma over de huidige standaard programmaregels. Zoek vervolgens in je Arduino Create IDE de verify knop. Gevonden? Klik hier dan op en kijk wat er gebeurt.</p>
 
 
-            <div style="">
+
+            <div style="overflow: auto">
                 <div style="float:left;width:49%;margin-right: 7px ">
                     <pre class="assignment"><code class="language-none">/*
 
@@ -1903,9 +1912,68 @@ void loop() {
             </div>
 
 
+            <p>Kijk eens goed naar de foutmelding in de rode balk onder het programma. Zie jij wat er fout is?</p>
+            <hr/>
+
+            <p>Als je het programma van <em>Opdracht 7.1</em> controleert op syntactische fouten geeft de IDE aan <code>expected</code> &apos;;&apos; before &apos;}&apos; token. <em>Expected</em> betekent verwachtte en <em>token</em> betekent teken. De IDE verwachtte dus het teken &quot;;&quot; voor het &quot;}&quot; teken.
+            </p>
+
+            <p>Maar waar dan? Want er staan wel meer &quot;}&quot; tekens in het programma. Onder de foutmelding wordt in het zwarte kader de foutmelding uitgebreider beschreven. Nog steeds is het niet gemakkelijk, maar als je vaak rustig leest staat er precies waar de fout zicht bevindt.</p>
+
+            <p>De eerste rode afgedrukte regel geeft bijvoorbeeld aan in welke functie de fout zit, <code>In function &apos;void setup()&apos;:</code>. De fout zit dus niet in de functie <code>loop()</code>, maar in <code>setup()</code>.</p>
+
+            <p>In de volgend rode afgedrukte regel staat iets wat waarschijnlijk lijkt op <code>debuggen.ino:12:1 error: expected &apos;;&apos; before &apos;}&apos; token</code>. De tekst <code>12:1</code> geeft precies aan waar in het programma de fout zit, regel 12 en het eerste teken. De IDE verachte op die plek dus een &quot;;&quot; voor het &quot;}&quot; teken.</p>
 
 
+            <h3>Opdracht 7.2</h3>
 
+            <p class="assignment">Haal nu met de aanwijzingen in de foutmeldingen de fout uit het programma. Waar zou jij de &quot;;&quot; zetten als je het netjes zou doen ?</p>
+            <hr/>
+
+
+            <h2>Runtime fouten</h2>
+
+            <p>Runtime fouten zijn fouten die ontstaan tijdens het uitvoeren van een programma. Als er een runtime fout in een programma zit hoeft deze niet op te treden, maar het kan soms wel optreden. Hieronder zie je een programma waar een runtime fout in zit. Begin het programma te lezen vanaf de regel <code>int getal = 5;</code>. De regels zorgen er onder andere voor dat het programma een willekeurig getal kan kiezen</p>
+
+            <pre><code class="language-none">
+    
+void setup() {
+  
+  Serial.begin(9600);
+  delay(2000);
+  pinMode(A1,INPUT) ;
+  randomSeed(analogRead(A1)); 
+  
+  int getal = 5;
+  Serial.println("start getal");
+  Serial.println(getal);
+  
+  int teller = random(1, 10);
+  Serial.println("start teller");
+    Serial.println(teller);
+  
+  while (getal != teller) {
+    Serial.println("teller");
+    Serial.println(teller);
+    teller++ ;
+  }
+    
+}
+
+void loop() {
+    
+}
+    </code>
+    </pre>
+
+            <p>Eerst wordt in de variabele <code>getal</code> de waarde <em>5</em> gezet. Vervolgens wordt dit getoond in het console van je IDE. Daarna wordt in variabele <code>teller</code> een willekeurig getal van 1 tot en met 10 geplaats. Elke keer dat je het programma start zal hier dus een andere waarde in gezet worden.</p>
+
+            <p>Daarna gaat het programma een aantal programma regels herhalen. Dit blijft de computer herhalen zolang de waarde van <code>getal</code> ongelijk is aan <code>teller</code>. Daar lijkt niets mis mee toch ?</p>
+
+            <h3>Opdracht 7.3</h3>
+
+            <p class="assignment">Maak een nieuw programma en knip en plak het bovenstaande programmaregels in het programma. Houd vervolgens een vinger op het pinnetje <em>A1</em> van de Arduino. Het maakt niet uit of je ook nog andere pinnetjes aanraakt. </p>
+            <hr/>
 
 
 </body>
