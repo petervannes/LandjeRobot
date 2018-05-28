@@ -1933,12 +1933,9 @@ void loop() {
 
             <h2>Runtime fouten</h2>
 
-            <p>Runtime fouten zijn fouten die ontstaan tijdens het uitvoeren van een programma. Als er een runtime fout in een programma zit hoeft deze niet op te treden, maar het kan soms wel optreden. Hieronder zie je een programma waar een runtime fout in zit. Begin het programma te lezen vanaf de regel <code>int getal = 5;</code>. De regels zorgen er onder andere voor dat het programma een willekeurig getal kan kiezen</p>
+            <p>Runtime fouten zijn fouten die ontstaan tijdens het uitvoeren van een programma. Uitvoeren noemen we in het Engels &quot;runnen&quot;. Als er een runtime fout in een programma zit hoeft deze niet op te treden, maar het kan soms wel optreden. Hieronder zie je een programma waar een runtime fout in zit. Begin het programma te lezen vanaf de regel <code>int getal = 5;</code>. De programma regels voor deze regel zorgen er onder andere voor dat het programma een willekeurig getal kiest. De functie <code>random(1,10)</code> kiest een willekeurig getal van 1 tot en met 10.</p>
 
-            <pre><code class="language-none">
-    
-void setup() {
-  
+            <pre><code class="language-none">void setup() {
   Serial.begin(9600);
   delay(2000);
   pinMode(A1,INPUT) ;
@@ -1950,13 +1947,15 @@ void setup() {
   
   int teller = random(1, 10);
   Serial.println("start teller");
-    Serial.println(teller);
+  Serial.println(teller);
   
   while (getal != teller) {
     Serial.println("teller");
     Serial.println(teller);
     teller++ ;
   }
+  
+  Serial.println("Klaar!");
     
 }
 
@@ -1972,8 +1971,81 @@ void loop() {
 
             <h3>Opdracht 7.3</h3>
 
-            <p class="assignment">Maak een nieuw programma en knip en plak het bovenstaande programmaregels in het programma. Houd vervolgens een vinger op het pinnetje <em>A1</em> van de Arduino. Het maakt niet uit of je ook nog andere pinnetjes aanraakt. </p>
+            <p class="assignment">Maak een nieuw programma en knip en plak de bovenstaande programmaregels in het programma. Houd vervolgens een vinger op de pin <em>A1</em> van de Arduino. Het maakt niet uit of je ook nog een andere pin aanraakt. Doordat je contact maakt met pin <em>A1</em> zal er van de computer naar jou een heel klein stroompje electriciteit lopen. Hoeveel electriciteit er door jou heen loopt verschilt per keer, dit gebruikt de Arduino weer om een willekeurig getal te maken. </p>
+
+            <p class="assignment">Start vervolgens het programma een paar keer.</p>
+
+            <p class="assignment">Je ziet waarschijnlijk dat het programma netjes na een paar keer printen van een getal &quot;Klaar!&quot; print zoals in het voorbeeld hieronder.</p>
+
+            <pre><code class="language-none">start getal
+5
+start teller
+2
+teller
+2
+teller
+3
+teller
+4
+Klaar!</code></pre>
+
+
+            <p class="assignment">Dit gaat niet altijd zo, als er een fout runtime fout optreed in het programma blijft de teller maar doorlopen.</p>
+
+
+            <pre><code class="language-none">start getal
+5
+start teller
+8
+teller
+8
+teller
+9
+teller
+10
+teller
+11
+teller
+12
+teller
+13
+teller
+14
+teller
+15
+teller
+16
+...
+</code></pre>
+
+            <p class="assignment">Hoe komt dat? Runtime fouten zijn helaas niet heel eenvoudig te vinden. Belangrijk is dat je precies te werk gaat en stap voor stap het programma probeert te debuggen. Doe dit door stap-voor-stap door de programma regels te gaan en op te schrijven wat de inhoud van de variabelen zijn en wat de uitkomsten van condities zijn.</p>
+
+            <p class="assignment">Hieronder zie je een voorbeeld hoe je dit op kan schrijven. Naast de inhoud van de variabelen staat ook nog het regelnummer in het programma waar de variabele van waarde wijzigt of de conditie getest wordt. Probeer nu aan de hand van onderstaande stappen te begrijpen hoe het programma verloopt. Op regel 12 krijgt de variabele <code>teller</code>het willekeurige getal 3. </p>
+
+            <pre><code class="language-none">Stap     Regel    Getal    Teller   Getal!=Teller
+  1          8        5         -          -
+  2         12        5         3          -
+  3         16        5         3        True
+  4         19        5         4          -
+  5         16        5         4        True
+  6         19        5         5          -
+  7         16        5         5        False  
+</code></pre>
+
+            <p class="assignment">Nu moet je zelf de stappen gaan opschrijven zoals in het voorbeeld hierboven. Alleen krijgt de variabele <code>teller</code>op regel 12 hier de willekeurige waarde 6.</p>
+            <pre><code class="language-none">Stap     Regel    Getal    Teller   Getal!=Teller
+  1          8        5         -          -
+  2         12        5         6          -
+  3
+</code></pre>
+
+            <p class="assignment">Zoals je ziet gaat er hier iets mis. Wat moet je aan het programma aanpassen om deze bug te verhelpen?</p>
             <hr/>
+
+            <h1 id="toc_15">Les 8, de robot instructie set</h1>
+
+
+            <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instruction%20manual%20NLD.html" target="_blank">Landje Robot Instructie set</a>
 
 
 </body>

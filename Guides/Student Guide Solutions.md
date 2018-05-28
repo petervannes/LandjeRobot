@@ -107,3 +107,66 @@ Het juiste antwoord is 9x
     void loop() {
         
     }
+    
+    
+### Assignment 3
+
+#### Solution 1
+
+    void setup() {
+      Serial.begin(9600);
+      delay(2000);
+      pinMode(A1,INPUT) ;
+      randomSeed(analogRead(A1)); 
+  
+      int getal = 10;
+      Serial.println("start getal");
+      Serial.println(getal);
+  
+      int teller = random(1, 10);
+      Serial.println("start teller");
+      Serial.println(teller);
+      
+      while (getal != teller) {
+        Serial.println("teller");
+        Serial.println(teller);
+        teller++ ;
+      }
+  
+      Serial.println("Klaar!");
+    
+    }
+
+    void loop() {
+        
+    }
+
+#### Solution 2
+
+    void setup() {
+      Serial.begin(9600);
+      delay(2000);
+      pinMode(A1,INPUT) ;
+      randomSeed(analogRead(A1)); 
+  
+      int getal = 5;
+      Serial.println("start getal");
+      Serial.println(getal);
+  
+      int teller = random(1, 5);
+      Serial.println("start teller");
+      Serial.println(teller);
+      
+      while (getal != teller) {
+        Serial.println("teller");
+        Serial.println(teller);
+        teller++ ;
+      }
+  
+      Serial.println("Klaar!");
+    
+    }
+
+    void loop() {
+        
+    }

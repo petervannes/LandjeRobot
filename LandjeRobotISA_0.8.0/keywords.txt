@@ -15,45 +15,54 @@ LandjeRobotHead	KEYWORD1	LandjeRobotHead
 #######################################
 
 # Mouth (Led)
-praat	KEYWORD2
-praatIk	KEYWORD2
-mondOpen	KEYWORD2
-mondDicht	KEYWORD2
+Talk	KEYWORD2
+IsTalking	KEYWORD2
+MouthOpen	KEYWORD2
+MouthShut	KEYWORD2
 
 # Head (Servo)
-kijk	KEYWORD2
+Look	KEYWORD2
 
 # Eyes (Ultrasonic Sensor)
-meetAfstand	KEYWORD2
+GetDistanceInCM	KEYWORD2
 
 # Line Sensors
-detecteerLijn	KEYWORD2
+DetectLine	KEYWORD2
 
 # Wheels (Stepper motors)
-beweegIk	KEYWORD2
-beweeg	KEYWORD2
-draai	KEYWORD2
+isMoving	KEYWORD2
+SetDirection  KEYWORD2
+SetTurn	KEYWORD2
+Move	KEYWORD2
 
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-
+# Direction of travel
 STOP	LITERAL1
 FORWARD	LITERAL1
 BACKWARD	LITERAL1
 
+# Stepper mode stepmode
 HALF_STEP	LITERAL1
 FULL_STEP	LITERAL1
 
-GEEN	LITERAL1
-LINKS	LITERAL1
-RECHTS	LITERAL1
-BEIDE	LITERAL1
+# Turn
+STRAIGHT
+LEFT
+RIGHT
 
+# Look direction
 FAR_LEFT	LITERAL1
 LEFT	LITERAL1
 FORWARD	LITERAL1
 RIGHT	LITERAL1
 FAR_RIGHT	LITERAL1
+
+# Line Sensor
+NONE  LITERAL1
+LEFT  LITERAL1
+RIGHT  LITERAL1
+BOTH  LITERAL1
