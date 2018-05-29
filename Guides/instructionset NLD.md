@@ -1,4 +1,4 @@
-# Landje Robot Instructies
+# Landje Robot Instructieset
 
 
 De Landje robot heeft zijn eigen set van opdrachten die je hem kunt geven, een instructie-set.
@@ -19,7 +19,7 @@ De Landje robot heeft verschillende eigen instructies. Je hebt instructies om te
 `LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM ,
 trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;`
 
-Met deze lange instructie wordt de robot ingesteld. Na het uitvoeren van deze regel kun je de variabele `landjerobot`. Door middel van deze variabele kun je de instructies aan de robot geven. Je geeft een instructie door aan de variabele `landjerobot` de instructie te plakken. Je plakt een instructie aan landjerobot door middel van een punt. Bijvoorbeeld;   
+Met deze lange instructie wordt de robot ingesteld. Na het uitvoeren van deze regel kun je de variabele `landjerobot` gebruiken om instructies voor de robot te geven. Je geeft een instructie door aan de variabele `landjerobot` de instructie te plakken. Je plakt een instructie aan landjerobot door middel van een punt. Bijvoorbeeld;   
 
 `landjerobot.talk(5) ;` 
 
@@ -375,4 +375,4 @@ if (detecteerLijn() != LandjeRobot::LINE::NONE) {
     Serial.println("Er is een lijn gedetecteerd") ;
 }
 
-```
+```v

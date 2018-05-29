@@ -15,25 +15,24 @@ LandjeRobotHead	KEYWORD1	LandjeRobotHead
 #######################################
 
 # Mouth (Led)
-Talk	KEYWORD2
-IsTalking	KEYWORD2
-MouthOpen	KEYWORD2
-MouthShut	KEYWORD2
+talk	KEYWORD2
+amITalking	KEYWORD2
+mouthOpen	KEYWORD2
+mouthClosed	KEYWORD2
 
 # Head (Servo)
-Look	KEYWORD2
+look	KEYWORD2
 
 # Eyes (Ultrasonic Sensor)
-GetDistanceInCM	KEYWORD2
+measureDistance	KEYWORD2
 
 # Line Sensors
-DetectLine	KEYWORD2
+detectLine	KEYWORD2
 
 # Wheels (Stepper motors)
-isMoving	KEYWORD2
-SetDirection  KEYWORD2
-SetTurn	KEYWORD2
-Move	KEYWORD2
+doIMove	KEYWORD2
+turn  KEYWORD2
+move	KEYWORD2
 
 
 #######################################
