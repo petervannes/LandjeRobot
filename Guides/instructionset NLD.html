@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>instruction manual NLD</title>
+<title>instructionset NLD</title>
 
 
 <style type="text/css">
@@ -282,7 +282,7 @@ table tr u {
 
 <body>
 
-<h1 id="toc_0">Landje Robot Instructies</h1>
+<h1 id="toc_0">Landje Robot Instructieset</h1>
 
 <p>De Landje robot heeft zijn eigen set van opdrachten die je hem kunt geven, een instructie-set.
 Met deze instructies kun je de robot eenvoudig besturen.</p>
@@ -317,9 +317,10 @@ int servoPin = 14 ;
 // Lampje in de mond van de robot
 int mouthledPin = 15 ;
 
+// Aansluiting van de mode schakelaar
+int switchPin = 0 ;
 
-LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM ,
-trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;</code></pre></div>
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin) ;</code></pre></div>
 
 <p>Deze instructies moeten voor de functie <em>setup()</em> in het programma geplaatst worden. Knip en plak deze instructies voor aan ieder programma dat je voor de robot schrijft.</p>
 
@@ -330,7 +331,7 @@ trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;<
 <p><code>LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM ,
 trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin,mouthledPin) ;</code></p>
 
-<p>Met deze lange instructie wordt de robot ingesteld. Na het uitvoeren van deze regel kun je de variabele <code>landjerobot</code>. Door middel van deze variabele kun je de instructies aan de robot geven. Je geeft een instructie door aan de variabele <code>landjerobot</code> de instructie te plakken. Je plakt een instructie aan landjerobot door middel van een punt. Bijvoorbeeld;   </p>
+<p>Met deze lange instructie wordt de robot ingesteld. Na het uitvoeren van deze regel kun je de variabele <code>landjerobot</code> gebruiken om instructies voor de robot te geven. Je geeft een instructie door aan de variabele <code>landjerobot</code> de instructie te plakken. Je plakt een instructie aan landjerobot door middel van een punt. Bijvoorbeeld;   </p>
 
 <p><code>landjerobot.talk(5) ;</code> </p>
 
@@ -794,7 +795,8 @@ Serial.println(&quot; cm&quot;) ;
 if (detecteerLijn() != LandjeRobot::LINE::NONE) {
     Serial.println(&quot;Er is een lijn gedetecteerd&quot;) ;
 }
-</code></pre></div>
+
+```v</code></pre></div>
 
 
 
