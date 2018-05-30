@@ -2056,11 +2056,11 @@ teller
 
             <p class="assignment">Lees nu de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> tot aan de <em>Instructies</em>.</p>
 
-            <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">hier</a> downloaden</p>
+            <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al, <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">hier</a> downloaden</p>
 
             <div style="">
                 <div style="float:left;width:49%;margin-right: 7px ">
-                    <p class="assignment">Nu je de library hebt gedownload kun je hem toevoegen in je IDE. Klik in je IDE in de linkerkolom op <em>Libraries</em>. Boven in de tweede kolom staat nu <em>LIBRARY MANAGER</em> met rechts hiervan een symbool met een pijl die naar boven wijst. Dit is de import knop. Klik op deze knop om de net door jouw downloaded <em>LandjeRobot.zip</em> te importen. Als dit goed is gegaan krijg je een melding zoals in de afbeelding getoond is. </p>
+                    <p class="assignment">Nu je de library hebt gedownload kun je hem toevoegen in je IDE. Klik in je IDE in de linkerkolom op <em>Libraries</em>. Boven in de tweede kolom staat nu <em>LIBRARY MANAGER</em> met rechts hiervan een symbool met een pijl die naar boven wijst. Dit is de import knop. Klik op deze knop om de net door jouw downloaded <em>LandjeRobot.zip</em> te importen. Als dit goed is gegaan krijg je een melding zoals in de afbeelding getoond wordt. </p>
                 </div>
                 <div style="float:left;width:49%;margin-right: 7px ">
                     <a class="lightbox" href="#Lesson_8_LibraryImport">
@@ -2075,9 +2075,9 @@ teller
                 <div style="clear:both; "></div>
             </div>
 
-            <p>Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
+            <p class="assignment">Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
 
-            <p>Denk je dat het programma goed is? Haal dan de USB kabel uit de robot, zet 4 batterijen in de batterijhouder en zet de robot aan.</p>
+            <p class="assignment">Denk je dat het programma goed is? Haal dan de USB kabel uit de robot, zet 4 batterijen in de batterijhouder en zet de robot aan.</p>
 
             <hr/>
 
@@ -2092,7 +2092,8 @@ teller
 
             <img style="display: block; margin-left: auto; margin-right: auto;width:40% " src="./Student%20guide/Lesson_8_Robot.png" alt="">
 
-            <p>Gebruik nu </p>
+            <p>Gebruik nu onderstaande &quot;instructies&quot; en gebruik jouw papieren robot om de instructies uit te voeren. Leg de robot neer op een tafel en beweeg hem volgens de instructies. Als je deze opvolgt zal de robot zich in een vierkant verplaatsen en weer uitkomen op de positie waar het begonnen was. </p>
+
             <pre><code class="language-none">Beweeg 10cm vooruit
 Draai 90 graden naar links
 Beweeg 10cm vooruit
@@ -2102,6 +2103,35 @@ Draai 90 graden naar links
 Beweeg 10cm vooruit
 Draai 90 graden naar links</code></pre>
 
+            <h3>Opdracht 8.2</h3>
+
+            <p class="assignment">Nu je weet hoe je de robot in een vierkant kunt laten rijden mag je dit zelf gaan programmeren. De <code>move</code> en <code>turn</code> instructies hebben verschillende syntaxis (meervoud van syntax). Zo heb je voor de instructie <code>move</code> de syntax <code>move( richting , afstand) ;</code> en <code>move( richting , afstand, wachten) ;</code></p>
+
+            <p class="assignment">Het verschil tussen beide syntaxis is dat bij de eerste syntax alleen de richting en afstand kan worden opgegeven. Bij de tweede kan ook aangegeven worden dat de instructie wacht totdat de actie, het bewegen van de robot over een afstand, is afgerond. Als je bij de <code>move</code> en <code>turn</code> instructie niet aangeeft dat het moet wachten tot het afgerond is zal de robot alle <code>move</code> en <code>turn</code> instructies hebben afgerond voordat de robot een centimeter heeft gereden! </p>
+
+            <p class="assignment">Maak nu een nieuw programma &quot;beweeg_vierkant&quot; en programmeer in de functie <code>setup()</code> de instructies om de robot zich in een vierkant te laten bewegen.</p>
+
+            <p class="assignment">Als je denkt dat het programma goed werkt, upload het dan naar de robot en zet hem aan. Vergeet niet de USB kabel eruit te halen!</p>
+
+            <hr/>
+
+            <h2>DRY</h2>
+
+            <p>Dry betekent in het Engels &quot;droog&quot;. Het is ook in het Engels een afkorting welke elke programmeur kent. Het is een afkorting van Don't Repeat Yourself, wat &quot;herhaal jezelf niet&quot; betekent. Waarschijnlijk heb jij in Opdracht 8.2 vier keer de <code>move</code> en <code>turn</code> instructie geschreven. Dit is goed, maar wat als je de robot in plaats van een vierkant van 10cm een vierkant van 15 centimeter wilt laten rijden ? Dan moet je het programma op 4 plekken aanpassen! Het is dus beter om herhalingen van instructies in programma's te voorkomen. Dus als je programmeert, DRY!</p>
+
+
+
+            <h3>Opdracht 8.3</h3>
+
+            <p class="assignment">Pas het programma van Opdracht 8.2 aan zodat je nog maar &egrave;&egrave;n keer de <code>move</code> en <code>turn</code> instructies gebruikt om de robot in een vierkant te laten bewegen. Heb je even geen idee hoe je dit zou moeten doen, kijk dan eens in hoofdstuk 6, succes!</p>
+
+
+            <h2>Sensors gebruiken</h2>
+
+
+            <p>Landjerobot heeft meerdere sensors. Sensors waarmee je afstand kunt meten, een schakelaar en reflectiesensors. Deze sensors kun je gebruiken om een lijn op een vloer te detecteren. Deze sensors werken het beste op een donkere vloer welke een gelijkmatige kleur heeft. Op deze vloer ga je straks een stukje wit tape plakken zodat de sensor deze kan detecteren.</p>
+
+            <p>Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
 
 </body>
 
