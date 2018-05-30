@@ -2043,11 +2043,64 @@ teller
             <hr/>
 
             <h1 id="toc_15">Les 8, de robot instructie set</h1>
+            <p>Je kunt nu al programmeren en debuggen! In de volgende lessen zul je meer instructies leren. Naat de standaard C instructies heeft deze robot speciale instructies voor de robot. Deze instructies kun je vinden in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></p>
 
-            <p>Je kunt nu al programmeren en debuggen! In de volgende lessen zul je meer instructies leren. Naat de standaard C instructies heeft deze robot speciale instructies voor de robot. Deze instructies kun je vinden in de Landje Robot Instructieset</p>
+            <p>Met deze speciale instructieset kun je de robot laten rijden, kijken, afstand meten en lijnen op de vloer herkennen. Door deze functies te combineren in een programma kun je bijvoorbeeld de robot een lijn op de vloer laten volgen. Maar je kunt hem ook laten rondrijden zonder tegen iets op te botsen.</p>
+
+            <h2>De eerste robot instructie, move</h2>
+
+            <p>Move betekent &quot;bewegen&quot;. In de volgende opdracht zul je robot door middel van de instructie <code>move</code> echt laten bewegen. Het is een opdracht waarin je best wel even moet lezen en dingen uitzoeken, dus neem je tijd.</p>
 
 
-            <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje Robot Instructie set</a>
+            <h3>Opdracht 8.1</h3>
+
+            <p class="assignment">Lees nu de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> tot aan de <em>Instructies</em>.</p>
+
+            <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">hier</a> downloaden</p>
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p class="assignment">Nu je de library hebt gedownload kun je hem toevoegen in je IDE. Klik in je IDE in de linkerkolom op <em>Libraries</em>. Boven in de tweede kolom staat nu <em>LIBRARY MANAGER</em> met rechts hiervan een symbool met een pijl die naar boven wijst. Dit is de import knop. Klik op deze knop om de net door jouw downloaded <em>LandjeRobot.zip</em> te importen. Als dit goed is gegaan krijg je een melding zoals in de afbeelding getoond is. </p>
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_8_LibraryImport">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_8_LibraryImport.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_8_LibraryImport">
+                        <img src="./Student%20guide/Lesson_8_LibraryImport.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
+            <p>Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
+
+            <p>Denk je dat het programma goed is? Haal dan de USB kabel uit de robot, zet 4 batterijen in de batterijhouder en zet de robot aan.</p>
+
+            <hr/>
+
+
+            <h2>Move herhalen</h2>
+
+            <p>Zoals je gezien hebt kun je met de <code>move</code> instructie de robot vooruit laten rijden. Met een andere instructie <code>turn</code> kun je de robot in een richting draaien. Hoever je de robot draait geeft je aan in graden. Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> bij de instructie <code>turn</code>. Bij het plaatje van de robot zie je een cirkel die is verdeeld in 360 stukjes, deze stukjes noem je graden. Als je de robot 360 graden laat draaien, maakt hij een heel rondje. Bij 90 graden maakt de robot een rechte hoek.</p>
+
+            <p>Door gebruik te maken van de <code>move</code> en <code>turn</code> instructie kun je de robot een vierkantje laten rijden. Als je de robot eerst vooruit laat bewegen, en dan draait heeft hij de eerste zijde van een vierkant afgelegd en staat hij klaar voor de tweede zijde. Als je dit vier keer herhaalt rijdt hij precies een vierkant.</p>
+
+            <p>Dit is misschien in het begin moeilijk te begrijpen. Wat kan helpen is door zelf de instructies na te spelen. Print daarvoor het onderstaande afbeelding af van de robot, of teken hem na op een stuk papier. Knip deze vervolgens uit.</p>
+
+            <img style="display: block; margin-left: auto; margin-right: auto;width:40% " src="./Student%20guide/Lesson_8_Robot.png" alt="">
+
+            <p>Gebruik nu </p>
+            <pre><code class="language-none">Beweeg 10cm vooruit
+Draai 90 graden naar links
+Beweeg 10cm vooruit
+Draai 90 graden naar links
+Beweeg 10cm vooruit
+Draai 90 graden naar links
+Beweeg 10cm vooruit
+Draai 90 graden naar links</code></pre>
 
 
 </body>

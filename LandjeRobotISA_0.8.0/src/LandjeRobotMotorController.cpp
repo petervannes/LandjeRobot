@@ -22,7 +22,7 @@ LandjeRobotMotorController::LandjeRobotMotorController(int motor_data[][4], Land
     _stepCount = 0;
     _stepperMode = stepperMode;
     _wheelCircumferenceMM = 2 * PI * wheelRadiusMM;
-    _turnRadiusCircumferenceMM = 2 * PI * trackWidthMM;
+    _turnRadiusCircumferenceMM = PI * trackWidthMM;
 
     // Convert pin numbers to pinbit mask, set input/output mode,
     // store the output port register per pin

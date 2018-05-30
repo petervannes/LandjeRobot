@@ -170,3 +170,11 @@ Het juiste antwoord is 9x
     void loop() {
         
     }
+    
+## Lesson 8, The Robot instructionset
+
+### Assignment 1
+
+    void setup() {      landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10) ;        }    void loop() {        }
+    
+    
