@@ -2131,7 +2131,27 @@ Draai 90 graden naar links</code></pre>
 
             <p>Landjerobot heeft meerdere sensors. Sensors waarmee je afstand kunt meten, een schakelaar en reflectiesensors. Deze sensors kun je gebruiken om een lijn op een vloer te detecteren. Deze sensors werken het beste op een donkere vloer welke een gelijkmatige kleur heeft. Op deze vloer ga je straks een stukje wit tape plakken zodat de sensor deze kan detecteren.</p>
 
-            <p>Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
+            <h3>Opdracht 8.4</h3>
+
+            <p class="assignment">In deze opdracht ga je de refelectiesensors afstellen. De sensors geven een voor mensen onzichtbaar licht en meten dan of dat licht gereflecteerd wordt. Je kunt deze sensors afstellen zodat ze bij een bepaalde hoeveelheid gereflecteerd licht een signaal geven. Je kunt de sensor dus het beste gebruiken op een donkere vloer met witte tape of een lichte tape met een donkere vloer zodat de sensor het beste het verschil tussen vloer en tape kan detecteren.</p>
+
+            <p class="assignment">Omdat je straks de robot aan moet zetten om de sensors af te stellen is het handig dat hij niet ineens begint te rijden. Maak daarom in je IDE een leeg programma en upload dit naar de robot.</p>
+
+
+            <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
+
+            <hr/>
+
+
+            <p>Met de instructie <code>detectLine()</code> kun je testen of de robot een lijn ziet en met welke, de linker of rechter, sensor. Als je in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> leest, zie je dat deze instructie vier verschillende waarden terug kan geven. Afhankelijk van </p>
+
+
+            <h3>Opdracht 8.5</h3>
+
+            <p class="assignment">Schrijf nu een programma dat de robot recht vooruit laat rijden en laat stoppen als een van de sensors detecteert dat er over het witte tape wordt gereden. Begin met de instructie <code>move(richting);</code> zodat de robot gelijk gaat rijden en niet wacht totdat de instructie is afgerond. Deze instructie zet je in de <code>setup()</code> functie. De <code>setup()</code> wordt maar &eacute;&eacute;n keer aangeroepen, als je de robot aanzet. Schrijf daarna in de functie <code>loop()</code> je programma dat ervoor zorgt dat <em>als</em> de sensor <em>niet niets</em> detecteerd de robot laat stoppen met rijden.</p>
+
+            <p class="assignment">De lijn detectie sensors kunnen vier verschillende waarden teruggeven <code>LandjeRobot::LINE::NONE</code>, <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> en <code>LandjeRobot::LINE::BOTH</code>. De robot moet dus stoppen als of deze de waarde <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> of <code>LandjeRobot::LINE::BOTH</code> teruggeeft. Kun je dit misschien ook schrijven door alleen gebruik te maken van <code>LandjeRobot::LINE::NONE</code>? Dat zou het schrijven van de code voor het stoppen van de robot namelijk wel veel eenvoudiger maken.</p>
+
 
 </body>
 

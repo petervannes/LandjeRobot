@@ -185,3 +185,12 @@ Het juiste antwoord is 9x
 ### Assignment 3
 
     void setup() {         ## Voorbeeld 1      for (int k=1 ; k <=4 ; k++) {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;        landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);      }         ## Voorbeeld 2      int k = 1 ;      while (k <= 4) {        landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;        landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);        k++ ;     }       }    void loop() {        }
+    
+### Assignment 4
+
+hands on assignment, no specific solution
+
+### Assignment 5
+
+    void setup() {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE ) {        landjerobot.move(LandjeRobot::DIRECTION::STOP ) ;      }      }
+

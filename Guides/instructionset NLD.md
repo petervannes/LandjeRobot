@@ -370,9 +370,8 @@ geen
 
 ```
 
-(
-if (detecteerLijn() != LandjeRobot::LINE::NONE) {
+if (detectLine() != LandjeRobot::LINE::NONE) {
     Serial.println("Er is een lijn gedetecteerd") ;
 }
 
-```v
+```
