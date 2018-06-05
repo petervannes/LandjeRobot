@@ -2148,10 +2148,73 @@ Draai 90 graden naar links</code></pre>
 
             <h3>Opdracht 8.5</h3>
 
-            <p class="assignment">Schrijf nu een programma dat de robot recht vooruit laat rijden en laat stoppen als een van de sensors detecteert dat er over het witte tape wordt gereden. Begin met de instructie <code>move(richting);</code> zodat de robot gelijk gaat rijden en niet wacht totdat de instructie is afgerond. Deze instructie zet je in de <code>setup()</code> functie. De <code>setup()</code> wordt maar &eacute;&eacute;n keer aangeroepen, als je de robot aanzet. Schrijf daarna in de functie <code>loop()</code> je programma dat ervoor zorgt dat <em>als</em> de sensor <em>niet niets</em> detecteerd de robot laat stoppen met rijden.</p>
+            <p class="assignment">Schrijf nu een programma dat de robot recht vooruit laat rijden en laat stoppen als een van de sensors detecteert dat er over het witte tape wordt gereden. Begin met de instructie <code>move(richting);</code> zodat de robot gelijk gaat rijden en niet wacht totdat de instructie is afgerond. Deze instructie zet je in de <code>setup()</code> functie. De <code>setup()</code> wordt maar &eacute;&eacute;n keer aangeroepen, als je de robot aanzet. Hierdoor start de robot met rijden als je hem aanzet, en zal hij niet meer gaan rijden nadat hij gestopt is. Schrijf daarna in de functie <code>loop()</code> je programma dat ervoor zorgt dat <em>als</em> de sensor <em>niet niets</em> detecteert de robot laat stoppen met rijden.</p>
 
-            <p class="assignment">De lijn detectie sensors kunnen vier verschillende waarden teruggeven <code>LandjeRobot::LINE::NONE</code>, <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> en <code>LandjeRobot::LINE::BOTH</code>. De robot moet dus stoppen als of deze de waarde <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> of <code>LandjeRobot::LINE::BOTH</code> teruggeeft. Kun je dit misschien ook schrijven door alleen gebruik te maken van <code>LandjeRobot::LINE::NONE</code>? Dat zou het schrijven van de code voor het stoppen van de robot namelijk wel veel eenvoudiger maken.</p>
+            <p class="assignment">De <code>detectLine</code> instructie kan vier verschillende waarden teruggeven <code>LandjeRobot::LINE::NONE</code>, <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> en <code>LandjeRobot::LINE::BOTH</code>. De robot moet dus stoppen als of deze de waarde <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> of <code>LandjeRobot::LINE::BOTH</code> teruggeeft. Kun je dit misschien ook schrijven door alleen gebruik te maken van <code>LandjeRobot::LINE::NONE</code> ? Dat zou het schrijven van de code voor het stoppen van de robot namelijk wel veel eenvoudiger maken!</p>
 
+
+            <h1 id="toc_16">Les 9, Lijnen volgen</h1>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>Je hebt nu al geleerd hoe je de robot in elkaar zet, eenvoudige programma's geschreven en de robot laten rijden en stoppen met robot instructies. In deze les ga je leren hoe je de robot zelfstandig langs een lijn laat rijden. </p>
+
+                    <p>Met behulp van de reflectiesensors ga je detecteren wanneer een sensor over een lijn gaat. Als deze over een lijn gaat zult je iets moeten doen om ervoor te zorgen dat de robot weer netjes de lijn gaat volgen. </p>
+
+                    <p>In het voorbeeld hiernaast zal de robot als deze recht vooruit blijft rijden geen enkele keer met de reflectiesensors over de lijn gaan. Je hoeft de robot dus niet bij te sturen om het de lijn te laten volgen. </p>
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_1.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_1">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_1.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>Maar wat nu als de lijn niet zo recht is?</p>
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_2">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_2.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_2">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_2.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>Dan zal een van de reflectiesensors op een bepaald moment de lijn detecteren.</p>
+
+                    <p>In het voorbeeld hiernaast</p>
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_3">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_3.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_3">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_3.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+            Lesson_9_LineFollow_1.png
 
 </body>
 
