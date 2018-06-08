@@ -192,5 +192,5 @@ hands on assignment, no specific solution
 
 ### Assignment 5
 
-    void setup() {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE ) {        landjerobot.move(LandjeRobot::DIRECTION::STOP ) ;      }      }
+    void setup() {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE ) {        landjerobot.move(LandjeRobot::DIRECTION::STOP ) ;      }      }
 

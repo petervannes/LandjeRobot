@@ -2200,7 +2200,36 @@ Draai 90 graden naar links</code></pre>
                 <div style="float:left;width:49%;margin-right: 7px ">
                     <p>Dan zal een van de reflectiesensors op een bepaald moment de lijn detecteren.</p>
 
-                    <p>In het voorbeeld hiernaast</p>
+                    <p>In het voorbeeld hiernaast zal de linker reflectiesensor de lijn het eerst detecteren. In het onderstaande programma laat je de robot recht vooruit rijden en een letter afdrukken. Welke letter wordt afgedrukt hangt af van wat de sensoren detecteren. Welke letter denk jij dat er afgedruk wordt als de robot zich bevindt zoals in de afbeelding hiernaast?</p>
+
+                    <pre><code class="language-none">void setup() {
+   
+   Serial.begin(9600);
+   delay(2000);
+  
+   landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+  
+}
+
+void loop() {
+  
+  if (landjerobot.detectLine() == LandjeRobot::LINE::NONE) {
+    Serial.println("A");
+  }
+  
+  if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+    Serial.println("B");
+  }
+  
+  if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+    Serial.println("C");
+  }
+
+  if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+    Serial.println("D");
+  }
+  
+}</code></pre>
                 </div>
                 <div style="float:left;width:49%;margin-right: 7px ">
                     <a class="lightbox" href="#Lesson_9_LineFollow_3">
@@ -2214,7 +2243,67 @@ Draai 90 graden naar links</code></pre>
                 </div>
                 <div style="clear:both; "></div>
             </div>
-            Lesson_9_LineFollow_1.png
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>Als de linker sensor een lijn detecteert dan moet de robot ook naar links draaien om de lijn te blijven volgen. </p>
+
+
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_4">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_4.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_4">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_4.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>En je raadt het al, als de rechter sensor een lijn detecteert, dan moet de robot naar rechts draaien.</p>
+
+
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_5">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_5.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_5">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_5.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
+
+            <div style="">
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <p>En je raadt het al, als de rechter sensor een lijn detecteert, dan moet de robot naar rechts draaien.</p>
+
+
+                </div>
+                <div style="float:left;width:49%;margin-right: 7px ">
+                    <a class="lightbox" href="#Lesson_9_LineFollow_6">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_6.png" alt=""/>
+                    </a>
+                    <div class="lightbox-target" id="Lesson_9_LineFollow_6">
+                        <img src="./Student%20guide/Lesson_9_LineFollow_6.png" alt="" />
+                        <a class="lightbox-close" href="#deadlink"></a>
+                    </div>
+                </div>
+                <div style="clear:both; "></div>
+            </div>
+
 
 </body>
 
