@@ -95,12 +95,11 @@ LandjeRobotMotorController::Move()
         {
         // left
         case TURN::LEFT:
-            _motorStep[m] = _motorStep[m] - ((int)_stepperMode * (m == 0 ? (int)_motorDirection[m] : (int)-_motorDirection[m]));
+            _motorStep[m] = _motorStep[m] + ((int)_stepperMode * (m == 0 ? (int)_motorDirection[m] : (int)-_motorDirection[m]));
             break;
         // right
         case TURN::RIGHT:
-            _motorStep[m] = _motorStep[m] + ((int)_stepperMode * (m == 0 ? (int)_motorDirection[m] : (int)-_motorDirection[m]));
-
+            _motorStep[m] = _motorStep[m] - ((int)_stepperMode * (m == 0 ? (int)_motorDirection[m] : (int)-_motorDirection[m]));
             break;
         }
 
