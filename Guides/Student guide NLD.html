@@ -2075,7 +2075,7 @@ teller
                 <div style="clear:both; "></div>
             </div>
 
-            <p class="assignment">Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
+            <p class="assignment">Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Vergeet ook niet de instructies zoals deze bovenaan in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> staan naar jouw programma te knippen en te plakken. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
 
             <p class="assignment">Denk je dat het programma goed is? Haal dan de USB kabel uit de robot, zet 4 batterijen in de batterijhouder en zet de robot aan.</p>
 
@@ -2133,15 +2133,30 @@ Draai 90 graden naar links</code></pre>
 
             <h3>Opdracht 8.4</h3>
 
-            <p class="assignment">In deze opdracht ga je de refelectiesensors afstellen. De sensors geven een voor mensen onzichtbaar licht en meten dan of dat licht gereflecteerd wordt. Je kunt deze sensors afstellen zodat ze bij een bepaalde hoeveelheid gereflecteerd licht een signaal geven. Je kunt de sensor dus het beste gebruiken op een donkere vloer met witte tape of een lichte tape met een donkere vloer zodat de sensor het beste het verschil tussen vloer en tape kan detecteren.</p>
+            <p class="assignment">In deze opdracht ga je de refelectiesensors afstellen. De sensors geven een voor mensen onzichtbaar licht en meten dan of dat licht gereflecteerd wordt. Je kunt deze sensors afstellen zodat ze bij een bepaalde hoeveelheid gereflecteerd licht een signaal geven. Je kunt de sensor dus het beste gebruiken op een donkere vloer met witte tape of een lichte tape met een donkere vloer zodat de sensor het beste het verschil tussen vloer en tape kan detecteren. Je moet de reflectiesensors anders afstellen als je op een donkere vloer gaat rijden dan op een lichte vloer. In deze opdracht kun je voor jouw vloer de juiste stappen vinden om de reflectiesensors goed af te stellen.</p>
 
             <p class="assignment">Omdat je straks de robot aan moet zetten om de sensors af te stellen is het handig dat hij niet ineens begint te rijden. Maak daarom in je IDE een leeg programma en upload dit naar de robot.</p>
 
 
+            <b class="assignment">lichte vloer</b>
             <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
 
-            <hr/>
 
+
+            <b class="assignment">donkere vloer</b>
+            <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar rechts. Plak nu een stukje zwart tape op de vloer en zet een van de sensors boven het zwarte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar links totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
+
+            <p class="assignment">Als je een nieuw programma voor de robot start moet je altijd een aantal regels vanuit de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> kopieren. Een van deze regels ziet er zo uit. </p>
+
+            <pre><code>const bool lineSensorInverse = false ;</code></pre>
+
+            <p class="assignment">Als je een donkere vloer hebt, moet je bij elk programma dat je maakt deze regel veranderen in.</p>
+
+            <pre><code>const bool lineSensorInverse = true ;</code></pre>
+
+            <p class="assignment">Door de waarde van <code>false</code> naar <code>true</code> te veranderen, weet de robot dat je een donkere lijn op een lichte vloer gebruik, in plaats van een lichte lijn op een donkere vloer.</p>
+
+            <hr/>
 
             <p>Met de instructie <code>detectLine()</code> kun je testen of de robot een lijn ziet en met welke, de linker of rechter, sensor. Als je in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> leest, zie je dat deze instructie vier verschillende waarden terug kan geven. Afhankelijk van </p>
 
@@ -2157,6 +2172,10 @@ Draai 90 graden naar links</code></pre>
 
             <h1 id="toc_16">Les 9, Lijnen volgen</h1>
 
+            <p>In deze les ga je leren om sensors te programmeren. Met sensors kun je dingen waarnemen, zoals met bijvoorbeeld de reflectiesensors, het verschil tussen lichte en donkere oppervlakken op een vloer. Met de gegevens van deze sensor ga je vervolgens de robot hierop laten reageren.</p>
+
+
+            <h2>Volgen van een lijn</h2>
 
             <div style="">
                 <div style="float:left;width:49%;margin-right: 7px ">
@@ -2309,16 +2328,175 @@ void loop() {
 
             <h3>Opdracht 8.6</h3>
 
-            <p class="assignment">Plak nu met stukken tape op de vloer een route van ca. 1 meter die de robot moet gaan afleggen. Maak hier net zoals op de afbeeldingen hiervoven een paar bochten in. Maak ze niet te scherp anders zal tijdens het maken van de bocht de andere sensor tijdens het draaien detecteren en loopt de robot vast.
+            <p class="assignment">Plak nu met stukken tape een route op de vloer van ca. 1 meter die de robot moet gaan afleggen. Maak hier net zoals op de afbeeldingen hiervoven een paar bochten in. Maak ze niet te scherp anders zal tijdens het draaien van de robot de andere sensor de lijn detecteren en kan de robot vastlopen.
+            </p>
 
+            <p class="assignment">Schrijf nu een programma dat de robot de lijn laat volgen. De robot moet dus:
 
             </p>
 
-            <p class="assignment"></p>
+            <ul>
+                <li>Beginnen met rijden als je de robot aanzet in de <code>setup()</code> functie</li>
+                <li>Wanneer de robot rijdt, in de <code>loop()</code> functie</li>
+                <li>
+                    <ul>
+                        <li>10 graden naar links draaien als er links een lijn gedetecteerd wordt.</li>
+                        <li>10 graden naar rechts draaien als er rechts een lijn gedetecteerd wordt.</li>
+                        <li>Na het maken van een draai weer verder rijden</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p class="assignment">In deze opdracht is het de eerste keer dat je de <code>turn</code> instructie gaat gebruiken. Zoek in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> op hoe je de deze instructie moet gebruiken. Denk goed na of je de <code>move</code> en <code>turn</code> instructie laat wachten met het uitvoeren van de volgende instructie totdat deze uitgevoerd is. </p>
+
+            <p class="assignment">Denk je dat het programma goed is? Test het dan uit! Doet het programma niet wat je er van verwacht, probeer dan te debuggen wat er fout gaat. Het helpt als je met de &quot;papieren robot&quot; het programma probeert na te spelen.
 
 
-            <hr/>
+                <hr/>
 
+
+
+                <h2>Keren</h2>
+
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <p>De robot volgt als het goed is nu jouw op de vloer aangebrachte lijn. Maar aan het einde van de lijn gaat de robot er vandoor. Hij blijft rechtdoor rijden omdat er geen lijn meer gedetecteerd wordt.</p>
+
+                        <p>Als je de robot aan het einde van de lijn kan laten keren, dan blijft hij de lijn de hele tijd volgen. Eerst van onder naar boven, zoals op de afbeelding hiernaast. Dan als hij keert zal hij weer van boven naar onder rijden.</p>
+
+
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_7">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_7.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_7">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_7.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+
+                        <p>Door een lijn, loodrecht, op het begin en het einde van de te volgen lijn te plakken kan de robot zien dat hij moet keren.</p>
+
+                        <p>Als de robot over deze &quot;keerlijn&quot; rijdt zullen de linker <em>en</em> de rechte reflectiesensor een lijn detecteren.</p>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_8">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_8.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_8">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_8.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+
+                        <p>Als de robot beide lijnen gelijktijdig ziet, dan kan hij 180 graden keren en weer verder rijden. </p>
+
+                        <p>De robot zal dan in omgekeerde volgorde de lijn volgen, totdat hij weer een &quot;keerlijn&quot; detecteert. Dan zal hij weer omkeren en begint het volgen van de lijn opnieuw.</p>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_8a">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_8a.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_8a">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_8a.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+
+                        <p>Maar wat gebeurt er nu als de robot niet precies met beide sensors de &quot;keerlijn&quot; ziet? Kijk eens naar de afbeelding hiernaast. De rechter sensor ziet de &quot;keerlijn&quot; net iets eerder dan de linker sensor.</p>
+
+                        <p>Wat zou er dan gebeuren als je de robot laat rijden met het programma van opdracht 8.6?</p>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_9">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_9.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_9">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_9.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+
+                        <p>De rechter sensor detecteert dat er een lijn is. In je programma staat iets dat waarschijnlijk lijk op;</p>
+
+                        <pre><code> if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+      landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
+    }</code></pre>
+
+                        <p>De robot draait dus naar rechts als de rechter sensor een lijn detecteerd. Hierdoor komt de linker sensor boven de &quot;keerlijn&quot;, maar staat de rechter sensor er weer naast. De robot zal dus nog steeds niet keren. Weet jij wat de robot nu blijft doen ?</p>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_9a">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_9a.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_9a">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_9a.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+
+                        <p>De robot blijft dus heen en weer wiebelen voor de &quot;keerlijn&quot;. Dit blijft hij doen totdat de batterijen op zijn.</p>
+
+                        <h3>Opdracht 8.7</h3>
+
+                        <p class="assignment">Probeer nu met je papieren robot te verzinnen en je programma van opdracht 8.6 hoe je kunt voorkomen dat de robot blijft wiebelen voor de &quot;keerlijn&quot;. Hoe kun je voorkomen dat de robot gelijk naar links of rechts gaat als hij niet helemaal perfect recht op de &quot;keerlijn&quot; uitkomt? </p>
+
+                        <p class="assignment">Tip: Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a>.</p>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_10">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_10.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_10">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_10.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
 </body>
 
 

@@ -193,4 +193,17 @@ hands on assignment, no specific solution
 ### Assignment 5
 
     void setup() {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE ) {        landjerobot.move(LandjeRobot::DIRECTION::STOP ) ;      }      }
+    
+### Assignment 6
+
+    void setup() {          landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {          landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;              }            if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {          landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;        }            landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          }      }
+
+
+    
+### Assignment 7
+
+When the robot detects the a line with the left or right sensor. Then wait a short moment to see if the status of the line-detection sensor changes. When the robot arrives at the turn marker in a slightly slanting line the state of the sensor will change from `LandjeRobot::LINE::LEFT` or `LandjeRobot::LINE::RIGHT` to `
+LandjeRobot::LINE::BOTH`. So when before taking action on the sensors output is waited for a fraction of a second, the turn marker will be detected correctly.
+
+How this will be implemented is part of the next assignment. 
 

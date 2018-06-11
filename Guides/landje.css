@@ -30,6 +30,8 @@ body {
     margin: 40px 70px;
 }
 
+ul,
+li,
 p {
     font-weight: lighter;
     margin-bottom: 20px;
@@ -119,6 +121,10 @@ h5 img,
 h6 img,
 p img {
     margin-bottom: 0;
+}
+
+b.assignment {
+    margin-left: 20px;
 }
 
 
