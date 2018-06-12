@@ -34,6 +34,6 @@ LandjeLineSensor::LINEDETECT LandjeLineSensor::DetectLine()
     //  LEFT (1)  // Left sensor line detected
     //  RIGHT (2) // Right sensor line detected
     //  BOTH (3)  // Left and right sensor line deteced
-    return (LINEDETECT)((((((*(_lineSensorRegisterData[0])) & (_lineSensorBitmaskData[0])) ? 1 : 0) ^ _inverse) << 0) |
-                        (((((*(_lineSensorRegisterData[1])) & (_lineSensorBitmaskData[1])) ? 1 : 0) ^ _inverse) << 1));
+    return (LINEDETECT)((((((*(_lineSensorRegisterData[0])) & (_lineSensorBitmaskData[0])) ? 1 : 0) ^ !_inverse) << 0) |
+                        (((((*(_lineSensorRegisterData[1])) & (_lineSensorBitmaskData[1])) ? 1 : 0) ^ !_inverse) << 1));
 }
