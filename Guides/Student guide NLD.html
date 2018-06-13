@@ -2452,7 +2452,7 @@ void loop() {
                     <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                        <p>De rechter sensor detecteert dat er een lijn is. In je programma staat iets dat waarschijnlijk lijk op;</p>
+                        <p>De rechter sensor detecteert dat er een lijn is. In je programma staat iets dat waarschijnlijk lijkt op;</p>
 
                         <pre><code> if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
       landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
@@ -2483,7 +2483,7 @@ void loop() {
 
                         <p class="assignment">Probeer nu met je papieren robot te verzinnen en je programma van opdracht 8.6 hoe je kunt voorkomen dat de robot blijft wiebelen voor de &quot;keerlijn&quot;. Hoe kun je voorkomen dat de robot gelijk naar links of rechts gaat als hij niet helemaal perfect recht op de &quot;keerlijn&quot; uitkomt? </p>
 
-                        <p class="assignment">Tip: Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a>.</p>
+                        <p class="assignment">Tip: Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> naar de instructie <code>delay</code>, kun je hier misschien iets mee?.</p>
                     </div>
                     <div style="float:left;width:49%;margin-right: 7px ">
                         <a class="lightbox" href="#Lesson_9_LineFollow_10">
@@ -2501,10 +2501,76 @@ void loop() {
                 <hr/>
 
 
-                <h3>Opdracht 8.7</h3>
+
+                <h3>Opdracht 8.8</h3>
 
                 <p class="assignment">Plak met tape de keerlijnen aan het begin en einde van de lijn die de robot moet volgen. Maak de lijnen breed genoeg, ongeveer net zo breed als de wielen van de robot uit elkaar staan. Maak de keerlijnen twee keer zo dik door twee stroken tape naast elkaar te plakken.
                 </p>
+
+                <p class="assignment">Omdat jij waarschijnlijk in opdracht 8.6 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Maak een nieuw programma en kopieer onderstaande oplossing voor opdracht 8.6 in jouw programma. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
+
+                <pre><code>void setup() {
+
+   // Start met rijden als de robot aangezet wordt en
+   // wacht niet
+   landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+  
+}
+
+void loop() {
+
+  // Als er niet niets (!) gedetecteerd wordt door de 
+  // reflectie sensors doe dan iets
+  if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    
+    // Als de reflectie sensors links een lijn detecteren
+    if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+      // Draai 10 graden naar links en wacht
+      landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;
+    }
+    
+    // Als de reflectie sensors rechts een lijn detecteren
+    if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+      // Draai 10 graden naar rechts en wacht
+      landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
+    }
+    
+    // Laat de robot weer verder rijden
+    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    
+  } // einde if
+  
+}</code></pre>
+
+                <p class="assignment">Ga nu je programma uitbreiden. Zorg ervoor dat de robot bij een &quot;keerlijn&quot; omdraait. Als hij omgedraaid is moet de robot weer in de andere richting de lijn gaat volgen, om vervolgens bij de volgende &quot;keerlijn&quot; weer om te keren.</p>
+
+                <p class="assignment">De robot moet dus keren als zowel de linker als rechte reflectiesensor de lijn ziet. Om dit te programmeren kun je de bestaande programmaregels welke de robot naar links en rechts laten draaien als voorbeeld gebruiken.</p>
+
+                <p class="assignment">Dan moet je er nog voor zorgen dat de robot niet blijft wiebelen voor de &quot;keerlijn&quot;. Programmeer wat je in opdracht 8.7 hebt verzonnen om de robot goed te laten keren en probeer of het werkt. Lukt het niet? Probeer dan te debuggen wat er fout gaat. Het helpt als je weer met je papieren robot het programma stap voor stap doorloopt.</p>
+
+                <hr/>
+
+                <h2>De mode schakelaar</h2>
+
+                <p>Je hebt nu een programma klaar dat er voor zorgt dat de robot langs een lijn rijdt en weer keert bij een keerlijn. Straks ga je de robot meer ingewikkeldere dingen laten doen. Het zou handig zijn als je beide programma's op de robot kan opslaan en bij het aanzetten van de robot kan kiezen welk programma de robot dan gaat uitvoeren.</p>
+
+                <p>Hiervoor moet je wel iets hebben om dit aan de robot te kunnen doorgeven. Dat kan zonder dat je de robot weer op een computer moet aansluiten met de mode schakelaar.</p>
+
+                <h3>Opdracht 8.9</h3>
+
+                <p class="assignment">Lees hoe de instructie <code>mode</code> werkt in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></p>
+
+                <p class="assignment">Maak voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en heeft het de waarde <code>0</code>.</p>
+
+                <p class="assignment">Schrijf in de functie <code>setup()</code> een stukje programma dat ervoor zorgt dat de variabele <code>mode</code> de waarde uit de landje robot instructie <code>mode</code> krijgt.</p>
+
+                <p class="assignment">Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 8.8 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</p>
+
+                <h1 id="toc_17">Les 10, Meer sensors en motoren</h1>
+
+                <p>yaddie yaddie yaddie... </p>
+
+
 </body>
 
 

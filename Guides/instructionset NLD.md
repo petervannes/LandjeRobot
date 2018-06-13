@@ -43,44 +43,34 @@ Instructies kunnen ook een waarde teruggeven. Als een instructie een waarde teru
    
 ### Instructies
 
-#### move
+#### detectLine
 
 **Omschrijving**
 
-Laat de robot in een richting bewegen
+Geeft aan of er een lijn wordt gedetecteerd
 
 **Syntax**
 
-move( richting ) ;   
-move( richting , afstand) ;   
-move( richting , afstand, wachten) ;
-
+detectLine() ;   
 
 **Parameters**
 
-|Parameter|Type|Waarden|Opmerkingen|
-|:--------|:---|:------|:----------|
-| richting | | LandjeRobot::DIRECTION::STOP </br>LandjeRobot::DIRECTION::FORWARD</br>LandjeRobot::DIRECTION::BACKWARD | |
-| afstand |int| 0.._∞_| De afstand die bewogen moet worden in centimeters |
-| wachten |bool| true</br>_false_ | Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd |
-
+geen
         
 **Geeft terug**
 
-niets
+|Type|Waarde|Opmerkingen|
+|:--------|:--------|:------|
+|| LandjeRobot::LINE::NONE</br>LandjeRobot::LINE::LEFT</br> LandjeRobot::LINE::RIGHT</br> LandjeRobot::LINE::BOTH | NONE geeft aan dat er geen lijn gedetecteerd wordt. Bij BOTH wordt zowel links als rechts een lijn gedetecteerd |
+
 
 **Voorbeeld**
 
 ```
-// beweeg de robot vooruit
-landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD) ;
 
-// beweeg de robot 10cm achteruit
-landjerobot.beweeg(LandjeRobot::DIRECTION::BACKWARD,10) ;
-
-// beweeg de robot 20cm vooruit en wacht 
-// totdat de opgegeven afstand is afgelegd
-landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD,20,true) ;
+if (detectLine() != LandjeRobot::LINE::NONE) {
+    Serial.println("Er is een lijn gedetecteerd") ;
+}
 
 ```
 
@@ -117,46 +107,38 @@ if (doIMove()) {
 
 ```
 
-
-#### turn
+#### doITalk
 
 **Omschrijving**
 
-Laat de robot in een bepaalde richting draaien 
+Geeft aan of de robot aan het praten is.
 
 **Syntax**
 
-turn( richting ) ;   
-turn( richting , hoek) ;   
-turn( richting , hoek, wachten) ;
-
+doITalk() ;   
 
 **Parameters**
 
-|Parameter|Type|Waarden|Opmerkingen|
-|:--------|:---|:------|:----------|
-| richting | | LandjeRobot::TURN::STRAIGHT</br>LandjeRobot::TURN::LEFT</br>LandjeRobot::TURN::RIGHT | De draairichting van de robot. De waarde STRAIGHT laat de robot weer recht voor- of achteruit rijden |
-| hoek |int| 0..360 </br>_90_| Het aantal graden dat de robot moet draaien. Een hoek van 90 graden is een rechte hoek |
-| wachten |bool| true</br>_false_ | Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd |
-
-**Draairichtingen van de robot**
-<img src="./instruction manual/img_2.png" width="640">
+geen
         
 **Geeft terug**
 
-niets
+|Type|Waarde|Opmerkingen|
+|:--------|:--------|:------|
+|bool| true | Deze waarde wordt teruggegeven als de robot aan het praten is |
+|bool| false | Als de robot niet praat wordt deze waarde teruggeveven |
 
 **Voorbeeld**
 
 ```
-// draai de robot naar links
-landjerobot.draai(LandjeRobot::TURN::LEFT) ;
+// Laat de robot praten
+landjerobot.talk(60) ;
 
-// laat de robot een rondje rechtsom draaien
-landjerobot.draai(LandjeRobot::TURN::RIGHT,360) ;
+if (doITalk()) {
+    Serial.println("Ik praat!") ;
+}
 
 ```
-
 
 #### look
 
@@ -193,44 +175,15 @@ niets
 landjerobot.look(LandjeRobot::LOOK::LEFT) ;
 ```
 
-#### talk
+#### measureDistance
 
 **Omschrijving**
 
-Laat de robot 'praten' door een lichtje in de mond te laten knipperen.
+Meet de afstand van de robot tot een ander object
 
 **Syntax**
 
-talk( duur ) ;   
-
-
-**Parameters**
-
-|Parameter|Type|Waarden|Opmerkingen|
-|:--------|:---|:------|:----------|
-| duur | int | 0..∞ | Aantal seconden dat de robot 'praat'|
-
-        
-**Geeft terug**
-
-niets
-
-**Voorbeeld**
-
-```
-// Praat 7 seconden
-landjerobot.talk(7);
-```
-
-#### doITalk
-
-**Omschrijving**
-
-Geeft aan of de robot aan het praten is.
-
-**Syntax**
-
-doITalk() ;   
+measureDistance() ;   
 
 **Parameters**
 
@@ -240,22 +193,55 @@ geen
 
 |Type|Waarde|Opmerkingen|
 |:--------|:--------|:------|
-|bool| true | Deze waarde wordt teruggegeven als de robot aan het praten is |
-|bool| false | Als de robot niet praat wordt deze waarde teruggeveven |
+|int| 2..400 | Afstand in centimeters |
+
 
 **Voorbeeld**
 
 ```
-// Laat de robot praten
-landjerobot.talk(60) ;
+int gemetenAfstand = 0 ;
+// Meet de afstand van de robot tot een ander object
+gemetenAfstand  = landjerobot.measureDistance() ;
 
-if (doITalk()) {
-    Serial.println("Ik praat!") ;
-}
+Serial.print("Gemeten afstand ") ;
+Serial.print(gemetenAfstand) ;
+Serial.println(" cm") ;
+
+```
+
+#### mode
+
+**Omschrijving**
+
+Geeft aan in welke stand de mode schakelaar staat.
+
+**Syntax**
+
+mode() ;   
+
+**Parameters**
+
+geen
+        
+**Geeft terug**
+
+|Type|Waarde|Opmerkingen|
+|:--------|:--------|:------|
+|int| 1 | Schakelaar staat in stand 1 |
+|int| 2 | Schakelaar staat in stand 2 |
+
+**Voorbeeld**
 
 ```
 
 
+if (mode() == 1) {
+    Serial.println("Mode 1") ;
+} else {
+    Serial.println("Mode 2") ;
+}
+
+```
 
 #### mouthClosed
 
@@ -311,73 +297,122 @@ landjerobot.mouthOpen();
 
 
 
-#### measureDistance
+#### move
 
 **Omschrijving**
 
-Meet de afstand van de robot tot een ander object
+Laat de robot in een richting bewegen
 
 **Syntax**
 
-measureDistance() ;   
+move( richting ) ;   
+move( richting , afstand) ;   
+move( richting , afstand, wachten) ;
+
 
 **Parameters**
 
-geen
+|Parameter|Type|Waarden|Opmerkingen|
+|:--------|:---|:------|:----------|
+| richting | | LandjeRobot::DIRECTION::STOP </br>LandjeRobot::DIRECTION::FORWARD</br>LandjeRobot::DIRECTION::BACKWARD | |
+| afstand |int| 0.._∞_| De afstand die bewogen moet worden in centimeters |
+| wachten |bool| true</br>_false_ | Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd |
+
         
 **Geeft terug**
 
-|Type|Waarde|Opmerkingen|
-|:--------|:--------|:------|
-|int| 2..400 | Afstand in centimeters |
-
+niets
 
 **Voorbeeld**
 
 ```
-int gemetenAfstand = 0 ;
-// Meet de afstand van de robot tot een ander object
-gemetenAfstand  = landjerobot.measureDistance() ;
+// beweeg de robot vooruit
+landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD) ;
 
-Serial.print("Gemeten afstand ") ;
-Serial.print(gemetenAfstand) ;
-Serial.println(" cm") ;
+// beweeg de robot 10cm achteruit
+landjerobot.beweeg(LandjeRobot::DIRECTION::BACKWARD,10) ;
+
+// beweeg de robot 20cm vooruit en wacht 
+// totdat de opgegeven afstand is afgelegd
+landjerobot.beweeg(LandjeRobot::DIRECTION::FORWARD,20,true) ;
 
 ```
 
-#### detectLine
+#### talk
 
 **Omschrijving**
 
-Geeft aan of er een lijn wordt gedetecteerd
+Laat de robot 'praten' door een lichtje in de mond te laten knipperen.
 
 **Syntax**
 
-detectLine() ;   
+talk( duur ) ;   
+
 
 **Parameters**
 
-geen
+|Parameter|Type|Waarden|Opmerkingen|
+|:--------|:---|:------|:----------|
+| duur | int | 0..∞ | Aantal seconden dat de robot 'praat'|
+
         
 **Geeft terug**
 
-|Type|Waarde|Opmerkingen|
-|:--------|:--------|:------|
-|| LandjeRobot::LINE::NONE</br>LandjeRobot::LINE::LEFT</br> LandjeRobot::LINE::RIGHT</br> LandjeRobot::LINE::BOTH | NONE geeft aan dat er geen lijn gedetecteerd wordt. Bij BOTH wordt zowel links als rechts een lijn gedetecteerd |
-
+niets
 
 **Voorbeeld**
 
 ```
+// Praat 7 seconden
+landjerobot.talk(7);
+```
 
-if (detectLine() != LandjeRobot::LINE::NONE) {
-    Serial.println("Er is een lijn gedetecteerd") ;
-}
+#### turn
+
+**Omschrijving**
+
+Laat de robot in een bepaalde richting draaien 
+
+**Syntax**
+
+turn( richting ) ;   
+turn( richting , hoek) ;   
+turn( richting , hoek, wachten) ;
+
+
+**Parameters**
+
+|Parameter|Type|Waarden|Opmerkingen|
+|:--------|:---|:------|:----------|
+| richting | | LandjeRobot::TURN::STRAIGHT</br>LandjeRobot::TURN::LEFT</br>LandjeRobot::TURN::RIGHT | De draairichting van de robot. De waarde STRAIGHT laat de robot weer recht voor- of achteruit rijden |
+| hoek |int| 0..360 </br>_90_| Het aantal graden dat de robot moet draaien. Een hoek van 90 graden is een rechte hoek |
+| wachten |bool| true</br>_false_ | Wacht (true) met het uitvoeren van de volgende instructie totdat de opgegeven afstand is afgelegd |
+
+**Draairichtingen van de robot**
+<img src="./instruction manual/img_2.png" width="640">
+        
+**Geeft terug**
+
+niets
+
+**Voorbeeld**
 
 ```
+// draai de robot naar links
+landjerobot.draai(LandjeRobot::TURN::LEFT) ;
+
+// laat de robot een rondje rechtsom draaien
+landjerobot.draai(LandjeRobot::TURN::RIGHT,360) ;
+
+```
+
 
 
 ## Arduino instructies
+
+Arduino instructies zijn voor alle Arduino computers, dus niet speciaal voor deze robot. Waar je bij Landje Robot instructies `landjerobot.` voor de instructie moet typen, hoeft en kan dit niet voor Arduino instructies. Bij Arduino instructies gebruik je gewoon de instructienaam. 
+
+Wil je meer instructies leren van de Arduino, dan kun je een kijkje nemen in de [Arduino Language Referece](https://www.arduino.cc/reference/en/).
 
 #### delay
 
