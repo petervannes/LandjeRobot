@@ -2331,7 +2331,7 @@ void loop() {
             <p class="assignment">Plak nu met stukken tape een route op de vloer van ca. 1 meter die de robot moet gaan afleggen. Maak hier net zoals op de afbeeldingen hiervoven een paar bochten in. Maak ze niet te scherp anders zal tijdens het draaien van de robot de andere sensor de lijn detecteren en kan de robot vastlopen.
             </p>
 
-            <p class="assignment">Schrijf nu een programma dat de robot de lijn laat volgen. De robot moet dus:
+            <p class="assignment">Maak nu een nieuw programma in Arduino Create. Geef het programma de naam &quot;Mijn_Robot&quot;. In de verdere opdrachten ga je dit programma telkens verder uitbreiden. Programmeer nu dat de robot de lijn laat volgen. De robot moet dus:
 
             </p>
 
@@ -2507,7 +2507,7 @@ void loop() {
                 <p class="assignment">Plak met tape de keerlijnen aan het begin en einde van de lijn die de robot moet volgen. Maak de lijnen breed genoeg, ongeveer net zo breed als de wielen van de robot uit elkaar staan. Maak de keerlijnen twee keer zo dik door twee stroken tape naast elkaar te plakken.
                 </p>
 
-                <p class="assignment">Omdat jij waarschijnlijk in opdracht 8.6 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Maak een nieuw programma en kopieer onderstaande oplossing voor opdracht 8.6 in jouw programma. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
+                <p class="assignment">Omdat jij waarschijnlijk in opdracht 8.6 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Kopieer onderstaande oplossing voor opdracht 8.6 in jouw programma, &quot;Mijn_Robot&quot;. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
 
                 <pre><code>void setup() {
 
@@ -2552,23 +2552,38 @@ void loop() {
 
                 <h2>De mode schakelaar</h2>
 
-                <p>Je hebt nu een programma klaar dat er voor zorgt dat de robot langs een lijn rijdt en weer keert bij een keerlijn. Straks ga je de robot meer ingewikkeldere dingen laten doen. Het zou handig zijn als je beide programma's op de robot kan opslaan en bij het aanzetten van de robot kan kiezen welk programma de robot dan gaat uitvoeren.</p>
+                <p>Je hebt nu een programma klaar dat er voor zorgt dat de robot langs een lijn rijdt en weer keert bij een keerlijn. Straks ga je de robot met een ander programma zelf laten rondrijden en om andere robots en voorwerpen heen rijden. Het zou handig zijn als je beide programma's op de robot kan opslaan en bij het aanzetten van de robot kan kiezen welk programma de robot dan gaat uitvoeren.</p>
 
-                <p>Hiervoor moet je wel iets hebben om dit aan de robot te kunnen doorgeven. Dat kan zonder dat je de robot weer op een computer moet aansluiten met de mode schakelaar.</p>
+                <p>Hiervoor moet je wel iets hebben om dit aan de robot te kunnen doorgeven. Dat kan zonder dat je de robot weer op een computer moet aansluiten met de mode schakelaar. Deze schakelaar heeft twee standen, 1 en 2. Door middel van de instructie <code>mode</code> kun je bepalen in welke stand de schakelaar staat.</p>
 
                 <h3>Opdracht 8.9</h3>
+                <p class="assignment">In deze opdracht ga je ervoor zorgen dat de robot jouw tot nu to geschreven programma, dat de robot laat rijden nadat je het hebt aangezet en de lijn blijft volgen, alleen start als de mode schakelaar op stand &quot;1&quot; staat. Als de schakelaar in stand &quot;2&quot; mag de robot niets doen. Later ga je ervoor zorgen dat in stand 2 een ander programma gestart wordt.</p>
 
-                <p class="assignment">Lees hoe de instructie <code>mode</code> werkt in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></p>
+                <ul>
+                    <li>
+                        Lees hoe de instructie <code>mode</code> werkt in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></li>
+                    <li>Plaats voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en geeft het de waarde <code>0</code>.</li>
+                    <li>Schrijf in de functie <code>setup()</code> een stukje programma dat ervoor zorgt dat de variabele <code>mode</code> de waarde uit de landje robot instructie <code>mode</code> krijgt.</li>
+                    <li>Laat in de functie <code>setup()</code> de robot alleen rijden als de variabele <code>mode</code> de waarde &quot;1&quot; heeft.</li>
+                    <li>Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 8.8 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</li>
+                </ul>
 
-                <p class="assignment">Maak voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en heeft het de waarde <code>0</code>.</p>
 
-                <p class="assignment">Schrijf in de functie <code>setup()</code> een stukje programma dat ervoor zorgt dat de variabele <code>mode</code> de waarde uit de landje robot instructie <code>mode</code> krijgt.</p>
 
-                <p class="assignment">Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 8.8 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</p>
+                <h1 id="toc_17">Les 9, Meer sensors en motoren</h1>
 
-                <h1 id="toc_17">Les 10, Meer sensors en motoren</h1>
+                <h2>Plaatsen van het robot hoofd</h2>
 
-                <p>yaddie yaddie yaddie... </p>
+                <p>In het hoofd van de robot van de robot zitten een ultrasoon sensor en een led'je. De ultrasoon sensor kan afstand meten met een voor ons niet hoorbaar geluid. Het meet een afstand door een geluidje te maken en te wachten totdat de echo van dit geluid weer terugkomt. Door middel van de tijd welke ligt tussen het vezenden en het weer ontvangen van het geluid kan de computer de afstand berekenen. Het led'je in de mond van de robot kun je laten knipperen zodat het lijkt of het praat. Je kunt het led'je ook aan- of uitzetten en opvragen of het knippert.</p>
+
+                <p>Het hoofd van de robot komt op een motorje. Dit is geen gewoon motortje, maar een servo-motor. Een servo-motor kan niet rondjes draaien. Deze motor kan de as precies een half rondje, 180 graden, naar links <em>en</em> naar rechts draaien. Omdat de motor precies weet in welke stand de as staat, kun je aangeven hoevell graden het naar links of rechts moet bewegen.</p>
+
+                <p>Straks kun je met de instructie <code>look</code> de richting van de as sturen. De as kun je dan 45 en 90 graden naar links en rechts draaien en precies in het midden zetten. Door het draaien van deze as kun je straks, na het vastzetten van het hoofd van de robot, deze naar links en rechts laten kijken.</p>
+
+                <p>Nu is het wel zo handig dat je weet in welke stand de motor staat <em>voordat</em> je het hoofd er op schroeft. Anders is de kans groot dat de robot naar achter kijkt zoals een uil dat kan als je het de opdracht geeft om naar links te kijken. Dat is nu zo handig, daarom ga je eerst ervoor zorgen dat de as precies in het midden staat voordat je het hoofd van de robot vastmaakt.</p>
+
+                <h3>Opdracht 9.1</h3>
+                <p class="assignment">
 
 
 </body>
