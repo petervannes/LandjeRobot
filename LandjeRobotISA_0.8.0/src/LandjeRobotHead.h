@@ -24,7 +24,7 @@ class LandjeRobotHead
 
 public:
    // Scoped enumeration for looking DIRECTION
-       enum class LOOK {
+  enum class LOOK {
     FORWARD = 90,   // Look forward
     LEFT = 135,     // Look left
     RIGHT = 45,     // Look Right

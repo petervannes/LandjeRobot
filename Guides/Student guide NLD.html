@@ -2580,10 +2580,73 @@ void loop() {
 
                 <p>Straks kun je met de instructie <code>look</code> de richting van de as sturen. De as kun je dan 45 en 90 graden naar links en rechts draaien en precies in het midden zetten. Door het draaien van deze as kun je straks, na het vastzetten van het hoofd van de robot, deze naar links en rechts laten kijken.</p>
 
-                <p>Nu is het wel zo handig dat je weet in welke stand de motor staat <em>voordat</em> je het hoofd er op schroeft. Anders is de kans groot dat de robot naar achter kijkt zoals een uil dat kan als je het de opdracht geeft om naar links te kijken. Dat is nu zo handig, daarom ga je eerst ervoor zorgen dat de as precies in het midden staat voordat je het hoofd van de robot vastmaakt.</p>
+                <p>Nu is het wel zo handig dat je weet in welke stand de motor staat <em>voordat</em> je het hoofd er op schroeft. Anders is de kans groot dat de robot altijd een andere kan op kijkt dan dat jij wilt dat het kijkt. Daarom ga je eerst ervoor zorgen dat de as van de servo-motor precies in het midden staat voordat je het hoofd van de robot vastmaakt.</p>
 
                 <h3>Opdracht 9.1</h3>
-                <p class="assignment">
+                <p class="assignment">Open de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> en lees de beschrijving bij de instructie <em>look</em>. Je gaat nu een nieuw programma schrijven dat je alleen zult gebruiken voor het juist instellen van de servo-motor.</p>
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <ul>
+                            <li>Maak een nieuw programma <em>instellen motor</em></li>
+                            <li>Voeg nu aan het programma de instructie toe om de robot naar voren te laten kijken.</li>
+                            <li>Stuur het programma naar de robot en kijk of de servo-motor beweegt. Laat de robot aan staan.</li>
+                            <li>Druk het hoofd van de robotvoorzichig op de as van de servo-motor</li>
+                            <li>Pas het programma aan zodat het hoofd van de robot helemaal eerst helemaal naar links kijkt, even wacht en dan naar voren kijkt. Dan weer wacht om uiteindelijk helemaal naar rechts te kijken.
+                                <li>Test het programma, kijkt de robot naar links, dan naar voren en uiteindelijk helemaal naar rechts ? Mooi ! Schroef dan het hoofd vast met het schroefje van de servo-motor. Gebruik het kleinste schroefje dat in het zakje zit bij de servo-motor. Kijkt de robot niet helemaal naar links? Haal het hoofd dan van de servo-motor en begin de opdracht dan opnieuw. </li>
+                        </ul>
+
+
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_9_LineFollow_4">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_9_LineFollow_4.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_9_LineFollow_4">
+                            <img src="./Student%20guide/Lesson_9_LineFollow_4.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+                <hr/>
+
+                <p>De robot is nu compleet, alleen de draden van de sensor en het led-lampje op het hoofd van de robot moet nog aangesloten worden. Op het hoofd van de robot zitten vier draden GND HEAD, VCC HEAD, VCC MOUTH, SIG ULTRA.</p>
+
+                [[ img here head robot wire labels]]
+
+                <p>De draad GND HEAD sluit je aan op de meest linker onderrij op het breadboard dat verbonden is met GND. De draad VCC HEAD moet op de meest linker bovenrij aangesloten worden.</p>
+                <p>Met de GND HEAD en VCC HEAD zorg je dat de sensors en het led op het hoofd van de robot aangesloten zijn op de batterij. Nu moet je nog de draden aansluiten om het signaal van de ultrasoon sensor te kunnen ontvangen en het led lampje aan- en uit te kunnen zetten. Sluit de draad VCC MOUTH aan op pin 15 van de Arduino, daarna sluit je de laatste draad SIG ULTRA aan op pin 13.</p>
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_2_Wiring_07">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_2_Wiring_07">
+                            <img src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_2_Wiring_08">
+                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_2_Wiring_08">
+                            <img src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+
+
 
 
 </body>

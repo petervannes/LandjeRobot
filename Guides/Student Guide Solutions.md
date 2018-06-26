@@ -218,3 +218,20 @@ How this will be implemented is part of the next assignment.
 ```
 int mode = 0 ;void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }  }void loop() {  // Als de schakelaar op "1" staat.  if (mode == 1) {    // Als er niet niets (!) gedetecteerd wordt door de     // reflectie sensors doe dan iets    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            // wacht 30 milliseconden (0,03 seconde)      delay(30) ;            // Als beide reflectie sensors een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {        // keer de robot om en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,180,true) ;      }            // Als de reflectie sensors links een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {        // Draai 10 graden naar links en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;      }            // Als de reflectie sensors rechts een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {        // Draai 10 graden naar rechts en wacht        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;      }            // Laat de robot weer verder rijden      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          } // einde if  } else {    // nieuwe programma  }  }
 ```
+
+
+## Lesson 9, more sensors and motors
+
+### Assignment 1
+
+
+```
+void setup() {    landjerobot.look(LandjeRobot::LOOK::FORWARD) ;}void loop() {    }
+```
+
+```
+void setup() {    landjerobot.look(LandjeRobot::LOOK::FAR_LEFT) ;
+    delay(2000);    landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
+    delay(2000);    landjerobot.look(LandjeRobot::LOOK::FAR_RIGHT) ;
+}void loop() {    }
+```
