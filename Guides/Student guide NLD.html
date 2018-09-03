@@ -2326,7 +2326,7 @@ void loop() {
             </div>
 
 
-            <h3>Opdracht 8.6</h3>
+            <h3>Opdracht 9.1</h3>
 
             <p class="assignment">Plak nu met stukken tape een route op de vloer van ca. 1 meter die de robot moet gaan afleggen. Maak hier net zoals op de afbeeldingen hiervoven een paar bochten in. Maak ze niet te scherp anders zal tijdens het draaien van de robot de andere sensor de lijn detecteren en kan de robot vastlopen.
             </p>
@@ -2432,7 +2432,7 @@ void loop() {
 
                         <p>Maar wat gebeurt er nu als de robot niet precies met beide sensors de &quot;keerlijn&quot; ziet? Kijk eens naar de afbeelding hiernaast. De rechter sensor ziet de &quot;keerlijn&quot; net iets eerder dan de linker sensor.</p>
 
-                        <p>Wat zou er dan gebeuren als je de robot laat rijden met het programma van opdracht 8.6?</p>
+                        <p>Wat zou er dan gebeuren als je de robot laat rijden met het programma van opdracht 9.1?</p>
                     </div>
                     <div style="float:left;width:49%;margin-right: 7px ">
                         <a class="lightbox" href="#Lesson_9_LineFollow_9">
@@ -2454,9 +2454,9 @@ void loop() {
 
                         <p>De rechter sensor detecteert dat er een lijn is. In je programma staat iets dat waarschijnlijk lijkt op;</p>
 
-                        <pre><code> if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
-      landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
-    }</code></pre>
+                        <pre><code>if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+    landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
+}</code></pre>
 
                         <p>De robot draait dus naar rechts als de rechter sensor een lijn detecteerd. Hierdoor komt de linker sensor boven de &quot;keerlijn&quot;, maar staat de rechter sensor er weer naast. De robot zal dus nog steeds niet keren. Weet jij wat de robot nu blijft doen ?</p>
                     </div>
@@ -2479,9 +2479,9 @@ void loop() {
 
                         <p>De robot blijft dus heen en weer wiebelen voor de &quot;keerlijn&quot;. Dit blijft hij doen totdat de batterijen op zijn.</p>
 
-                        <h3>Opdracht 8.7</h3>
+                        <h3>Opdracht 9.2</h3>
 
-                        <p class="assignment">Probeer nu met je papieren robot te verzinnen en je programma van opdracht 8.6 hoe je kunt voorkomen dat de robot blijft wiebelen voor de &quot;keerlijn&quot;. Hoe kun je voorkomen dat de robot gelijk naar links of rechts gaat als hij niet helemaal perfect recht op de &quot;keerlijn&quot; uitkomt? </p>
+                        <p class="assignment">Probeer nu met je papieren robot te verzinnen en je programma van opdracht 9.1 hoe je kunt voorkomen dat de robot blijft wiebelen voor de &quot;keerlijn&quot;. Hoe kun je voorkomen dat de robot gelijk naar links of rechts gaat als hij niet helemaal perfect recht op de &quot;keerlijn&quot; uitkomt? </p>
 
                         <p class="assignment">Tip: Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> naar de instructie <code>delay</code>, kun je hier misschien iets mee?.</p>
                     </div>
@@ -2502,43 +2502,43 @@ void loop() {
 
 
 
-                <h3>Opdracht 8.8</h3>
+                <h3>Opdracht 9.3</h3>
 
                 <p class="assignment">Plak met tape de keerlijnen aan het begin en einde van de lijn die de robot moet volgen. Maak de lijnen breed genoeg, ongeveer net zo breed als de wielen van de robot uit elkaar staan. Maak de keerlijnen twee keer zo dik door twee stroken tape naast elkaar te plakken.
                 </p>
 
-                <p class="assignment">Omdat jij waarschijnlijk in opdracht 8.6 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Kopieer onderstaande oplossing voor opdracht 8.6 in jouw programma, &quot;Mijn_Robot&quot;. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
+                <p class="assignment">Omdat jij waarschijnlijk in opdracht 9.1 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Kopieer onderstaande oplossing voor opdracht 9.1 in jouw programma, &quot;Mijn_Robot&quot;. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
 
                 <pre><code>void setup() {
 
-   // Start met rijden als de robot aangezet wordt en
-   // wacht niet
-   landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+       // Start met rijden als de robot aangezet wordt en
+       // wacht niet
+       landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
   
 }
 
 void loop() {
 
-  // Als er niet niets (!) gedetecteerd wordt door de 
-  // reflectie sensors doe dan iets
-  if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    // Als er niet niets (!) gedetecteerd wordt door de 
+    // reflectie sensors doe dan iets
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+            
+        // Als de reflectie sensors links een lijn detecteren
+        if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+            // Draai 10 graden naar links en wacht
+            landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;
+        }
     
-    // Als de reflectie sensors links een lijn detecteren
-    if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
-      // Draai 10 graden naar links en wacht
-      landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;
-    }
+        // Als de reflectie sensors rechts een lijn detecteren
+        if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+            // Draai 10 graden naar rechts en wacht
+            landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
+        }
     
-    // Als de reflectie sensors rechts een lijn detecteren
-    if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
-      // Draai 10 graden naar rechts en wacht
-      landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
-    }
+        // Laat de robot weer verder rijden
+        landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
     
-    // Laat de robot weer verder rijden
-    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    
-  } // einde if
+    } // einde if
   
 }</code></pre>
 
@@ -2556,21 +2556,30 @@ void loop() {
 
                 <p>Hiervoor moet je wel iets hebben om dit aan de robot te kunnen doorgeven. Dat kan zonder dat je de robot weer op een computer moet aansluiten met de mode schakelaar. Deze schakelaar heeft twee standen, 1 en 2. Door middel van de instructie <code>mode</code> kun je bepalen in welke stand de schakelaar staat.</p>
 
-                <h3>Opdracht 8.9</h3>
-                <p class="assignment">In deze opdracht ga je ervoor zorgen dat de robot jouw tot nu to geschreven programma, dat de robot laat rijden nadat je het hebt aangezet en de lijn blijft volgen, alleen start als de mode schakelaar op stand &quot;1&quot; staat. Als de schakelaar in stand &quot;2&quot; mag de robot niets doen. Later ga je ervoor zorgen dat in stand 2 een ander programma gestart wordt.</p>
+                <h3>Opdracht 9.4</h3>
+                <p class="assignment">In deze opdracht ga je ervoor zorgen dat de robot jouw tot nu to geschreven programma, "Mijn_Robot", alleen start als de mode schakelaar op stand &quot;1&quot; staat. Als de schakelaar in stand &quot;2&quot; mag de robot niets doen. Later ga je ervoor zorgen dat in stand 2 een ander programma gestart wordt.</p>
 
                 <ul>
                     <li>
                         Lees hoe de instructie <code>mode</code> werkt in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></li>
-                    <li>Plaats voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en geeft het de waarde <code>0</code>.</li>
+                    <li>Plaats voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en geeft het de waarde <code>0</code>. Als je een variabele in een functie aanmaakt kun je hem alleen in deze functie gebruiken. Als je bijvoorbeeld de variabele <code>mode</code> in de functie <code>setup()</code> maakt, kun je hem niet gebruiken in de functie <code>loop()</code>. De functie <code>loop()</code> kent dan deze variabele niet. Als je een variabele maakt voor de functie <code>setup()</code> en <code>loop()</code> kun je ze in beide functie gebruiken.
+                    </li>
                     <li>Schrijf in de functie <code>setup()</code> een stukje programma dat ervoor zorgt dat de variabele <code>mode</code> de waarde uit de landje robot instructie <code>mode</code> krijgt.</li>
-                    <li>Laat in de functie <code>setup()</code> de robot alleen rijden als de variabele <code>mode</code> de waarde &quot;1&quot; heeft.</li>
-                    <li>Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 8.8 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</li>
+                    <li>Laat in de functie <code>setup()</code> de robot alleen starten met rijden als de variabele <code>mode</code> de waarde &quot;1&quot; heeft.</li>
+                    <li>Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 9.3 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</li>
+                </ul>
+
+                <p>Als alles goed verlopen is heb je het eerste programma van de robot nu helemaal klaar! Test het programma nu.</p>
+                <ul>
+                    <li>Zet de robot uit en zet de mode-schakelaar op "1".</li>
+                    <li>Plaats de robot op de lijn en zet hem aan. De robot zou nu de lijn moeten volgen en bij de dubbele lijn weer omkeren.</li>
+                    <li>Zet de robot uit en zet de mode-schakelaar op "2"</li>
+                    <li>Plaats de robot op de lijn en zet hem aan. Als het helemaal goed is blijft de robot stilstaan</li>
                 </ul>
 
 
 
-                <h1 id="toc_17">Les 9, Meer sensors en motoren</h1>
+                <h1 id="toc_17">Les 10, Meer sensors en motoren</h1>
 
                 <h2>Plaatsen van het robot hoofd</h2>
 
@@ -2582,7 +2591,7 @@ void loop() {
 
                 <p>Nu is het wel zo handig dat je weet in welke stand de motor staat <em>voordat</em> je het hoofd er op schroeft. Anders is de kans groot dat de robot altijd een andere kan op kijkt dan dat jij wilt dat het kijkt. Daarom ga je eerst ervoor zorgen dat de as van de servo-motor precies in het midden staat voordat je het hoofd van de robot vastmaakt.</p>
 
-                <h3>Opdracht 9.1</h3>
+                <h3>Opdracht 10.1</h3>
                 <p class="assignment">Open de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> en lees de beschrijving bij de instructie <em>look</em>. Je gaat nu een nieuw programma schrijven dat je alleen zult gebruiken voor het juist instellen van de servo-motor.</p>
 
 
@@ -2600,12 +2609,12 @@ void loop() {
 
                     </div>
                     <div style="float:left;width:49%;margin-right: 7px ">
-                        <a class="lightbox" href="#Lesson_9_LineFollow_4">
+                        <a class="lightbox" href="#Lesson_10_PlaceHead">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
-                        src="./Student%20guide/Lesson_9_LineFollow_4.png" alt=""/>
+                        src="./Student%20guide/Lesson_10_PlaceHead.png" alt=""/>
                     </a>
-                        <div class="lightbox-target" id="Lesson_9_LineFollow_4">
-                            <img src="./Student%20guide/Lesson_9_LineFollow_4.png" alt="" />
+                        <div class="lightbox-target" id="Lesson_10_PlaceHead">
+                            <img src="./Student%20guide/Lesson_10_PlaceHead.png" alt="" />
                             <a class="lightbox-close" href="#deadlink"></a>
                         </div>
                     </div>
@@ -2614,36 +2623,107 @@ void loop() {
 
                 <hr/>
 
-                <p>De robot is nu compleet, alleen de draden van de sensor en het led-lampje op het hoofd van de robot moet nog aangesloten worden. Op het hoofd van de robot zitten vier draden GND HEAD, VCC HEAD, VCC MOUTH, SIG ULTRA.</p>
 
-                [[ img here head robot wire labels]]
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_10_HeadWiring">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_10_HeadWiring.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_10_HeadWiring">
+                            <img src="./Student%20guide/Lesson_10_HeadWiring.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+
+
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <p>De robot is nu compleet, alleen de draden van de sensor en het led-lampje op het hoofd van de robot moet nog aangesloten worden. Op het hoofd van de robot zitten vier draden GND HEAD, VCC HEAD, VCC MOUTH, SIG ULTRA.</p>
+
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
 
                 <p>De draad GND HEAD sluit je aan op de meest linker onderrij op het breadboard dat verbonden is met GND. De draad VCC HEAD moet op de meest linker bovenrij aangesloten worden.</p>
                 <p>Met de GND HEAD en VCC HEAD zorg je dat de sensors en het led op het hoofd van de robot aangesloten zijn op de batterij. Nu moet je nog de draden aansluiten om het signaal van de ultrasoon sensor te kunnen ontvangen en het led lampje aan- en uit te kunnen zetten. Sluit de draad VCC MOUTH aan op pin 15 van de Arduino, daarna sluit je de laatste draad SIG ULTRA aan op pin 13.</p>
 
 
                 <div style="">
-                    <div style="float:left;width:49%;margin-right: 7px ">
-                        <a class="lightbox" href="#Lesson_2_Wiring_07">
+                    <div style="float:left;width:90%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_10_HeadConnect">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
-                        src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt=""/>
+                        src="./Student%20guide/Lesson_10_HeadConnect.png" alt=""/>
                     </a>
-                        <div class="lightbox-target" id="Lesson_2_Wiring_07">
-                            <img src="./Student%20guide/Lesson_2_Wiring_07.JPG" alt="" />
-                            <a class="lightbox-close" href="#deadlink"></a>
-                        </div>
-                    </div>
-                    <div style="float:left;width:49%;margin-right: 7px ">
-                        <a class="lightbox" href="#Lesson_2_Wiring_08">
-                        <img style=" display: block; margin-left: auto; margin-right: auto; width:80%; "  src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt=""/>
-                    </a>
-                        <div class="lightbox-target" id="Lesson_2_Wiring_08">
-                            <img src="./Student%20guide/Lesson_2_Wiring_08.JPG" alt="" />
+                        <div class="lightbox-target" id="Lesson_10_HeadConnect">
+                            <img src="./Student%20guide/Lesson_10_HeadConnect.png" alt="" />
                             <a class="lightbox-close" href="#deadlink"></a>
                         </div>
                     </div>
                     <div style="clear:both; "></div>
                 </div>
+
+                <h2>De robot laten 'praten' en'kijken'</h2>
+
+                <p>De robot heeft nu mond waarmee het kan 'praten' en een paar ogen waarmee het echt kan kijken. In de volgende opdrachten ga je leren hoe je de robot kunt laten kijken en praten.</p>
+
+                <h3>Opdracht 10.2</h3>
+                <p class="assignment">Nu je het hoofd van de robot heb aangesloten is de robot compleet. Op het hoofd van de robot zitten de ultrasoon sensor waarmee je afstanden kunt meten. Ook zit er een led in de mond dat je kunt laten branden. Je kunt de led aan of uit zetten. Ook kun je het laten knipperen voor een aantal seconden. Zoek in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> de instructies die je hiervoor nodig hebt. Maak een nieuw programma en probeer deze drie instructies uit. Schrijf bijvoorbeeld instructies die de led laat branden, uit zet en laat knipperen. Tussen deze instructies kun je de <code>delay()</code> instructie gebruiken om even te wachten.</p>
+                <hr/>
+
+
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_10_ultrasonic">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_10_ultrasonic.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_10_ultrasonic">
+                            <img src="./Student%20guide/Lesson_10_ultrasonic.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <p>In het hoofd van de robot zit een ultrasoon sensor om afstanden mee te meten, maar hoe werkt deze eigenlijk ? Als de sensor de afstand gaat meten maakt het geluid. Dit geluid is een hoge pieptoon die wij mensen niet kunnen horen. Dit geluid gaat in de richting waar de sensor heen gericht is. Als het geluid iets op zijn weg komt, wordt het geluid weerkaatst en komt het weer terug naar de sensor. Het weerkaatsen van geluid noemen we 'echo'. Zodra de sensor het verstuurde geluid weer ontvangen is, meet het hoe lang het geluid onderweg is geweest van de sensor naar het voorwerp en weer terug.
+
+                            <p>Geluid verplaatst zich met een snelheid van ongeveer 343 meter per seconde of ruim 1200 km/h! Omdat we weten hoe snel geluid zich verplaatst kunnen we met behulp van de gemeten tijd uitrekenen wat de afstand is tussen de sensor en het voorwerp.</p>
+
+                            <h3>Opdracht 10.3</h3>
+                            <p class="assignment">Als je in de bergen een gil geeft naar een berg hoor je na 12 seconden de echo. Reken uit hoe ver de berg van je af staat.</p>
+                            <hr/>
+
+                            <h3>Opdracht 10.4</h3>
+                            <p class="assignment">In deze opdracht ga je de robot afstand laten meten met behulp van de ultrasoon sensor. Maak een in de Arduino Web editor een nieuw programma, <em>meten_afstand</em></p>
+
+                            <p>Om het alvast iets makkelijker te maken krijg je onderstaande programma. Knip en plak dit programma in het nieuwe programma <em>meten_afstand</em>. Vervang daarna op de 3 plekken met <em>...</em> op met de juiste instructies </p>
+                            <pre><code>void setup() {
+  
+    int afstand = 400 ;
+    
+    Serial.begin(9600);
+    delay(2000);
+    
+    // druk de gemeten afstand af zolang
+    // de afstand groter is dan 5 cm.
+    while (...) {
+      ...
+      Serial.println(afstand) ;
+    }
+    
+    // Laat de robot 10 seconden praten
+    ...
+    
+}</code></pre>
+
+                            <p>Test het programma door het programma te starten en de monitor in de Ardunio Web editor te openen. Beweeg nu je hand heel langzaam naar de sensor toe. Als het allemaal goed is zal de robot gaan 'praten' als je minder dan 5 cm vanaf de sensor is.</p>
+                            <hr/>
+                            <p></p>
+
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
+
+                <h1 id="toc_18">Les 11, Meer sensors en motoren</h1>
 
 
 
