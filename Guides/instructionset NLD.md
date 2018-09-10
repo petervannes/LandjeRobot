@@ -441,3 +441,40 @@ niets
 // Wacht twee seconden
 delay(2000) ; 
 ```
+
+
+#### random
+
+**Omschrijving**
+
+Geef een willekeurig getal
+
+**Syntax**
+
+random( kleinste getal, grootste getal ) ;   
+
+**Parameters**
+
+|Parameter|Type|Waarden|Opmerkingen|
+|:--------|:---|:------|:----------|
+| kleinste getal | int | 0..∞ | Kleinste waarde dat als willekeurg getal terugegeven kan worden |
+| grootste getal | int | 0..∞ | Grootste waarde dat als willekeurg getal terugegeven kan worden |
+
+        
+**Geeft terug**
+
+|Type|Waarde|Opmerkingen|
+|:--------|:--------|:------|
+|long| - | Een willekeurig getal gelijk of groter dan het opgegeven kleinste getal en gelijk of kleiner dan het opgegeven grootste getal. |
+
+Het type ```long``` is niet uitgelegd. Maar voor de robot mag je ook het type ```int``` gebruiken.
+
+
+**Voorbeeld**
+
+```
+// Geef een willeurig getal,
+// groter of gelijk aan 10 en
+// kleiner of gelijk aan 20
+int a = random(10,20) ; 
+```

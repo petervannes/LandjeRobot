@@ -218,7 +218,7 @@ How this will be implemented is part of the next assignment.
 ### Assignment 4
 
 ```
-int mode = 0 ;void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }  }void loop() {  // Als de schakelaar op "1" staat.  if (mode == 1) {    // Als er niet niets (!) gedetecteerd wordt door de     // reflectie sensors doe dan iets    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            // wacht 30 milliseconden (0,03 seconde)      delay(30) ;            // Als beide reflectie sensors een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {        // keer de robot om en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,180,true) ;      }            // Als de reflectie sensors links een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {        // Draai 10 graden naar links en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;      }            // Als de reflectie sensors rechts een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {        // Draai 10 graden naar rechts en wacht        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;      }            // Laat de robot weer verder rijden      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          } // einde if  } else {    // nieuwe programma  }  }
+int mode = 0 ;void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }  }void loop() {  // Als de schakelaar op "1" staat.  if (mode == 1) {    // Als er niet niets (!) gedetecteerd wordt door de     // reflectie sensors doe dan iets    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            // wacht 30 milliseconden (0,03 seconde)      delay(30) ;            // Als beide reflectie sensors een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {        // keer de robot om en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,180,true) ;      }            // Als de reflectie sensors links een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {        // Draai 10 graden naar links en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;      }            // Als de reflectie sensors rechts een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {        // Draai 10 graden naar rechts en wacht        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;      }            // Laat de robot weer verder rijden      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          } // einde if  } else { // Als de schakelaar op "2" staat  }  }
 ```
 
 
@@ -256,4 +256,128 @@ Sound travels at the speed of 343 m/sec. So when it takes 12 seconds to hear the
 void setup() {
 
     int afstand = 400 ;      Serial.begin(9600);    delay(2000);        // druk de gemeten afstand af zolang    // de afstand groter is dan 5 cm.    while (afstand > 5) {      afstand = landjerobot.measureDistance() ;      Serial.println(afstand) ;    }        // Laat de robot 10 seconden praten    landjerobot.talk(10) ;    }
+```
+
+
+
+## Lesson 11, A new program
+
+### Assignment 1
+
+Solution is;
+
+* If the left sensor detects a line move 10cm backward, then turn 45 degrees right. Continue driving forward.
+* If the right sensor detects a line move 10cm backward, then turn 45 degrees left. Continue driving forward.
+* If the both sensors detect a line move 10cm backward, then turn 180 degrees left. Continue driving forward.
+
+### Assignment 2
+
+The robot must start moving forward when the mode switch is set to mode "2" and switched on. So in the function ```setup()``` and instruction has to be added to make the robot moving forward.
+
+This can be accomplished in two ways. First by adding an if statement which will make the robot move forward in mode 2.
+
+```
+void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  } else {
+    // Als schakelaar op "2" staat
+    // Start met rijden als de robot aangezet wordt en
+    // wacht niet
+    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+  }  }
+```
+
+The same result can be accomplished by removing some lines of code from the existing code. Regardless of the state of the mode switch the robot has to start moving forward. There is no specific reason 
+
+```
+void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Start met rijden als de robot aangezet wordt en
+  // wacht niet  landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }
+```
+
+### Assignment 3
+
+This is a basic working example to make the robot stay within the lines. 
+
+```
+    // Als er niet niets (!) gedetecteerd wordt door de 
+    // reflectie sensors doe dan iets
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    
+      // wacht 30 milliseconden (0,03 seconde)
+      delay(30) ;
+    
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 180, true) ;
+      }
+      
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    }
+```
+
+Using the basic code, the robot may end in an endless loop, repeating the same movements over and over again. Most certainly this will occur when the robot ends up in a corner of the drawn rectangle. Adding some randomness whill resolve this issue.
+
+```
+    // Als er niet niets (!) gedetecteerd wordt door de 
+    // reflectie sensors doe dan iets
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    
+      // wacht 30 milliseconden (0,03 seconde)
+      delay(30) ;
+    
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, random(20,90), true) ;
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, random(20,90), true) ;
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, random(160,200), true) ;
+      }
+      
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    }
+```
+
+### Assignment 4
+
+```
+void setup() {
+
+  // "Lees" de stand van de mode schakelaar
+  mode = landjerobot.mode() ;
+
+  // Laat de robot naar voren kijken
+  landjerobot.look(LandjeRobot::LOOK::FORWARD);
+  
+  // Start met rijden als de robot aangezet wordt en
+  // wacht niet
+  landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+  
+}
+```
+
+### Assignment 5
+
+```
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance() ;
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
+    }
 ```

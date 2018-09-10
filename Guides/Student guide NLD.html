@@ -64,6 +64,7 @@
         <li>Een lampje laten knipperen.</li>
     </ul>
 
+
     <h2 id="toc_2">Programmeertaal</h2>
 
     <p>Om te programmeren gebruik je een taal. Een taal die jouw computer begrijpt zodat je kan uitleggen wat het moet doen. Zo zijn er heel veel talen, sommige talen zijn heel erg geschikt om spelletjes mee te schrijven, andere talen zijn weer betere beschikt om complexe berekeningen te maken. Als je begint met programmeren is er een grote kans dat je dit in Scratch doet. Met Scratch kun je met het in elkaar schuiven van blokken een programma&#39;tje maken. </p>
@@ -2092,7 +2093,7 @@ teller
 
             <img style="display: block; margin-left: auto; margin-right: auto;width:40% " src="./Student%20guide/Lesson_8_Robot.png" alt="">
 
-            <p>Gebruik nu onderstaande &quot;instructies&quot; en gebruik jouw papieren robot om de instructies uit te voeren. Leg de robot neer op een tafel en beweeg hem volgens de instructies. Als je deze opvolgt zal de robot zich in een vierkant verplaatsen en weer uitkomen op de positie waar het begonnen was. </p>
+            <p>Gebruik nu onderstaande &quot;instructies&quot; en gebruik jouw papierenrobot om de instructies uit te voeren. Leg de robot neer op een tafel en beweeg hem volgens de instructies. Als je deze opvolgt zal de robot zich in een vierkant verplaatsen en weer uitkomen op de positie waar het begonnen was. </p>
 
             <pre><code class="language-none">Beweeg 10cm vooruit
 Draai 90 graden naar links
@@ -2723,12 +2724,139 @@ void loop() {
                     <div style="clear:both; "></div>
                 </div>
 
-                <h1 id="toc_18">Les 11, Meer sensors en motoren</h1>
+                <h1 id="toc_18">Les 11, Een nieuw programma</h1>
+
+                <div style="">
+                    <div style="float:right;width:49%;margin-right: 7px ">
+
+                        <p>In de vorige lessen heb je het eerste programma voor de robot geschreven. Dit programma zorgde ervoor dat de robot een lijn kan volgen en aan het einde van een lijn omkeert. Je startte dit programma door ervoor te zorgen dat de <em>mode</em> schakelaar op "<em>1</em>" stond bij het aanzetten van de robot.</p>
+
+
+                        <p>In de volgende lessen ga je het programma uitbreiden. Deze uitbreiding van het programma zal gestart worden als de <em>mode</em> schakelaar bij het aanzetten van de robot op "<em>2</em>" staat.</p>
+
+                        <p>In plaats van het volgen van een lijn, zul je nu de robot binnen een gebied laten bewegen. Dit gebied maak je door met tape op de vloer de buitenkant te markeren, net zoals op het voorbeeld hier links. Als de robot tijdens het rijden een lijn detecteerd moet de robot draaien en verder rijden binnen het gebied.
+                        </p>
+
+                        <p>Daarnaast ga je gebruik maken van de ogen van de robot, het kan nu immers zien of er iets staat waar omheen gereden moet worden.</p>
+
+                        <h3>Opdracht 11.1</h3>
+                        <p class="assignment">Het is weer tijd om je papieren robot te gebruiken! Pak een vel papier en teken net zoals in de afbeelding hiernaast een rechthoek met een dikke stift. Plaats je papieren robot in het rechthoek en ga er mee rijden.</p>
+
+                        <p class="assignment">Kijk nu op hoeveel manieren de reflectie sensors van de robot de lijnen kunnen raken. Beschrijf per manier wat de robot moet doen om binnen de lijnen te blijven. Schrijf dit op de volgende manier op; &quot;<b>Als de [linker | rechter | beide] sensor de lijn detecteert, ... dan ... en ga dan ... </b>&quot;. </p>
+
+                        <p class="assignment">Dus bijvoorbeeld: &quot;Als de linker sensor de lijn detecteert, draai dan 10 graden naar links en ga dan vooruit.&quot;</p>
+                        <hr/>
+
+                    </div>
+                    <div style="float:left;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_11_Avoidance_1">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_11_Avoidance_1.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_11_Avoidance_1">
+                            <img src="./Student%20guide/Lesson_11_Avoidance_1.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
 
 
 
+                <p>Je hebt nu in opdracht 11.1 bedacht wat de robot moet doen om netjes binnen de lijnen op de vloer te blijven. De programma regels die je gaat schrijven om dit te doen moeten herhaald worden zolang als de robot rijdt. Deze programma regels moeten dus in de functie <code>loop()</code> geplaatst worden. Er is alleen nog iets nodig in de functie <code>setup()</code> nodig om de robot goed te laten starten.</p>
 
 
+                <h3>Opdracht 11.2</h3>
+                <p class="assignment">Pak de rol tape en maak hiermee een rechthoek op de vloer. Maak de rechthoek groot genoeg zodat de robot er goed in kan rondrijden. Maar maak hem natuurlijk niet zo groot dat het heel lang duurt voordat de robot een lijn raakt. Later in de lessen zul je een veel grotere rechthoek mogen maken. Nu is een lengte van ėėn tot anderhalve meter per zijde van de rechthoek heel mooi.</p>
+
+                <p class="assignment">Zitten de lijnen mooi? Dan kun je de robot uitproberen. Zet de robot midden in het rechthoek en zet de <em>mode</em> schakelaar op stand <em>2</em>. Zet de robot dan aan, en wat gebeurt er ?</p>
+
+                <p class="assignment">Tja, er mist iets. De robot moet &egrave;&egrave;n ding doen zodra je hem aanzet! Open het programma &quot;Mijn_Robot&quot; en pas de functie <code>setup()</code> aan zodat de robot doet wat hij moet doen nadat je hem aanzet! Weet je het niet wat de robot moet doen ? Zet de <em>mode</em> schakelaar dan op stand <em>1</em> en zet de robot aan. Nu weet je het!</p>
+                <hr/>
+
+                <p>Tja nu beweegt de robot wel als je de <em>mode</em> schakelaar op <em>2</em> zet, maar blijft hij nog niet netjes binnen de lijnen! Dat ga je in de volgende opdracht oplossen.</p>
+
+                <h3>Opdracht 11.3</h3>
+
+                <p class="assignment">Programmeer nu de instructies die je met de papieren robot hebt uitgewerkt zodat de robot binnen de lijnen blijft. Wat moet de robot gaan doen om binnen de lijnen te blijven ?
+                </p>
+
+                <ul>
+                    <li>Als er geen lijn gedetecteerd wordt hoeft de robot alleen maar te (blijven!) rijden.</li>
+                    <li>Als er links een lijn gedetecteerd wordt moet de robot</li>
+                    <ul>
+                        <li>naar achter rijden,</li>
+                        <li>naar rechts draaien,</li>
+                        <li>en weer verder rijden</li>
+                    </ul>
+                    <li>Als er rechts een lijn gedetecteerd wordt moet de robot</li>
+                    <ul>
+                        <li>naar achter rijden,</li>
+                        <li>naar links draaien,</li>
+                        <li>en weer verder rijden</li>
+                    </ul>
+                    <li>Als er links en rechts een lijn gedetecteerd wordt moet de robot</li>
+                    <ul>
+                        <li>naar achter rijden,</li>
+                        <li>omdraaien,</li>
+                        <li>en weer verder rijden</li>
+                    </ul>
+
+                </ul>
+
+                <p>Tip: Kijk nog eens naar de programma regels die je geschreven hebt voor het volgen van de lijn! </p>
+
+                <p class="assignment">Als je denkt dat het programma goed is, verstuur het dan naar de robot, zet de mode schakelaar op <em>2</em> en zet hem aan. Gaat er iets fout, kijk dan goed wat er fout gaat en probeer de fout in het programma te herstellen. Als je het helemaal niet meer begrijpt probeer dan één probleem per keer op te lossen. Als bijvoorbeeld de robot bij het raken van de lijn met de linker sensor niet doet wat jij wilt, zet de robot dan zo neer bij het testen dat hij altijd als eerste de linke lijn raakt. Soms helpt het ook om programma regels <em>uit</em> te zetten. Je kunt programmaregels makkelijk uit zetten door aan het begin van de regel <code>//</code> te typen. De robot weet dan dat het deze regels niet moet uitvoeren.</p>
+                <hr/>
+
+                <p>Zo nu ben je al een heel eind gekomen ! De robot blijft binnen de lijnen en rijdt zelfstandig rond. Alleen als er iets anders binnen de lijnen staat rijdt de robot er tegenaan omdat het nog niets kan zien. Dat gaan je nu in de volgende stappen programmeren. We beginnen eenvoudig en gaan het daarna wat moeilijker maken.</p>
+
+                <h3>Opdracht 11.4</h3>
+
+                <p class="assignment">Zoals gezegd we beginnen eenvoudig. Is het je al opgevallen dat de robot elke keer dat je hem aanzet een andere kant op kijkt ? Je weet daardoor eigenlijk nooit welke kant de robot opkijkt als je hem aanzet. Als je niet weet naar welke kant de robot kijkt, weet je straks ook niet of de robot nu de afstand links, voor of rechts van de robot meet.
+                </p>
+
+                <p class="assignment">Breid nu je programma &quot;Mijn_Robot&quot; uit zodat bij het aanzetten het hoofd van de robot altijd naar voren wijst.</p>
+                <hr/>
+
+                <p>Nu je weet dat de robot altijd begint met vooruitkijken wordt het meten van de afstand vanaf de voorkant van de robot een stuk eenvoudiger. Door tijdens het rijden van de robot de afstand te meten tot een voorwerp voor je kun je ervoor zorgen dat de robot niet tegen andere dingen in het gebied van de robot oprijdt. </p>
+
+                <h3>Opdracht 11.5</h3>
+
+                <p class="assignment">In deze opdracht ga je proberen om de robot te laten stoppen zodra er iets in de weg staat. Laat de robot ruim op tijd stoppen, dus stop als de robot iets ziet wat op 10 centimeter of minder voor de robot staat.
+                </p>
+
+                <p class="assignment">Begin met het meten van de afstand. Maak een variabele <code>afstand</code> en vul deze met de gemeten afstand. Let goed op waar je deze regel gaat plaatsen in je programma. Je moet de hele tijd dat de robot rijdt de afstand meten. Het is niet nodig, of zelfs beter van niet, om de afstand te meten als de robot een lijn detecteert. Weet je ook waarom niet ?</p>
+
+                <p class="assignment">Voeg nu de programmaregels toe welke ervoor zorgen dat de robot stopt als de afstand tussen de robot en een voorwerp kleiner is dan 10cm.</p>
+
+                <hr/>
+
+                <div style="">
+                    <div style="float:left;width:49%;margin-right: 7px ">
+
+                        <p>Je robot staat nu stil als er iets op zijn weg ligt, maar wat dan ? Wat moet de robot doen ?</p>
+
+                        <p>Je kun de robot om laten draaien en verder rijden. Maar het kan ook slimmer, je kunt de robot ook om het obstakel heen laten rijden, zodat het zijn weg verder kan vervolgen.</p>
+
+                        <p>Maar hoe kun je de robot nu het beste om een obstakel laten rijden? Kijk eens naar de afbeelding rechts. Op deze tekening staan drie lijnen getekend. Iedere lijn wijst in een andere richting, links, vooruit en rechts. Elke lijn geeft de afstand van de robot ten opzichte van het obstakel.</p>
+
+                        <h3>Opdracht 11.6</h3>
+                        <p class="assignment">Als de robot nu om het obstakel heen moet rijden, welke richting zou je hem dan sturen.En als je de robot bij </p>
+
+                    </div>
+                    <div style="float:right;width:49%;margin-right: 7px ">
+                        <a class="lightbox" href="#Lesson_11_Avoidance_2">
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
+                        src="./Student%20guide/Lesson_11_Avoidance_2.png" alt=""/>
+                    </a>
+                        <div class="lightbox-target" id="Lesson_11_Avoidance_2">
+                            <img src="./Student%20guide/Lesson_11_Avoidance_2.png" alt="" />
+                            <a class="lightbox-close" href="#deadlink"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both; "></div>
+                </div>
 </body>
 
 
