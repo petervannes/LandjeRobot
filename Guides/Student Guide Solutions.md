@@ -381,3 +381,170 @@ void setup() {
       landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
     }
 ```
+
+### Assignment 6
+
+To which direction would you send the robot; To the left
+
+Based on distance; The longest measured distance.
+
+```
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance() ;
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
+      
+      // Meet afstand links van de robot
+      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
+      delay(1000) ;
+      int links = landjerobot.measureDistance() ;
+
+      // Meet afstand rechts van de robot
+      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
+      delay(1000) ;
+      int rechts = landjerobot.measureDistance() ;
+      
+      // Kijk weer naar voren
+      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
+      
+      if (links > rechts) {
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
+      } else {
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
+      }
+      
+      // Rijd weer vooruit
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    }
+```
+    
+    
+#Lesson 12, improvements
+
+##Assignment 1
+
+```
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance() ;
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
+      
+      // Meet afstand links van de robot
+      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
+      delay(1000) ;
+      int links = landjerobot.measureDistance() ;
+
+      // Meet afstand rechts van de robot
+      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
+      delay(1000) ;
+      int rechts = landjerobot.measureDistance() ;
+      
+      // Kijk weer naar voren
+      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
+      
+      if (links > rechts) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
+      } else {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
+      }
+      
+      // Rijd weer vooruit
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    }
+```
+
+## Assignment 2
+
+```
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance() ;
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
+      
+      // Mopper
+      landjerobot.talk(5) ;
+      
+      // Meet afstand links van de robot
+      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
+      delay(1000) ;
+      int links = landjerobot.measureDistance() ;
+
+      // Meet afstand rechts van de robot
+      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
+      delay(1000) ;
+      int rechts = landjerobot.measureDistance() ;
+      
+      // Kijk weer naar voren
+      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
+      
+      if (links > rechts) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
+      } else {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
+      }
+      
+      // Rijd weer vooruit
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+    }
+    ```
+    
+    
+## Assignment 3
+
+```
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance() ;
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      
+      // Controleer de gemeten afstand
+      int totaalafstand = 0 ;
+      for (int x=1; x<=5 ;x++) {
+        totaalafstand = totaalafstand + landjerobot.measureDistance() ; 
+      }
+      
+      if (totaalafstand < 50) {
+        
+        landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
+        
+        // Mopper
+        landjerobot.talk(5) ;
+      
+        // Meet afstand links van de robot
+        landjerobot.look(LandjeRobot::LOOK::LEFT) ;
+        delay(1000) ;
+        int links = landjerobot.measureDistance() ;
+  
+        // Meet afstand rechts van de robot
+        landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
+        delay(1000) ;
+        int rechts = landjerobot.measureDistance() ;
+        
+        // Kijk weer naar voren
+        landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
+        
+        if (links > rechts) {
+          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+          landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
+        } else {
+          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
+          landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
+        }
+        
+         // Rijd weer vooruit
+         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
+      }
+    }
+  }
+  ```

@@ -2784,23 +2784,29 @@ void loop() {
                 <ul>
                     <li>Als er geen lijn gedetecteerd wordt hoeft de robot alleen maar te (blijven!) rijden.</li>
                     <li>Als er links een lijn gedetecteerd wordt moet de robot</li>
-                    <ul>
-                        <li>naar achter rijden,</li>
-                        <li>naar rechts draaien,</li>
-                        <li>en weer verder rijden</li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li>naar achter rijden,</li>
+                            <li>naar rechts draaien,</li>
+                            <li>en weer verder rijden</li>
+                        </ul>
+                    </li>
                     <li>Als er rechts een lijn gedetecteerd wordt moet de robot</li>
-                    <ul>
-                        <li>naar achter rijden,</li>
-                        <li>naar links draaien,</li>
-                        <li>en weer verder rijden</li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li>naar achter rijden,</li>
+                            <li>naar links draaien,</li>
+                            <li>en weer verder rijden</li>
+                        </ul>
+                    </li>
                     <li>Als er links en rechts een lijn gedetecteerd wordt moet de robot</li>
-                    <ul>
-                        <li>naar achter rijden,</li>
-                        <li>omdraaien,</li>
-                        <li>en weer verder rijden</li>
-                    </ul>
+                    <li>
+                        <ul>
+                            <li>naar achter rijden,</li>
+                            <li>omdraaien,</li>
+                            <li>en weer verder rijden</li>
+                        </ul>
+                    </li>
 
                 </ul>
 
@@ -2842,9 +2848,25 @@ void loop() {
                         <p>Maar hoe kun je de robot nu het beste om een obstakel laten rijden? Kijk eens naar de afbeelding rechts. Op deze tekening staan drie lijnen getekend. Iedere lijn wijst in een andere richting, links, vooruit en rechts. Elke lijn geeft de afstand van de robot ten opzichte van het obstakel.</p>
 
                         <h3>Opdracht 11.6</h3>
-                        <p class="assignment">Als de robot nu om het obstakel heen moet rijden, welke richting zou je hem dan sturen.En als je de robot bij </p>
+                        <p class="assignment">Als de robot nu om het obstakel heen moet rijden, welke richting zou je hem dan sturen?</p>
 
+                        <p class="assignment">De robot kan met zijn hoofd draaien en met de ogen de afstand van de robot tot een voorwerp meten. Als je nu hiermee links, vooruit en rechts van de robot de afstand meet en deze afstanden vergelijkt. Naar welke kant zou de robot moeten rijden de kortste, middelste of langst gemeten afstand ? </p>
+
+                        <p class="assignment">Je robot kan nu rondrijden binnen de lijnen en stop als het 10cm voor zich iets ziet staan. Tijd om het programma &quot;Mijn_Robot&quot; weer verder uit te breiden. De robot moet nu gaan beslissen welke kant het op moet gaan rijden om het ding dat hij voor zich ziet staan heen te rijden.</p>
+
+                        <p class="assignment">Breid het programma uit na de instructie regel <code>landjerobot.move(LandjeRobot::DIRECTION::STOP) ;</code> wanneer gemeten is dat de afstand tussen de robot en het voorwerp minder dan 10cm is. Zorg nu dat de robot de afstand links en rechts van zich meet. Vergelijk deze twee afstanden en zorg dat de robot nu de juiste kant op draait zodat het om het voorwerp heen rijdt.</p>
+
+
+                        <p class="assignment">Tip: De robot meet de afstand beter als je na het draaien van het hoofd even wacht, 1 seconde is meer dan genoeg, voordat je de afstand meet.
+                        </p>
+
+                        <p class="assignment">Tijd om te testen ! Zet je robot neer, zet hem met de schakelaar op mode &quot;2&quot; en laat hem rijden binnen de lijnen. Pak nu een voorwerp en plaats deze ver genoeg voor de robot. Rijdt hij er omheen dan ben je geslaagd!
+                        </p>
+
+                        <hr/>
                     </div>
+
+
                     <div style="float:right;width:49%;margin-right: 7px ">
                         <a class="lightbox" href="#Lesson_11_Avoidance_2">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
@@ -2857,6 +2879,25 @@ void loop() {
                     </div>
                     <div style="clear:both; "></div>
                 </div>
+
+                <h1 id="toc_19">Les 12, Verbeteren van je programma</h1>
+
+                <p>Je robot kan nu zelfstandig rondrijden. Maar zoals je waarschijnlijk al merkt gaat het nog niet altijd even goed. Soms raakt het nog het voorwerp dat in de weg staat of probeert robot het voorwerp opzij te duwen. Het kan nog zelfs voorkomen dat het doordat het buiten de lijnen gaat rijden.</p>
+
+                <h3>Opdracht 12.1</h3>
+                <p class="assignment">Soms als de robot vlak voor een voorwerp moet draaien kan het zijn dat het tijdens het draaien te weinig ruimte heeft en het voorwerp opzij duwt. Hoe kun je dit voorkomen ?</p>
+
+                <h3>Opdracht 12.2</h3>
+                <p class="assignment">Laat de robot mopperen als er iets voor hem staat door het 5 seconden te laten praten!</p>
+
+                <h3>Opdracht 12.3</h3>
+                <p class="assignment">Ook als er soms niets voor de robot in de weg staat gaat het meten en gaat dan een andere kant op. Dit kan komen omdat de robot soms een beetje fout meet. Dit kan komen door echo van het geluid waarmee gemeten wordt of door geluid van een andere robot.</p>
+
+                <h3>Opdracht 12.4</h3>
+                <p class="assignment">Het kan zijn dat als er iets recht voor een robot staat er links en rechts nog minder afstand is. De robot kan er dan niet omheen rijden. Maak hier een oplossing voor en test het uit.</p>
+
+
+
 </body>
 
 
