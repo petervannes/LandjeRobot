@@ -1,550 +1,0 @@
-# Student Guide Solutions
-
-## Lesson 3, variables
-
-### Assignment 1
-
-Create three variables and print the output
-
-    /*
-        */    void setup() {      Serial.begin(9600);      delay(2000);        String naam = "Peter"  ;      int waarde = 12 ;      boolean waarofniet = false ;      Serial.println(naam);      Serial.println(waarde);      Serial.println(waarofniet);    }    void loop() {        }## Lesson 4, comparing
-
-### Assignment 1
-
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);    }    void loop() {    }
-    
-    
-### Assignment 2  
-    
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      String var1 = "abcd" ;          String var2 = "abcd" ;      String var3 = "efgh" ;      boolean uitkomst = var1 == var2 ;      Serial.println(var1 == var2);      Serial.println(var1 == var3);      Serial.println(uitkomst);    }    void loop() {    }
-    ### Assignment 3  
-    
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                Serial.println(klein > groot);      Serial.println(klein < groot);    }    void loop() {    }
-
-### Assignment 4
-    
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;    
-            Serial.println(klein > groot);      Serial.println(klein < groot);
-      Serial.println(klein >= klein);
-      Serial.println(groot <= groot);
-      Serial.println(klein >= groot);
-      Serial.println(groot <= klein);
-    }    void loop() {    }### Assignment 5
-    
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;    
-            Serial.println(klein > groot);      Serial.println(klein < groot);
-      Serial.println(klein >= klein);
-      Serial.println(groot <= groot);
-      Serial.println(klein >= groot);
-      Serial.println(groot <= klein);
-      Serial.println(klein != klein);    
-      Serial.println(klein != groot);              }    void loop() {    }
-    
-    
-## Lesson 5, conditional statements
-
-### Assignment 1
-
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                if (klein < groot) {        Serial.println("klein is kleiner dan groot") ;            }     }    void loop() {    }
-    
-### Assignment 2
-
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);      int groot = 2313 ;          int klein = 5 ;                if (klein < groot) {        Serial.println("klein is kleiner dan groot") ;            } else {
-        Serial.println("klein is groter dan groot") ;      
-      }    }    void loop() {    }    
-    
-## Lesson 6, Loops
-
-### Assignment 1
-
-Het juiste antwoord is 9x
-    
-    getal 1
-    "Dit herhaal ik" 
-    getal 2
-    "Dit herhaal ik" 
-    getal 3
-    "Dit herhaal ik" 
-    getal 4
-    "Dit herhaal ik" 
-    getal 5
-    "Dit herhaal ik" 
-    getal 6
-    "Dit herhaal ik" 
-    getal 7
-    "Dit herhaal ik" 
-    getal 8
-    "Dit herhaal ik" 
-    getal 9
-    "Dit herhaal ik" 
-    getal 10
-
-
-### Assignment 2
-
-    /*    */    void setup() {      Serial.begin(9600);      delay(2000);        int grondtal = 3 ;      int exponent = 5 ;      int uitkomst = grondtal ;        for (int x=1 ; x<exponent ; x++) {        uitkomst = uitkomst * grondtal ;      }        Serial.println(uitkomst);        }    void loop() {        }
-    
-    
-## Lesson 7, Debugging
-
-### Assignment 1
-
-### Assignment 2
-
-    /*
-    
-    */
-    
-    void setup() {
-      
-      Serial.begin(9600);
-      delay(2000);
-      
-      Serial.println("Gaat het wel goed?");
-        
-    }
-    
-    void loop() {
-        
-    }
-    
-    
-### Assignment 3
-
-#### Solution 1
-
-    void setup() {
-      Serial.begin(9600);
-      delay(2000);
-      pinMode(A1,INPUT) ;
-      randomSeed(analogRead(A1)); 
-  
-      int getal = 10;
-      Serial.println("start getal");
-      Serial.println(getal);
-  
-      int teller = random(1, 10);
-      Serial.println("start teller");
-      Serial.println(teller);
-      
-      while (getal != teller) {
-        Serial.println("teller");
-        Serial.println(teller);
-        teller++ ;
-      }
-  
-      Serial.println("Klaar!");
-    
-    }
-
-    void loop() {
-        
-    }
-
-#### Solution 2
-
-    void setup() {
-      Serial.begin(9600);
-      delay(2000);
-      pinMode(A1,INPUT) ;
-      randomSeed(analogRead(A1)); 
-  
-      int getal = 5;
-      Serial.println("start getal");
-      Serial.println(getal);
-  
-      int teller = random(1, 5);
-      Serial.println("start teller");
-      Serial.println(teller);
-      
-      while (getal != teller) {
-        Serial.println("teller");
-        Serial.println(teller);
-        teller++ ;
-      }
-  
-      Serial.println("Klaar!");
-    
-    }
-
-    void loop() {
-        
-    }
-    
-## Lesson 8, The Robot instructionset
-
-### Assignment 1
-
-    void setup() {        landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10) ;        }    void loop() {        }
-    
-### Assignment 2
-
-    void setup() {          landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);      landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);        landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);      landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;      landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);  
-    }    void loop() {        }
-    
-### Assignment 3
-
-    void setup() {         ## Voorbeeld 1      for (int k=1 ; k <=4 ; k++) {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;        landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);      }         ## Voorbeeld 2      int k = 1 ;      while (k <= 4) {        landjerobot.move(LandjeRobot::DIRECTION::FORWARD,10,true) ;        landjerobot.turn(LandjeRobot::TURN::LEFT,90,true);        k++ ;     }       }    void loop() {        }
-    
-### Assignment 4
-
-hands on assignment, no specific solution
-
-### Assignment 5
-
-    void setup() {         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE ) {        landjerobot.move(LandjeRobot::DIRECTION::STOP ) ;      }      }
-    
-## Lesson 9, Line Following   
-    
-### Assignment 1
-
-    void setup() {          landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {        if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {          landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;              }            if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {          landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;        }            landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          }      }
-
-
-    
-### Assignment 2
-
-When the robot detects the a line with the left or right sensor. Then wait a short moment to see if the status of the line-detection sensor changes. When the robot arrives at the turn marker in a slightly slanting line the state of the sensor will change from `LandjeRobot::LINE::LEFT` or `LandjeRobot::LINE::RIGHT` to `
-LandjeRobot::LINE::BOTH`. So when before taking action on the sensors output is waited for a fraction of a second, the turn marker will be detected correctly.
-
-How this will be implemented is part of the next assignment. 
-
-
-### Assignment 3
-
-    void setup() {       // Start met rijden als de robot aangezet wordt en       // wacht niet       landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;      }    void loop() {      // Als er niet niets (!) gedetecteerd wordt door de       // reflectie sensors doe dan iets      if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            // wacht 30 milliseconden (0,03 seconde)        delay(30) ;            // Als beide reflectie sensors een lijn detecteren        if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {          // keer de robot om en wacht          landjerobot.turn(LandjeRobot::TURN::LEFT,180,true) ;        }            // Als de reflectie sensors links een lijn detecteren        if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {          // Draai 10 graden naar links en wacht          landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;        }            // Als de reflectie sensors rechts een lijn detecteren        if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {          // Draai 10 graden naar rechts en wacht          landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;        }            // Laat de robot weer verder rijden        landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          } // einde if      }
-
-
-### Assignment 4
-
-```
-int mode = 0 ;void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }  }void loop() {  // Als de schakelaar op "1" staat.  if (mode == 1) {    // Als er niet niets (!) gedetecteerd wordt door de     // reflectie sensors doe dan iets    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {            // wacht 30 milliseconden (0,03 seconde)      delay(30) ;            // Als beide reflectie sensors een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {        // keer de robot om en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,180,true) ;      }            // Als de reflectie sensors links een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {        // Draai 10 graden naar links en wacht        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;      }            // Als de reflectie sensors rechts een lijn detecteren      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {        // Draai 10 graden naar rechts en wacht        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;      }            // Laat de robot weer verder rijden      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;          } // einde if  } else { // Als de schakelaar op "2" staat  }  }
-```
-
-
-## Lesson 10, more sensors and motors
-
-### Assignment 1
-
-
-```
-void setup() {    landjerobot.look(LandjeRobot::LOOK::FORWARD) ;}void loop() {    }
-```
-
-```
-void setup() {    landjerobot.look(LandjeRobot::LOOK::FAR_LEFT) ;
-    delay(2000);    landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
-    delay(2000);    landjerobot.look(LandjeRobot::LOOK::FAR_RIGHT) ;
-}void loop() {    }
-```
-
-### Assignment 2
-
-```
-void setup() {     landjerobot.mouthOpen() ;   delay(5000);   landjerobot.mouthClosed();   delay(5000) ;      landjerobot.talk(10) ;    }
-```
-
-### Assignment 3
-
-Sound travels at the speed of 343 m/sec. So when it takes 12 seconds to hear the echo, the sound has travelled 343 * 12 or 4116 meters. But the sound has to travel from you to the mountain and back again. Therefore the actual distance to the mountain is 4116 meters divided by 2. So the distance is 2058 meters or approximately 2 km.
-
-### Assignment 4
-
-
-
-```
-void setup() {
-
-    int afstand = 400 ;      Serial.begin(9600);    delay(2000);        // druk de gemeten afstand af zolang    // de afstand groter is dan 5 cm.    while (afstand > 5) {      afstand = landjerobot.measureDistance() ;      Serial.println(afstand) ;    }        // Laat de robot 10 seconden praten    landjerobot.talk(10) ;    }
-```
-
-
-
-## Lesson 11, A new program
-
-### Assignment 1
-
-Solution is;
-
-* If the left sensor detects a line move 10cm backward, then turn 45 degrees right. Continue driving forward.
-* If the right sensor detects a line move 10cm backward, then turn 45 degrees left. Continue driving forward.
-* If the both sensors detect a line move 10cm backward, then turn 180 degrees left. Continue driving forward.
-
-### Assignment 2
-
-The robot must start moving forward when the mode switch is set to mode "2" and switched on. So in the function ```setup()``` and instruction has to be added to make the robot moving forward.
-
-This can be accomplished in two ways. First by adding an if statement which will make the robot move forward in mode 2.
-
-```
-void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Als schakelaar op "1" staat  if (mode == 1) {    // Start met rijden als de robot aangezet wordt en    // wacht niet    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  } else {
-    // Als schakelaar op "2" staat
-    // Start met rijden als de robot aangezet wordt en
-    // wacht niet
-    landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-  }  }
-```
-
-The same result can be accomplished by removing some lines of code from the existing code. Regardless of the state of the mode switch the robot has to start moving forward. There is no specific reason 
-
-```
-void setup() {  // "Lees" de stand van de mode schakelaar  mode = landjerobot.mode() ;  // Start met rijden als de robot aangezet wordt en
-  // wacht niet  landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;  }
-```
-
-### Assignment 3
-
-This is a basic working example to make the robot stay within the lines. 
-
-```
-    // Als er niet niets (!) gedetecteerd wordt door de 
-    // reflectie sensors doe dan iets
-    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
-    
-      // wacht 30 milliseconden (0,03 seconde)
-      delay(30) ;
-    
-      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
-      }
-
-      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
-      }
-
-      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, 180, true) ;
-      }
-      
-      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    }
-```
-
-Using the basic code, the robot may end in an endless loop, repeating the same movements over and over again. Most certainly this will occur when the robot ends up in a corner of the drawn rectangle. Adding some randomness whill resolve this issue.
-
-```
-    // Als er niet niets (!) gedetecteerd wordt door de 
-    // reflectie sensors doe dan iets
-    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
-    
-      // wacht 30 milliseconden (0,03 seconde)
-      delay(30) ;
-    
-      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
-        landjerobot.turn(LandjeRobot::TURN::RIGHT, random(20,90), true) ;
-      }
-
-      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, random(20,90), true) ;
-      }
-
-      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, random(160,200), true) ;
-      }
-      
-      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    }
-```
-
-### Assignment 4
-
-```
-void setup() {
-
-  // "Lees" de stand van de mode schakelaar
-  mode = landjerobot.mode() ;
-
-  // Laat de robot naar voren kijken
-  landjerobot.look(LandjeRobot::LOOK::FORWARD);
-  
-  // Start met rijden als de robot aangezet wordt en
-  // wacht niet
-  landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-  
-}
-```
-
-### Assignment 5
-
-```
-    // Meet de afstand
-    int afstand = landjerobot.measureDistance() ;
-
-    // Stop als de afstand minder dan 10 cm is.
-    if (afstand < 10) {
-      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
-    }
-```
-
-### Assignment 6
-
-To which direction would you send the robot; To the left
-
-Based on distance; The longest measured distance.
-
-```
-    // Meet de afstand
-    int afstand = landjerobot.measureDistance() ;
-
-    // Stop als de afstand minder dan 10 cm is.
-    if (afstand < 10) {
-      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
-      
-      // Meet afstand links van de robot
-      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
-      delay(1000) ;
-      int links = landjerobot.measureDistance() ;
-
-      // Meet afstand rechts van de robot
-      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
-      delay(1000) ;
-      int rechts = landjerobot.measureDistance() ;
-      
-      // Kijk weer naar voren
-      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
-      
-      if (links > rechts) {
-        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
-      } else {
-        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
-      }
-      
-      // Rijd weer vooruit
-      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    }
-```
-    
-    
-#Lesson 12, improvements
-
-##Assignment 1
-
-```
-    // Meet de afstand
-    int afstand = landjerobot.measureDistance() ;
-
-    // Stop als de afstand minder dan 10 cm is.
-    if (afstand < 10) {
-      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
-      
-      // Meet afstand links van de robot
-      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
-      delay(1000) ;
-      int links = landjerobot.measureDistance() ;
-
-      // Meet afstand rechts van de robot
-      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
-      delay(1000) ;
-      int rechts = landjerobot.measureDistance() ;
-      
-      // Kijk weer naar voren
-      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
-      
-      if (links > rechts) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
-      } else {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
-      }
-      
-      // Rijd weer vooruit
-      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    }
-```
-
-## Assignment 2
-
-```
-    // Meet de afstand
-    int afstand = landjerobot.measureDistance() ;
-
-    // Stop als de afstand minder dan 10 cm is.
-    if (afstand < 10) {
-      landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
-      
-      // Mopper
-      landjerobot.talk(5) ;
-      
-      // Meet afstand links van de robot
-      landjerobot.look(LandjeRobot::LOOK::LEFT) ;
-      delay(1000) ;
-      int links = landjerobot.measureDistance() ;
-
-      // Meet afstand rechts van de robot
-      landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
-      delay(1000) ;
-      int rechts = landjerobot.measureDistance() ;
-      
-      // Kijk weer naar voren
-      landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
-      
-      if (links > rechts) {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
-      } else {
-        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
-      }
-      
-      // Rijd weer vooruit
-      landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-    }
-    ```
-    
-    
-## Assignment 3
-
-```
-    // Meet de afstand
-    int afstand = landjerobot.measureDistance() ;
-
-    // Stop als de afstand minder dan 10 cm is.
-    if (afstand < 10) {
-      
-      // Controleer de gemeten afstand
-      int totaalafstand = 0 ;
-      for (int x=1; x<=5 ;x++) {
-        totaalafstand = totaalafstand + landjerobot.measureDistance() ; 
-      }
-      
-      if (totaalafstand < 50) {
-        
-        landjerobot.move(LandjeRobot::DIRECTION::STOP) ;
-        
-        // Mopper
-        landjerobot.talk(5) ;
-      
-        // Meet afstand links van de robot
-        landjerobot.look(LandjeRobot::LOOK::LEFT) ;
-        delay(1000) ;
-        int links = landjerobot.measureDistance() ;
-  
-        // Meet afstand rechts van de robot
-        landjerobot.look(LandjeRobot::LOOK::RIGHT) ;
-        delay(1000) ;
-        int rechts = landjerobot.measureDistance() ;
-        
-        // Kijk weer naar voren
-        landjerobot.look(LandjeRobot::LOOK::FORWARD) ;
-        
-        if (links > rechts) {
-          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-          landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true) ;
-        } else {
-          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true) ;
-          landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true) ;
-        }
-        
-         // Rijd weer vooruit
-         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
-      }
-    }
-  }
-  ```
