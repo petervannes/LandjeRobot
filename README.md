@@ -4,7 +4,7 @@
 
 ## Introduction
 
-![](petervannes.github.com/LandjeRobot/Guides/Student guide/cover.png)
+![](https://petervannes.github.com/LandjeRobot/Guides/Student guide/cover.png)
 
 Welcome to the Landje Robot repository. Landje Robot is an fully open source STEM robot. It is a common object avoidance and line following robot like many others. Landje Robot deviates in two aspects from many other builds. 
 
