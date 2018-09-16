@@ -4,6 +4,8 @@
 
 ## Introduction
 
+![](./Guides/Student guide/cover.png)
+
 Welcome to the Landje Robot repository. Landje Robot is an fully open source STEM robot. It is a common object avoidance and line following robot like many others. Landje Robot deviates in two aspects from many other builds. 
 
 First, Landje Robot is fully documented. There is a [Preparation guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Landje%20robot%20Kit%20preparation.html) which describes the bill of material, assembly of wire looms and other main parts and 3D printed parts. Next to the [Preparation guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Landje%20robot%20Kit%20preparation.html) there is a [Student guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20guide%20NLD.html) with programming lessons. And documentation of the [Instruction Set](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html).
