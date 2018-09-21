@@ -8,6 +8,415 @@
 <title>Landje robot Kit preparation</title>
 
 
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 18px;
+  line-height: 22.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+  list-style-position: inside
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+
+}
+li {
+  margin-bottom: 10px;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  /* text-transform: capitalize; */
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid;
+}
+h2 {
+  border-bottom: 2px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+
+html body {
+  /* background-color: #fdf6e3; */
+background-color: #ffffff;
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  background-color: #58b51c ;
+}
+
+
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #957500;
+}
+
+html h1 {
+  color: #957500;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #957500;
+}
+
+html code {
+  color: #ffffff;
+  background-color: #58b51c;
+}
+
+html u {
+  color: #657b83;
+}
+
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+
+
+body > h1:first-child {
+	position:relative;
+  left:-4px;
+  margin-top: 0;
+  padding-top: 110px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  border: 0;
+  color: #58b51c;
+  background:  url(data:image/png;base64,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) ;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+table {
+
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table tr em {
+  color: #ffffff;
+}
+
+table tr u {
+  color: #ffffff;
+}
+
+  table tr {
+    border-top: 2px solid #95C11F;
+    background-color: #58b51c;
+    padding: 20px;
+
+    /* margin: 0;
+    padding: 0px; }
+    /* table tr:nth-child(2n) { */
+      /* background-color: #f8f8f8; } */
+    }
+    table tr th {
+      color: #ffffff;
+      font-weight: bold;
+      border: 2px solid #95C11F;
+      padding: 10px ;
+      /* margin: 0; */
+      /* padding: 6px 13px; } */
+    }
+    table tr td {
+      color: #ffffff;
+      border: 2px solid #95C11F;
+      padding: 10px ;
+      /* margin: 0; */
+      /* padding: 6px 13px; } */
+    }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
 
 </head>
 
@@ -599,6 +1008,10 @@ stepper 5 (coil 2) to connector 4  </p>
 <p>Follow the instructions to create a team and add the students to the plan. If the students have been added successfully, the Arduino Create for Education Chrome app can be installed by following the steps in the <a href="https://create.arduino.cc/projecthub/Arduino_Genuino/install-arduino-create-for-education-chrome-app-6bf22a">Install Arduino Create for Education Chrome app</a> article.</p>
 
 
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
 
 
 </body>
