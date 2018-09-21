@@ -1696,99 +1696,99 @@ a4 &gt; a3</code></pre>
 
         <h2>Less than or equal and greater than or equal</h2>
 
-        <p>You have already learned how to compare whether values are equal, smaller or larger than another value. These equations can also be combined with each other. You can not only compare whether a value is greater than another value, but also greater than or equal to another value. The comparison <code>4 &gt; 3</code> is true, but <code>4 &gt; 4</code> is not. Suppose you want to compare a value that is greater than or equal to 4. Then you can do this very easily by combining the comparison symbols, for example <code>&gt;=</code>. The result of the equation <code>4 &gt;= 4</code> is then true and <code>4 &gt;= 3</code> is also true!
+        <p>You have already learned how to compare whether values are equal, smaller or larger than another value. These equations can also be combined with each other. You can not only compare whether a value is greater than another value, but also greater than or equal to another value. The comparison <code>4 &gt; 3</code> is true, but <code>4 &gt; 4</code> is not. Suppose you want to compare a value that is greater than or equal to 4. Then you can do this very easily by combining the comparison symbols, for example <code>&gt;=</code>. The result of the equation <code>4 &gt;= 4</code> is then true and <code>4 &gt;= 3</code> is also true!</p>
 
-            <p>In addition to the equation greater or equal , <code>&gt;=</code> there is also the equation smaller or equal, <code>&lt;=</code>. Just as with the larger or equal equation, with the smaller or equal equation, both <code>3 &lt;= 4</code> and <code>4 &lt;= 4</code> where.</p>
+        <p>In addition to the equation greater or equal , <code>&gt;=</code> there is also the equation smaller or equal, <code>&lt;=</code>. Just as with the larger or equal equation, with the smaller or equal equation, both <code>3 &lt;= 4</code> and <code>4 &lt;= 4</code> where.</p>
 
-            <h3>Task 4.4</h3>
+        <h3>Task 4.4</h3>
 
-            <p class="assignment">Add to the program created in the previous command <em>Lesson_4_largersmaller</em> comparisons using the Less than or equal and greater than or equal equations. </p>
+        <p class="assignment">Add to the program created in the previous command <em>Lesson_4_largersmaller</em> comparisons using the Less than or equal and greater than or equal equations. </p>
 
-            <hr/>
-
-
-            <h2>Not equal to</h2>
-
-            <p>The last equation is <em>not equal to</em>, <code>!=</code>. The result of this equation is true if both equations are not equal, so <code>3 != 7</code> is true. The exclamation mark for the = sign in the equation means <em>not</em> (NOT) , so it actually says &quot;not equal&quot;.</p>
-
-            <h3>Task 4.5</h3>
-
-            <p class="assignment">Add to the program <em>Lesson_4_largersmaller</em> an equation using the not equal to operator.</p>
-
-            <hr/>
-
-            <h1 id="toc_12">Lesson 5, conditional statements</h1>
-
-            <p> You will probably think, nice these comparisons, but what can you actually use those for ? Well you can use them in conditional statements ?! Conditional what ? A statement is another word for a programming instruction, a condition is something that must exist before something else can happen . It becomes a bit clearer with the following example.</p>
-
-            <p>Say that you agree with your friend that you will give him a candy cane if he has helped you with your homework. Then the condition, is that he helped you with your homework. The instruction then is that you give him a candy cane. If you write this down so that it can be understood by a computer, it looks like this.</p>
+        <hr/>
 
 
-            <pre><code class="language-none">if (help me with homework) {
+        <h2>Not equal to</h2>
+
+        <p>The last equation is <em>not equal to</em>, <code>!=</code>. The result of this equation is true if both equations are not equal, so <code>3 != 7</code> is true. The exclamation mark for the = sign in the equation means <em>not</em> (NOT) , so it actually says &quot;not equal&quot;.</p>
+
+        <h3>Task 4.5</h3>
+
+        <p class="assignment">Add to the program <em>Lesson_4_largersmaller</em> an equation using the not equal to operator.</p>
+
+        <hr/>
+
+        <h1 id="toc_12">Lesson 5, conditional statements</h1>
+
+        <p> You will probably think, nice these comparisons, but what can you actually use those for ? Well you can use them in conditional statements ?! Conditional what ? A statement is another word for a programming instruction, a condition is something that must exist before something else can happen . It becomes a bit clearer with the following example.</p>
+
+        <p>Say that you agree with your friend that you will give him a candy cane if he has helped you with your homework. Then the condition, is that he helped you with your homework. The instruction then is that you give him a candy cane. If you write this down so that it can be understood by a computer, it looks like this.</p>
+
+
+        <pre><code class="language-none">if (help me with homework) {
   Give my friend a candy cane
 }</code></pre>
 
-            <p>You start for a computer with <em>if</em> to indicate that you set a condition that must be met. This condition is between the round brackets and the outcome may only be true or false. The outcome of a condition is therefore a <em>Boolean</em> value. After the condition you place the statements, instructions, that have to be executed if the outcome of the condition, defined between the round brackets, is true. The following example program says <em>if</em> it is true, then show &quot;The condition is true&quot;.</p>
+        <p>You start for a computer with <em>if</em> to indicate that you set a condition that must be met. This condition is between the round brackets and the outcome may only be true or false. The outcome of a condition is therefore a <em>Boolean</em> value. After the condition you place the statements, instructions, that have to be executed if the outcome of the condition, defined between the round brackets, is true. The following example program says <em>if</em> it is true, then show &quot;The condition is true&quot;.</p>
 
-            <pre><code class="language-none">if (true) {
+        <pre><code class="language-none">if (true) {
   Serial.println("The condition is true") ;
 }</code></pre>
 
-            <p>The boolean value <em>true</em> is true, so if you run the program the text &quot;The condition is true&quot; is shown./p>
+        <p>The boolean value <em>true</em> is true, so if you run the program the text &quot;The condition is true&quot; is shown.</p>
 
-                <h3>Task 5.1</h3>
-                <p class="assignment">Create a new program, <em>Lesson_5_condition_if</em>. In the <code>setup()</code> function, create two new variables, <code>large</code> and <code>small</code> of the <em>int</em> type. Fill this variable with a number. The number in variable <code>small</code> must be smaller than in the variable <code>large</code>. Then write an if instruction which prints the text &quot;small is smaller than large&quot; if the value in variable <code>small</code> is smaller than the value in variable <code>large</code>.</p>
+        <h3>Task 5.1</h3>
+        <p class="assignment">Create a new program, <em>Lesson_5_condition_if</em>. In the <code>setup()</code> function, create two new variables, <code>large</code> and <code>small</code> of the <em>int</em> type. Fill this variable with a number. The number in variable <code>small</code> must be smaller than in the variable <code>large</code>. Then write an if instruction which prints the text &quot;small is smaller than large&quot; if the value in variable <code>small</code> is smaller than the value in variable <code>large</code>.</p>
 
-                <hr/>
+        <hr/>
 
-                <p>If all goes well the program of <em>Task 5.1</em> now prints the text "small is smaller than large". But what if the value of small <em>is not</em> smaller than large? So if the outcome condition is <em>false</em>. Then nothing will be printed now! With an if-instruction you can also execute instructions if the outcome of the condition is not true (false). This is done with the word <code>else</code>. You use the word <code>else</code> after the instructions between { and } that is executed if the outcome of the condition is true. After else, use the { and } again to indicate which instructions you want to execute if the outcome of the condition is untrue. Just look at the example below.</p>
+        <p>If all goes well the program of <em>Task 5.1</em> now prints the text "small is smaller than large". But what if the value of small <em>is not</em> smaller than large? So if the outcome condition is <em>false</em>. Then nothing will be printed now! With an if-instruction you can also execute instructions if the outcome of the condition is not true (false). This is done with the word <code>else</code>. You use the word <code>else</code> after the instructions between { and } that is executed if the outcome of the condition is true. After else, use the { and } again to indicate which instructions you want to execute if the outcome of the condition is untrue. Just look at the example below.</p>
 
-                <pre><code class="language-none">if (true) {
+        <pre><code class="language-none">if (true) {
   Serial.println("The condition is true") ;
 } else {
   Serial.println("The condition is false") ;
 }</code></pre>
 
-                <h3>Task 5.2</h3>
-                <p class="assignment">Customize the program now <em>Lesson_5_condition_if</em>. Make sure that the text "small is larger than large" is printed if the value in variable <code>small</code> is larger than the value in variable <code>large</code>. Also adjust the value of one of the variables so that the new text is printed.</p>
+        <h3>Task 5.2</h3>
+        <p class="assignment">Customize the program now <em>Lesson_5_condition_if</em>. Make sure that the text "small is larger than large" is printed if the value in variable <code>small</code> is larger than the value in variable <code>large</code>. Also adjust the value of one of the variables so that the new text is printed.</p>
 
-                <hr/>
+        <hr/>
 
-                <h1 id="toc_13">Lesson 6, loops</h1>
+        <h1 id="toc_13">Lesson 6, loops</h1>
 
-                <p>Repeatative work is boring! But sometimes useful. Just think about learning the tables. If a computer has to repeat a certain job every time you want to, you can program this more times, for example if you want to print 5x &quot;I repeat this&quot;, you can write it like this.</p>
+        <p>Repeatative work is boring! But sometimes useful. Just think about learning the tables. If a computer has to repeat a certain job every time you want to, you can program this more times, for example if you want to print 5x &quot;I repeat this&quot;, you can write it like this.</p>
 
-                <pre><code class="language-none">Serial.println("I repeat this") ;
+        <pre><code class="language-none">Serial.println("I repeat this") ;
 Serial.println("I repeat this") ;
 Serial.println("I repeat this") ;
 Serial.println("I repeat this") ;
 Serial.println("I repeat this") ;
 </code></pre>
 
-                <p>For a few repetitions this is still clear, but suppose you have to repeat something a thousand times. Then the program becomes very long and still does not do much. To make this easier and more convenient there are <em>loop</em>, instructions. Of these, we'll discuss two, the <code>for</code> and the <code>while</code> loop.</p>.
+        <p>For a few repetitions this is still clear, but suppose you have to repeat something a thousand times. Then the program becomes very long and still does not do much. To make this easier and more convenient there are <em>loop</em>, instructions. Of these, we'll discuss two, the <code>for</code> and the <code>while</code> loop.</p>.
 
-                <h2>The while-loop</h2>
+        <h2>The while-loop</h2>
 
-                <p>While means <em>as long as</em>. The instruction <code>while</code> works similarly to the instruction <code>if</code>. If you start with the name of the instruction, <code>while</code>, a condition will appear between two round brackets and instructions between { and }. These last two characters are also called braces. </p>
+        <p>While means <em>as long as</em>. The instruction <code>while</code> works similarly to the instruction <code>if</code>. If you start with the name of the instruction, <code>while</code>, a condition will appear between two round brackets and instructions between { and }. These last two characters are also called braces. </p>
 
-                <pre><code class="language-none">while (true) {
+        <pre><code class="language-none">while (true) {
   Serial.println("I repeat this") ;
 }
 </code></pre>
 
-                <p>The <code>while</code> instruction repeats the instructions between the braces as long as the outcome of the condition is true.</p>
+        <p>The <code>while</code> instruction repeats the instructions between the braces as long as the outcome of the condition is true.</p>
 
-                <div style="overflow: auto;margin: 7px 7px 7px 7px;">
-                    <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
-                    <div>Do you know how long the above <code>while</code> loop repeats printing the text?</div>
-                </div>
+        <div style="overflow: auto;margin: 7px 7px 7px 7px;">
+            <img style="float: left;margin-right: 7px;" src="./Student%20guide/doe_icoon.png" width="50" alt="Doe" />
+            <div>Do you know how long the above <code>while</code> loop repeats printing the text?</div>
+        </div>
 
-                <p>If you want a <code>while</code> loop to stop repeating at some point, you must make sure that the condition changes from <em>true</em> to <em>false</em> during the repeat. If you don't make sure the outcome of the condition changes, the repeat will never stop.</p>
+        <p>If you want a <code>while</code> loop to stop repeating at some point, you must make sure that the condition changes from <em>true</em> to <em>false</em> during the repeat. If you don't make sure the outcome of the condition changes, the repeat will never stop.</p>
 
-                <p>Check the example below and try to understand when the <code>while</code> condition changes.</p>
+        <p>Check the example below and try to understand when the <code>while</code> condition changes.</p>
 
 
-                <pre><code class="language-none">int number = 1 ;
+        <pre><code class="language-none">int number = 1 ;
   
 while (number &lt; 10) {
   Serial.println("I repeat this") ;
@@ -1796,88 +1796,88 @@ while (number &lt; 10) {
 }
   </code></pre>
 
-                <p>The program starts by creating a variable <code>number</code> and assigns it the value &quot;1&quot;. The condition <code>number &lt;= 10</code> in the while-loop then is true. The text &quot;I repeat this&quot; will then be printed. Then the instruction <code>number = number + 1</code> is executed. The variable <em>number</em> will get a new value here. This new value is the current value in variable number, &quot;1&quot;, plus 1. The new content of variable <em>number</em> becomes 2. The result of the while-loop condition is still true, so the instructions between { and } will be repeated again.
-                </p>
+        <p>The program starts by creating a variable <code>number</code> and assigns it the value &quot;1&quot;. The condition <code>number &lt;= 10</code> in the while-loop then is true. The text &quot;I repeat this&quot; will then be printed. Then the instruction <code>number = number + 1</code> is executed. The variable <em>number</em> will get a new value here. This new value is the current value in variable number, &quot;1&quot;, plus 1. The new content of variable <em>number</em> becomes 2. The result of the while-loop condition is still true, so the instructions between { and } will be repeated again.
+        </p>
 
-                <h3>Task 6.1</h3>
-                <p class="assignment">Try now to find out how often the text &quot;I repeat this&quot; is printed by the previous example program. Do this by going step-by-step through the program rules and writing down the contents of the variable <em>number</em> and when something is printed.</p>
+        <h3>Task 6.1</h3>
+        <p class="assignment">Try now to find out how often the text &quot;I repeat this&quot; is printed by the previous example program. Do this by going step-by-step through the program rules and writing down the contents of the variable <em>number</em> and when something is printed.</p>
 
-                <p class="assignment"> Write down for example;</p>
-                <pre class="assignment"><code class="language-none">number 1
+        <p class="assignment"> Write down for example;</p>
+        <pre class="assignment"><code class="language-none">number 1
 &quot;I repeat this&quot; 
 number 2
 &quot;I repeat this&quot; 
 </code></pre>
 
-                <p class="assignment"></p>
+        <p class="assignment"></p>
 
-                <hr/>
+        <hr/>
 
-                <h2>The for-loop</h2>
+        <h2>The for-loop</h2>
 
-                <p>The for-loop also allows you to repeat multiple instructions. Instead of just a condition, you have to place a <em>initialization</em>, <em>condition</em> and <em>increment</em> between the round brackets in a <code>for-loop</code>. But what are <em>initialization</em>, <em>condition</em> and <em>increment</em>?</p>
+        <p>The for-loop also allows you to repeat multiple instructions. Instead of just a condition, you have to place a <em>initialization</em>, <em>condition</em> and <em>increment</em> between the round brackets in a <code>for-loop</code>. But what are <em>initialization</em>, <em>condition</em> and <em>increment</em>?</p>
 
-                <p>Initialization means creating again, it is creating a variable and assigning an initial value. The instruction <code>int number=1</code> for the while-loop example program showb below is the initialization of the variable <em>number</em></p>.
+        <p>Initialization means creating again, it is creating a variable and assigning an initial value. The instruction <code>int number=1</code> for the while-loop example program showb below is the initialization of the variable <em>number</em></p>.
 
-                <p>You have already dealed with a condition before, this is for example <code>number &lt; 10</code> shown in the while-loop example program below.</p>
+        <p>You have already dealed with a condition before, this is for example <code>number &lt; 10</code> shown in the while-loop example program below.</p>
 
-                <p>Increment is another word for addition. With this you indicate how much the value of a variable will be increased. In the while-loop example program this is executed in the loop by the instruction <code>number = number + 1</code>.</p>.
+        <p>Increment is another word for addition. With this you indicate how much the value of a variable will be increased. In the while-loop example program this is executed in the loop by the instruction <code>number = number + 1</code>.</p>.
 
-                <p>The <em>initialization</em>, <em>condition</em> and <em>increment</em> in a for-loop must appear in parentheses after the instruction <code>for</code>. Between the <em>initialization</em>, <em>condition</em> and <em>increment</em> type a semicolon (;). So it looks like this</p>
+        <p>The <em>initialization</em>, <em>condition</em> and <em>increment</em> in a for-loop must appear in parentheses after the instruction <code>for</code>. Between the <em>initialization</em>, <em>condition</em> and <em>increment</em> type a semicolon (;). So it looks like this</p>
 
-                <pre class="assignment"><code class="language-none">for (initialization;condition;increment) {
+        <pre class="assignment"><code class="language-none">for (initialization;condition;increment) {
   // Instructions
 }
 </code></pre>
 
-                <p>If we want to do exactly the same with a for-loop as in the &quot;I repeat this&quot; while-loop program, the program looks like this.</p>
+        <p>If we want to do exactly the same with a for-loop as in the &quot;I repeat this&quot; while-loop program, the program looks like this.</p>
 
-                <pre class="assignment"><code class="language-none">for (int number=1;number&lt;10;number=number+1) {
+        <pre class="assignment"><code class="language-none">for (int number=1;number&lt;10;number=number+1) {
   Serial.println("I repeat this") ;
 }
 </code></pre>
 
-                <p>In a for-loop you actually put all instructions which ensure a good progression of the repetition together. The variable is initialized, <em>number</em> gets the value 1. Each repetition a value of 1 is added to the value of the variable <em>number</em>. And the instructions are repeated as long as the value of the variable <em>number</em> is less than 10.</p>
+        <p>In a for-loop you actually put all instructions which ensure a good progression of the repetition together. The variable is initialized, <em>number</em> gets the value 1. Each repetition a value of 1 is added to the value of the variable <em>number</em>. And the instructions are repeated as long as the value of the variable <em>number</em> is less than 10.</p>
 
-                <p> If you want to increase the content of a variable by exactly 1, you can also write it down differently. By typing &quot;++&quot; after the name of a variable, for example <code>number+++</code>, this is the same as <code>number = number + 1</code>, so the previous program does exactly the same as the program below.</p>
+        <p> If you want to increase the content of a variable by exactly 1, you can also write it down differently. By typing &quot;++&quot; after the name of a variable, for example <code>number+++</code>, this is the same as <code>number = number + 1</code>, so the previous program does exactly the same as the program below.</p>
 
 
-                <pre class="assignment"><code class="language-none">for (int number=1;number&lt;10;number++) {
+        <pre class="assignment"><code class="language-none">for (int number=1;number&lt;10;number++) {
   Serial.println("I repeat this") ;
 }
 </code></pre>
 
 
-                <h3>Task 6.2</h3>
-                <p class="assignment">This will be a more difficult task, so take your time and think carefully. Write a program that calculates the power of a number. If you want to calculate 2 to the power 4, you calculate the outcome of 2x2x2x2. Two times two is four, four times two is eight and eight times two is sixteen. Two to the power 4 therefore is 16. To calculate a power of a number you need a <em>ground number</em> and a <em>exponent</em>. The base number is the number you want to multiply, the exponent is the number of times you want to multiply the number.</p>
+        <h3>Task 6.2</h3>
+        <p class="assignment">This will be a more difficult task, so take your time and think carefully. Write a program that calculates the power of a number. If you want to calculate 2 to the power 4, you calculate the outcome of 2x2x2x2. Two times two is four, four times two is eight and eight times two is sixteen. Two to the power 4 therefore is 16. To calculate a power of a number you need a <em>ground number</em> and a <em>exponent</em>. The base number is the number you want to multiply, the exponent is the number of times you want to multiply the number.</p>
 
-                <p class="assignment">Start the program by creating three variables, <code>ground</code>, <code>exponent</code> and <code>result</code>. Decide for yourself which type of variable you use. Make the content of the variable <code>result</code> equal to the value of <code>ground</code> and choose your own value for the variables <code>ground</code> and <code>exponent</code>. Start with small numbers to keep it comprehensible.</p>
+        <p class="assignment">Start the program by creating three variables, <code>ground</code>, <code>exponent</code> and <code>result</code>. Decide for yourself which type of variable you use. Make the content of the variable <code>result</code> equal to the value of <code>ground</code> and choose your own value for the variables <code>ground</code> and <code>exponent</code>. Start with small numbers to keep it comprehensible.</p>
 
-                <p class="assignment"> Then write in a for-loop the calculation of the power of the number in variable <code>ground</code>. Use the variable <code>exponent</code> in the condition. In the for-loop you use a separate variable <code>x</code> for initialization, condition and increment.</p>.
+        <p class="assignment"> Then write in a for-loop the calculation of the power of the number in variable <code>ground</code>. Use the variable <code>exponent</code> in the condition. In the for-loop you use a separate variable <code>x</code> for initialization, condition and increment.</p>.
 
-                <p class="assignment">Print the value of variable <code>result</code> after the for-loop is finished. Test your program with base 3 and exponent 5. If the result of the program is 243, then the program works well.</p>
+        <p class="assignment">Print the value of variable <code>result</code> after the for-loop is finished. Test your program with base 3 and exponent 5. If the result of the program is 243, then the program works well.</p>
 
-                <hr/>
-
-
-                <h1 id="toc_14">Lesson 7, debugging</h1>
+        <hr/>
 
 
-                <p class="assignment">Finding and solving errors in a program is called &quot;debugging&quot;. There are two types of errors in computer programs, syntactic and runtime errors. </p>
-
-                <h2>Syntactic errors</h2>
-
-                <p>What are these for errors ? A syntactic error is something like a speling mistake 😉. So you can already detect syntactic errors before you run a program. If you follow the rules of the programming language exactly, you will never make syntactic errors. But there are a lot of rules. So this is actually a job for a program to track these errors down. This program is also included in your IDE which you can start by clicking the verify button. </p>
-
-                <h3>Task 7.1</h3>
-
-                <p class="assignment">Create a new program in Arduino Create and call it <em>Lesson_7_debugging</em>. Then cut and paste the program below over the current standard program rules. Then find in your Arduino Create ID the verify button. Found it? Click there and see what happens.
+        <h1 id="toc_14">Lesson 7, debugging</h1>
 
 
+        <p class="assignment">Finding and solving errors in a program is called &quot;debugging&quot;. There are two types of errors in computer programs, syntactic and runtime errors. </p>
 
-                    <div style="overflow: auto">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <pre class="assignment"><code class="language-none">/*
+        <h2>Syntactic errors</h2>
+
+        <p>What are these for errors ? A syntactic error is something like a speling mistake 😉. So you can already detect syntactic errors before you run a program. If you follow the rules of the programming language exactly, you will never make syntactic errors. But there are a lot of rules. So this is actually a job for a program to track these errors down. This program is also included in your IDE which you can start by clicking the verify button. </p>
+
+        <h3>Task 7.1</h3>
+
+        <p class="assignment">Create a new program in Arduino Create and call it <em>Lesson_7_debugging</em>. Then cut and paste the program below over the current standard program rules. Then find in your Arduino Create ID the verify button. Found it? Click there and see what happens.</p>
+
+
+
+        <div style="overflow: auto">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <pre class="assignment"><code class="language-none">/*
 
 */
 
@@ -1895,65 +1895,65 @@ void loop() {
 }
 </code></pre>
 
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_6_debugging">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_6_debugging">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_6_debugging.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_6_debugging">
-                                <img src="./Student%20guide/Lesson_6_debugging.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_6_debugging">
+                    <img src="./Student%20guide/Lesson_6_debugging.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
 
-                    </div>
-
-
-                    <p>Check the error message in the red bar underneath the program. Do you see what is wrong?</p>
-                    <hr/>
-
-                    <p>Als je het programma van <em>Opdracht 7.1</em> controleert op syntactische fouten geeft de IDE aan <code>expected</code> &apos;;&apos; before &apos;}&apos; token. <em>Expected</em> betekent verwachtte en <em>token</em> betekent teken. De IDE verwachtte dus het teken &quot;;&quot; voor het &quot;}&quot; teken.
-                    </p>
-
-                    <p>Maar waar dan? Want er staan wel meer &quot;}&quot; tekens in het programma. Onder de foutmelding wordt in het zwarte kader de foutmelding uitgebreider beschreven. Nog steeds is het niet gemakkelijk, maar als je vaak rustig leest staat er precies waar de fout zicht bevindt.</p>
-
-                    <p>De eerste rode afgedrukte regel geeft bijvoorbeeld aan in welke functie de fout zit, <code>In function &apos;void setup()&apos;:</code>. De fout zit dus niet in de functie <code>loop()</code>, maar in <code>setup()</code>.</p>
-
-                    <p>In de volgend rode afgedrukte regel staat iets wat waarschijnlijk lijkt op <code>debuggen.ino:12:1 error: expected &apos;;&apos; before &apos;}&apos; token</code>. De tekst <code>12:1</code> geeft precies aan waar in het programma de fout zit, regel 12 en het eerste teken. De IDE verachte op die plek dus een &quot;;&quot; voor het &quot;}&quot; teken.</p>
+        </div>
 
 
-                    <h3>Opdracht 7.2</h3>
+        <p>Check the error message in the red bar underneath the program. Do you see what is wrong?</p>
+        <hr/>
 
-                    <p class="assignment">Haal nu met de aanwijzingen in de foutmeldingen de fout uit het programma. Waar zou jij de &quot;;&quot; zetten als je het netjes zou doen ?</p>
-                    <hr/>
+        <p>If you check the program of <em>Task 7.1</em> for syntactic errors, the IDE indicates <code>expected</code> &apos;;&apos; before &apos;}&apos; token. A <em>token</em> means something like symbol or character. So the IDE expected the character &quot;;&quot; for the character &quot;}&quot;.
+        </p>
+
+        <p>But where? Because there are more &quot;}&quot; characters in the program. Under the error message the black box describes the error message in more detail. It is still not easy, but if you often read quietly, it says exactly where the error is located.</p>
+
+        <p>The first red printed line indicates, for example, which function the error is in, <code>In function &apos;void setup()&apos;:</code>. The error is not in the function <code>loop()</code>, but in <code>setup()</code>.</p>.
+
+        <p>The next red printed line shows something that probably looks like <code>Lesson_7_debugging.ino:12:1 error: expected &apos;;&apos; before &apos;}&apos; token</code>. The text <code>12:1</code> indicates exactly where in the program the error is, line 12 and the first character. The IDE therefore despises an &quot;;&quot; for the &quot;}&quot; character.</p>
 
 
-                    <h2>Runtime fouten</h2>
+        <h3>Task 7.2</h3>
 
-                    <p>Runtime fouten zijn fouten die ontstaan tijdens het uitvoeren van een programma. Uitvoeren noemen we in het Engels &quot;runnen&quot;. Als er een runtime fout in een programma zit hoeft deze niet op te treden, maar het kan soms wel optreden. Hieronder zie je een programma waar een runtime fout in zit. Begin het programma te lezen vanaf de regel <code>int getal = 5;</code>. De programma regels voor deze regel zorgen er onder andere voor dat het programma een willekeurig getal kiest. De functie <code>random(1,10)</code> kiest een willekeurig getal van 1 tot en met 10.</p>
+        <p class="assignment">Now use the indications in the error messages to solve the error from the program. Where would you put the &quot;;&quot; if you did it properly ?</p>
+        <hr/>
 
-                    <pre><code class="language-none">void setup() {
+
+        <h2>Runtime errors</h2>
+
+        <p>Runtime errors are errors that occur during the execution of a program. If there is a runtime error in a program, it does not have to occur, but it can sometimes occur. Below you see a program which will have a runtime error when executing it. Start reading the program from the line <code>int number = 5;</code>. The program rules for this line make sure that the program chooses a random number. The <code>random(1,10)</code> function selects a random number from 1 to 10.</p>
+
+        <pre><code class="language-none">void setup() {
   Serial.begin(9600);
   delay(2000);
   pinMode(A1,INPUT) ;
   randomSeed(analogRead(A1)); 
   
   int getal = 5;
-  Serial.println("start getal");
-  Serial.println(getal);
+  Serial.println("start number");
+  Serial.println(number);
   
-  int teller = random(1, 10);
-  Serial.println("start teller");
-  Serial.println(teller);
+  int counter = random(1, 10);
+  Serial.println("start counter");
+  Serial.println(counter);
   
-  while (getal != teller) {
-    Serial.println("teller");
-    Serial.println(teller);
-    teller++ ;
+  while (number != counter) {
+    Serial.println("counter");
+    Serial.println(counter);
+    counter++ ;
   }
   
-  Serial.println("Klaar!");
+  Serial.println("Finished!");
     
 }
 
@@ -1963,64 +1963,64 @@ void loop() {
     </code>
     </pre>
 
-                    <p>Eerst wordt in de variabele <code>getal</code> de waarde <em>5</em> gezet. Vervolgens wordt dit getoond in het console van je IDE. Daarna wordt in variabele <code>teller</code> een willekeurig getal van 1 tot en met 10 geplaats. Elke keer dat je het programma start zal hier dus een andere waarde in gezet worden.</p>
+        <p>First, the variable <code></code> contains the value <em>5</em>. This is then shown in the console of your IDE. Then a random number from 1 to 10 is placed in variable <code>counter</code>. Each time you start the program, a different value will be placed in it.</p>
 
-                    <p>Daarna gaat het programma een aantal programma regels herhalen. Dit blijft de computer herhalen zolang de waarde van <code>getal</code> ongelijk is aan <code>teller</code>. Daar lijkt niets mis mee toch ?</p>
+        <p>After that the program will repeat a number of program lines. The program will repeat these as long as the value of <code>number</code> is not equal to <code>counter</code>. Nothing seems wrong with that, is it not?!</p>
 
-                    <h3>Opdracht 7.3</h3>
+        <h3>Task 7.3</h3>
 
-                    <p class="assignment">Maak een nieuw programma en knip en plak de bovenstaande programmaregels in het programma. Houd vervolgens een vinger op de pin <em>A1</em> van de Arduino. Het maakt niet uit of je ook nog een andere pin aanraakt. Doordat je contact maakt met pin <em>A1</em> zal er van de computer naar jou een heel klein stroompje electriciteit lopen. Hoeveel electriciteit er door jou heen loopt verschilt per keer, dit gebruikt de Arduino weer om een willekeurig getal te maken. </p>
+        <p class="assignment">Create a new program and, and call it <em>Lesson_7_debug_runtime</em>, cut and paste the above program lines into the program. Then hold a finger on the pin <em>A1</em> of the Arduino. It doesn't matter if you touch another pin. Because you make contact with pin <em>A1</em> a very small stream of electricity will flow from the computer to you. How much electricity goes through you varies at each time, this is used by the Arduino to generate a random number.</p>
 
-                    <p class="assignment">Start vervolgens het programma een paar keer.</p>
+        <p class="assignment">Then start the program a few times.</p>
 
-                    <p class="assignment">Je ziet waarschijnlijk dat het programma netjes na een paar keer printen van een getal &quot;Klaar!&quot; print zoals in het voorbeeld hieronder.</p>
+        <p class="assignment">You can probably see that the program prints &quot;Finished!&quot; after a few numbers have been printed as shown in the example below.</p>.
 
-                    <pre><code class="language-none">start getal
+        <pre><code class="language-none">start number
 5
-start teller
+start counter
 2
-teller
+counter
 2
-teller
+counter
 3
-teller
+counter
 4
-Klaar!</code></pre>
+Finished!</code></pre>
 
 
-                    <p class="assignment">Dit gaat niet altijd zo, als er een fout runtime fout optreed in het programma blijft de teller maar doorlopen.</p>
+        <p class="assignment">This is not always the case, if an error runtime error occurs in the program, the counter continues to run.</p>
 
 
-                    <pre><code class="language-none">start getal
+        <pre><code class="language-none">start number
 5
-start teller
+start counter
 8
-teller
+counter
 8
-teller
+counter
 9
-teller
+counter
 10
-teller
+counter
 11
-teller
+counter
 12
-teller
+counter
 13
-teller
+counter
 14
-teller
+counter
 15
-teller
+counter
 16
 ...
 </code></pre>
 
-                    <p class="assignment">Hoe komt dat? Runtime fouten zijn helaas niet heel eenvoudig te vinden. Belangrijk is dat je precies te werk gaat en stap voor stap het programma probeert te debuggen. Doe dit door stap-voor-stap door de programma regels te gaan en op te schrijven wat de inhoud van de variabelen zijn en wat de uitkomsten van condities zijn.</p>
+        <p class="assignment">How come? Runtime errors are unfortunately not very easy to find. It is important that you work precise and try to debug the program step by step. Do this by going step-by-step through the program rules and writing down what the contents of the variables are and what the outcomes of conditions are.</p>
 
-                    <p class="assignment">Hieronder zie je een voorbeeld hoe je dit op kan schrijven. Naast de inhoud van de variabelen staat ook nog het regelnummer in het programma waar de variabele van waarde wijzigt of de conditie getest wordt. Probeer nu aan de hand van onderstaande stappen te begrijpen hoe het programma verloopt. Op regel 12 krijgt de variabele <code>teller</code>het willekeurige getal 3. </p>
+        <p class="assignment">Below is an example of how to write this down. Besides the contents of the variables is also the line number in the program where the variable changes value or the condition is tested. Now try to understand how the program works by following the steps below. On line 12 the variable <code>counter</code>will get the random number 3. </p>
 
-                    <pre><code class="language-none">Stap     Regel    Getal    Teller   Getal!=Teller
+        <pre><code class="language-none">Step     Line    Number    Counter   Number!=Counter
   1          8        5         -          -
   2         12        5         3          -
   3         16        5         3        True
@@ -2030,198 +2030,201 @@ teller
   7         16        5         5        False  
 </code></pre>
 
-                    <p class="assignment">Nu moet je zelf de stappen gaan opschrijven zoals in het voorbeeld hierboven. Alleen krijgt de variabele <code>teller</code>op regel 12 hier de willekeurige waarde 6.</p>
-                    <pre><code class="language-none">Stap     Regel    Getal    Teller   Getal!=Teller
+        <p class="assignment">Now try to write down the steps yourself as in the example above. Only the variable <code>counter</code>on line 12 gets here the random value 6.</p>
+        <pre><code class="language-none">Step     Line    Number    Counter   Number!=Counter
   1          8        5         -          -
   2         12        5         6          -
   3
 </code></pre>
 
-                    <p class="assignment">Zoals je ziet gaat er hier iets mis. Wat moet je aan het programma aanpassen om deze bug te verhelpen?</p>
-                    <hr/>
+        <p class="assignment">As you see something goes wrong here. What do you have to adapt to the program to fix this bug?</p>
 
-                    <h1 id="toc_15">Les 8, de robot instructie set</h1>
-                    <p>Je kunt nu al programmeren en debuggen! In de volgende lessen zul je meer instructies leren. Naat de standaard C instructies heeft deze robot speciale instructies voor de robot. Deze instructies kun je vinden in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></p>
+        <hr/>
 
-                    <p>Met deze speciale instructieset kun je de robot laten rijden, kijken, afstand meten en lijnen op de vloer herkennen. Door deze functies te combineren in een programma kun je bijvoorbeeld de robot een lijn op de vloer laten volgen. Maar je kunt hem ook laten rondrijden zonder tegen iets op te botsen.</p>
+        <h1 id="toc_15">Lesson 8, the robot instructionset</h1>
 
-                    <h2>De eerste robot instructie, move</h2>
+        <p>You can already program and debug now! In the next lessons you will learn more instructions. In addition to the standard C instructions, this robot has special instructions for the robot. These instructions can be found in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a></p>.
 
-                    <p>Move betekent &quot;bewegen&quot;. In de volgende opdracht zul je robot door middel van de instructie <code>move</code> echt laten bewegen. Het is een opdracht waarin je best wel even moet lezen en dingen uitzoeken, dus neem je tijd.</p>
+        <p>With this special instruction set you can let the robot drive, look, measure distance and recognize lines on the floor. By combining these functions in a program you can, for example, let the robot follow a line on the floor. But you can also let it drive around without bumping into anything.</p>
+
+        <h2>The first robot instruction, move</h2>
+
+        <p>In the next assignment, you will really make the robot move by means of the instruction <code>move</code>. It is an assignment in which you have to read and figure out things out, so take your time.</p>
 
 
-                    <h3>Opdracht 8.1</h3>
+        <h3>Task 8.1</h3>
 
-                    <p class="assignment">Lees nu de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> tot aan de <em>Instructies</em>.</p>
+        <p class="assignment">Now read the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landjerobot instructionset</a> until the paragraph <em>Instructions</em>.</p>
 
-                    <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al, <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">hier</a> downloaden</p>
+        <p class="assignment">To use the Landjerobot instructions in your program, you must add the instructionset to the library of your IDE. A library is a collection of programs that belong together. For the Landjerobot, the library is named, you will probably guess it, <em>LandjeRobot</em>. Before you can add the library, you must first download it. You can download this library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">here</a></p>.
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p class="assignment">Nu je de library hebt gedownload kun je hem toevoegen in je IDE. Klik in je IDE in de linkerkolom op <em>Libraries</em>. Boven in de tweede kolom staat nu <em>LIBRARY MANAGER</em> met rechts hiervan een symbool met een pijl die naar boven wijst. Dit is de import knop. Klik op deze knop om de net door jouw downloaded <em>LandjeRobot.zip</em> te importen. Als dit goed is gegaan krijg je een melding zoals in de afbeelding getoond wordt. </p>
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_8_LibraryImport">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p class="assignment">After downloading the library you can add it to your IDE. In your IDE, click in the left column on <em>Libaries</em>. At the top of the second column is now <em>LIBRARY MANAGER</em> with to the right a symbol with an arrow pointing upwards. This is the import button. Click this button to import the just downloaded file <em>LandjeRobot.zip</em>. If this went well you will get a message as shown in the image. </p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_8_LibraryImport">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_8_LibraryImport.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_8_LibraryImport">
-                                <img src="./Student%20guide/Lesson_8_LibraryImport.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_8_LibraryImport">
+                    <img src="./Student%20guide/Lesson_8_LibraryImport.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                    <p class="assignment">Maak nu een nieuw programma <em>robot_beweegt</em>. Maak nu gebruik van de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> om in de functie <code>setup()</code> een instructie te schrijven waardoor de robot 10cm vooruit rijdt. Vergeet ook niet de instructies zoals deze bovenaan in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> staan naar jouw programma te knippen en te plakken. Zorg ervoor dat je voordat je het programma naar de robot stuurt de ON/OFF schakelaar op <em>OFF</em> staat.</p>
+        <p class="assignment">Create a new program <em>Lesson_8_robot_moves</em>. Now use the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landjerobot instruction set</a> to write an instruction in the function <code>setup()</code> that will make the robot move 10cm forward. Also don't forget to cut and paste the instructions shown at the top of the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landjerobot instructionset</a> into your program. Before sending the program to the robot, make sure you set the ON/OFF switch to <em>OFF</em>.</p>
 
-                    <p class="assignment">Denk je dat het programma goed is? Haal dan de USB kabel uit de robot, zet 4 batterijen in de batterijhouder en zet de robot aan.</p>
+        <p class="assignment">Do you think the program is fine? Then remove the USB cable from the robot, put 4 batteries in the battery compartment and switch the robot on.</p>
 
-                    <hr/>
-
-
-                    <h2>Move herhalen</h2>
-
-                    <p>Zoals je gezien hebt kun je met de <code>move</code> instructie de robot vooruit laten rijden. Met een andere instructie <code>turn</code> kun je de robot in een richting draaien. Hoever je de robot draait geeft je aan in graden. Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> bij de instructie <code>turn</code>. Bij het plaatje van de robot zie je een cirkel die is verdeeld in 360 stukjes, deze stukjes noem je graden. Als je de robot 360 graden laat draaien, maakt hij een heel rondje. Bij 90 graden maakt de robot een rechte hoek.</p>
-
-                    <p>Door gebruik te maken van de <code>move</code> en <code>turn</code> instructie kun je de robot een vierkantje laten rijden. Als je de robot eerst vooruit laat bewegen, en dan draait heeft hij de eerste zijde van een vierkant afgelegd en staat hij klaar voor de tweede zijde. Als je dit vier keer herhaalt rijdt hij precies een vierkant.</p>
-
-                    <p>Dit is misschien in het begin moeilijk te begrijpen. Wat kan helpen is door zelf de instructies na te spelen. Print daarvoor het onderstaande afbeelding af van de robot, of teken hem na op een stuk papier. Knip deze vervolgens uit.</p>
-
-                    <img style="display: block; margin-left: auto; margin-right: auto;width:40% " src="./Student%20guide/Lesson_8_Robot.png" alt="">
-
-                    <p>Gebruik nu onderstaande &quot;instructies&quot; en gebruik jouw papierenrobot om de instructies uit te voeren. Leg de robot neer op een tafel en beweeg hem volgens de instructies. Als je deze opvolgt zal de robot zich in een vierkant verplaatsen en weer uitkomen op de positie waar het begonnen was. </p>
-
-                    <pre><code class="language-none">Beweeg 10cm vooruit
-Draai 90 graden naar links
-Beweeg 10cm vooruit
-Draai 90 graden naar links
-Beweeg 10cm vooruit
-Draai 90 graden naar links
-Beweeg 10cm vooruit
-Draai 90 graden naar links</code></pre>
-
-                    <h3>Opdracht 8.2</h3>
-
-                    <p class="assignment">Nu je weet hoe je de robot in een vierkant kunt laten rijden mag je dit zelf gaan programmeren. De <code>move</code> en <code>turn</code> instructies hebben verschillende syntaxis (meervoud van syntax). Zo heb je voor de instructie <code>move</code> de syntax <code>move( richting , afstand) ;</code> en <code>move( richting , afstand, wachten) ;</code></p>
-
-                    <p class="assignment">Het verschil tussen beide syntaxis is dat bij de eerste syntax alleen de richting en afstand kan worden opgegeven. Bij de tweede kan ook aangegeven worden dat de instructie wacht totdat de actie, het bewegen van de robot over een afstand, is afgerond. Als je bij de <code>move</code> en <code>turn</code> instructie niet aangeeft dat het moet wachten tot het afgerond is zal de robot alle <code>move</code> en <code>turn</code> instructies hebben afgerond voordat de robot een centimeter heeft gereden! </p>
-
-                    <p class="assignment">Maak nu een nieuw programma &quot;beweeg_vierkant&quot; en programmeer in de functie <code>setup()</code> de instructies om de robot zich in een vierkant te laten bewegen.</p>
-
-                    <p class="assignment">Als je denkt dat het programma goed werkt, upload het dan naar de robot en zet hem aan. Vergeet niet de USB kabel eruit te halen!</p>
-
-                    <hr/>
-
-                    <h2>DRY</h2>
-
-                    <p>Dry betekent in het Engels &quot;droog&quot;. Het is ook in het Engels een afkorting welke elke programmeur kent. Het is een afkorting van Don't Repeat Yourself, wat &quot;herhaal jezelf niet&quot; betekent. Waarschijnlijk heb jij in Opdracht 8.2 vier keer de <code>move</code> en <code>turn</code> instructie geschreven. Dit is goed, maar wat als je de robot in plaats van een vierkant van 10cm een vierkant van 15 centimeter wilt laten rijden ? Dan moet je het programma op 4 plekken aanpassen! Het is dus beter om herhalingen van instructies in programma's te voorkomen. Dus als je programmeert, DRY!</p>
+        <hr/>
 
 
+        <h2>Repeating a move</h2>
 
-                    <h3>Opdracht 8.3</h3>
+        <p>As you have seen, you can use the <code>move</code> instruction to move the robot forward. With another instruction <code>turn</code> you can turn the robot in one direction. How far you turn the robot is indicated in degrees. Take a look in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a> at the instruction <code>turn</code>. At the picture of the robot you see a circle divided into 360 pieces, these pieces are called degrees. If you let the robot rotate 360 degrees, it makes a complete circle. At 90 degrees the robot makes a right angle.</p>
 
-                    <p class="assignment">Pas het programma van Opdracht 8.2 aan zodat je nog maar &egrave;&egrave;n keer de <code>move</code> en <code>turn</code> instructies gebruikt om de robot in een vierkant te laten bewegen. Heb je even geen idee hoe je dit zou moeten doen, kijk dan eens in hoofdstuk 6, succes!</p>
+        <p>By using the <code>move</code> and <code>turn</code> instruction you can make the robot drive a square. If you let the robot move forward first, and then rotate it has covered the first side of a square and is ready for the second side. If you repeat this four times, the robot will drive exactly a perfect square.</p>
 
+        <p>This may be difficult to understand in the beginning. What can help is by replaying the instructions yourself. Print out the image of the robot below, or draw it on a piece of paper. Then cut it out.</p>
 
-                    <h2>Sensors gebruiken</h2>
+        <img style="display: block; margin-left: auto; margin-right: auto;width:40% " src="./Student%20guide/Lesson_8_Robot.png" alt="">
 
+        <p>Now use the instructions below and use your paper robot to execute the instructions. Place the robot on a table and move it according to the instructions. If you follow these instructions, the robot will move into a square and return to the position where it started. </p>
 
-                    <p>Landjerobot heeft meerdere sensors. Sensors waarmee je afstand kunt meten, een schakelaar en reflectiesensors. Deze sensors kun je gebruiken om een lijn op een vloer te detecteren. Deze sensors werken het beste op een donkere vloer welke een gelijkmatige kleur heeft. Op deze vloer ga je straks een stukje wit tape plakken zodat de sensor deze kan detecteren.</p>
+        <pre><code class="language-none">Move 10cm forward
+Turn 90 degrees to the left
+Move 10cm forward
+Turn 90 degrees to the left
+Move 10cm forward
+Turn 90 degrees to the left
+Move 10cm forward
+Turn 90 degrees to the left</code></pre>
 
-                    <h3>Opdracht 8.4</h3>
+        <h3>Task 8.2</h3>
 
-                    <p class="assignment">In deze opdracht ga je de refelectiesensors afstellen. De sensors geven een voor mensen onzichtbaar licht en meten dan of dat licht gereflecteerd wordt. Je kunt deze sensors afstellen zodat ze bij een bepaalde hoeveelheid gereflecteerd licht een signaal geven. Je kunt de sensor dus het beste gebruiken op een donkere vloer met witte tape of een lichte tape met een donkere vloer zodat de sensor het beste het verschil tussen vloer en tape kan detecteren. Je moet de reflectiesensors anders afstellen als je op een donkere vloer gaat rijden dan op een lichte vloer. In deze opdracht kun je voor jouw vloer de juiste stappen vinden om de reflectiesensors goed af te stellen.</p>
+        <p class="assignment">You know how to drive the robot in a square and you can program it yourself. The <code>move</code> and <code>turn</code> instructions have a different syntax . For example, for the instruction <code>move</code> you have the syntax <code>move( direction , distance) ;</code> and <code>move( direction , distance, waiting) ;</code>. Syntax is how an instruction is composed.</p>
 
-                    <p class="assignment">Omdat je straks de robot aan moet zetten om de sensors af te stellen is het handig dat hij niet ineens begint te rijden. Maak daarom in je IDE een leeg programma en upload dit naar de robot.</p>
+        <p class="assignment">The difference between the two syntaxes is that the first syntax can only specify the direction and distance. With the second syntax you can also indicate that the instruction waits until the action, moving the robot over a distance, is finished. If you don't indicate in the <code>move</code> and <code>turn</code> instruction that it has to wait until it is finished, the robot will have completed all <code>move</code> and <code>turn</code> instructions before the robot has driven an inch!</p>
 
+        <p class="assignment">Now create a new program &quot;Lesson_8_move_square&quot; and program in the function <code>setup()</code> the instructions to move the robot in a square.</p>
 
-                    <b class="assignment">lichte vloer</b>
-                    <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
+        <p class="assignment">If you think the program works properly, upload it to the robot and turn it on. Don't forget to remove the USB cable! </p>
 
+        <hr/>
 
+        <h2>DRY</h2>
 
-                    <b class="assignment">donkere vloer</b>
-                    <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar rechts. Plak nu een stukje zwart tape op de vloer en zet een van de sensors boven het zwarte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar links totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
-
-                    <p class="assignment">Als je een nieuw programma voor de robot start moet je altijd een aantal regels vanuit de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> kopieren. Een van deze regels ziet er zo uit. </p>
-
-                    <pre><code>const bool lineSensorInverse = false ;</code></pre>
-
-                    <p class="assignment">Als je een donkere vloer hebt, moet je bij elk programma dat je maakt deze regel veranderen in.</p>
-
-                    <pre><code>const bool lineSensorInverse = true ;</code></pre>
-
-                    <p class="assignment">Door de waarde van <code>false</code> naar <code>true</code> te veranderen, weet de robot dat je een donkere lijn op een lichte vloer gebruik, in plaats van een lichte lijn op een donkere vloer.</p>
-
-                    <hr/>
-
-                    <p>Met de instructie <code>detectLine()</code> kun je testen of de robot een lijn ziet en met welke, de linker of rechter, sensor. Als je in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> leest, zie je dat deze instructie vier verschillende waarden terug kan geven. Afhankelijk van </p>
+        <p>Dry is an abbreviation that every programmer knows. It is the abbreviation of Don't Repeat Yourself. You probably wrote four times the <code>move</code> and <code>turn</code> instruction in <em>Task 8.2</em>. This is good, but what if you want the robot to drive a 15 centimeter square instead of a 10cm square? Then you have to change the program in 4 places! So it is better to avoid repetitions of instructions in programs. So if you program, DRY!</p>
 
 
-                    <h3>Opdracht 8.5</h3>
+        <h3>Task 8.3</h3>
 
-                    <p class="assignment">Schrijf nu een programma dat de robot recht vooruit laat rijden en laat stoppen als een van de sensors detecteert dat er over het witte tape wordt gereden. Begin met de instructie <code>move(richting);</code> zodat de robot gelijk gaat rijden en niet wacht totdat de instructie is afgerond. Deze instructie zet je in de <code>setup()</code> functie. De <code>setup()</code> wordt maar &eacute;&eacute;n keer aangeroepen, als je de robot aanzet. Hierdoor start de robot met rijden als je hem aanzet, en zal hij niet meer gaan rijden nadat hij gestopt is. Schrijf daarna in de functie <code>loop()</code> je programma dat ervoor zorgt dat <em>als</em> de sensor <em>niet niets</em> detecteert de robot laat stoppen met rijden.</p>
+        <p class="assignment">Pas het programma van Opdracht 8.2 aan zodat je nog maar &egrave;&egrave;n keer de <code>move</code> en <code>turn</code> instructies gebruikt om de robot in een vierkant te laten bewegen. Heb je even geen idee hoe je dit zou moeten doen, kijk dan eens in hoofdstuk 6, succes!</p>
 
-                    <p class="assignment">De <code>detectLine</code> instructie kan vier verschillende waarden teruggeven <code>LandjeRobot::LINE::NONE</code>, <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> en <code>LandjeRobot::LINE::BOTH</code>. De robot moet dus stoppen als of deze de waarde <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> of <code>LandjeRobot::LINE::BOTH</code> teruggeeft. Kun je dit misschien ook schrijven door alleen gebruik te maken van <code>LandjeRobot::LINE::NONE</code> ? Dat zou het schrijven van de code voor het stoppen van de robot namelijk wel veel eenvoudiger maken!</p>
+        <hr/>
 
-
-                    <hr/>
-
-                    <h1 id="toc_16">Les 9, Lijnen volgen</h1>
-
-                    <p>In deze les ga je leren om sensors te programmeren. Met sensors kun je dingen waarnemen, zoals met bijvoorbeeld de reflectiesensors, het verschil tussen lichte en donkere oppervlakken op een vloer. Met de gegevens van deze sensor ga je vervolgens de robot hierop laten reageren.</p>
+        <h2>Using sensors</h2>
 
 
-                    <h2>Volgen van een lijn</h2>
+        <p>Landjerobot has several sensors. Sensors with which you can measure distance, a switch and reflection sensors. These sensors can be used to detect a line on a floor. These sensors work best on a dark floor that has a uniform color. On this floor you will soon stick a piece of white tape so that the sensor can detect it.</p>
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>Je hebt nu al geleerd hoe je de robot in elkaar zet, eenvoudige programma's geschreven en de robot laten rijden en stoppen met robot instructies. In deze les ga je leren hoe je de robot zelfstandig langs een lijn laat rijden. </p>
+        <h3>Task 8.4</h3>
 
-                            <p>Met behulp van de reflectiesensors ga je detecteren wanneer een sensor over een lijn gaat. Als deze over een lijn gaat zult je iets moeten doen om ervoor te zorgen dat de robot weer netjes de lijn gaat volgen. </p>
+        <p class="assignment">In this command you will adjust the reflection sensors. The sensors give a light that is invisible to humans and then can detect if that light is reflected. You can adjust these sensors to give a signal when a certain amount of light is reflected. So it is best to use the sensor on a dark floor with white tape or a light floor with a dark tape so that the sensor can best detect the difference between floor and tape. You have to adjust the reflection sensors differently when driving on a dark floor than on a light floor. In this task you can find the right steps for your floor to adjust the reflection sensors properly.</p>
 
-                            <p>In het voorbeeld hiernaast zal de robot als deze recht vooruit blijft rijden geen enkele keer met de reflectiesensors over de lijn gaan. Je hoeft de robot dus niet bij te sturen om het de lijn te laten volgen. </p>
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_1">
+        <p class="assignment">Because you will have to turn on the robot to adjust the sensors, it is useful that it does not start to drive at once. So create an empty program in your IDE and upload it to the robot.</p>
+
+        <b class="assignment">light floor</b>
+
+        <p class="assignment">Unplug the USB cable from the robot and turn it on. The reflection sensors have a small blue block with a small screw hole in the middle. Take the smallest Phillips screwdriver (the one in the shape of a cross) and carefully turn the screws of both sensors to the left. Now stick a piece of white tape on the floor and place one of the sensors above the white tape. If all goes well, only one LED on the sensor will be lit. Then slowly turn the screw to the right until a second LED lights up, then stop turning the screw. Repeat the same steps for the other sensor.</p>
+
+
+
+        <b class="assignment">dark floor</b>
+
+        <p class="assignment">Unplug the USB cable from the robot and turn it on. The reflection sensors have a small blue block with a small screw hole in the middle. Take the smallest Phillips screwdriver (the one in the shape of a cross) and carefully turn the screws of both sensors to the right. Now stick a piece of black tape on the floor and place one of the sensors above the black tape. If all goes well, only one LED on the sensor will be lit. Then slowly turn the screw to the left until a second LED lights up, then stop turning the screw. Repeat the same steps for the other sensor.</p>
+
+        <p class="assignment">When starting a new program for the robot you always have to copy some lines from the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landjerobot instructionset</a>. One of these lines looks like this. </p>
+
+        <pre><code>const bool lineSensorInverse = false ;</code></pre>
+
+        <p class="assignment">If you have a dark floor, you must change this line for every program you create to</p>
+
+        <pre><code>const bool lineSensorInverse = true ;</code></pre>
+
+        <p class="assignment">By changing the value from <code>false</code> to <code>true</code>, the robot knows that you use a dark line on a light floor, instead of a light line on a dark floor.</p>
+
+        <hr/>
+
+        <p>With the instruction <code>detectLine()</code> you can test if the robot detects a line and on which side, the left or right. If you read in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a>, you will see that this instruction can return four different values. Which value is returned, depends on which sensor or sensors detects a line.</p>
+
+
+
+        <h3>Task 8.5</h3>
+
+        <p class="assignment">Now write a program that will let the robot drive straight ahead and stop if one of the sensors detects the tape. Start with the instruction <code>move(direction);</code> so that the robot will start driving and does not wait until the instruction is finished. Put this instruction in the <code>setup()</code> function. The <code>setup()</code> is only called once, when you switch the robot on. This will cause the robot to start driving when you turn it on, and it will no longer start driving after it has stopped. Then write in the function <code>loop()</code> your program that makes sure that <em>if</em> the sensor does detect a line it stops the robot.</p>
+
+        <p class="assignment">The <code>detectLine</code> instruction can return four different values <code>LandjeRobot::LINE::NONE</code>, <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> and <code>LandjeRobot::LINE::BOTH</code>. So the robot must stop if it returns the value <code>LandjeRobot::LINE::LEFT</code>, <code>LandjeRobot::LINE::RIGHT</code> or <code>LandjeRobot::LINE::BOTH</code>. Perhaps you could also write this by using only <code>LandjeRobot::LINE::NONE</code> ? That would make writing the code for stopping the robot much easier! </p>
+
+        <hr/>
+
+        <h1 id="toc_16">Les 9, tracking a line</h1>
+
+        <p>In this lesson you will learn to program sensors. With sensors you can observe things, like for example the reflection sensors, the difference between light and dark surfaces on a floor. With the data from this sensor you can then make the robot respond to this.</p>
+
+
+        <h2>Tracking a line</h2>
+
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>You have already learned how to assemble the robot, write simple programs and let the robot drive and stop with robot instructions. In this lesson you will learn how to let the robot drive independently along a line. </p>
+
+                <p>By using the reflection sensors you will detect when a sensor passes a line. If it goes over a line you will have to do something to make sure the robot will follow the line again. </p>
+
+                <p>In the example on the right, if the robot continues to drive straight ahead, it will not cross the line with the reflection sensors at all. You don't have to adjust the robot to let it follow the line. </p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_1">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_1.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_1">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_1.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_1">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_1.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>Maar wat nu als de lijn niet zo recht is?</p>
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_2">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>But what if the line is not so straight?</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_2">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_2.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_2">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_2.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_2">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_2.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>Dan zal een van de reflectiesensors op een bepaald moment de lijn detecteren.</p>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>Then one of the reflection sensors will detect the line at some point.</p>
 
-                            <p>In het voorbeeld hiernaast zal de linker reflectiesensor de lijn het eerst detecteren. In het onderstaande programma laat je de robot recht vooruit rijden en een letter afdrukken. Welke letter wordt afgedrukt hangt af van wat de sensoren detecteren. Welke letter denk jij dat er afgedruk wordt als de robot zich bevindt zoals in de afbeelding hiernaast?</p>
+                <p>In the example on the right, the left reflection sensor will detect the line first. In the program below you let the robot drive straight ahead and print a letter. Which letter is printed depends on what the sensors detect. Which letter do you think will be printed when the robot is as shown in the picture on the right?</p>
 
-                            <pre><code class="language-none">void setup() {
+                <pre><code class="language-none">void setup() {
    
    Serial.begin(9600);
    delay(2000);
@@ -2249,452 +2252,450 @@ void loop() {
   }
   
 }</code></pre>
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_3">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_3">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_3.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_3">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_3.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_3">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_3.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>Als de linker sensor een lijn detecteert dan moet de robot ook naar links draaien om de lijn te blijven volgen. </p>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>If the left sensor detects a line, the robot must also turn to the left to continue following the line. </p>
 
 
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_4">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_4">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_4.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_4">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_4.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_4">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_4.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>En je raadt het al, als de rechter sensor een lijn detecteert, dan moet de robot naar rechts draaien.</p>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>And you guessed it, if the right sensor detects a line, the robot should turn to the right.</p>
 
 
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_5">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_5">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_5.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_5">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_5.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_5">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_5.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <div style="">
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <p>Zo zal de robot de lijn netjes blijven volgen.</p>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>This way the robot will keep following the line.</p>
 
 
-                        </div>
-                        <div style="float:left;width:49%;margin-right: 7px ">
-                            <a class="lightbox" href="#Lesson_9_LineFollow_6">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_6">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_6.png" alt=""/>
                     </a>
-                            <div class="lightbox-target" id="Lesson_9_LineFollow_6">
-                                <img src="./Student%20guide/Lesson_9_LineFollow_6.png" alt="" />
-                                <a class="lightbox-close" href="#deadlink"></a>
-                            </div>
-                        </div>
-                        <div style="clear:both; "></div>
-                    </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_6">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_6.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                    <h3>Opdracht 9.1</h3>
+        <h3>Task 9.1</h3>
 
-                    <p class="assignment">Plak nu met stukken tape een route op de vloer van ca. 1 meter die de robot moet gaan afleggen. Maak hier net zoals op de afbeeldingen hiervoven een paar bochten in. Maak ze niet te scherp anders zal tijdens het draaien van de robot de andere sensor de lijn detecteren en kan de robot vastlopen.
-                    </p>
+        <p class="assignment">Now stick pieces of tape on the floor of about 1 meter that the robot has to follow. Make a few bends here and there, as shown in the pictures above. Do not make them too sharp otherwise the other sensor will detect the line during the rotation of the robot and the robot can get stuck.
+        </p>
 
-                    <p class="assignment">Maak nu een nieuw programma in Arduino Create. Geef het programma de naam &quot;Mijn_Robot&quot;. In de verdere opdrachten ga je dit programma telkens verder uitbreiden. Programmeer nu dat de robot de lijn laat volgen. De robot moet dus:
+        <p class="assignment">Now create a new program in Arduino Create. Give the program the name &quot;My_Robot&quot;. In the following tasks you will expand this program further and further. Now program the robot to follow the line. In short you must make the robot:
+        </p>
 
-                    </p>
+        <ul>
+            <li>Start driving in the function <code>setup()</code> function when you turn the robot on</li>
+            <li>When the robot is moving, it must do the following in the function <code>loop()</code> </li>
+            <li>
+                <ul>
+                    <li>If a line is detected on the left, rotate 10 degrees to the left.</li>
+                    <li>If a line is detected on the right, rotate 10 degrees to the right.</li>
+                    <li>After making a turn continue driving again</li>
+                </ul>
+            </li>
+        </ul>
 
-                    <ul>
-                        <li>Beginnen met rijden als je de robot aanzet in de <code>setup()</code> functie</li>
-                        <li>Wanneer de robot rijdt, in de <code>loop()</code> functie</li>
-                        <li>
-                            <ul>
-                                <li>10 graden naar links draaien als er links een lijn gedetecteerd wordt.</li>
-                                <li>10 graden naar rechts draaien als er rechts een lijn gedetecteerd wordt.</li>
-                                <li>Na het maken van een draai weer verder rijden</li>
-                            </ul>
-                        </li>
-                    </ul>
+        <p class="assignment">In this task it is the first time you will use the <code>turn</code> instruction. Find in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a> how to use the instruction. Think carefully whether you let the <code>move</code> and <code>turn</code> instruction wait till it is completed and continue with the next instruction.</p>
 
-                    <p class="assignment">In deze opdracht is het de eerste keer dat je de <code>turn</code> instructie gaat gebruiken. Zoek in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> op hoe je de deze instructie moet gebruiken. Denk goed na of je de <code>move</code> en <code>turn</code> instructie laat wachten met het uitvoeren van de volgende instructie totdat deze uitgevoerd is. </p>
+        <p class="assignment">Do you think the program is fine? Then test it out! If the program does not do what you expect of it, try to debug what goes wrong. It helps if you try to replay the program with the &quot;paper robot&quot;.</p>
 
-                    <p class="assignment">Denk je dat het programma goed is? Test het dan uit! Doet het programma niet wat je er van verwacht, probeer dan te debuggen wat er fout gaat. Het helpt als je met de &quot;papieren robot&quot; het programma probeert na te spelen.
+        <hr/>
 
+        <h2>Making full turns</h2>
 
-                        <hr/>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>The robot will, if all went well, follow the line on the floor. But at the end of the line the robot will continue driving. It will continue straight ahead because no line is detected anymore.</p>
 
-
-
-                        <h2>Keren</h2>
-
-
-
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <p>De robot volgt als het goed is nu jouw op de vloer aangebrachte lijn. Maar aan het einde van de lijn gaat de robot er vandoor. Hij blijft rechtdoor rijden omdat er geen lijn meer gedetecteerd wordt.</p>
-
-                                <p>Als je de robot aan het einde van de lijn kan laten keren, dan blijft hij de lijn de hele tijd volgen. Eerst van onder naar boven, zoals op de afbeelding hiernaast. Dan als hij keert zal hij weer van boven naar onder rijden.</p>
+                <p>If you can let the robot turn at the end of the line, it will keep following the line. First from bottom to top, as shown in the picture on the right. Then when he turns he will drive from top to bottom again.</p>
 
 
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_7">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_7">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_7.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_7">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_7.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_7">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_7.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                                <p>Door een lijn, loodrecht, op het begin en het einde van de te volgen lijn te plakken kan de robot zien dat hij moet keren.</p>
+                <p>By pasting a line perpendicular to the beginning and end of the line to be followed, the robot can detect that it has to turn.</p>
 
-                                <p>Als de robot over deze &quot;keerlijn&quot; rijdt zullen de linker <em>en</em> de rechte reflectiesensor een lijn detecteren.</p>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_8">
+                <p>When the robot drives over this &quot;full turn line&quot;, the left <em>and</em> the right reflection sensor will detect a line.</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_8">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_8.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_8">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_8.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_8">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_8.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                                <p>Als de robot beide lijnen gelijktijdig ziet, dan kan hij 180 graden keren en weer verder rijden. </p>
+                <p>If the robot sees both lines at the same time, it can turn 180 degrees and continue following the line again. </p>
 
-                                <p>De robot zal dan in omgekeerde volgorde de lijn volgen, totdat hij weer een &quot;keerlijn&quot; detecteert. Dan zal hij weer omkeren en begint het volgen van de lijn opnieuw.</p>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_8a">
+                <p>The robot will then follow the line in reverse order until it detects another &quot;full turn line&quot;. Then it will make a full turn again and the line tracking will start again.</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_8a">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_8a.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_8a">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_8a.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_8a">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_8a.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                                <p>Maar wat gebeurt er nu als de robot niet precies met beide sensors de &quot;keerlijn&quot; ziet? Kijk eens naar de afbeelding hiernaast. De rechter sensor ziet de &quot;keerlijn&quot; net iets eerder dan de linker sensor.</p>
+                <p>But what happens if the robot does not see the &quot;full turn line&quot; exactly with both sensors at the same moment? Look at the picture on the right. The right sensor sees the &quot;full turn line&quot; just before the left sensor..</p>
 
-                                <p>Wat zou er dan gebeuren als je de robot laat rijden met het programma van opdracht 9.1?</p>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_9">
+                <p>What would happen if you let the robot drive with the program of task 9.1?</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_9">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_9.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_9">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_9.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_9">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_9.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                                <p>De rechter sensor detecteert dat er een lijn is. In je programma staat iets dat waarschijnlijk lijkt op;</p>
+                <p>The right sensor detects that there is a line. There is something in your program that probably looks like this;</p>
 
-                                <pre><code>if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+                <pre><code>if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
     landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
 }</code></pre>
 
-                                <p>De robot draait dus naar rechts als de rechter sensor een lijn detecteerd. Hierdoor komt de linker sensor boven de &quot;keerlijn&quot;, maar staat de rechter sensor er weer naast. De robot zal dus nog steeds niet keren. Weet jij wat de robot nu blijft doen ?</p>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_9a">
+                <p>The robot turns to the right when the right sensor detects a line. This will bring the left sensor above the &quot;full turn line&quot;, but the right sensor will be next to the lineagain. So the robot will still not turn. Do you know what the robot will continue to do?</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_9a">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_9a.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_9a">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_9a.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_9a">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_9a.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
 
-                                <p>De robot blijft dus heen en weer wiebelen voor de &quot;keerlijn&quot;. Dit blijft hij doen totdat de batterijen op zijn.</p>
+                <p>So the robot continues to wobble back and forth for the &quot;full turn line&quot;. It keeps doing this until the batteries are empty.</p>
 
-                                <h3>Opdracht 9.2</h3>
+                <h3>Task 9.2</h3>
 
-                                <p class="assignment">Probeer nu met je papieren robot te verzinnen en je programma van opdracht 9.1 hoe je kunt voorkomen dat de robot blijft wiebelen voor de &quot;keerlijn&quot;. Hoe kun je voorkomen dat de robot gelijk naar links of rechts gaat als hij niet helemaal perfect recht op de &quot;keerlijn&quot; uitkomt? </p>
+                <p class="assignment">Now try to think up with your paper robot and your program of task 9.1 how you can prevent the robot from wobbling for the &quot;full turn line&quot;. How can you prevent the robot from going immediately to the left or right if it doesn't end up perfectly straight on the &quot;full turn line&quot;? </p>
 
-                                <p class="assignment">Tip: Kijk eens in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> naar de instructie <code>delay</code>, kun je hier misschien iets mee?.</p>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_9_LineFollow_10">
+                <p class="assignment">Tip: Take a look in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a> at the instruction <code>delay</code>, might you be able to do something with this instruction?</p>
+
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_9_LineFollow_10">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_9_LineFollow_10.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_9_LineFollow_10">
-                                    <img src="./Student%20guide/Lesson_9_LineFollow_10.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_9_LineFollow_10">
+                    <img src="./Student%20guide/Lesson_9_LineFollow_10.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <hr/>
+        <hr/>
 
 
 
-                        <h3>Opdracht 9.3</h3>
+        <h3>Task 9.3</h3>
 
-                        <p class="assignment">Plak met tape de keerlijnen aan het begin en einde van de lijn die de robot moet volgen. Maak de lijnen breed genoeg, ongeveer net zo breed als de wielen van de robot uit elkaar staan. Maak de keerlijnen twee keer zo dik door twee stroken tape naast elkaar te plakken.
-                        </p>
+        <p class="assignment">Stick the turn lines with tape at the beginning and end of the line the robot should follow. Make the lines wide enough, about as wide as the wheels of the robot are apart. Make the turn lines twice as thick by sticking two strips of tape next to each other.
+        </p>
 
-                        <p class="assignment">Omdat jij waarschijnlijk in opdracht 9.1 je eigen oplossing hebt gemaakt ga je verder met de oplossing zoals deze hieronder staat. Kopieer onderstaande oplossing voor opdracht 9.1 in jouw programma, &quot;Mijn_Robot&quot;. Er staat ook commentaar bij dat uitlegt wat de instructies doen. Probeer dit programma dus eerst goed te begrijpen voordat je verder gaat.</p>
+        <p class="assignment">Because you probably created your own solution in assignment 9.1, you will continue with the solution as shown below. Copy the solution below for command 9.1 into your program, &quot;My_Robot&quot;. There are also some comments explaining what the instructions do. So try to understand this program before you continue.</p>
 
-                        <pre><code>void setup() {
+        <pre><code>void setup() {
 
-       // Start met rijden als de robot aangezet wordt en
-       // wacht niet
+       // Start moving in forward direction and
+       // do not wait till the instruction is completed
        landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
   
 }
 
 void loop() {
 
-    // Als er niet niets (!) gedetecteerd wordt door de 
-    // reflectie sensors doe dan iets
+    // If the sensor does not detect nothing (!)
+    // then act
     if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
             
-        // Als de reflectie sensors links een lijn detecteren
+        // If the reflection sensors do detect a line on the left
         if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
-            // Draai 10 graden naar links en wacht
+            // Turn 10 degrees to the left and wait till the 
+            // instruction is completed
             landjerobot.turn(LandjeRobot::TURN::LEFT,10,true) ;
         }
     
-        // Als de reflectie sensors rechts een lijn detecteren
+        // If the reflection sensors do detect a line on the right
         if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
-            // Draai 10 graden naar rechts en wacht
+            // Turn 10 degrees to the right and wait till the 
+            // instruction is completed
             landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true) ;
         }
     
-        // Laat de robot weer verder rijden
+        // Let the robot drive on again
         landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
     
-    } // einde if
+    } // end if
   
 }</code></pre>
 
-                        <p class="assignment">Ga nu je programma uitbreiden. Zorg ervoor dat de robot bij een &quot;keerlijn&quot; omdraait. Als hij omgedraaid is moet de robot weer in de andere richting de lijn gaat volgen, om vervolgens bij de volgende &quot;keerlijn&quot; weer om te keren.</p>
+        <p class="assignment">Expand your program now. Make sure the robot turns around at a &quot;full turn line&quot;. When it is turned around, the robot should follow the line again in the other direction, and then turn around at the next &quot;full turn line&quot; again.</p>
 
-                        <p class="assignment">De robot moet dus keren als zowel de linker als rechte reflectiesensor de lijn ziet. Om dit te programmeren kun je de bestaande programmaregels welke de robot naar links en rechts laten draaien als voorbeeld gebruiken.</p>
+        <p class="assignment">The robot must turn when both the left and right reflection sensors do detect a line. To program this you can use the existing program lines rotating the robot to the left and right as an example.</p>
 
-                        <p class="assignment">Dan moet je er nog voor zorgen dat de robot niet blijft wiebelen voor de &quot;keerlijn&quot;. Programmeer wat je in opdracht 8.7 hebt verzonnen om de robot goed te laten keren en probeer of het werkt. Lukt het niet? Probeer dan te debuggen wat er fout gaat. Het helpt als je weer met je papieren robot het programma stap voor stap doorloopt.</p>
+        <p class="assignment">Then you have to make sure that the robot does not wobble before the &quot;full turn line&quot;. Program what you came up with in task 9.2 to make the robot turn properly and try if it works. Can you not get it to work? Then try to debug what goes wrong. It helps if you go through the program step by step again with your paper robot.</p>
 
-                        <hr/>
+        <hr/>
 
-                        <h2>De mode schakelaar</h2>
+        <h2>The mode switch</h2>
 
-                        <p>Je hebt nu een programma klaar dat er voor zorgt dat de robot langs een lijn rijdt en weer keert bij een keerlijn. Straks ga je de robot met een ander programma zelf laten rondrijden en om andere robots en voorwerpen heen rijden. Het zou handig zijn als je beide programma's op de robot kan opslaan en bij het aanzetten van de robot kan kiezen welk programma de robot dan gaat uitvoeren.</p>
+        <p>You now have a program ready that makes sure the robot drives along a line and turns on a &quot;full turn line&quot;. Later you'll program the robot to drive around and avoid other robots and objects. It would be useful if you can save both programs into the robots memory and decide which program to execute when you switch the robot on.</p>
 
-                        <p>Hiervoor moet je wel iets hebben om dit aan de robot te kunnen doorgeven. Dat kan zonder dat je de robot weer op een computer moet aansluiten met de mode schakelaar. Deze schakelaar heeft twee standen, 1 en 2. Door middel van de instructie <code>mode</code> kun je bepalen in welke stand de schakelaar staat.</p>
+        <p>For this you need something to be able to pass your choice on to the robot. You can do this without having to connect the robot to a computer again with the mode switch. This switch has two positions, 1 and 2. By means of the instruction <code>mode</code> you can determine which position the switch is in.</p>
 
-                        <h3>Opdracht 9.4</h3>
-                        <p class="assignment">In deze opdracht ga je ervoor zorgen dat de robot jouw tot nu to geschreven programma, "Mijn_Robot", alleen start als de mode schakelaar op stand &quot;1&quot; staat. Als de schakelaar in stand &quot;2&quot; mag de robot niets doen. Later ga je ervoor zorgen dat in stand 2 een ander programma gestart wordt.</p>
+        <h3>Task 9.4</h3>
 
-                        <ul>
-                            <li>
-                                Lees hoe de instructie <code>mode</code> werkt in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a></li>
-                            <li>Plaats voor de functie <code>setup()</code> een variabele <code>mode</code> van het type <code>int</code> en geeft het de waarde <code>0</code>. Als je een variabele in een functie aanmaakt kun je hem alleen in deze functie gebruiken. Als je bijvoorbeeld de variabele <code>mode</code> in de functie <code>setup()</code> maakt, kun je hem niet gebruiken in de functie <code>loop()</code>. De functie <code>loop()</code> kent dan deze variabele niet. Als je een variabele maakt voor de functie <code>setup()</code> en <code>loop()</code> kun je ze in beide functie gebruiken.
-                            </li>
-                            <li>Schrijf in de functie <code>setup()</code> een stukje programma dat ervoor zorgt dat de variabele <code>mode</code> de waarde uit de landje robot instructie <code>mode</code> krijgt.</li>
-                            <li>Laat in de functie <code>setup()</code> de robot alleen starten met rijden als de variabele <code>mode</code> de waarde &quot;1&quot; heeft.</li>
-                            <li>Pas de functie <code>loop</code> in je programma zo aan, dat de instructies zoals je deze in opdracht 9.3 hebt afgerond alleen uitvoert als de schakelaar bij het starten van de robot op stand 1 staat.</li>
-                        </ul>
+        <p class="assignment">In this task you will make sure that the robot only starts your &quot;line follow&quot; program in, &quot;My_Robot&quot;, when the mode switch is set to &quot;1&quot;. If the switch is set to &quot;2&quot;, the robot is not allowed to do anything. Later you will make sure that another program is started in position 2.</p>
 
-                        <p>Als alles goed verlopen is heb je het eerste programma van de robot nu helemaal klaar! Test het programma nu.</p>
-                        <ul>
-                            <li>Zet de robot uit en zet de mode-schakelaar op "1".</li>
-                            <li>Plaats de robot op de lijn en zet hem aan. De robot zou nu de lijn moeten volgen en bij de dubbele lijn weer omkeren.</li>
-                            <li>Zet de robot uit en zet de mode-schakelaar op "2"</li>
-                            <li>Plaats de robot op de lijn en zet hem aan. Als het helemaal goed is blijft de robot stilstaan</li>
-                        </ul>
+        <ul>
+            <li>
+                Read how the instruction <code>mode</code> works in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a></li>
+            <li>Place a variable <code>mode</code> of the type <code>int</code> before the function <code>setup()</code> and give it the value <code>0</code>. If you create a variable in a function, you can only use it in this function. For example, if you create the variable <code>mode</code> in the <code>setup()</code> function, you cannot use it in the <code>loop()</code> function. The function <code>loop()</code> then does not know this variable. If you create a variable before the function <code>setup()</code> and <code>loop()</code> you can use it in both functions.
+            </li>
+            <li>In the function <code>setup()</code> , write a piece of program that causes the variable <code>mode</code> to get the value from the instruction <code>mode</code>.</li>
+            <li>In the function <code>setup()</code>, let the robot only start driving if the variable <code>mode</code> has the value &quot;1&quot;</li>
+            <li>Adjust the <code>loop</code> function in your program so that the instructions as you completed in task 9.3 will only be executed if the switch is in position 1 when starting the robot.</li>
+        </ul>
 
+        <p>If all went well, you'll have the first program of the robot ready now! Test the program now.</p>
 
+        <ul>
+            <li>Switch the robot off and set the mode switch to "1".</li>
+            <li>Place the robot on the line and turn it on. The robot should now follow the line and turn around at the double line.</li>
+            <li>Switch the robot off and set the mode switch to "2".</li>
+            <li>Place the robot on the line and turn it on. If all goes well, the robot will do nothing.</li>
+        </ul>
 
-                        <h1 id="toc_17">Les 10, Meer sensors en motoren</h1>
+        <h1 id="toc_17">Lesson 10, more sensors and motors</h1>
 
-                        <h2>Plaatsen van het robot hoofd</h2>
+        <h2>Placing the robot's head</h2>
 
-                        <p>In het hoofd van de robot van de robot zitten een ultrasoon sensor en een led'je. De ultrasoon sensor kan afstand meten met een voor ons niet hoorbaar geluid. Het meet een afstand door een geluidje te maken en te wachten totdat de echo van dit geluid weer terugkomt. Door middel van de tijd welke ligt tussen het vezenden en het weer ontvangen van het geluid kan de computer de afstand berekenen. Het led'je in de mond van de robot kun je laten knipperen zodat het lijkt of het praat. Je kunt het led'je ook aan- of uitzetten en opvragen of het knippert.</p>
+        <p>In the head of the robot of the robot are an ultrasonic sensor and a led. The ultrasonic sensor can measure distance with a sound that is not audible to us. It measures a distance by making a sound and waiting until the echo of this sound comes back. By means of the time that lies between the sending and receiving of the sound, the computer can calculate the distance. The led in the robot's mouth can blink so it looks like it's talking. You can also turn the led on or off and detect if it is flashing.</p>
 
-                        <p>Het hoofd van de robot komt op een motorje. Dit is geen gewoon motortje, maar een servo-motor. Een servo-motor kan niet rondjes draaien. Deze motor kan de as precies een half rondje, 180 graden, naar links <em>en</em> naar rechts draaien. Omdat de motor precies weet in welke stand de as staat, kun je aangeven hoevell graden het naar links of rechts moet bewegen.</p>
+        <p>The head of the robot comes on a motor. This is not just a motor, but a servo motor. A servo motor can't rotate continously. This motor can turn the shaft exactly half a circle, 180 degrees, to the left <em>and</em> to the right. Because the motor knows exactly in which position the shaft is, you can indicate how many degrees it should move to the left or right.</p>
 
-                        <p>Straks kun je met de instructie <code>look</code> de richting van de as sturen. De as kun je dan 45 en 90 graden naar links en rechts draaien en precies in het midden zetten. Door het draaien van deze as kun je straks, na het vastzetten van het hoofd van de robot, deze naar links en rechts laten kijken.</p>
+        <p>Later on you can use the instruction <code>look</code> to steer the direction of the axis. The axis can then be rotated 45 and 90 degrees to the left and right and positioned exactly in the middle. By rotating this axis you can later, after securing the robot's head, make it look to the left and right.</p>
 
-                        <p>Nu is het wel zo handig dat je weet in welke stand de motor staat <em>voordat</em> je het hoofd er op schroeft. Anders is de kans groot dat de robot altijd een andere kan op kijkt dan dat jij wilt dat het kijkt. Daarom ga je eerst ervoor zorgen dat de as van de servo-motor precies in het midden staat voordat je het hoofd van de robot vastmaakt.</p>
+        <p>Now it is so handy that you know in which position the motor is <em>before</em> you screw the head onto the servo motor. Otherwise there is a good chance that the robot always looks in another directon than you want it to look. Therefore, first make sure that the shaft of the servo motor is exactly in the middle before you attach the head of the robot.</p>
 
-                        <h3>Opdracht 10.1</h3>
-                        <p class="assignment">Open de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> en lees de beschrijving bij de instructie <em>look</em>. Je gaat nu een nieuw programma schrijven dat je alleen zult gebruiken voor het juist instellen van de servo-motor.</p>
-
-
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <ul>
-                                    <li>Maak een nieuw programma <em>instellen motor</em></li>
-                                    <li>Voeg nu aan het programma de instructie toe om de robot naar voren te laten kijken.</li>
-                                    <li>Stuur het programma naar de robot en kijk of de servo-motor beweegt. Laat de robot aan staan.</li>
-                                    <li>Druk het hoofd van de robotvoorzichig op de as van de servo-motor</li>
-                                    <li>Pas het programma aan zodat het hoofd van de robot helemaal eerst helemaal naar links kijkt, even wacht en dan naar voren kijkt. Dan weer wacht om uiteindelijk helemaal naar rechts te kijken.
-                                        <li>Test het programma, kijkt de robot naar links, dan naar voren en uiteindelijk helemaal naar rechts ? Mooi ! Schroef dan het hoofd vast met het schroefje van de servo-motor. Gebruik het kleinste schroefje dat in het zakje zit bij de servo-motor. Kijkt de robot niet helemaal naar links? Haal het hoofd dan van de servo-motor en begin de opdracht dan opnieuw. </li>
-                                </ul>
+        <h3>Task 10.1</h3>
+        <p class="assignment">Open the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a> and read the description at the instruction <em>look</em>. You are now going to write a new temporary program that you will only use for the correct setup of the servo-motor.</p>
 
 
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_10_PlaceHead">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <ul>
+                    <li>Create a new program <em>Lesson_10_calibrating_head</em></li>
+                    <li>Add to the program now the instruction to ake the robot look forward.</li>
+                    <li>Send the program to the robot and see if the servo motor is moving. Leave the robot on.</li>
+                    <li>Press the head of the robot heading forward onto the shaft of the servo motor</li>
+                    <li>Adjust the program so that the head of the robot looks all the way to the left first, waits a while and then looks forward. Then wait again and finally look all the way to the right.
+                        <li>Test the program. Does the robot look to the left, then to the front and finally all the way to the right? Nice ! Then screw the head tight with the screw of the servo motor. Use the smallest screw in the small bag which comes with the servo motor. Is the robot not looking all the way to the left? Then take the head off the servo motor and start the task again. </li>
+                </ul>
+
+
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_10_PlaceHead">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_10_PlaceHead.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_10_PlaceHead">
-                                    <img src="./Student%20guide/Lesson_10_PlaceHead.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_10_PlaceHead">
+                    <img src="./Student%20guide/Lesson_10_PlaceHead.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <hr/>
+        <hr/>
 
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_10_HeadWiring">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_10_HeadWiring">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_10_HeadWiring.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_10_HeadWiring">
-                                    <img src="./Student%20guide/Lesson_10_HeadWiring.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
+                <div class="lightbox-target" id="Lesson_10_HeadWiring">
+                    <img src="./Student%20guide/Lesson_10_HeadWiring.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
 
 
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <p>De robot is nu compleet, alleen de draden van de sensor en het led-lampje op het hoofd van de robot moet nog aangesloten worden. Op het hoofd van de robot zitten vier draden GND HEAD, VCC HEAD, VCC MOUTH, SIG ULTRA.</p>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>The robot is now complete, only the wires of the sensor and the led-light on the head of the robot have to be connected. On the head of the robot are four wires GND HEAD, VCC HEAD, VCC MOUTH, SIG ULTRA.
+                </p>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
-
-                        <p>De draad GND HEAD sluit je aan op de meest linker onderrij op het breadboard dat verbonden is met GND. De draad VCC HEAD moet op de meest linker bovenrij aangesloten worden.</p>
-                        <p>Met de GND HEAD en VCC HEAD zorg je dat de sensors en het led op het hoofd van de robot aangesloten zijn op de batterij. Nu moet je nog de draden aansluiten om het signaal van de ultrasoon sensor te kunnen ontvangen en het led lampje aan- en uit te kunnen zetten. Sluit de draad VCC MOUTH aan op pin 15 van de Arduino, daarna sluit je de laatste draad SIG ULTRA aan op pin 13.</p>
+        <p>Connect the GND HEAD wire to the bottom leftmost row of the breadboard that is connected to GND. The VCC HEAD wire must be connected to the top leftmost row.</p>
+        <p>With the GND HEAD and VCC HEAD you make sure that the sensors and the LED on the head of the robot are connected to the battery. Now you have to connect the wires to receive the signal from the ultrasonic sensor and to turn the LED on and off. Connect the wire VCC MOUTH to pin 15 of the Arduino, then connect the last wire SIG ULTRA to pin 13.</p>
 
 
-                        <div style="">
-                            <div style="float:left;width:90%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_10_HeadConnect">
+        <div style="">
+            <div style="float:left;width:90%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_10_HeadConnect">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_10_HeadConnect.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_10_HeadConnect">
-                                    <img src="./Student%20guide/Lesson_10_HeadConnect.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_10_HeadConnect">
+                    <img src="./Student%20guide/Lesson_10_HeadConnect.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <h2>De robot laten 'praten' en'kijken'</h2>
+        <h2>Let the robot 'talk' and 'look'.</h2>
 
-                        <p>De robot heeft nu mond waarmee het kan 'praten' en een paar ogen waarmee het echt kan kijken. In de volgende opdrachten ga je leren hoe je de robot kunt laten kijken en praten.</p>
+        <p>The robot now has a mouth with which it can 'talk' and a pair of eyes with which it can really look. In the following assignments you will learn how to let the robot look and talk.</p>
 
-                        <h3>Opdracht 10.2</h3>
-                        <p class="assignment">Nu je het hoofd van de robot heb aangesloten is de robot compleet. Op het hoofd van de robot zitten de ultrasoon sensor waarmee je afstanden kunt meten. Ook zit er een led in de mond dat je kunt laten branden. Je kunt de led aan of uit zetten. Ook kun je het laten knipperen voor een aantal seconden. Zoek in de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landje robot instructieset</a> de instructies die je hiervoor nodig hebt. Maak een nieuw programma en probeer deze drie instructies uit. Schrijf bijvoorbeeld instructies die de led laat branden, uit zet en laat knipperen. Tussen deze instructies kun je de <code>delay()</code> instructie gebruiken om even te wachten.</p>
-                        <hr/>
+        <h3>Task 10.2</h3>
+
+        <p class="assignment">When you have connected the head of the robot, the robot is complete. On the head of the robot are the ultrasonic sensor with which you can measure distances. There is also a led in the mouth that you can turn on, off and blink. You can turn the LED on or off. You can also make it blink for a few seconds. Search in the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landje robot instructionset</a> the instructions you need for this. Create a new program, &quot;Lesson_10_mouth&quot; and try out these three instructions. For example, write instructions that illuminate the led, turn it off and make it blink. Between these instructions you can use the <code>delay()</code> instruction to wait a while between the instructions.</p>
+        <hr/>
 
 
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_10_ultrasonic">
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_10_ultrasonic">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_10_ultrasonic.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_10_ultrasonic">
-                                    <img src="./Student%20guide/Lesson_10_ultrasonic.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <p>In het hoofd van de robot zit een ultrasoon sensor om afstanden mee te meten, maar hoe werkt deze eigenlijk ? Als de sensor de afstand gaat meten maakt het geluid. Dit geluid is een hoge pieptoon die wij mensen niet kunnen horen. Dit geluid gaat in de richting waar de sensor heen gericht is. Als het geluid iets op zijn weg komt, wordt het geluid weerkaatst en komt het weer terug naar de sensor. Het weerkaatsen van geluid noemen we 'echo'. Zodra de sensor het verstuurde geluid weer ontvangen is, meet het hoe lang het geluid onderweg is geweest van de sensor naar het voorwerp en weer terug.
+                <div class="lightbox-target" id="Lesson_10_ultrasonic">
+                    <img src="./Student%20guide/Lesson_10_ultrasonic.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <p>In the head of the robot is an ultrasonic sensor to measure distances, but how does it actually work? When the sensor starts measuring the distance, it makes a sound. This sound is a high beep that we humans cannot hear. This sound goes in the direction where the sensor is pointing. When the sound comes something on its way, the sound is reflected and comes back to the sensor. The reflection of sound is called 'echo'. Once the sensor has received the sent sound again, it measures how long the sound has been on its way from the sensor to the object and back again.</p>
 
-                                    <p>Geluid verplaatst zich met een snelheid van ongeveer 343 meter per seconde of ruim 1200 km/h! Omdat we weten hoe snel geluid zich verplaatst kunnen we met behulp van de gemeten tijd uitrekenen wat de afstand is tussen de sensor en het voorwerp.</p>
+                <p>Sound moves at a speed of about 343 meters per second or over 1200 km/h! Because we know how fast sound moves, we can use the measured time to calculate the distance between the sensor and the object.
 
-                                    <h3>Opdracht 10.3</h3>
-                                    <p class="assignment">Als je in de bergen een gil geeft naar een berg hoor je na 12 seconden de echo. Reken uit hoe ver de berg van je af staat.</p>
-                                    <hr/>
+                    <h3>Task 10.3</h3>
+                    <p class="assignment">If you scream at a mountain in the mountains you will hear the echo after 12 seconds. Calculate how far the mountain is from you.</p>
+                    <hr/>
 
-                                    <h3>Opdracht 10.4</h3>
-                                    <p class="assignment">In deze opdracht ga je de robot afstand laten meten met behulp van de ultrasoon sensor. Maak een in de Arduino Web editor een nieuw programma, <em>meten_afstand</em></p>
+                    <h3>Task 10.4</h3>
+                    <p class="assignment">In this command you will have the robot measure distance using the ultrasonic sensor. Create a new program in the Arduino Web editor, <em>Lesson_10_measure_distance</em></p>.
 
-                                    <p>Om het alvast iets makkelijker te maken krijg je onderstaande programma. Knip en plak dit programma in het nieuwe programma <em>meten_afstand</em>. Vervang daarna op de 3 plekken met <em>...</em> op met de juiste instructies </p>
-                                    <pre><code>void setup() {
+                    <p>To make it a bit easier you get the program below. Cut and paste this program in the new programs <em>Lesson_10_measure_distance</em> function <code>setup()</code>. Then replace the 3 places with <em>...</em> with the correct instructions </p>.
+                    <pre><code>void setup() {
   
     int afstand = 400 ;
     
@@ -2713,200 +2714,190 @@ void loop() {
     
 }</code></pre>
 
-                                    <p>Test het programma door het programma te starten en de monitor in de Ardunio Web editor te openen. Beweeg nu je hand heel langzaam naar de sensor toe. Als het allemaal goed is zal de robot gaan 'praten' als je minder dan 5 cm vanaf de sensor is.</p>
-                                    <hr/>
-                                    <p></p>
+                    <p>Test the program by starting the program and opening the monitor in the Ardunio Web editor. Now move your hand very slowly towards the sensor. If all goes well, the robot will start 'talking' if you are less than 5 cm from the sensor.</p>
+                    <hr/>
+                    <p></p>
 
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <h1 id="toc_18">Les 11, Een nieuw programma</h1>
+        <h1 id="toc_18">Lesson 11, A new program</h1>
 
-                        <div style="">
-                            <div style="float:right;width:49%;margin-right: 7px ">
+        <div style="">
+            <div style="float:right;width:49%;margin-right: 7px ">
 
-                                <p>In de vorige lessen heb je het eerste programma voor de robot geschreven. Dit programma zorgde ervoor dat de robot een lijn kan volgen en aan het einde van een lijn omkeert. Je startte dit programma door ervoor te zorgen dat de <em>mode</em> schakelaar op "<em>1</em>" stond bij het aanzetten van de robot.</p>
+                <p>In the previous lessons you wrote the first program for the robot. This program allowed the robot to follow a line and reverse at the end of a line. You started this program by making sure that the <em>mode</em> switch was set to "<em>1</em>" when you turned on the robot.</p>
 
+                <p>In the next lessons you will expand the program. This extension of the program will be started when the <em>mode</em> switch is set to "<em>2</em>" when the robot is switched on.</p>
 
-                                <p>In de volgende lessen ga je het programma uitbreiden. Deze uitbreiding van het programma zal gestart worden als de <em>mode</em> schakelaar bij het aanzetten van de robot op "<em>2</em>" staat.</p>
+                <p>Instead of following a line, you will now move the robot within an area. This area is created by marking the outside with tape on the floor, just like on the example on the left. If the robot detects a line while driving, the robot has to turn and move on within the area.
+                </p>
 
-                                <p>In plaats van het volgen van een lijn, zul je nu de robot binnen een gebied laten bewegen. Dit gebied maak je door met tape op de vloer de buitenkant te markeren, net zoals op het voorbeeld hier links. Als de robot tijdens het rijden een lijn detecteerd moet de robot draaien en verder rijden binnen het gebied.
-                                </p>
+                <p>In addition, you are going to use the robot's eyes, as it can now see whether there is anything that needs to be driven around.</p>
 
-                                <p>Daarnaast ga je gebruik maken van de ogen van de robot, het kan nu immers zien of er iets staat waar omheen gereden moet worden.</p>
+                <h3>Task 11.1</h3>
+                <p class="assignment">It's time to use your paper robot again! Take a sheet of paper and draw a rectangle with a thick marker as shown in the image on the right. Place your paper robot in the rectangle and drive with it.</p>
 
-                                <h3>Opdracht 11.1</h3>
-                                <p class="assignment">Het is weer tijd om je papieren robot te gebruiken! Pak een vel papier en teken net zoals in de afbeelding hiernaast een rechthoek met een dikke stift. Plaats je papieren robot in het rechthoek en ga er mee rijden.</p>
+                <p class="assignment"> Now look at how many ways the reflection sensors of the robot can touch the lines. Describe per way what the robot has to do to stay within the lines. Write this down as follows; &quot;<b>If the [left | right | both] sensor detects the line,  then ... and then  ...  </b>&quot;. </p>
 
-                                <p class="assignment">Kijk nu op hoeveel manieren de reflectie sensors van de robot de lijnen kunnen raken. Beschrijf per manier wat de robot moet doen om binnen de lijnen te blijven. Schrijf dit op de volgende manier op; &quot;<b>Als de [linker | rechter | beide] sensor de lijn detecteert, ... dan ... en ga dan ... </b>&quot;. </p>
+                <p class="assignment">So for example: &quot;If the left sensor detects the line, then turn 10 degrees to the left and then move forward.&quot;</p>
+                <hr/>
 
-                                <p class="assignment">Dus bijvoorbeeld: &quot;Als de linker sensor de lijn detecteert, draai dan 10 graden naar links en ga dan vooruit.&quot;</p>
-                                <hr/>
-
-                            </div>
-                            <div style="float:left;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_11_Avoidance_1">
+            </div>
+            <div style="float:left;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_11_Avoidance_1">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_11_Avoidance_1.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_11_Avoidance_1">
-                                    <img src="./Student%20guide/Lesson_11_Avoidance_1.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_11_Avoidance_1">
+                    <img src="./Student%20guide/Lesson_11_Avoidance_1.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
 
 
-                        <p>Je hebt nu in opdracht 11.1 bedacht wat de robot moet doen om netjes binnen de lijnen op de vloer te blijven. De programma regels die je gaat schrijven om dit te doen moeten herhaald worden zolang als de robot rijdt. Deze programma regels moeten dus in de functie <code>loop()</code> geplaatst worden. Er is alleen nog iets nodig in de functie <code>setup()</code> nodig om de robot goed te laten starten.</p>
+        <p>In task 11.1 you have now thought about what the robot has to do to stay neatly within the lines on the floor. The program rules you are going to write to do this have to be repeated as long as the robot is moving. These program rules have to be placed in the function <code>loop()</code>. Only something is needed in the function <code>setup()</code> to get the robot to start properly.</p>
 
 
-                        <h3>Opdracht 11.2</h3>
-                        <p class="assignment">Pak de rol tape en maak hiermee een rechthoek op de vloer. Maak de rechthoek groot genoeg zodat de robot er goed in kan rondrijden. Maar maak hem natuurlijk niet zo groot dat het heel lang duurt voordat de robot een lijn raakt. Later in de lessen zul je een veel grotere rechthoek mogen maken. Nu is een lengte van ėėn tot anderhalve meter per zijde van de rechthoek heel mooi.</p>
+        <h3>Task 11.2</h3>
+        <p class="assignment">Pack the roll of tape and use it to make a rectangle on the floor. Make the rectangle big enough for the robot to drive around in it. But don't make it so big that it takes a long time before the robot touches a line. Later in the lessons you will be allowed to make a much larger rectangle. Now a length of one to one and a half meter per side of the rectangle is very nice.</p>
 
-                        <p class="assignment">Zitten de lijnen mooi? Dan kun je de robot uitproberen. Zet de robot midden in het rechthoek en zet de <em>mode</em> schakelaar op stand <em>2</em>. Zet de robot dan aan, en wat gebeurt er ?</p>
+        <p class="assignment">Are the lines tape nicely? Then you can try out the robot. Put the robot in the middle of the rectangle and set the <em>mode</em> switch to position <em>2</em>. Then turn on the robot, and what happens ?</p>
 
-                        <p class="assignment">Tja, er mist iets. De robot moet &egrave;&egrave;n ding doen zodra je hem aanzet! Open het programma &quot;Mijn_Robot&quot; en pas de functie <code>setup()</code> aan zodat de robot doet wat hij moet doen nadat je hem aanzet! Weet je het niet wat de robot moet doen ? Zet de <em>mode</em> schakelaar dan op stand <em>1</em> en zet de robot aan. Nu weet je het!</p>
-                        <hr/>
+        <p class="assignment">Yes, something is missing. The robot should do one thing as soon as you turn it on! Open the program &quot;My_Robot&quot; and adjust the function <code>setup()</code> so that the robot does what it should do after you turn it on! You don't know what the robot should do ? Then set the <em>mode</em> switch to <em>1</em> and turn on the robot. Now you know!</p>
+        <hr/>
 
-                        <p>Tja nu beweegt de robot wel als je de <em>mode</em> schakelaar op <em>2</em> zet, maar blijft hij nog niet netjes binnen de lijnen! Dat ga je in de volgende opdracht oplossen.</p>
+        <p>yeah now, the robot will move if you set the <em>mode</em> switch to <em>2</em>, but it will not stay neatly within the lines! You'll solve that in the next command.</p>
 
-                        <h3>Opdracht 11.3</h3>
+        <h3>Task 11.3</h3>
 
-                        <p class="assignment">Programmeer nu de instructies die je met de papieren robot hebt uitgewerkt zodat de robot binnen de lijnen blijft. Wat moet de robot gaan doen om binnen de lijnen te blijven ?
-                        </p>
+        <p class="assignment">Now program the instructions you worked out with the paper robot so that the robot stays within the lines. What does the robot have to do to stay within the lines?
+        </p>
 
+        <ul>
+            <li>If no line is detected, all the robot needs to do is to (keep!) driving.</li>
+            <li>If a line is detected on the left side, the robot must be able to
+                <li>
+                    <ul>
+                        <li>drive backwards,</li>
+                        <li>turn to the right,</li>
+                        <li>and drive on again</li>
+                    </ul>
+                </li>
+                <li>If a line is detected on the right side, the robot must be able to
+                    <li>
                         <ul>
-                            <li>Als er geen lijn gedetecteerd wordt hoeft de robot alleen maar te (blijven!) rijden.</li>
-                            <li>Als er links een lijn gedetecteerd wordt moet de robot</li>
-                            <li>
-                                <ul>
-                                    <li>naar achter rijden,</li>
-                                    <li>naar rechts draaien,</li>
-                                    <li>en weer verder rijden</li>
-                                </ul>
-                            </li>
-                            <li>Als er rechts een lijn gedetecteerd wordt moet de robot</li>
-                            <li>
-                                <ul>
-                                    <li>naar achter rijden,</li>
-                                    <li>naar links draaien,</li>
-                                    <li>en weer verder rijden</li>
-                                </ul>
-                            </li>
-                            <li>Als er links en rechts een lijn gedetecteerd wordt moet de robot</li>
-                            <li>
-                                <ul>
-                                    <li>naar achter rijden,</li>
-                                    <li>omdraaien,</li>
-                                    <li>en weer verder rijden</li>
-                                </ul>
-                            </li>
-
+                            <li>drive backwards,</li>
+                            <li>turn to the left,</li>
+                            <li>and drive on again</li>
                         </ul>
+                    </li>
+                    <li>If a line is detected to the left and right, the robot must be able to
+                        <li>
+                            <ul>
+                                <li>drive backwards,</li>
+                                <li>turn around,</li>
+                                <li>and drive on again</li>
+                            </ul>
+                        </li>
 
-                        <p>Tip: Kijk nog eens naar de programma regels die je geschreven hebt voor het volgen van de lijn! </p>
+        </ul>
 
-                        <p class="assignment">Als je denkt dat het programma goed is, verstuur het dan naar de robot, zet de mode schakelaar op <em>2</em> en zet hem aan. Gaat er iets fout, kijk dan goed wat er fout gaat en probeer de fout in het programma te herstellen. Als je het helemaal niet meer begrijpt probeer dan één probleem per keer op te lossen. Als bijvoorbeeld de robot bij het raken van de lijn met de linker sensor niet doet wat jij wilt, zet de robot dan zo neer bij het testen dat hij altijd als eerste de linke lijn raakt. Soms helpt het ook om programma regels <em>uit</em> te zetten. Je kunt programmaregels makkelijk uit zetten door aan het begin van de regel <code>//</code> te typen. De robot weet dan dat het deze regels niet moet uitvoeren.</p>
-                        <hr/>
+        <p>Tip: Look again at the program rules you wrote for following the line! </p>
 
-                        <p>Zo nu ben je al een heel eind gekomen ! De robot blijft binnen de lijnen en rijdt zelfstandig rond. Alleen als er iets anders binnen de lijnen staat rijdt de robot er tegenaan omdat het nog niets kan zien. Dat gaan je nu in de volgende stappen programmeren. We beginnen eenvoudig en gaan het daarna wat moeilijker maken.</p>
+        <p class="assignment">If you think the program is ok, send it to the robot, set the mode switch to <em>2</em> and turn it on. If something goes wrong, check what goes wrong and try to fix the error in the program. If you don't understand it at all, try to solve one problem at a time. For example, if the robot doesn't do what you want when touching the line with the left sensor, place the robot in a position that it always touches the left line first. Sometimes it also helps to set program rules <em>off</em>. You can easily disable program lines by typing <code>//</code> at the beginning of the line. The robot will then know that it should not execute these lines.</p>
+        <hr/>
 
-                        <h3>Opdracht 11.4</h3>
+        <p>You've come a long way now ! The robot stays within the lines and drives around independently. Only when there is something else within the lines, the robot drives against it because it can't see anything yet. Now you are going to program this in the next steps. We start simply and then we will make it a bit more difficult.</p>
 
-                        <p class="assignment">Zoals gezegd we beginnen eenvoudig. Is het je al opgevallen dat de robot elke keer dat je hem aanzet een andere kant op kijkt ? Je weet daardoor eigenlijk nooit welke kant de robot opkijkt als je hem aanzet. Als je niet weet naar welke kant de robot kijkt, weet je straks ook niet of de robot nu de afstand links, voor of rechts van de robot meet.
-                        </p>
+        <h3>Task 11.4</h3>
 
-                        <p class="assignment">Breid nu je programma &quot;Mijn_Robot&quot; uit zodat bij het aanzetten het hoofd van de robot altijd naar voren wijst.</p>
-                        <hr/>
+        <p class="assignment">As said before, we start simply. Have you noticed that the robot looks in a different direction every time you turn it on? You never know which way the robot is looking when you turn it on. If you don't know which way the robot is looking, you won't know whether the robot is measuring the distance to the left, front or right of the robot.
+        </p>
 
-                        <p>Nu je weet dat de robot altijd begint met vooruitkijken wordt het meten van de afstand vanaf de voorkant van de robot een stuk eenvoudiger. Door tijdens het rijden van de robot de afstand te meten tot een voorwerp voor je kun je ervoor zorgen dat de robot niet tegen andere dingen in het gebied van de robot oprijdt. </p>
+        <p class="assignment">Now expand your program &quot;My_Robot&quot; so that the head of the robot always points forward when you turn it on.</p>
+        <hr/>
 
-                        <h3>Opdracht 11.5</h3>
+        <p>Now that you know that the robot always starts looking ahead, measuring the distance from the front of the robot becomes a lot easier. By measuring the distance to an object in front of you while driving the robot, you can make sure that the robot does not drive into the area of the robot against other things. </p>
 
-                        <p class="assignment">In deze opdracht ga je proberen om de robot te laten stoppen zodra er iets in de weg staat. Laat de robot ruim op tijd stoppen, dus stop als de robot iets ziet wat op 10 centimeter of minder voor de robot staat.
-                        </p>
+        <h3>Task 11.5</h3>
 
-                        <p class="assignment">Begin met het meten van de afstand. Maak een variabele <code>afstand</code> en vul deze met de gemeten afstand. Let goed op waar je deze regel gaat plaatsen in je programma. Je moet de hele tijd dat de robot rijdt de afstand meten. Het is niet nodig, of zelfs beter van niet, om de afstand te meten als de robot een lijn detecteert. Weet je ook waarom niet ?</p>
+        <p class="assignment">In this command you will try to make the robot stop as soon as something is in the way. Let the robot stop well in time, so stop if the robot sees something that is 10 centimeters or less in front of the robot.
+        </p>
 
-                        <p class="assignment">Voeg nu de programmaregels toe welke ervoor zorgen dat de robot stopt als de afstand tussen de robot en een voorwerp kleiner is dan 10cm.</p>
+        <p class="assignment">Start by measuring the distance. Create a variable <code>distance</code> and fill it with the measured distance. Pay attention where you are going to place this line in your program. You have to measure the distance all the time the robot is moving. It is not necessary, or even better not, to measure the distance when the robot detects a line. Do you also know why it is better not to measure the distance when the robot detects a line? </p>
 
-                        <hr/>
+        <p class="assignment">Add now the program rules that cause the robot to stop if the distance between the robot and an object is less than 10cm.</p>
 
-                        <div style="">
-                            <div style="float:left;width:49%;margin-right: 7px ">
+        <hr/>
 
-                                <p>Je robot staat nu stil als er iets op zijn weg ligt, maar wat dan ? Wat moet de robot doen ?</p>
+        <div style="">
+            <div style="float:left;width:49%;margin-right: 7px ">
 
-                                <p>Je kun de robot om laten draaien en verder rijden. Maar het kan ook slimmer, je kunt de robot ook om het obstakel heen laten rijden, zodat het zijn weg verder kan vervolgen.</p>
+                <p>Your robot now stands still when something is on its way, but what to do? What should the robot do ?</p>?
 
-                                <p>Maar hoe kun je de robot nu het beste om een obstakel laten rijden? Kijk eens naar de afbeelding rechts. Op deze tekening staan drie lijnen getekend. Iedere lijn wijst in een andere richting, links, vooruit en rechts. Elke lijn geeft de afstand van de robot ten opzichte van het obstakel.</p>
+                <p>You can let the robot turn around and drive on. But it can also be smarter, you can also let the robot drive around the obstacle, so it can continue its way.</p>
 
-                                <h3>Opdracht 11.6</h3>
-                                <p class="assignment">Als de robot nu om het obstakel heen moet rijden, welke richting zou je hem dan sturen?</p>
+                <p>But how can you best let the robot drive around an obstacle? Look at the picture on the right. On this drawing three lines are drawn. Each line points in a different direction, left, forward and right. Each line shows the distance of the robot from the obstacle.</p>
 
-                                <p class="assignment">De robot kan met zijn hoofd draaien en met de ogen de afstand van de robot tot een voorwerp meten. Als je nu hiermee links, vooruit en rechts van de robot de afstand meet en deze afstanden vergelijkt. Naar welke kant zou de robot moeten rijden de kortste, middelste of langst gemeten afstand ? </p>
+                <h3>Task 11.6</h3>
+                <p class="assignment">If the robot now has to drive around the obstacle, which direction would you steer it?</p>
 
-                                <p class="assignment">Je robot kan nu rondrijden binnen de lijnen en stop als het 10cm voor zich iets ziet staan. Tijd om het programma &quot;Mijn_Robot&quot; weer verder uit te breiden. De robot moet nu gaan beslissen welke kant het op moet gaan rijden om het ding dat hij voor zich ziet staan heen te rijden.</p>
+                <p class="assignment">The robot can turn its head and measure the distance between the robot and an object with its eyes. If you now measure the distance of the robot left, forward and right and compare these distances. To which side should the robot drive the shortest, middle or longest measured distance ? </p>
 
-                                <p class="assignment">Breid het programma uit na de instructie regel <code>landjerobot.move(LandjeRobot::DIRECTION::STOP) ;</code> wanneer gemeten is dat de afstand tussen de robot en het voorwerp minder dan 10cm is. Zorg nu dat de robot de afstand links en rechts van zich meet. Vergelijk deze twee afstanden en zorg dat de robot nu de juiste kant op draait zodat het om het voorwerp heen rijdt.</p>
+                <p class="assignment"> Your robot can now drive around within the lines and stop when it sees something 10cm in front of it. Time to expand the program &quot;My_Robot&quot; again. The robot now has to decide which way to go in order to drive around the objectit detects in front of it.</p>
+
+                <p class="assignment">Extend the program after the instruction line <code>landjerobot.move(LandjeRobot::DIRECTION::STOP) ;</code> when the distance between the robot and the object is measured to be less than 10cm. Now make sure the robot measures the distance to the left and right. Compare these two distances and make sure that the robot now turns in the right direction so that it drives around the object.</p>
+
+                <p class="assignment">Tip: The robot measures the distance better if you wait a while after turning the head, 1 second is more than enough, before you measure the distance.
+                </p>
+
+                <p class="assignment">Time to test ! Put your robot down, set it with the switch to mode &quot;2&quot; and let it drive within the lines. Now take an object and place it far enough in front of the robot. If he drives around it, you've succeeded!
+                </p>
+
+                <hr/>
+            </div>
 
 
-                                <p class="assignment">Tip: De robot meet de afstand beter als je na het draaien van het hoofd even wacht, 1 seconde is meer dan genoeg, voordat je de afstand meet.
-                                </p>
-
-                                <p class="assignment">Tijd om te testen ! Zet je robot neer, zet hem met de schakelaar op mode &quot;2&quot; en laat hem rijden binnen de lijnen. Pak nu een voorwerp en plaats deze ver genoeg voor de robot. Rijdt hij er omheen dan ben je geslaagd!
-                                </p>
-
-                                <hr/>
-                            </div>
-
-
-                            <div style="float:right;width:49%;margin-right: 7px ">
-                                <a class="lightbox" href="#Lesson_11_Avoidance_2">
+            <div style="float:right;width:49%;margin-right: 7px ">
+                <a class="lightbox" href="#Lesson_11_Avoidance_2">
                         <img style="display: block; margin-left: auto; margin-right: auto; width:80%;"  
                         src="./Student%20guide/Lesson_11_Avoidance_2.png" alt=""/>
                     </a>
-                                <div class="lightbox-target" id="Lesson_11_Avoidance_2">
-                                    <img src="./Student%20guide/Lesson_11_Avoidance_2.png" alt="" />
-                                    <a class="lightbox-close" href="#deadlink"></a>
-                                </div>
-                            </div>
-                            <div style="clear:both; "></div>
-                        </div>
+                <div class="lightbox-target" id="Lesson_11_Avoidance_2">
+                    <img src="./Student%20guide/Lesson_11_Avoidance_2.png" alt="" />
+                    <a class="lightbox-close" href="#deadlink"></a>
+                </div>
+            </div>
+            <div style="clear:both; "></div>
+        </div>
 
-                        <h1 id="toc_19">Les 12, Verbeteren van je programma</h1>
+        <h1 id="toc_19">Lesson 12, Improving your program</h1>
 
-                        <p>Je robot kan nu zelfstandig rondrijden. Maar zoals je waarschijnlijk al merkt gaat het nog niet altijd even goed. Soms raakt het nog het voorwerp dat in de weg staat of probeert robot het voorwerp opzij te duwen. Het kan zelfs nog voorkomen dat het over de lijnen rijdt en er vandoor gaat om de rest van de ruimte te verkennen.</p>
+        <p>You robot can now drive around independently. But as you probably already noticed, things are not always going well. Sometimes it still touches the object that is in the way or the robot tries to push it aside. It can even happen that it drives over the lines and leaves the area to explore the rest of the space.</p>
 
-                        <p>In deze laatste les zitten nog vier opdrachten die je helemaal zelfstandig moet uitvoeren. </p>
+        <p>In this last lesson there are four more tasks that you have to perform independently. </p>
 
-                        <h3>Opdracht 12.1</h3>
-                        <p class="assignment">Soms als de robot vlak voor een voorwerp moet draaien kan het zijn dat het tijdens het draaien te weinig ruimte heeft en het voorwerp opzij duwt. Hoe kun je dit voorkomen ? Pas het programma aan zodat het bij het draaien geen voorwerpen meer raakt. Heb je geen idee hoe je dit moet oplossen ? Pak dan je papieren robot, teken een obstakel op een vel papier rijd er mee naar het obstakel. Laat je robot draaien bij het obstakel en kijk of je zo ziet wat je moet doen om bij het draaien het obstakel niet te raken.</p>
-                        <hr/>
+        <h3>Task 12.1</h3>
+        <p class="assignment">Sometimes if the robot has to rotate just in front of an object, it may be that it has too little space when making turns and pushes the object aside. How can you prevent this? Adjust the program so that it doesn't touch any more objects during rotation. You have no idea how to solve this problem ? Then grab your paper robot, draw an obstacle on a sheet of paper and drive it to the obstacle. Let your robot rotate at the obstacle and see if you can see what to do to avoid hitting the obstacle.</p>
+        <hr/>
 
-                        <h3>Opdracht 12.2</h3>
-                        <p class="assignment">Het is nooit leuk als je weer moet stoppen en ergens om heen moet rijden. Dit robot vindt dit ook niet laat de robot mopperen als er iets voor hem staat door het 5 seconden te laten praten!</p>
-                        <hr/>
+        <h3>Task 12.2</h3>
+        <p class="assignment">It's never nice when you have to stop again and drive around something. This robot doesn't like this either, let the robot grumble when something is in front of it by make it talk for 5 seconds!</p>
+        <hr/>
 
-                        <h3>Opdracht 12.3</h3>
-                        <p class="assignment">Ook als er soms niets voor de robot in de weg staat ziet het iets voor zich en gaat dan een andere kant op. Dit kan komen omdat de robot soms een fout meet. Dit kan komen door echo van het geluid waarmee gemeten wordt of door geluid van een andere robot. Je kunt de robot beter laten zien of er iets voor hem staat. Als de robot denkt dat er iets voor hem staat laat je hem bijvoorbeeld nog eens 5 keer achter elkaar meten. De gemeten afstanden tel je bij elkaar op. Als de opgetelde metingen kleiner is dan 5 keer de afstand waarop de robot zou moeten stoppen heeft de robot zeker goed gezien.</p>
-                        <hr/>
+        <h3>Task 12.3</h3>
+        <p class="assignment">Even if there is nothing in the way of the robot it something sees an object in front of it and then goes in a different direction. This may occur due to measurement errors of the robot. This can be due to echo of the sound of the sensor that is being detected or by sound from another robots sensor. You can make the robot look better to detect object more reliably. If the robot thinks there is something in front of him, let it measure 5 times in a row. Add up the measured distances. If the accumulated measurements are less than 5 times the distance the robot should stop at, the robot has certainly seen well.</p>
+        <hr/>
 
-                        <h3>Opdracht 12.4</h3>
-                        <p class="assignment">Het kan zijn dat als er iets recht voor een robot staat er links en rechts nog minder afstand is. De robot kan er dan niet omheen rijden. Maak hier een oplossing voor en test het uit.</p>
-                        <hr/>
-
-
+        <h3>Task 12.4</h3>
+        <p class="assignment">It may be that if something is right in front of a robot there is even less distance left and right. The robot can then not drive around it. Make a solution for this and test it out.</p>
+        <hr/>
 
 </body>
-
-
-
-
-
-
 
 </html>

@@ -7,7 +7,7 @@
 Create three variables and print the values
 
     /*
-        */    void setup() {      Serial.begin(9600);      delay(2000);        String naam = "Peter" ;      int waarde = 12;      boolean waarofniet = false;      Serial.println(naam);      Serial.println(waarde);      Serial.println(waarofniet);    }    void loop() {        }## Lesson 4, comparing
+        */    void setup() {      Serial.begin(9600);      delay(2000);        String name = "Peter" ;      int value = 12;      boolean trueorfalse = false;      Serial.println(name);      Serial.println(value);      Serial.println(trueorfalse);    }    void loop() {        }## Lesson 4, comparing
 
 ### Assignment 1
 
