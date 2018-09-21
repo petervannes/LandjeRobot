@@ -3,9 +3,10 @@
 
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Student guide NLD</title>
+    <link rel="stylesheet" type="text/css" href="landje.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Student guide NLD</title>
 
 
 
@@ -13,88 +14,116 @@
 
 <body>
 
-<h1 id="toc_0">Leren programmeren</h1>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
 
-<p>Over programmeren kun je heel veel lezen. Maar je leert het vooral door hetzelf te doen, fouten te maken en deze zelf op te lossen. Het zelf zoeken naar en oplossen van fouten heet debuggen.</p>
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
 
-<p><strong>Waarom heet het zoeken naar en oplossen van fouten debuggen ?</strong>
-Het woord &ldquo;bug&rdquo; betekent in het Engels, kever of insect. Lang geleden bestonden computers uit elektrische schakelaars. Tussen deze schakelaars kon wel eens een kever of vlieg vast komen te zitten waardoor de schakelaar vast kon komen te zitten. Door de vastzittende schakelaar werkte de computer niet meer goed. Om de computer weer goed te laten werken moest de &lsquo;bug&rsquo;, de kever of vlieg, gevonden en verwijderd worden om hem weer goed te laten werken. </p>
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
-<p><img src="./Student%20guide/H96566k.jpg" alt="By Courtesy of the Naval Surface Warfare Center, Dahlgren, VA., 1988. [Public domain] via Wikimedia Commons">
-Een voorbeeld van een computer verslag van de Mark II computer. Hier staat de eerste bug die men gevonden heeft geplakt in het computer verslag in 1947</p>
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
 
-<h2 id="toc_1">Landje Robot</h2>
+    </script>
 
-<p>Je gaat dus vooral zelf veel proberen, puzzelen en leren van je eigen fouten! Dit ga je doen met een robot, Landje Robot. Landje Robot kan als je het hem goed programmeert;</p>
+    <div class="coverContainer">
+        <img src="./Student%20guide/cover.png" alt="Landje robot cover" style="width:100%;" />
+        <div class="coverTitle">
+            <h1 id="toc_0">Leren programmeren</h1>
+        </div>
+    </div>
 
-<ul>
-<li>Rond rijden</li>
-<li>Lijnen volgen</li>
-<li>Binnen een door een lijn gemarkeerd gebied blijven</li>
-<li>Afstand meten tot een ander object</li>
-<li>Andere objecten of robots ontwijken</li>
-<li>Een lampje laten knipperen.</li>
-</ul>
+    <p>Over programmeren kun je heel veel lezen. Maar je leert het vooral door hetzelf te doen, fouten te maken en deze zelf op te lossen. Het zelf zoeken naar en oplossen van fouten heet debuggen.</p>
 
-<h2 id="toc_2">Programmeertaal</h2>
+    <p><strong>Waarom heet het zoeken naar en oplossen van fouten debuggen ?</strong> Het woord &ldquo;bug&rdquo; betekent in het Engels, kever of insect. Lang geleden bestonden computers uit elektrische schakelaars. Tussen deze schakelaars kon wel eens een kever of vlieg vast komen te zitten waardoor de schakelaar vast kon komen te zitten. Door de vastzittende schakelaar werkte de computer niet meer goed. Om de computer weer goed te laten werken moest de &lsquo;bug&rsquo;, de kever of vlieg, gevonden en verwijderd worden om hem weer goed te laten werken. </p>
 
-<p>Om te programmeren gebruik je een taal. Een taal die jouw computer begrijpt zodat je kan uitleggen wat het moet doen. Zo zijn er heel veel talen, sommige talen zijn heel erg geschikt om spelletjes mee te schrijven, andere talen zijn weer betere beschikt om complexe berekeningen te maken. Als je begint met programmeren is er een grote kans dat je dit in Scratch doet. Met Scratch kun je met het in elkaar schuiven van blokken een programma&#39;tje maken. </p>
+    <p><img src="./Student%20guide/H96566k.jpg" alt="By Courtesy of the Naval Surface Warfare Center, Dahlgren, VA., 1988. [Public domain] via Wikimedia Commons"> Een voorbeeld van een computer verslag van de Mark II computer. Hier staat de eerste bug die men gevonden heeft geplakt in het computer verslag in 1947</p>
 
-<p><img src="./Student%20guide/Scratch_Hello_World.png" alt="Scratch Hello World"><br>
-Een simpel voorbeeld van een programma in Scratch.</p>
+    <h2 id="toc_1">Landje Robot</h2>
 
-<p>Bijna geen enkele programmeertaal werkt zoals Scratch. Bij de meeste programmeertalen moet je een opdracht schrijven om de computer te laten weten wat je moet doen. Schrijven van een programma is moeilijker dan zoals bij Scratch. Dit komt omdat een computer heel precies en erg dom is. Een computer begrijpt je alleen als je heel erg precies vertelt wat je van hem wilt. </p>
+    <p>Je gaat dus vooral zelf veel proberen, puzzelen en leren van je eigen fouten! Dit ga je doen met een robot, Landje Robot. Landje Robot kan als je het hem goed programmeert;</p>
 
-<div><pre><code class="language-none">// Dit wordt door de computer begrepen
+    <ul>
+        <li>Rond rijden</li>
+        <li>Lijnen volgen</li>
+        <li>Binnen een door een lijn gemarkeerd gebied blijven</li>
+        <li>Afstand meten tot een ander object</li>
+        <li>Andere objecten of robots ontwijken</li>
+        <li>Een lampje laten knipperen.</li>
+    </ul>
+
+    <h2 id="toc_2">Programmeertaal</h2>
+
+    <p>Om te programmeren gebruik je een taal. Een taal die jouw computer begrijpt zodat je kan uitleggen wat het moet doen. Zo zijn er heel veel talen, sommige talen zijn heel erg geschikt om spelletjes mee te schrijven, andere talen zijn weer betere beschikt om complexe berekeningen te maken. Als je begint met programmeren is er een grote kans dat je dit in Scratch doet. Met Scratch kun je met het in elkaar schuiven van blokken een programma&#39;tje maken. </p>
+
+    <p><img src="./Student%20guide/Scratch_Hello_World.png" alt="Scratch Hello World"><br> Een simpel voorbeeld van een programma in Scratch.</p>
+
+    <p>Bijna geen enkele programmeertaal werkt zoals Scratch. Bij de meeste programmeertalen moet je een opdracht schrijven om de computer te laten weten wat je moet doen. Schrijven van een programma is moeilijker dan zoals bij Scratch. Dit komt omdat een computer heel precies en erg dom is. Een computer begrijpt je alleen als je heel erg precies vertelt wat je van hem wilt. </p>
+
+    <div>
+        <pre><code class="language-none">// Dit wordt door de computer begrepen
 Serial.println(&quot;Hallo&quot;) ;
 
 // Dit begrijpt de computer niet
-Serial.Println(&quot;Hallo&quot;) ;</code></pre></div>
+Serial.Println(&quot;Hallo&quot;) ;</code></pre>
+    </div>
 
-<p>Zie jij het verschil tussen de twee opdrachten ?</p>
+    <p>Zie jij het verschil tussen de twee opdrachten ?</p>
 
-<p>Het programmeren van Landje Robot zal je in de programmeertaal C (<em>see</em>) gaan doen. Zoals je in het vorige voorbeeld al kon zien worden hier Engelse woorden gebruikt.  </p>
+    <p>Het programmeren van Landje Robot zal je in de programmeertaal C (<em>see</em>) gaan doen. Zoals je in het vorige voorbeeld al kon zien worden hier Engelse woorden gebruikt. </p>
 
-<h1 id="toc_3">Les 1</h1>
+    <h1 id="toc_3">Les 1</h1>
 
-<p>In deze les ga je het eerste programma&#39;tje schrijven. Programma&rsquo;s kun je op veel manier schrijven, maar meestal doe je dit met een programma dat je help bij programmeren. Zo&#39;n programma heet een geintegreerde ontwikkel omgeving of Integrated Development Environment. Een hele mond vol, daarom heeft iedereen het over een IDE.  De IDE die jij gaat gebruiken staat &lsquo; in de cloud &rsquo;. Deze term zal je wel vaker gehoord hebben. Het betekent niets anders dan dat je het programma overal ter wereld kunt gebruiken als je maar een internet verbinding en een computer hebt. </p>
+    <p>In deze les ga je het eerste programma&#39;tje schrijven. Programma&rsquo;s kun je op veel manier schrijven, maar meestal doe je dit met een programma dat je help bij programmeren. Zo&#39;n programma heet een geintegreerde ontwikkel omgeving of Integrated Development Environment. Een hele mond vol, daarom heeft iedereen het over een IDE. De IDE die jij gaat gebruiken staat &lsquo; in de cloud &rsquo;. Deze term zal je wel vaker gehoord hebben. Het betekent niets anders dan dat je het programma overal ter wereld kunt gebruiken als je maar een internet verbinding en een computer hebt. </p>
 
-<p>Jij zult gebruik gaan maken van de IDE Arduino Create.  </p>
+    <p>Jij zult gebruik gaan maken van de IDE Arduino Create. </p>
 
-<ul>
-<li>Start <em>Chrome</em> en ga naar de internet pagina <a href="https://create.arduino.cc">https://create.arduino.cc</a>.</li>
-<li>Klik op de knop <em>Arduino Web Editor</em> om de IDE te starten.</li>
-<li>Je staat nu op de inlog pagina maar hebt nog geen geldige gebruikersnaam, een account. </li>
-<li>Klik nu onder <em>create a new account</em> op de knop <em>sign up</em>.</li>
-<li>Verzin een gebruikersnaam en wachtwoord. Zorg dat je de gebruikersnaam ergens opschrijft. Verzin een wachtwoord dat <strong>JIJ</strong> makkelijk kan onthouden, maar niet makkelijk door iemand anders is te raden. </li>
-<li>Vul bij het e-mail adres je landje010 e-mail adres in.</li>
-<li>Om je account aan te kunnen maken moet je aantonen dat je geen robot bent. Lees de opdracht goed en voer deze uit. Als je dit goed genoeg doet heb je aangetoond dat je geen robot bent en wordt je account aangemaakt.</li>
-<li>Om aan te kunnen loggen moet je aantonen dat het e-mail adres echt van jou is. Kijk in je mail en klik op de link die je van Arduino hebt ontvangen.</li>
-<li>Gelukt ? Probeer dan nu aanloggen. Als dit goed gegaan is zal het scherm er ongeveer zo uit zien als het het plaatje hieronder.</li>
-</ul>
+    <ul>
+        <li>Start <em>Chrome</em> en ga naar de internet pagina <a href="https://create.arduino.cc">https://create.arduino.cc</a>.</li>
+        <li>Klik op de knop <em>Arduino Web Editor</em> om de IDE te starten.</li>
+        <li>Je staat nu op de inlog pagina maar hebt nog geen geldige gebruikersnaam, een account. </li>
+        <li>Klik nu onder <em>create a new account</em> op de knop <em>sign up</em>.</li>
+        <li>Verzin een gebruikersnaam en wachtwoord. Zorg dat je de gebruikersnaam ergens opschrijft. Verzin een wachtwoord dat <strong>JIJ</strong> makkelijk kan onthouden, maar niet makkelijk door iemand anders is te raden. </li>
+        <li>Vul bij het e-mail adres je landje010 e-mail adres in.</li>
+        <li>Om je account aan te kunnen maken moet je aantonen dat je geen robot bent. Lees de opdracht goed en voer deze uit. Als je dit goed genoeg doet heb je aangetoond dat je geen robot bent en wordt je account aangemaakt.</li>
+        <li>Om aan te kunnen loggen moet je aantonen dat het e-mail adres echt van jou is. Kijk in je mail en klik op de link die je van Arduino hebt ontvangen.</li>
+        <li>Gelukt ? Probeer dan nu aanloggen. Als dit goed gegaan is zal het scherm er ongeveer zo uit zien als het het plaatje hieronder.</li>
+    </ul>
 
-<p><img style=" display: block;
+    <p><img style=" display: block;
     margin-left: auto;
     margin-right: auto;" src="./Student guide/create.arduino.cc.png" width="600" alt="Arduino Create"></p>
 
-<p>Om de IDE te starten klik je op de knop <em>Arduino Web Editor</em>. In de IDE kun je links op diverse tabjes klikken. Klik op <em>Sketchbook</em>. Een programma in deze IDE noemt men een <em>sketch</em>, dit is Engels voor schets (tekening). <em>Sketchbook</em> is Engels voor schetsboek. Rechts naast het <em>Sketchbook</em> zie je schetsen die je in het boek hebt bewaard.</p>
+    <p>Om de IDE te starten klik je op de knop <em>Arduino Web Editor</em>. In de IDE kun je links op diverse tabjes klikken. Klik op <em>Sketchbook</em>. Een programma in deze IDE noemt men een <em>sketch</em>, dit is Engels voor schets (tekening). <em>Sketchbook</em> is Engels voor schetsboek. Rechts naast het <em>Sketchbook</em> zie je schetsen die je in het boek hebt bewaard.</p>
 
-<p><img style=" display: block;
+    <p><img style=" display: block;
     margin-left: auto;
     margin-right: auto;" src="./Student guide/editor.arduino.png" width="600" alt="Arduino Create"></p>
 
-<p>Maak nu een nieuwe schets door op <em>NEW SKETCH</em> te klikken. Een nieuwe sketch krijgt automatisch een naam bijvoorbeeld &lsquo;sketch_jan11b&rsquo;. Dit is vaak niet handig, het zou duidelijker zijn als de sketch <em>mijn eerste sketch</em> heet. </p>
+    <p>Maak nu een nieuwe schets door op <em>NEW SKETCH</em> te klikken. Een nieuwe sketch krijgt automatisch een naam bijvoorbeeld &lsquo;sketch_jan11b&rsquo;. Dit is vaak niet handig, het zou duidelijker zijn als de sketch <em>mijn eerste sketch</em> heet. </p>
 
-<p><img style="float:left;margin: 7px 7px 7px 7px;"src="./Student guide/doe_icoon.png" width="50px" alt="Doe"/>
-Probeer zelf uit te zoeken hoe je de naam van de sketch kan veranderen naar <em>mijn_eerste_sketch</em> asdasdasdasdasdasdasd</p>
+    <p><img style="float:left;margin: 7px 7px 7px 7px;" src="./Student guide/doe_icoon.png" width="50px" alt="Doe" /> Probeer zelf uit te zoeken hoe je de naam van de sketch kan veranderen naar <em>mijn_eerste_sketch</em> asdasdasdasdasdasdasd</p>
 
-<p>asdadadadas</p>
+    <p>asdadadadas</p>
 
-<p>&hellip;asdasd</p>
+    <p>&hellip;asdasd</p>
 
-<p></p></p>
+    <p></p>
+    </p>
 
-<p>asas</p>
+    <p>asas</p>
 
 
 
