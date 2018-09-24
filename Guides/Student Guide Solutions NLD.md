@@ -419,6 +419,7 @@ Gebaseerd op afstand; De langst gemeten afstand.
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
     
     
@@ -464,6 +465,7 @@ Wanneer de robot moet draaien, ga dan eerst een stukje achteruit om wat ruimte t
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
 
 Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan de DRY regel!
@@ -503,6 +505,7 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
 
 ## Opdracht 2
@@ -536,7 +539,7 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
       // Rij iets achteruit
       landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
       
-     [ // Draai naar links of rechts]()
+      // Draai naar links of rechts
       if (links > rechts) {
         landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true);
       } else {
@@ -546,7 +549,8 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
-    ```
+  }
+```
     
     
 ## Opdracht 3
@@ -597,5 +601,5 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
          landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
       }
     }
-  }
-  ```
+
+```

@@ -409,6 +409,7 @@ Based on distance; The longest measured distance.
       // move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
     
     
@@ -453,6 +454,7 @@ When the robot needs to turn, just move a bit backward first to get some space t
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
 
 Or more efficient
@@ -492,6 +494,7 @@ Or more efficient
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
+  }
 ```
 
 ## Assignment 2
@@ -535,7 +538,8 @@ Or more efficient
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
     }
-    ```
+  }
+```
     
     
 ## Assignment 3
@@ -588,5 +592,4 @@ Or more efficient
          landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
       }
     }
-  }
-  ```
+```
