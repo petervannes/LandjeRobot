@@ -2058,7 +2058,7 @@ teller
 
         <p class="assignment">Lees nu de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> tot aan de <em>Instructies</em>.</p>
 
-        <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al, <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobot.zip">hier</a> downloaden</p>
+        <p class="assignment">Om de Landjerobot instructies te kunnen gebruiken in je programma moeten deze instructies toegevoegd worden aan de bibliotheek van je IDE. Een bibliotheek, of library, is een verzameling van programma's die bij elkaar horen. Voor de Landjerobot is de library, je raad het al, <em>LandjeRobot</em>. Voordat je de library kan toevoegen, moet je hem eerst downloaden. Je kunt deze library <a href="https://github.com/petervannes/LandjeRobot/raw/master/LandjeRobotISA_0.9.0/LandjeRobot.zip">hier</a> downloaden</p>
 
         <div style="">
             <div style="float:left;width:49%;margin-right: 7px ">
@@ -2140,23 +2140,23 @@ Draai 90 graden naar links</code></pre>
         <p class="assignment">Omdat je straks de robot aan moet zetten om de sensors af te stellen is het handig dat hij niet ineens begint te rijden. Maak daarom in je IDE een leeg programma en upload dit naar de robot.</p>
 
 
-            <b class="assignment">licht gekleurde vloer</b>
+        <b class="assignment">licht gekleurde vloer</b>
         <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar links. Plak nu een stukje wit tape op de vloer en zet een van de sensors boven het witte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar rechts totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
 
 
 
-            <b class="assignment">donker gekleurde vloer</b>
+        <b class="assignment">donker gekleurde vloer</b>
         <p class="assignment">Haal de USB kabel uit de robot en zet hem aan. Op de reflectiesensors zit een klein blauw blokje met hier in het midden een klein schroefgaatje. Neem de kleinste Phillips schroevedraaier (die in de vorm van een kruisje) en draai heel voorzichtig het schroefjes van beide sensors naar rechts. Plak nu een stukje zwart tape op de vloer en zet een van de sensors boven het zwarte tape. Als het goed is brandt er maar &eacute;&eacute;n ledje op de sensor. Draai vervolgens het schroefje langzaam naar links totdat een tweede ledje gaat branden. Herhaal dit voor de andere sensor.</p>
 
         <p class="assignment">Als je een nieuw programma voor de robot start moet je altijd een aantal regels vanuit de <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html" target="_blank">Landjerobot instructieset</a> kopieren. Een van deze regels ziet er zo uit. </p>
 
-            <pre><code>const bool lineSensorInverse = true ;</code></pre>
+        <pre><code>const bool lineSensorInverse = true ;</code></pre>
 
         <p class="assignment">Als je een donkere vloer hebt, moet je bij elk programma dat je maakt deze regel veranderen in.</p>
 
-            <pre><code>const bool lineSensorInverse = false ;</code></pre>
+        <pre><code>const bool lineSensorInverse = false ;</code></pre>
 
-            <p class="assignment">Door de waarde van <code>true</code> naar <code>false</code> te veranderen, weet de robot dat je een licht gekleurde lijn op een donker gekleurde vloer gebruik, in plaats van een donker gekleurde lijn op een licht gekleurde vloer.</p>
+        <p class="assignment">Door de waarde van <code>true</code> naar <code>false</code> te veranderen, weet de robot dat je een licht gekleurde lijn op een donker gekleurde vloer gebruik, in plaats van een donker gekleurde lijn op een licht gekleurde vloer.</p>
 
         <hr/>
 
