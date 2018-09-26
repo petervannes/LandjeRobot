@@ -340,7 +340,7 @@ Using the basic code, the robot may end in an endless loop, repeating the same m
       }
       
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // end if
 ```
 
 ### Assignment 4
@@ -408,7 +408,7 @@ Based on distance; The longest measured distance.
       
       // move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // end if
   }
 ```
     
@@ -453,7 +453,7 @@ When the robot needs to turn, just move a bit backward first to get some space t
       
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // end if
   }
 ```
 
@@ -493,7 +493,7 @@ Or more efficient
       
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // end if
   }
 ```
 
@@ -537,7 +537,7 @@ Or more efficient
       
       // Move forward again
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // end if
   }
 ```
     
@@ -590,6 +590,173 @@ Or more efficient
         
          // Move forward again
          landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+      } // end if
+    }
+```
+
+
+#Appendix
+
+## Solution example
+
+```
+
+#include <LandjeRobot.h>
+
+// Robot motor connections
+const int motor[2][4] = {
+  {2, 3, 4, 5}, {6, 7, 8, 9}
+};
+
+// Line sensor connections
+const int lineSensors[2] = { 10, 11 };
+// Light floor with dark lines = true
+// Dark floor with light lines = false 
+const bool lineSensorInverse = true;
+
+// Wheel circumference in cm
+const int wheelRadiusMM = 21;
+// Track width in cm
+const int trackWidthMM = 98;
+
+// Ultrasonic sensor connections
+int ultraPin = 13;
+
+// Servo connections
+int servoPin = 14;
+
+// Led connection
+int mouthledPin = 15;
+
+// Mode switch connection
+int switchPin = 0;
+
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin);
+
+int mode = 0;
+
+void setup() {
+
+  // read the mode-switch state
+  mode = landjerobot.mode();
+
+  // Laat de robot naar voren kijken
+  landjerobot.look(LandjeRobot::LOOK::FORWARD);
+  
+  // Start moving forward when the robot is switched on
+  // and do not wait for completion of the instruction
+  landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+  
+}
+
+void loop() {
+
+  // If the switch has state "1" 
+  if (mode == 1) {
+    // If there is not nothing (!) detected by the
+    // reflection sensors, then do something
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+      
+      // wait 30 milliseconds (0,03 second)
+      delay(30);
+      
+      // When both reflection sensors do detect a line
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        // turn the robot around and wait for completion
+          landjerobot.turn(LandjeRobot::TURN::LEFT,180,true);
+      }
+      
+      // When the reflection sensors do detect a line on the left
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        // Turn 10 degrees to the left and wait for completion
+        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true);
+      }
+      
+      // When the reflection sensors do detect a line on the right
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        // Turn 10 degrees to the right and wait for completion
+        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true);
+      }
+      
+      // Let the robot continue moving forward
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+      
+    } // end if
+    
+  } else { // Als de schakelaar op "2" staat
+  
+    // If there is not nothing (!) detected by the
+    // reflection sensors, then do something
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    
+      // wait 30 milliseconds (0,03 second)
+      delay(30);
+    
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true);
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, random(20,90), true);
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true);
+        landjerobot.turn(LandjeRobot::TURN::LEFT, random(20,90), true);
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, random(5,10), true);
+        landjerobot.turn(LandjeRobot::TURN::LEFT, random(160,200), true);
+      }
+      
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+    } // end if
+  
+    // Measure the distance
+    int distance = landjerobot.measureDistance();
+
+    // Stop when the distance is less than 10cm
+    if (distance < 10) {
+      
+      // Verifiy the measured distance
+      int totaldistance = 0;
+      for (int x=1; x<=5;x++) {
+        totaldistance = totaldistance + landjerobot.measureDistance(); 
+      }
+      
+      if (totaldistance < 50) {
+      
+        // Stop moving
+        landjerobot.move(LandjeRobot::DIRECTION::STOP);
+        
+        // Grumble
+        landjerobot.talk(5);
+      
+        // Measure the distance to the left
+        landjerobot.look(LandjeRobot::LOOK::LEFT);
+        delay(1000);
+        int left = landjerobot.measureDistance();
+  
+        // Measure the distance to the right
+        landjerobot.look(LandjeRobot::LOOK::RIGHT);
+        delay(1000);
+        int right = landjerobot.measureDistance();
+        
+        // Look forward again
+        landjerobot.look(LandjeRobot::LOOK::FORWARD);
+        
+        // Move a bit backward
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+      
+        // Turn to the left or right
+        if (left > right) {
+          landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true);
+        } else {
+          landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true);
+        }
+        
+         // Move forward again
+         landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
       }
     }
+  }
+}
 ```

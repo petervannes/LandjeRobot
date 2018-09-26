@@ -438,12 +438,14 @@ const int motor[2][4] = {
 
 // Aansluitingen van de lijn sensoren
 const int lineSensors[2] = { 10, 11 } ;
-const bool lineSensorInverse = false ;
+// Lichte vloer met donker lijnen = true
+// Donkere vloer met lichte lijnen = false 
+const bool lineSensorInverse = true;
 
 // Omtrek van de wielen in cm
 const int wheelRadiusMM = 21 ;
 // Afstand tussen de wielen in cm
-const int trackWidthMM = 55 ;
+const int trackWidthMM = 98 ;
 
 // Aansluiting van de ultrasoon sensor
 int ultraPin = 13 ;

@@ -7,7 +7,38 @@ Met deze instructies kun je de robot eenvoudig besturen.
 Elke programma voor een Landje Robot moet beginnen met de volgende instructies. Deze instructies hoef je niet te begrijpen. Je kunt deze instructies gewoon boven aan elke robot programma plakken.
 
 ```
-#include <LandjeRobot.h>// Aansluitingen van de robot motors.const int motor[2][4] = {  {2, 3, 4, 5}, {6, 7, 8, 9}} ;// Aansluitingen van de lijn sensorenconst int lineSensors[2] = { 10, 11 } ;const bool lineSensorInverse = false ;// Omtrek van de wielen in cmconst int wheelRadiusMM = 21 ;// Afstand tussen de wielen in cmconst int trackWidthMM = 55 ;// Aansluiting van de ultrasoon sensorint ultraPin = 13 ;// Aansluiting van de servoint servoPin = 14 ;// Aansluiting van het led int mouthledPin = 15 ;// Aansluiting van de mode schakelaarint switchPin = 0 ;LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin) ;```
+#include <LandjeRobot.h>
+
+// Aansluitingen van de robot motors.
+const int motor[2][4] = {
+  {2, 3, 4, 5}, {6, 7, 8, 9}
+} ;
+
+// Aansluitingen van de lijn sensoren
+const int lineSensors[2] = { 10, 11 } ;
+// Lichte vloer met donker lijnen = true
+// Donkere vloer met lichte lijnen = false 
+const bool lineSensorInverse = true;
+
+// Omtrek van de wielen in cm
+const int wheelRadiusMM = 21 ;
+// Afstand tussen de wielen in cm
+const int trackWidthMM = 98 ;
+
+// Aansluiting van de ultrasoon sensor
+int ultraPin = 13 ;
+
+// Aansluiting van de servo
+int servoPin = 14 ;
+
+// Aansluiting van het led 
+int mouthledPin = 15 ;
+
+// Aansluiting van de mode schakelaar
+int switchPin = 0 ;
+
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin) ;
+```
 
 Deze instructies moeten voor de functie *setup()* in het programma geplaatst worden. Knip en plak deze instructies voor aan ieder programma dat je voor de robot schrijft.
 

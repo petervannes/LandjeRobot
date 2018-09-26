@@ -349,7 +349,7 @@ Met de basis versie van de programma regels kan de robot in een eindeloze herhal
       }
       
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // einde if
 ```
 
 ### Opdracht 4
@@ -418,7 +418,7 @@ Gebaseerd op afstand; De langst gemeten afstand.
       
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // einde if 
   }
 ```
     
@@ -464,7 +464,7 @@ Wanneer de robot moet draaien, ga dan eerst een stukje achteruit om wat ruimte t
       
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // einde if
   }
 ```
 
@@ -504,7 +504,7 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
       
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // einde if
   }
 ```
 
@@ -548,7 +548,7 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
       
       // Rijd weer vooruit
       landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-    }
+    } // einde if
   }
 ```
     
@@ -599,7 +599,172 @@ Of eenvoudiger geprogrammeerd met minder herhaling van programmaregels. Denk aan
         
          // Rijd weer vooruit
          landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
-      }
+      } // einde if
     }
 
+```
+
+
+# Appendix
+
+## Voorbeeld oplossing
+
+```
+
+#include <LandjeRobot.h>
+
+// Aansluitingen van de robot motors.
+const int motor[2][4] = {
+  {2, 3, 4, 5}, {6, 7, 8, 9}
+} ;
+
+// Aansluitingen van de lijn sensoren
+const int lineSensors[2] = { 10, 11 } ;
+// Lichte vloer met donker lijnen = true
+// Donkere vloer met lichte lijnen = false 
+const bool lineSensorInverse = true ;
+
+// Omtrek van de wielen in cm
+const int wheelRadiusMM = 21 ;
+// Afstand tussen de wielen in cm
+const int trackWidthMM = 98 ;
+
+// Aansluiting van de ultrasoon sensor
+int ultraPin = 13 ;
+
+// Aansluiting van de servo
+int servoPin = 14 ;
+
+// Aansluiting van het led 
+int mouthledPin = 15 ;
+
+// Aansluiting van de mode schakelaar
+int switchPin = 0 ;
+
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin) ;
+
+int mode = 0;
+
+void setup() {
+
+  // "Lees" de stand van de mode schakelaar
+  mode = landjerobot.mode();
+
+  // Laat de robot naar voren kijken
+  landjerobot.look(LandjeRobot::LOOK::FORWARD);
+  
+  // Start met rijden als de robot aangezet wordt en
+  // wacht niet
+  landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+  
+}
+
+void loop() {
+
+  // Als de schakelaar op "1" staat.
+  if (mode == 1) {
+    // Als er niet niets (!) gedetecteerd wordt door de 
+    // reflectie sensors doe dan iets
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+      
+      // wacht 30 milliseconden (0,03 seconde)
+      delay(30);
+      
+      // Als beide reflectie sensors een lijn detecteren
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        // keer de robot om en wacht
+        landjerobot.turn(LandjeRobot::TURN::LEFT,180,true);
+      }
+      
+      // Als de reflectie sensors links een lijn detecteren
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        // Draai 10 graden naar links en wacht
+        landjerobot.turn(LandjeRobot::TURN::LEFT,10,true);
+      }
+      
+      // Als de reflectie sensors rechts een lijn detecteren
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        // Draai 10 graden naar rechts en wacht
+        landjerobot.turn(LandjeRobot::TURN::RIGHT,10,true);
+      }
+      
+      // Laat de robot weer verder rijden
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+      
+    } // einde if
+    
+  } else { // Als de schakelaar op "2" staat
+  
+    // Als er niet niets (!) gedetecteerd wordt door de 
+    // reflectie sensors doe dan iets
+    if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
+    
+      // wacht 30 milliseconden (0,03 seconde)
+      delay(30);
+    
+      if (landjerobot.detectLine() == LandjeRobot::LINE::LEFT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+        landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true);
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::RIGHT) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true);
+      }
+
+      if (landjerobot.detectLine() == LandjeRobot::LINE::BOTH) {
+        landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+        landjerobot.turn(LandjeRobot::TURN::LEFT, 180, true);
+      }
+      
+      landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+    } // einde if
+  
+    // Meet de afstand
+    int afstand = landjerobot.measureDistance();
+
+    // Stop als de afstand minder dan 10 cm is.
+    if (afstand < 10) {
+      
+      // Controleer de gemeten afstand
+      int totaalafstand = 0;
+      for (int x=1; x<=5;x++) {
+        totaalafstand = totaalafstand + landjerobot.measureDistance(); 
+      }
+      
+      if (totaalafstand < 50) {
+      
+        // Stop met rijden
+        landjerobot.move(LandjeRobot::DIRECTION::STOP);
+        
+        // Mopper
+        landjerobot.talk(5);
+      
+        // Meet afstand links van de robot
+        landjerobot.look(LandjeRobot::LOOK::LEFT);
+        delay(1000);
+        int links = landjerobot.measureDistance();
+  
+        // Meet afstand rechts van de robot
+        landjerobot.look(LandjeRobot::LOOK::RIGHT);
+        delay(1000);
+        int rechts = landjerobot.measureDistance();
+        
+        // Kijk weer naar voren
+        landjerobot.look(LandjeRobot::LOOK::FORWARD);
+        
+        if (links > rechts) {
+          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+          landjerobot.turn(LandjeRobot::TURN::LEFT, 45, true);
+        } else {
+          landjerobot.move(LandjeRobot::DIRECTION::BACKWARD, 10, true);
+          landjerobot.turn(LandjeRobot::TURN::RIGHT, 45, true);
+        }
+        
+         // Rijd weer vooruit
+         landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
+      }
+    }
+  }
+}
 ```

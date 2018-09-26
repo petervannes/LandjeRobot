@@ -2137,25 +2137,25 @@ Turn 90 degrees to the left</code></pre>
 
         <p class="assignment">Because you will have to turn on the robot to adjust the sensors, it is useful that it does not start to drive at once. So create an empty program in your IDE and upload it to the robot.</p>
 
-        <b class="assignment">light floor</b>
+        <b class="assignment">light coloured floor</b>
 
         <p class="assignment">Unplug the USB cable from the robot and turn it on. The reflection sensors have a small blue block with a small screw hole in the middle. Take the smallest Phillips screwdriver (the one in the shape of a cross) and carefully turn the screws of both sensors to the left. Now stick a piece of white tape on the floor and place one of the sensors above the white tape. If all goes well, only one LED on the sensor will be lit. Then slowly turn the screw to the right until a second LED lights up, then stop turning the screw. Repeat the same steps for the other sensor.</p>
 
 
 
-        <b class="assignment">dark floor</b>
+        <b class="assignment">dark coloured floor</b>
 
         <p class="assignment">Unplug the USB cable from the robot and turn it on. The reflection sensors have a small blue block with a small screw hole in the middle. Take the smallest Phillips screwdriver (the one in the shape of a cross) and carefully turn the screws of both sensors to the right. Now stick a piece of black tape on the floor and place one of the sensors above the black tape. If all goes well, only one LED on the sensor will be lit. Then slowly turn the screw to the left until a second LED lights up, then stop turning the screw. Repeat the same steps for the other sensor.</p>
 
         <p class="assignment">When starting a new program for the robot you always have to copy some lines from the <a href="http://htmlpreview.github.io/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html" target="_blank">Landjerobot instructionset</a>. One of these lines looks like this. </p>
 
-        <pre><code>const bool lineSensorInverse = false ;</code></pre>
-
-        <p class="assignment">If you have a dark floor, you must change this line for every program you create to</p>
-
         <pre><code>const bool lineSensorInverse = true ;</code></pre>
 
-        <p class="assignment">By changing the value from <code>false</code> to <code>true</code>, the robot knows that you use a dark line on a light floor, instead of a light line on a dark floor.</p>
+        <p class="assignment">If you have a dark coloured floor, you must change this line for every program you create to</p>
+
+        <pre><code>const bool lineSensorInverse = false ;</code></pre>
+
+        <p class="assignment">By changing the value from <code>true</code> to <code>false</code>, the robot knows that you use a light coloured line on a dark floor, instead of a dark coloured line on a light coloured floor.</p>
 
         <hr/>
 

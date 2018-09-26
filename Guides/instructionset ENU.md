@@ -6,7 +6,38 @@ The Landje robot has its own instruction set. With these instructions you can ea
 Every program for a Landje Robot must start with the following instructions. You do not need to understand these instructions, just copy and paste these instructions when you start a new program. 
 
 ```
-#include <LandjeRobot.h>// Robot motor connectionsconst int motor[2][4] = {  {2, 3, 4, 5}, {6, 7, 8, 9}};// Line sensor connectionsconst int lineSensors[2] = { 10, 11 };const bool lineSensorInverse = false;// Wheel circumference in cmconst int wheelRadiusMM = 21;// Track width in cmconst int trackWidthMM = 55;// Ultrasonic sensor connectionsint ultraPin = 13;// Servo connectionsint servoPin = 14;// Led connectionint mouthledPin = 15;// Mode switch connectionint switchPin = 0;LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin);```
+#include <LandjeRobot.h>
+
+// Robot motor connections
+const int motor[2][4] = {
+  {2, 3, 4, 5}, {6, 7, 8, 9}
+};
+
+// Line sensor connections
+const int lineSensors[2] = { 10, 11 };
+// Light floor with dark lines = true
+// Dark floor with light lines = false 
+const bool lineSensorInverse = true;
+
+// Wheel circumference in cm
+const int wheelRadiusMM = 21;
+// Track width in cm
+const int trackWidthMM = 98;
+
+// Ultrasonic sensor connections
+int ultraPin = 13;
+
+// Servo connections
+int servoPin = 14;
+
+// Led connection
+int mouthledPin = 15;
+
+// Mode switch connection
+int switchPin = 0;
+
+LandjeRobot landjerobot(motor, LandjeRobotMotorController::STEPMODE::FULL_STEP, wheelRadiusMM , trackWidthMM, lineSensors, lineSensorInverse, ultraPin, servoPin, mouthledPin, switchPin);
+```
 
 These instructions must be placed in the program before the *setup()* function. Cut and paste these instructions into every program you write for the robot.
 

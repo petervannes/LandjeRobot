@@ -437,12 +437,14 @@ const int motor[2][4] = {
 
 // Line sensor connections
 const int lineSensors[2] = { 10, 11 };
-const bool lineSensorInverse = false;
+// Light floor with dark lines = true
+// Dark floor with light lines = false 
+const bool lineSensorInverse = true;
 
 // Wheel circumference in cm
 const int wheelRadiusMM = 21;
 // Track width in cm
-const int trackWidthMM = 55;
+const int trackWidthMM = 98;
 
 // Ultrasonic sensor connections
 int ultraPin = 13;
