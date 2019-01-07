@@ -1,7 +1,5 @@
 # Landje Robot
 
--- DRAFT -- 
-
 ## Introduction
 
 ![cover](https://raw.githubusercontent.com/petervannes/LandjeRobot/master/Guides/Student%20guide/cover.png)
@@ -18,18 +16,4 @@ For documentation and components there has been made use of open source componen
 
 ## Documentation
 
-### Preparation Guide
-
-The [Preparation guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Landje%20robot%20Kit%20preparation.html) documents how to prepare the robot kit and lessons. Yes, i have built this kit for instructional programming lessons. It is not suitable for children to follow the lessons on their own.
-
-
-### English
-
-The [Student guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20guide%20ENU.html) is the instruction guide containing the lesson material. It is accompanied by a [Landje Robot Instructionset](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20ENU.html) containing the available instructions and samples. The teaching material contains many tasks, answers and solution suggestions are documented in the [Student Guide Solutions](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20Guide%20Solutions%20ENU.html)
-
-
-### Dutch
-
-De [Student guide](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20guide%20NLD.html) is de instructie handleiding voor de leerling en bevat het basis lesmateriaal. Hierbij is een begeleidende bechrijving van de [Landje Robot Instructionset](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/instructionset%20NLD.html) met voorbeelden hoe de instructies te gebruiken. Het lesmateriaal bevat veel opdrachten, antwoorden en oplossingsuggesties zijn beschreven in de [Student Guide Solutions](http://htmlpreview.github.com/?https://github.com/petervannes/LandjeRobot/blob/master/Guides/Student%20Guide%20Solutions%20NLD.html)
-
-
+Landje robot is fully documented with a preparation, student and solution guidebook. Also an instruction manual is available for the Landje Robot instruction set. All documenation can be found [here](https://petervannes.github.io/LandjeRobot/)
