@@ -63,7 +63,7 @@ I developed the 3D printed parts using Tinkercad and an Ultimaker 3 printer. Bec
 
 |Qty|Article|Details|Est.&nbsp;&nbsp;price|
 |:--------|:---|:------|-----:|
-|1| Frame|  Requires about 77g PLA and 86g PVA |€ 16,03|
+|1| Frame|  <img src="./Landje robot Kit preparation/frame.png" width="350"></br>Requires about 77g PLA and 86g PVA |€ 16,03|
 | 1| Head| <img src="./Landje robot Kit preparation/head.png" width="350"></br>Requires about 14g PLA and 13g PVA| € 2,69|
 | 2 | Wheel | <img src="./Landje robot Kit preparation/wheels.png" width="350"></br>Requires about 6g PLA and 2g PVA| € 0,72|
 | 1 | Tail wheel | <img src="./Landje robot Kit preparation/tailwheel.png" width="350"></br>Requires about <1g PLA and 0g PVA| € 0,07|
