@@ -99,7 +99,7 @@ geen
 
 ```
 
-if (detectLine() != LandjeRobot::LINE::NONE) {
+if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
     Serial.println("Er is een lijn gedetecteerd") ;
 }
 
@@ -132,7 +132,7 @@ geen
 // beweeg de robot vooruit
 landjerobot.move(LandjeRobot::DIRECTION::FORWARD) ;
 
-if (doIMove()) {
+if (landjerobot.doIMove()) {
     Serial.println("Ik beweeg!") ;
 }
 
@@ -165,7 +165,7 @@ geen
 // Laat de robot praten voor 60 seconden
 landjerobot.talk(60) ;
 
-if (doITalk()) {
+if (landjerobot.doITalk()) {
     Serial.println("Ik praat!") ;
 }
 
@@ -266,7 +266,7 @@ geen
 ```
 
 
-if (mode() == 1) {
+if (landjerobot.mode() == 1) {
     Serial.println("Mode 1") ;
 } else {
     Serial.println("Mode 2") ;

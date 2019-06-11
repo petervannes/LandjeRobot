@@ -98,7 +98,7 @@ none
 
 ```
 
-if (detectLine() != LandjeRobot::LINE::NONE) {
+if (landjerobot.detectLine() != LandjeRobot::LINE::NONE) {
     Serial.println("Sensor detected a line");
 }
 
@@ -131,7 +131,7 @@ none
 // Move the robot in forward direction
 landjerobot.move(LandjeRobot::DIRECTION::FORWARD);
 
-if (doIMove()) {
+if (landjerobot.doIMove()) {
     Serial.println("I am moving now!");
 }
 
@@ -164,7 +164,7 @@ none
 // Make the robot talk for 60 seconds
 landjerobot.talk(60);
 
-if (doITalk()) {
+if (landjerobot.doITalk()) {
     Serial.println("I am talking now!");
 }
 
@@ -263,7 +263,7 @@ none
 **Example**
 
 ```
-if (mode() == 1) {
+if (landjerobot.mode() == 1) {
     Serial.println("Mode 1");
 } else {
     Serial.println("Mode 2");
